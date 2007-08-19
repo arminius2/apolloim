@@ -1,0 +1,48 @@
+Valid HTML
+----------
+
+FireTalk accepts a subset of HTML from the client, and speaks back
+to the client with the same subset.  A tag takes the format of:
+
+<[tag] [attribute]="[value]"...>
+
+Quotes are *required* or the attribute will be ignored.  Whitespace
+is allowed between the [tag] and [attribute], and between subsequent
+attribute entities, but nowhere else.
+
+Ending tags take the form of:
+
+</[tag]>
+
+Whitespace is not allowed.
+
+Valid tags and attributes are as follows:
+
+font
+	size
+	color
+	back
+b
+u
+i
+img
+	src
+br
+
+Not all protocols necessarily pass all tags/attributes (IRC cannot
+handle font size, etc.).  Anything that is not one of these items
+will be stripped, to avoid odd client HTML leaking into protocols
+that are not HTML-based.
+
+Character substitions accepted:
+
+&amp;
+&lt;
+&gt;
+&nbsp;
+&tab;
+&quot;
+
+FireTalk internally compresses multiple whitespace.  Use &nbsp;
+and &tab; to represent multiple whitespace.  Always escape non-HTML
+&, < and > with &amp;, &lt; and &gt; to avoid confusion.
