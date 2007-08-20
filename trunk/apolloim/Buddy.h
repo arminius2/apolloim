@@ -15,6 +15,7 @@
 	NSString*			group;
 	NSString*			status;
 	NSString*			info;
+	NSString*			properName;
 	bool				online;
 	long				idletime;
 	NSMutableArray*		conversation;
@@ -30,6 +31,7 @@
 -(void)addMessage:(NSString*)pass;
 
 -(NSString*)name;
+-(NSString*)properName;
 -(NSString*)status;
 -(bool)online;
 -(NSString*)group;

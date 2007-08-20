@@ -31,13 +31,17 @@
 	AccountEditorView	*accountEditor;
 	BuddyView			*_buddyView;
 	Account*			active;
-	
+
+	NSMutableArray		*_conversations;
+	Buddy				*currentConversationBuddy;
+	Conversation		*currentConversation;
+		
 	NSString			*prefFile;
 
 	bool				_accountsViewBrowser;
 	bool				_accountsEditorViewBrowser;	
 	bool				_buddyViewBrowser;
-//	bool				_accountsViewBrowser;
+	bool				_conversationView;
 //	bool				_accountsViewBrowser;			
 }
 
@@ -52,6 +56,13 @@
 @end
 
 enum { 
+	ACCOUNT_VIEW		=	1,
+	ACCOUNT_EDITOR_VIEW	=	2,
+	BUDDY_VIEW			=	3,
+	CONVERSATION		=   4
+};
+
+enum {
 	AIM_RECV_MESG		=	1,
 	AIM_BUDDY_ONLINE	=	2, 
 	AIM_BUDDY_OFFLINE	=	3, 

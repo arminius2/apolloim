@@ -11,7 +11,7 @@
 #import <UIKit/UITransitionView.h>
 #import "Account.h"
 #import "Buddy.h"
-
+#import "Conversation.h"
 
 @interface BuddyView : UIView {
 	UINavigationBar *_navBar;
@@ -19,6 +19,7 @@
     CGRect _rect;	
 	
 	NSMutableArray *_buddies;
+	
 	UITable *_table;
 	int _rowCount;
 	id _delegate;
@@ -30,6 +31,6 @@
 - (int)numberOfRowsInTable:(UITable *)table;
 - (UITableCell *)table:(UITable *)table cellForRow:(int)row column:(UITableColumn *)col;
 - (Buddy *)selectedBuddy;
-- (void)updateBuddy:(Buddy*)aBuddy;
+- (void)updateBuddy:(Buddy*)aBuddy withCode:(int)Code;
 - (void)tableRowSelected:(NSNotification *)notification;
 @end

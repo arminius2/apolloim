@@ -642,7 +642,7 @@ static char *firetalk_translate_message(firetalk_t conn, const char * const mess
 
 enum firetalk_error firetalk_im_internal_add_buddy(firetalk_t conn, const char * const nickname, const char * const group) {
 	struct s_firetalk_buddy *iter;
-	printf("LIBFIRETALK>> firetalk_im_internal_add_buddy");
+	//printf("LIBFIRETALK>> firetalk_im_internal_add_buddy");
 #ifdef DEBUG
 	if (firetalk_check_handle(conn) != FE_SUCCESS)
 		return FE_BADHANDLE;
@@ -1107,7 +1107,7 @@ void firetalk_callback_needpass(client_t c, char *pass, const int size) {
 
 void firetalk_callback_im_getmessage(client_t c, const char * const sender, const int automessage, const char * const message) {
 	struct s_firetalk_handle *conn;
-	printf("LIBFIRETALK>> firetalk_callback_im_getmessage");	
+	//printf("LIBFIRETALK>> firetalk_callback_im_getmessage");	
 	struct s_firetalk_deny *iter;
 	conn = firetalk_find_handle(c);
 	if (conn->callbacks[FC_IM_GETMESSAGE]) {
@@ -1143,7 +1143,7 @@ void firetalk_callback_im_getaction(client_t c, const char * const sender, const
 void firetalk_callback_im_buddyonline(client_t c, const char * const nickname, const int online) {
 	struct s_firetalk_handle *conn;
 	struct s_firetalk_buddy *buddyiter;
-	printf("LIBFIRETALK>> firetalk_callback_im_buddyonline");
+	//printf("LIBFIRETALK>> firetalk_callback_im_buddyonline");
 	conn = firetalk_find_handle(c);
 	if (conn == NULL)
 		return;
@@ -1175,7 +1175,7 @@ void firetalk_callback_im_buddyonline(client_t c, const char * const nickname, c
 void firetalk_callback_im_buddyaway(client_t c, const char * const nickname, const int away) {
 	struct s_firetalk_handle *conn;
 	struct s_firetalk_buddy *buddyiter;
-	printf("LIBFIRETALK>> firetalk_callback_im_buddyaway");
+	//printf("LIBFIRETALK>> firetalk_callback_im_buddyaway");
 	conn = firetalk_find_handle(c);
 	if (conn == NULL)
 		return;
@@ -1200,7 +1200,7 @@ void firetalk_callback_im_buddyaway(client_t c, const char * const nickname, con
 void firetalk_callback_error(client_t c, const int error, const char * const roomoruser, const char * const description) {
 	struct s_firetalk_handle *conn;
 	conn = firetalk_find_handle(c);
-	printf("LIBFIRETALK>> firetalk_callback_error");	
+	//printf("LIBFIRETALK>> firetalk_callback_error");	
 	if (conn == NULL)
 		return;
 	if (conn->callbacks[FC_ERROR])

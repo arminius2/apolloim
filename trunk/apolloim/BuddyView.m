@@ -8,6 +8,17 @@
 
 #import "BuddyView.h"
 
+enum { 
+	AIM_RECV_MESG		=	1,
+	AIM_BUDDY_ONLINE	=	2, 
+	AIM_BUDDY_OFFLINE	=	3, 
+	AIM_BUDDY_AWAY		=	4, 
+	AIM_BUDDY_UNAWAY	=	5,
+	AIM_BUDDY_IDLE		=	6,	
+	AIM_BUDDY_MSG_RECV	=   7,
+	AIM_CONNECTED		=   8,
+	AIM_DISCONNECTED	=	9
+};
 
 @implementation BuddyView
 
@@ -46,36 +57,47 @@
 	[_table reloadData];
 }
 
-- (void)updateBuddy:(Buddy*)aBuddy
+- (void)updateBuddy:(Buddy*)aBuddy withCode:(int)Code
 {
-	/*int i=0,max=[self numberOfRowsInTable:_table];
+	int i=0,max=[self numberOfRowsInTable:_table];
 	
 	//Search for buddy
 	//if username matches, replace new buddy object with it
 	//else add the buddy
-	
-	for(i=0; i<max;i++)
-	{
-		Buddy* comparisonBuddy = [_buddies objectAtIndex:i];
+	NSLog(@"BUDDY IS %@", [aBuddy properName]);
 
-		if([[[_buddies objectAtIndex:i]name] isEqualToString:[aBuddy name]] && [[_buddies objectAtIndex:i]online])
-		{
-			NSLog(@"REPLACE");
-			[_buddies replaceObjectAtIndex:i withObject:aBuddy];
-			return;
-		}	
-		else
-		if([[[_buddies objectAtIndex:i]name] isEqualToString:[aBuddy name]] && ![[_buddies objectAtIndex:i]online])
-		{
-			NSLog(@"OFFLINE");
-			[_buddies removeObject:[_buddies objectAtIndex:i]];
-			return;
-		}
-	}
-	
-	NSLog(@"ADD BUDDY");
-	[_buddies addObject:aBuddy];
-	[self reloadData];*/
+	switch(Code)
+	{
+		case AIM_BUDDY_ONLINE:
+			for(i=0; i<max; i++)
+			{	
+				if([[[_buddies objectAtIndex:i]properName]isEqualToString:[aBuddy properName]])
+				{
+					NSLog(@"%@ exists.  No add.", [aBuddy properName]);
+					return;			
+				}
+			}
+			if([aBuddy online])
+			{
+				NSLog(@"%@ is online.",[aBuddy properName]);
+				[_buddies addObject:aBuddy];
+			}
+			else
+				NSLog(@"%@ is not online.",[aBuddy properName]);
+			break;
+		case AIM_BUDDY_OFFLINE:
+			for(i=0; i<max; i++)
+			{
+				if([[[_buddies objectAtIndex:i]properName]isEqualToString:[aBuddy properName]])
+				{
+					[_buddies removeObjectAtIndex:i];
+					NSLog(@"Buddy is offline.");
+					return;			
+				}			
+			}
+			break;
+	}		
+	[self reloadData];
 }
 
 - (void)setDelegate:(id)delegate
@@ -92,7 +114,7 @@
 {
 	UIImageAndTextTableCell *cell = [[UIImageAndTextTableCell alloc] init];
 	[cell setTitle: [[_buddies objectAtIndex: row]name]];
-	[cell setImage:[UIImage applicationImageNamed: @"smiley.gif"]];	
+	[cell setImage:[UIImage applicationImageNamed: @"aim.png"]];	
 	return cell;
 }
 

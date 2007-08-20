@@ -92,7 +92,7 @@
 //		[cell setSelected:YES withFade:YES];
 
 	[cell setTitle: [[_accounts objectAtIndex: row]username]];
-	[cell setImage:[UIImage applicationImageNamed: @"smiley.gif"]];			
+	[cell setImage:[UIImage applicationImageNamed: @"aim.png"]];			
 	
 	//Create description label------------------------------------------------      X      Y       length  height
 	UITextLabel *activeLabel	=	[[UITextLabel alloc] initWithFrame:CGRectMake(220.0f, 0.0f, 210.0f, 20.0f)];

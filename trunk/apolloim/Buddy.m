@@ -13,6 +13,7 @@
 	self = [super init];
 	if (self != nil) {
 		name		= [[NSString alloc]init];
+		properName	= [[NSString alloc]init];
 		group		= [[NSString alloc]init];
 		status		= [[NSString alloc]init];
 		online		= false;
@@ -57,7 +58,18 @@
 
 -(void)setName:(NSString*)pass
 {
-	name = [pass copy];
+	NSArray* split = [pass componentsSeparatedByString:@":"];
+	name = [[split objectAtIndex:0]copy];
+	NSLog(@"|-----SETNAME---START");
+	if([split count]>1)
+		NSLog(@"|  Name: %@   Other: %@  Count: %d", name,[split objectAtIndex:1], [split count]);
+		else
+		NSLog(@"|  Name: %@  Count: %d", name,[split count]);		
+	NSLog(@"|-----SETNAME---END");	
+	
+	NSMutableString* buddyname = [[NSMutableString alloc]initWithString:[[split objectAtIndex:0] uppercaseString]];
+	[buddyname replaceOccurrencesOfString:@" " withString:@"" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [buddyname length])];	
+	properName = [NSString stringWithString:buddyname];
 }
 -(void)setStatus :(NSString*)pass
 {
@@ -91,6 +103,10 @@
 -(NSString*)name
 {
 	return [name copy];
+}
+-(NSString*)properName
+{
+	return [properName copy];
 }
 -(NSString*)status
 {
