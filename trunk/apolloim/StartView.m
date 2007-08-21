@@ -70,7 +70,8 @@ enum {
 		[_accountsView setDelegate:self];
 		_buddyView		= [[BuddyView alloc]initWithFrame:rect];
 		[_buddyView		setDelegate:self];
-
+		_conversations	= [[NSMutableArray alloc]init];		
+		
 //		NSLog(@"StartView.m>>  Transition view...");
 		_transitionView = [[UITransitionView alloc] initWithFrame: 
 			CGRectMake(rect.origin.x, offset, rect.size.width, rect.size.height - offset)
@@ -161,6 +162,10 @@ enum {
 				[sheet setDelegate: self];
 				[sheet presentSheetFromAboveView: self];		
 				break;
+			case AIM_RECV_MESG:
+				NSLog(@"Received Message.");
+				[self receiveMessage:[payload objectAtIndex:2] fromBuddy:[payload objectAtIndex:1]];
+				break;
 			case AIM_CONNECTED:
 				NSLog(@"Connected.");
 				[[ApolloTOC sharedInstance]listBuddies];
@@ -173,6 +178,30 @@ enum {
 	NSLog(@"StartView>> Event -- %d", [[NSString stringWithString:[payload objectAtIndex:0]]intValue]);
 }
 
+- (void)receiveMessage:(NSString*)msg fromBuddy:(Buddy*)aBuddy
+{
+	//Go through conversations, looking for one
+	//If one matches this buddy, add to that
+	//Else - create new conversation, add it to the conversations array.
+	int i=0,max=[_conversations count];
+	NSLog(@"StartView> Mother fucking %@ wants to talk to me.h", [aBuddy name]);
+	for(i=0; i<max; i++)
+	{
+		if([[[[_conversations objectAtIndex:i]buddy]properName]isEqualToString:[aBuddy properName]])
+		{
+			NSLog(@"StartView> (recv) Adding to Existing Convo with... %@", [aBuddy name]);		
+			if(msg != nil)
+				[[_conversations objectAtIndex:i] addMessage:msg];
+			return;
+		}
+ 	}
+	
+	NSLog(@"StartView> (recv) Starting New Convo with... %@", [aBuddy name]);
+	Conversation* convo = [[Conversation alloc]initWithFrame:_rect withBuddy:aBuddy andDelegate:self];
+	[convo addMessage:msg];
+	[_conversations addObject:convo];	
+}
+
 - (void)alertSheet:(UIAlertSheet *)sheet buttonClicked:(int)button 
 {
 	[sheet dismiss];
@@ -181,6 +210,31 @@ enum {
 		sleep(3);
 		exit(1);
 	}
+}
+
+- (void)switchToConvo:(Buddy*)aBuddy
+{
+	[_navBar showButtonsWithLeftTitle:@"Buddy List" rightTitle:@"Buddy Info" leftBack: YES];				
+	_accountsEditorViewBrowser	=	false;
+	_buddyViewBrowser			=	false;
+	_accountsViewBrowser		=	false;	
+	_conversationView			=	true;
+	int i=0,max=[_conversations count];
+	NSLog(@"StartView> (Switch) Switching to ", [aBuddy name]);
+	for(i=0; i<max; i++)
+	{
+		if([[[[_conversations objectAtIndex:i]buddy]properName]isEqualToString:[aBuddy properName]])
+		{
+			NSLog(@"StartView> Going to existing Convo with... %@", [aBuddy name]);		
+			[_transitionView transition:1 toView:[_conversations objectAtIndex:i]];				
+			return;
+		}
+ 	}	
+
+	NSLog(@"StartView> (Switch) Starting New Convo with... %@", [aBuddy name]);
+	Conversation* convo = [[Conversation alloc]initWithFrame:_rect withBuddy:aBuddy andDelegate:self];
+	[_conversations addObject:convo];	
+	[_transitionView transition:1 toView:[_conversations objectAtIndex:i]];			
 }
 
 - (void)makeACoolMoveTo:(int)target
@@ -192,6 +246,7 @@ enum {
 			[_transitionView transition:3 toView:_accountsView];	
 			_accountsEditorViewBrowser	=	false;
 			_buddyViewBrowser			=	false;
+			_conversationView			=	false;
 			
 			_accountsViewBrowser		=	true;
 			[navtitle setText:@"Accounts"];	
@@ -200,6 +255,7 @@ enum {
 			[_transitionView transition:3 toView:accountEditor];
 			_accountsViewBrowser		=	false;			
 			_buddyViewBrowser			=	false;
+			_conversationView			=	false;			
 
 			_accountsEditorViewBrowser	=	true;			
 			[navtitle setText:@"Account Editor"];			
@@ -209,6 +265,7 @@ enum {
 			[_transitionView transition:3 toView:_buddyView];
 			_accountsViewBrowser		=	false;
 			_accountsEditorViewBrowser	=	false;
+			_conversationView			=	false;			
 
 			_buddyViewBrowser			=	true;
 			[_navBar showButtonsWithLeftTitle:@"Disconnect" rightTitle:@"Options" leftBack: YES];				

@@ -17,7 +17,7 @@ LDFLAGS = -lobjc \
 
 all:	ApolloIM package
 
-ApolloIM:	main.o ApolloIMApp.o StartView.o AccountsView.o AccountEditorView.o Account.o  ApolloTOC.o ApolloIM-Callback.o ShellKeyboard.o BuddyView.o Buddy.o #Conversation.o
+ApolloIM:	main.o ApolloIMApp.o StartView.o AccountsView.o AccountEditorView.o Account.o  ApolloTOC.o ApolloIM-Callback.o ShellKeyboard.o BuddyView.o Buddy.o Conversation.o
 		(cd firetalk && make clean && make compat-static)
 		$(LD) $(LDFLAGS) -o $@ $^
 		

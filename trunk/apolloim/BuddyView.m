@@ -46,6 +46,7 @@ enum {
 		_rowCount = 0;
 		_delegate = nil;
 		NSLog(@"BuddyView>> Adding table view...");
+		[_table setAllowsRubberBanding:NO];
 		[self addSubview: _table];
 		NSLog(@"BuddyView>> Reloading data...");
 		[self reloadData];				

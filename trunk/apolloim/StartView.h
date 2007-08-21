@@ -41,7 +41,7 @@
 	bool				_accountsViewBrowser;
 	bool				_accountsEditorViewBrowser;	
 	bool				_buddyViewBrowser;
-//	bool				_conversationView;
+	bool				_conversationView;
 //	bool				_currentBuddyInfo;			
 }
 
@@ -49,6 +49,7 @@
 - (id)initWithFrame:(CGRect)frame;
 - (void)imEvent:(NSMutableArray*)payload;
 - (void)populatePreferences;
+- (void)receiveMessage:(NSString*)msg fromBuddy:(Buddy*)aBuddy;
 - (void)accountsView:(AccountsView *)acctView accountSelected:(Account *)selectedAccount;
 - (void)makeACoolMoveTo:(int)target;
 - (void)dealloc;

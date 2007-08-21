@@ -18,13 +18,13 @@
 #import "Buddy.h"
 
 @implementation Conversation
-{
+
 	-(id)initWithFrame:(struct CGRect)frame withBuddy:(Buddy*)aBuddy andDelegate:(id)delegate
 	{
 		if ((self == [super initWithFrame: frame]) != nil) 
 		{
 			buddy = aBuddy;
-			rect = frame;
+//			rect = frame;
 			_delegate = delegate;
 			convoView = [[UITextView alloc]initWithFrame:frame];
 			[convoView setEditable:NO];
@@ -39,11 +39,17 @@
 	{
 //		[convoView webView:_webView shouldInsertText:[msg stringByAppendingString:@"<br/><br/>"]
   //          replacingDOMRange:fp16 givenAction:fp20];
+		NSLog(@"%@ >> %@", [buddy name], msg);
+	}
+	
+	- (Buddy*)buddy
+	{
+		return buddy;
 	}
 	
 	-(void)dealloc
 	{
 		[super dealloc];
 	}
-}
+
 @end

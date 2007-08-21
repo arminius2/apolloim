@@ -190,24 +190,24 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>FA6777880C7A798C00DEC8EF</string>
+				<string>FA67782C0C7A83DE00DEC8EF</string>
 				<key>PBXProjectModuleLabel</key>
-				<string>StartView.h</string>
+				<string>UITable.h</string>
 				<key>PBXSplitModuleInNavigatorKey</key>
 				<dict>
 					<key>Split0</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
-						<string>FA6777890C7A798C00DEC8EF</string>
+						<string>FA67782D0C7A83DE00DEC8EF</string>
 						<key>PBXProjectModuleLabel</key>
-						<string>StartView.h</string>
+						<string>UITable.h</string>
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>FA6777900C7A799A00DEC8EF</string>
+						<string>FA6778300C7A83DE00DEC8EF</string>
 						<key>history</key>
 						<array>
-							<string>FA6777850C7A797200DEC8EF</string>
+							<string>FA67782E0C7A83DE00DEC8EF</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -219,58 +219,18 @@
 			<key>Geometry</key>
 			<dict>
 				<key>Frame</key>
-				<string>{{0, 20}, {568, 466}}</string>
+				<string>{{0, 20}, {915, 540}}</string>
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>47 271 568 507 0 0 1280 778 </string>
+				<string>107 108 915 581 0 0 1280 778 </string>
 			</dict>
 		</dict>
 		<dict>
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>FA6777490C7A735D00DEC8EF</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>BuddyView.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>FA67774A0C7A735D00DEC8EF</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>BuddyView.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>FA6777910C7A799A00DEC8EF</string>
-						<key>history</key>
-						<array>
-							<string>FA67773E0C7A730500DEC8EF</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {953, 425}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>327 312 953 466 0 0 1280 778 </string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>FA6777090C7A711B00DEC8EF</string>
+				<string>FA6778000C7A82AC00DEC8EF</string>
 				<key>PBXProjectModuleLabel</key>
 				<string>StartView.m</string>
 				<key>PBXSplitModuleInNavigatorKey</key>
@@ -278,16 +238,16 @@
 					<key>Split0</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
-						<string>FA67770A0C7A711B00DEC8EF</string>
+						<string>FA6778010C7A82AC00DEC8EF</string>
 						<key>PBXProjectModuleLabel</key>
 						<string>StartView.m</string>
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>FA6777920C7A799A00DEC8EF</string>
+						<string>FA6778320C7A83DE00DEC8EF</string>
 						<key>history</key>
 						<array>
-							<string>FA6776FD0C7A70FE00DEC8EF</string>
+							<string>FA67781E0C7A834A00DEC8EF</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -299,35 +259,35 @@
 			<key>Geometry</key>
 			<dict>
 				<key>Frame</key>
-				<string>{{0, 20}, {1142, 609}}</string>
+				<string>{{0, 20}, {915, 540}}</string>
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>50 128 1142 650 0 0 1280 778 </string>
+				<string>291 197 915 581 0 0 1280 778 </string>
 			</dict>
 		</dict>
 		<dict>
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>FA67772F0C7A721F00DEC8EF</string>
+				<string>FA6778330C7A83DE00DEC8EF</string>
 				<key>PBXProjectModuleLabel</key>
-				<string>ApolloIM-Callback.m</string>
+				<string>UIScroller.h</string>
 				<key>PBXSplitModuleInNavigatorKey</key>
 				<dict>
 					<key>Split0</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
-						<string>FA6777300C7A721F00DEC8EF</string>
+						<string>FA6778340C7A83DE00DEC8EF</string>
 						<key>PBXProjectModuleLabel</key>
-						<string>ApolloIM-Callback.m</string>
+						<string>UIScroller.h</string>
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>FA6777930C7A799A00DEC8EF</string>
+						<string>FA6778370C7A83DE00DEC8EF</string>
 						<key>history</key>
 						<array>
-							<string>FA67772C0C7A721900DEC8EF</string>
+							<string>FA6778350C7A83DE00DEC8EF</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -339,11 +299,11 @@
 			<key>Geometry</key>
 			<dict>
 				<key>Frame</key>
-				<string>{{0, 20}, {1192, 650}}</string>
+				<string>{{0, 20}, {915, 540}}</string>
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>88 87 1192 691 0 0 1280 778 </string>
+				<string>130 87 915 581 0 0 1280 778 </string>
 			</dict>
 		</dict>
 	</array>
@@ -427,7 +387,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>12</integer>
+									<integer>16</integer>
+									<integer>14</integer>
 									<integer>9</integer>
 									<integer>0</integer>
 								</array>
@@ -671,11 +632,10 @@
 	<array>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>FA67775B0C7A738F00DEC8EF</string>
-		<string>FA67772F0C7A721F00DEC8EF</string>
-		<string>FA6777090C7A711B00DEC8EF</string>
-		<string>FA6777490C7A735D00DEC8EF</string>
+		<string>FA6778330C7A83DE00DEC8EF</string>
+		<string>FA6778000C7A82AC00DEC8EF</string>
+		<string>FA67782C0C7A83DE00DEC8EF</string>
 		<string>/Users/alex/Desktop/Development/apolloim/ApolloIM.xcodeproj</string>
-		<string>FA6777880C7A798C00DEC8EF</string>
 	</array>
 	<key>WindowString</key>
 	<string>131 81 821 664 0 0 1280 778 </string>
