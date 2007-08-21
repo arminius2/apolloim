@@ -8,7 +8,7 @@
 
 #import "BuddyView.h"
 
-enum { 
+enum {
 	AIM_RECV_MESG		=	1,
 	AIM_BUDDY_ONLINE	=	2, 
 	AIM_BUDDY_OFFLINE	=	3, 
@@ -17,7 +17,8 @@ enum {
 	AIM_BUDDY_IDLE		=	6,	
 	AIM_BUDDY_MSG_RECV	=   7,
 	AIM_CONNECTED		=   8,
-	AIM_DISCONNECTED	=	9
+	AIM_DISCONNECTED	=	9,
+	AIM_READ_MSGS		=   10
 };
 
 @implementation BuddyView
@@ -64,7 +65,7 @@ enum {
 - (void)updateBuddy:(Buddy*)aBuddy withCode:(int)Code
 {
 	int i=0,max=[self numberOfRowsInTable:_table];
-	
+	bool recvd = NO;	
 	//Search for buddy
 	//if username matches, replace new buddy object with it
 	//else add the buddy
@@ -123,7 +124,45 @@ enum {
 					[self reloadData];
 					return;
 				}			
-			}			
+			}
+			break;
+		case AIM_READ_MSGS:		
+			for(i=0; i<max; i++)
+			{
+				if([[[_buddies objectAtIndex:i]properName]isEqualToString:[aBuddy properName]])
+				{
+					[[_buddies objectAtIndex:i]setUnreadMsgs:0];
+					NSLog(@"BuddyView.m> You have read %@'s messages ",[aBuddy properName]);
+					[self reloadData];
+					return;
+				}			
+			}
+			break;
+		case AIM_RECV_MESG:		
+			for(i=0; i<max; i++)
+			{
+				if([[[_buddies objectAtIndex:i]properName]isEqualToString:[aBuddy properName]])
+				{
+					recvd = YES;
+					[[_buddies objectAtIndex:i]setUnreadMsgs:1];
+					NSLog(@"BuddyView.m> %@ has given you new messages",[aBuddy properName]);
+					[self reloadData];
+				}		
+			}
+			if(!recvd)
+			{
+				NSLog(@"BuddyView.m> ---------");
+				NSLog(@"BuddyView.m> We don't have this buddy in our fucking list.  Bastard.");
+				NSLog(@"BuddyView.m> He might be our buddy, he might not be - point being, I want this to just work and not have to work properly.");
+				NSLog(@"BuddyView.m> For now, we're going to add him to the list.  Delete him if you want to.");
+				NSLog(@"BuddyView.m> In the future, we should get a buddy_list on sign on, and then do a check against who's online, and the rest are offline.");				
+				NSLog(@"BuddyView.m> That's for Beta 2. STAY TUNED.  PS This src is in yer buddylist warnin' yer dudes.");				
+				NSLog(@"BuddyView.m> ---------");
+				[aBuddy setUnreadMsgs:1];
+				[_buddies addObject:aBuddy];		
+			}
+			
+			break;
 	}		
 	NSLog(@"--------");	
 	[self reloadData];

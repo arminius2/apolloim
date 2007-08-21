@@ -17,6 +17,8 @@
 	NSString*			info;
 	NSString*			properName;
 	bool				online;
+	bool				killBuddy;
+	int					unreadMsgs;
 	long				idletime;
 	NSMutableArray*		conversation;
 	
@@ -31,6 +33,8 @@
 -(void)setInfo:(NSString*)pass;
 -(void)setOnline:(bool)pass;
 -(void)addMessage:(NSString*)pass;
+-(void)setKillBuddy:(bool)pass;
+-(void)setUnreadMsgs:(int)pass;
 
 -(NSString*)name;
 -(NSString*)properName;
@@ -40,8 +44,10 @@
 -(NSString*)info;
 -(NSArray*)conversation;
 -(long)idletime;
--(float)result;
+-(bool)killBuddy;
+-(int)unreadMsgs;
 
+-(float)result;
 -(NSComparisonResult)compareNames:(Buddy *)anotherBuddy;
 -(NSComparisonResult)compareResults:(Buddy *)anotherBuddy;
 

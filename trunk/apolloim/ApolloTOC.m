@@ -270,11 +270,14 @@ static NSRecursiveLock *lock;
 {
 	NSLog(@"ApolloTOC: Recieved message from %@, is auto: %i.\n%@", user, automessage, message);
 	
+	Buddy* yourBuddy = [[Buddy alloc]init];
+	[yourBuddy setName:user];
+	
 	NSMutableArray* payload = 
 	[[NSMutableArray alloc]init];
 	
 	[payload addObject:		@"1"];
-	[payload addObject:		user];
+	[payload addObject:		yourBuddy];
 	[payload addObject:		message];
 	[_delegate imEvent:		payload];
 //	[payload release];	

@@ -17,6 +17,7 @@
 		group		= [[NSString alloc]init];
 		status		= [[NSString alloc]init];
 		online		= false;
+		unreadMsgs = 0;		
 		conversation= [[NSMutableArray alloc]init];
 	}
 	return self;
@@ -32,6 +33,7 @@
 		[self setStatus:aStatus];
 		[self addMessage:msg];
 		[self setOnline:_online];
+		unreadMsgs = 0;		
 	}
 	return self;
 }
@@ -54,6 +56,25 @@
 		[coder encodeObject: @"YES" forKey:@"enabled"];
 		else
 		[coder encodeObject: @"NO" forKey:@"enabled"];		*/
+}
+
+-(bool)killBuddy
+{
+	return killBuddy;
+}
+
+-(void)setKillBuddy:(bool)pass
+{
+	killBuddy = pass;
+}
+
+-(void)setUnreadMsgs:(int)pass
+{
+	unreadMsgs = pass;
+}
+-(int)unreadMsgs
+{
+	return unreadMsgs;
 }
 
 -(void)setName:(NSString*)pass

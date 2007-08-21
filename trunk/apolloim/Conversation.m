@@ -35,6 +35,7 @@
 		}
 		return self;
 	}
+	
 	-(void)addMessage:(NSString*)msg;
 	{
 //		[convoView webView:_webView shouldInsertText:[msg stringByAppendingString:@"<br/><br/>"]

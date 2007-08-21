@@ -163,8 +163,8 @@ enum {
 				[sheet presentSheetFromAboveView: self];		
 				break;
 			case AIM_RECV_MESG:
-				NSLog(@"Received Message.");
-				[self receiveMessage:[payload objectAtIndex:2] fromBuddy:[payload objectAtIndex:1]];
+				NSLog(@"Received Message from %@ that says '%@'",[[payload objectAtIndex:1]name],[payload objectAtIndex:2]);
+				[self receiveMessage:(NSString*)[payload objectAtIndex:2] fromBuddy:(Buddy*)[payload objectAtIndex:1]];
 				break;
 			case AIM_CONNECTED:
 				NSLog(@"Connected.");
@@ -184,17 +184,19 @@ enum {
 	//If one matches this buddy, add to that
 	//Else - create new conversation, add it to the conversations array.
 	int i=0,max=[_conversations count];
-	NSLog(@"StartView> Mother fucking %@ wants to talk to me.h", [aBuddy name]);
+	bool exist=NO;
+	NSLog(@"StartView> Mother fucking %@ wants to talk to me.h", [aBuddy properName]);	
 	for(i=0; i<max; i++)
 	{
 		if([[[[_conversations objectAtIndex:i]buddy]properName]isEqualToString:[aBuddy properName]])
 		{
 			NSLog(@"StartView> (recv) Adding to Existing Convo with... %@", [aBuddy name]);		
-			if(msg != nil)
+			if(msg != nil)			
 				[[_conversations objectAtIndex:i] addMessage:msg];
-			return;
-		}
+		}	
  	}
+ 	
+ 	[_buddyView updateBuddy:aBuddy withCode:AIM_RECV_MESG];
 	
 	NSLog(@"StartView> (recv) Starting New Convo with... %@", [aBuddy name]);
 	Conversation* convo = [[Conversation alloc]initWithFrame:_rect withBuddy:aBuddy andDelegate:self];
@@ -220,6 +222,9 @@ enum {
 	_accountsViewBrowser		=	false;	
 	_conversationView			=	true;
 	int i=0,max=[_conversations count];
+	
+ 	[_buddyView updateBuddy:aBuddy withCode:AIM_READ_MSGS];	
+	
 	NSLog(@"StartView> (Switch) Switching to ", [aBuddy name]);
 	for(i=0; i<max; i++)
 	{
@@ -229,7 +234,7 @@ enum {
 			[_transitionView transition:1 toView:[_conversations objectAtIndex:i]];				
 			return;
 		}
- 	}	
+ 	}
 
 	NSLog(@"StartView> (Switch) Starting New Convo with... %@", [aBuddy name]);
 	Conversation* convo = [[Conversation alloc]initWithFrame:_rect withBuddy:aBuddy andDelegate:self];
@@ -356,7 +361,8 @@ enum {
 			}
 			if(_conversationView)
 			{
-				NSLog(@"StartView>> RIGHT -- CONVERSATION_VEW -- BUDDYINFO");	
+				NSLog(@"StartView>> LEFT -- CONVERSATION_VEW -- BACK_TO_BUDDYLIST");	
+				[self makeACoolMoveTo:ACCOUNT_EDITOR_VIEW];
 				return;
 			}
 			break;
