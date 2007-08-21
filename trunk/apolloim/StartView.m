@@ -354,6 +354,11 @@ enum {
 				}
 				return;
 			}
+			if(_conversationView)
+			{
+				NSLog(@"StartView>> RIGHT -- CONVERSATION_VEW -- BUDDYINFO");	
+				return;
+			}
 			break;
 		case 0:	
 			if (_buddyViewBrowser)
@@ -375,6 +380,11 @@ enum {
 /*				NSLog(@"USERNAME: %@",	[temp username]);
 				NSLog(@"PASSWORD: %@",	[temp password]);
 				NSLog(@"ENABLED:  %d",  [temp enabled]);*/
+				return;
+			}
+			if(_conversationView)
+			{
+				NSLog(@"StartView>> RIGHT -- CONVERSATION_VEW -- BUDDYINFO");	
 				return;
 			}
 			break;

@@ -152,9 +152,11 @@ enum {
 
 - (void)tableRowSelected:(NSNotification *)notification 
 {
-	NSLog(@"--------");	
+	NSLog(@"BuddyView.m>--------");	
 	NSLog(@"BuddyView.m> %@ Selected",[[self selectedBuddy]name]);
-	NSLog(@"--------");	
+	NSLog(@"BuddyView.m> Moving to window from delegate...");
+	[_delegate switchToConvo:[self selectedBuddy]];
+	NSLog(@"BuddyView.m>--------");	
 }
 
 - (Buddy *)selectedBuddy 

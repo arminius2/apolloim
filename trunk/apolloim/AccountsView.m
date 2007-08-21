@@ -116,7 +116,7 @@
 }
 
 - (void)tableRowSelected:(NSNotification *)notification {
-	if( [_delegate respondsToSelector:@selector( accountsView:accountSelected: )] )
+//	if( [_delegate respondsToSelector:@selector( accountsView:accountSelected: )] )
 		[_delegate accountsView:self accountSelected:[self selectedAccount]];	
 }
 
