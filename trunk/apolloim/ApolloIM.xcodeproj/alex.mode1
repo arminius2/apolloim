@@ -190,6 +190,46 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
+				<string>FA6777880C7A798C00DEC8EF</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>StartView.h</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>FA6777890C7A798C00DEC8EF</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>StartView.h</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>FA6777900C7A799A00DEC8EF</string>
+						<key>history</key>
+						<array>
+							<string>FA6777850C7A797200DEC8EF</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {568, 466}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>47 271 568 507 0 0 1280 778 </string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
 				<string>FA6777490C7A735D00DEC8EF</string>
 				<key>PBXProjectModuleLabel</key>
 				<string>BuddyView.m</string>
@@ -204,7 +244,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>FA6777510C7A738F00DEC8EF</string>
+						<string>FA6777910C7A799A00DEC8EF</string>
 						<key>history</key>
 						<array>
 							<string>FA67773E0C7A730500DEC8EF</string>
@@ -244,7 +284,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>FA6777520C7A738F00DEC8EF</string>
+						<string>FA6777920C7A799A00DEC8EF</string>
 						<key>history</key>
 						<array>
 							<string>FA6776FD0C7A70FE00DEC8EF</string>
@@ -270,46 +310,6 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>FA6777220C7A720300DEC8EF</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>gui.c</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>FA6777230C7A720300DEC8EF</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>gui.c</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>FA6777530C7A738F00DEC8EF</string>
-						<key>history</key>
-						<array>
-							<string>FA6777240C7A720300DEC8EF</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {1142, 609}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>15 123 1142 650 0 0 1280 778 </string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
 				<string>FA67772F0C7A721F00DEC8EF</string>
 				<key>PBXProjectModuleLabel</key>
 				<string>ApolloIM-Callback.m</string>
@@ -324,7 +324,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>FA6777540C7A738F00DEC8EF</string>
+						<string>FA6777930C7A799A00DEC8EF</string>
 						<key>history</key>
 						<array>
 							<string>FA67772C0C7A721900DEC8EF</string>
@@ -427,8 +427,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>7</integer>
-									<integer>1</integer>
+									<integer>12</integer>
+									<integer>9</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -672,10 +672,10 @@
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>FA67775B0C7A738F00DEC8EF</string>
 		<string>FA67772F0C7A721F00DEC8EF</string>
-		<string>FA6777220C7A720300DEC8EF</string>
 		<string>FA6777090C7A711B00DEC8EF</string>
 		<string>FA6777490C7A735D00DEC8EF</string>
 		<string>/Users/alex/Desktop/Development/apolloim/ApolloIM.xcodeproj</string>
+		<string>FA6777880C7A798C00DEC8EF</string>
 	</array>
 	<key>WindowString</key>
 	<string>131 81 821 664 0 0 1280 778 </string>

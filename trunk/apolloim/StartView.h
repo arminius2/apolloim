@@ -32,9 +32,9 @@
 	BuddyView			*_buddyView;
 	Account*			active;
 
-/*	NSMutableArray		*_conversations;
+	NSMutableArray		*_conversations;
 	Buddy				*currentConversationBuddy;
-	Conversation		*currentConversation;*/
+	Conversation		*currentConversation;
 		
 	NSString			*prefFile;
 
