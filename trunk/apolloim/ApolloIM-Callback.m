@@ -74,11 +74,11 @@ void ft_callback_getmessage(void *c, void *cs, const char * const who, const int
 									ftConnection:c];
 }
 
-void ft_callback_listbuddy(void *c, void *cs,char *who, char const *group, char online, char away, long idletime)
+void ft_callback_listbuddy(void *c, void *cs, const char * const nickname, const char * const group, const int online, const int away, const long idle)
 {
-	NSLog(@"ft_callback_listbuddy -- %@", [NSString stringWithCString:who]);
-//	Buddy* buddy = [[Buddy alloc]initWithBuddyName:[NSString stringWithCString:who] group:[NSString stringWithCString:group] status:@"Unknown"	isOnline:true		   message:nil];
-//	[[ApolloTOC sharedInstance] buddyUpdate:buddy withCode:AIM_BUDDY_ONLINE];
+//	NSLog(@"ft_callback_listbuddy -- %@", [NSString stringWithCString:who]);
+	Buddy* buddy = [[Buddy alloc]initWithBuddyName:[NSString stringWithCString:nickname] group:[NSString stringWithCString:group] status:@"Unknown"	isOnline:(bool)away		   message:nil];
+	[[ApolloTOC sharedInstance] buddyUpdate:buddy withCode:AIM_BUDDY_AWAY];
 }
 
 void ft_callback_im_user_nickchanged(void *c, void *cs, const char * const nickname)

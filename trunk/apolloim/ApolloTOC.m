@@ -146,6 +146,13 @@ static NSRecursiveLock *lock;
         return NO;
 }
 
+- (void)listBuddies
+{
+	[lock lock];
+	firetalk_im_list_buddies(ft_aim_connection);
+	[lock unlock];
+}
+
 - (BOOL)connected
 {
     if (connected == ApolloTOC_CONNECTED)
@@ -186,13 +193,11 @@ static NSRecursiveLock *lock;
 
 - (void)buddyUpdate:(Buddy*)buddy withCode:(int)code
 {
-	[lock lock];
 	NSLog(@"Buddy Update: %@ -- %d",[buddy name], code);
 	NSMutableArray* payload = [[NSMutableArray alloc]init];		
 	[payload addObject:	[[NSString alloc]initWithFormat:@"%d",code] ]; 
 	[payload addObject:		buddy]; 	
-	[_delegate imEvent:		payload];	
-	[lock unlock];
+	[_delegate imEvent:		payload];
 }
 
 - (void)registerFiretalkCallbacks
@@ -215,7 +220,6 @@ static NSRecursiveLock *lock;
 	firetalk_register_callback(ft_aim_connection, FC_IM_BUDDYAWAY, (ptrtofnct)ft_callback_buddyaway);
 	firetalk_register_callback(ft_aim_connection, FC_IM_BUDDYUNAWAY, (ptrtofnct)ft_callback_buddyunaway);
 	firetalk_register_callback(ft_aim_connection, FC_IM_GETACTION, (ptrtofnct)ft_callback_getaction);			
-	
 	firetalk_register_callback(ft_aim_connection, FC_IM_LISTBUDDY, (ptrtofnct)ft_callback_listbuddy);
 	
 //    firetalk_register_callback(ft_aim_connection, FC_SETIDLE, (ptrtofnct)ft_callback_setidle);
@@ -260,10 +264,6 @@ static NSRecursiveLock *lock;
 	[_delegate imEvent:		payload];
 	NSLog(@"ApolloTOC>  here's to the good ol' days...");
     // [self registerForText:@"Hello" target:self selector:@selector(parseHello:forUser:)];
-	
-	[lock lock];
-	firetalk_im_list_buddies(ft_aim_connection);
-	[lock unlock];	
 }
 
 - (void)recievedMessage:(NSString*)message fromUser:(NSString*)user isAutomessage:(BOOL)automessage ftConnection:(void *)ftConnection

@@ -45,6 +45,7 @@ typedef enum {ApolloTOC_DISCONNECTED, ApolloTOC_CONNECTING, ApolloTOC_CONNECTED}
 - (void)setInfoMessage:(NSString*)newMessage;
 
 - (BOOL)connectUsingUsername:(NSString*)username password:(NSString*)password;
+- (void)listBuddies;
 - (BOOL)connected;
 - (void)disconnect;
 

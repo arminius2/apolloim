@@ -19,6 +19,7 @@
     CGRect _rect;	
 	
 	NSMutableArray *_buddies;
+	NSMutableArray *buddyList;
 	
 	UITable *_table;
 	int _rowCount;

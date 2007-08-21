@@ -22,7 +22,7 @@
 	NSMutableArray *_accounts;
 	id _delegate;
 }
-- (id)initWithFrame:(CGRect)frame forBuddy:(Buddy*) andDelegate:(id)delegate;
+- (id)initWithFrame:(struct CGRect)frame withBuddy:(Buddy*)aBuddy andDelegate:(id)delegate;
 - (void)addMessage:(NSString*)msg;
 - (void)dealloc;
 @end

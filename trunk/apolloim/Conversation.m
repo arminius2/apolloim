@@ -7,11 +7,19 @@
 //
 
 #import "Conversation.h"
-
+#import "UIKit/UIPreferencesTable.h"
+#import "UIKit/UIPreferencesTableCell.h"
+#import "UIKit/UIPreferencesTextTableCell.h"
+#import <UIKit/UIView-Hierarchy.h>
+#import <UIKit/UIView-Rendering.h>
+#import "UIKit/UISwitchControl.h"
+#import <UIKit/UIWindow.h>
+#import <UIKit/CDStructures.h>
+#import "Buddy.h"
 
 @implementation Conversation
 {
-	- (id)initWithFrame:(struct CGRect)frame withBuddy:(Buddy*)aBuddy andDelegate:(id)delegate
+	-(id)initWithFrame:(struct CGRect)frame withBuddy:(Buddy*)aBuddy andDelegate:(id)delegate
 	{
 		if ((self == [super initWithFrame: frame]) != nil) 
 		{
@@ -27,9 +35,15 @@
 		}
 		return self;
 	}
-	- (void)addMessage:(NSString*)msg;
+	-(void)addMessage:(NSString*)msg;
 	{
-		[convoView insertText:[msg stringByAppendingString:@"<br/><br/>"]];
+//		[convoView webView:_webView shouldInsertText:[msg stringByAppendingString:@"<br/><br/>"]
+  //          replacingDOMRange:fp16 givenAction:fp20];
+	}
+	
+	-(void)dealloc
+	{
+		[super dealloc];
 	}
 }
 @end

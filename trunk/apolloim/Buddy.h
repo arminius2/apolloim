@@ -19,9 +19,11 @@
 	bool				online;
 	long				idletime;
 	NSMutableArray*		conversation;
+	
+	float				result;
 }
 -(id) init;
-- (id) initWithBuddyName:(NSString*)aName group:(NSString*)aGroup status:(NSString*)aStatus isOnline:(bool)_online message:(NSString*)msg;
+-(id) initWithBuddyName:(NSString*)aName group:(NSString*)aGroup status:(NSString*)aStatus isOnline:(bool)_online message:(NSString*)msg;
 -(void)setName:(NSString*)pass;
 -(void)setStatus :(NSString*)pass;
 -(void)setGroup :(NSString*)pass;
@@ -38,5 +40,9 @@
 -(NSString*)info;
 -(NSArray*)conversation;
 -(long)idletime;
+-(float)result;
+
+-(NSComparisonResult)compareNames:(Buddy *)anotherBuddy;
+-(NSComparisonResult)compareResults:(Buddy *)anotherBuddy;
 
 @end

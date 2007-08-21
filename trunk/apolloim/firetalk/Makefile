@@ -4,7 +4,7 @@ CC=arm-apple-darwin-cc
 
 OBJECTS = firetalk.o firedns.o firestring.o dummy.o irc.o toc1.o toc2.o toc.o aim.o safestring.o
 
-all: compat-static
+all: static
 
 compat: compat-shared
 

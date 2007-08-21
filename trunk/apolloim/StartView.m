@@ -38,7 +38,8 @@ double objc_msgSend_fpret(id self, SEL op, ...) {
 enum { 
 	ACCOUNT_VIEW		=	1,
 	ACCOUNT_EDITOR_VIEW	=	2,
-	BUDDY_VIEW			=	3
+	BUDDY_VIEW			=	3,
+	CONVERSATION		=   4
 };
 
 @implementation StartView
@@ -132,12 +133,20 @@ enum {
 		switch([[NSString stringWithString:[payload objectAtIndex:0]]intValue])
 		{		
 			case AIM_BUDDY_ONLINE:
-				NSLog(@"New Buddy.");
-				[_buddyView updateBuddy:[payload objectAtIndex:1]];
+//				NSLog(@"New Buddy.");											
+				[_buddyView updateBuddy:[payload objectAtIndex:1] withCode:AIM_BUDDY_ONLINE];
 				break;
 			case AIM_BUDDY_OFFLINE:
-				NSLog(@"Buddy offline.");
-				[_buddyView updateBuddy:[payload objectAtIndex:1]];
+//				NSLog(@"Buddy offline.");
+				[_buddyView updateBuddy:[payload objectAtIndex:1] withCode:AIM_BUDDY_OFFLINE];
+				break;
+			case AIM_BUDDY_AWAY:
+//				NSLog(@"Buddy offline.");
+				[_buddyView updateBuddy:[payload objectAtIndex:1] withCode:AIM_BUDDY_AWAY];
+				break;
+			case AIM_BUDDY_UNAWAY:
+//				NSLog(@"Buddy offline.");
+				[_buddyView updateBuddy:[payload objectAtIndex:1] withCode:AIM_BUDDY_UNAWAY];
 				break;
 			case AIM_DISCONNECTED:
 				NSLog(@"You have been disconnected.");
@@ -154,6 +163,7 @@ enum {
 				break;
 			case AIM_CONNECTED:
 				NSLog(@"Connected.");
+				[[ApolloTOC sharedInstance]listBuddies];
 				[self makeACoolMoveTo:BUDDY_VIEW];				
 				break;			
 			default:
@@ -168,7 +178,7 @@ enum {
 	[sheet dismiss];
 	if(EXIT)
 	{
-		sleep(10);
+		sleep(3);
 		exit(1);
 	}
 }

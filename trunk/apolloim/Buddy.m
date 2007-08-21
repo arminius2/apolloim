@@ -71,6 +71,22 @@
 	[buddyname replaceOccurrencesOfString:@" " withString:@"" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [buddyname length])];	
 	properName = [NSString stringWithString:buddyname];
 }
+
+-(NSComparisonResult)compareNames:(Buddy *)anotherBuddy
+{
+	return [properName caseInsensitiveCompare:[anotherBuddy properName]];
+}
+
+-(NSComparisonResult)compareResults:(Buddy *)anotherBuddy
+{
+	if(result < [anotherBuddy result])
+		return NSOrderedAscending;
+	else if ( result > [anotherBuddy result])
+		return NSOrderedDescending;
+	else
+		return NSOrderedSame;
+}
+
 -(void)setStatus :(NSString*)pass
 {
 	status = [pass copy];
@@ -132,4 +148,10 @@
 {
 	return online;
 }
+
+-(float)result
+{
+	return result;
+}
 @end
+

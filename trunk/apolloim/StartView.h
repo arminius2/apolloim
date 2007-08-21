@@ -32,17 +32,17 @@
 	BuddyView			*_buddyView;
 	Account*			active;
 
-	NSMutableArray		*_conversations;
+/*	NSMutableArray		*_conversations;
 	Buddy				*currentConversationBuddy;
-	Conversation		*currentConversation;
+	Conversation		*currentConversation;*/
 		
 	NSString			*prefFile;
 
 	bool				_accountsViewBrowser;
 	bool				_accountsEditorViewBrowser;	
 	bool				_buddyViewBrowser;
-	bool				_conversationView;
-//	bool				_accountsViewBrowser;			
+//	bool				_conversationView;
+//	bool				_currentBuddyInfo;			
 }
 
 - (void)navigationBar:(UINavigationBar *)navbar buttonClicked:(int)button;
@@ -54,13 +54,6 @@
 - (void)dealloc;
 
 @end
-
-enum { 
-	ACCOUNT_VIEW		=	1,
-	ACCOUNT_EDITOR_VIEW	=	2,
-	BUDDY_VIEW			=	3,
-	CONVERSATION		=   4
-};
 
 enum {
 	AIM_RECV_MESG		=	1,
