@@ -205,7 +205,7 @@ static NSRecursiveLock *lock;
 		if([[[[_conversations objectAtIndex:i]buddy]properName]isEqualToString:[aBuddy properName]])
 		{
 			NSLog(@"StartView> (recv) Adding to Existing Convo with... %@", [aBuddy name]);		
-			if(msg != nil)			
+			if(msg != nil)
 			{
 				NSLog(@"StartView> (recv) totally adding...");
 				[[_conversations objectAtIndex:i] recvMessage:msg];
