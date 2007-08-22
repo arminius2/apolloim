@@ -58,14 +58,14 @@
 		[coder encodeObject: @"NO" forKey:@"enabled"];		*/
 }
 
--(bool)killBuddy
+-(bool)inAConversation
 {
-	return killBuddy;
+	return inAConversation;
 }
 
--(void)setKillBuddy:(bool)pass
+-(void)setInAConversation:(bool)pass;
 {
-	killBuddy = pass;
+	inAConversation = pass;
 }
 
 -(void)setUnreadMsgs:(int)pass

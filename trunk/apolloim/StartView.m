@@ -42,6 +42,8 @@ enum {
 	CONVERSATION		=   4
 };
 
+static NSRecursiveLock *lock;
+
 @implementation StartView
 - (id)initWithFrame:(struct CGRect)rect 
 {	
@@ -128,6 +130,7 @@ enum {
 - (void)imEvent:(NSMutableArray*)payload
 {
 //	NSLog(@"EVENT RECEIVED");
+	[lock lock];
 	if([payload count] > 0)
 	{
 //		NSLog(@"PAYLOAD IS SET");
@@ -175,7 +178,18 @@ enum {
 				NSLog(@"StartView> No case statement for Event. Event is...");
 		}
 	}
+	[lock unlock];
 	NSLog(@"StartView>> Event -- %d", [[NSString stringWithString:[payload objectAtIndex:0]]intValue]);
+}
+
+- (void)alertSheet:(UIAlertSheet *)sheet buttonClicked:(int)button 
+{
+	[sheet dismiss];
+	if(EXIT)
+	{
+		sleep(3);
+		exit(1);
+	}
 }
 
 - (void)receiveMessage:(NSString*)msg fromBuddy:(Buddy*)aBuddy
@@ -192,7 +206,11 @@ enum {
 		{
 			NSLog(@"StartView> (recv) Adding to Existing Convo with... %@", [aBuddy name]);		
 			if(msg != nil)			
-				[[_conversations objectAtIndex:i] addMessage:msg];
+			{
+				NSLog(@"StartView> (recv) totally adding...");
+				[[_conversations objectAtIndex:i] recvMessage:msg];
+				return;
+			}
 		}	
  	}
  	
@@ -200,22 +218,13 @@ enum {
 	
 	NSLog(@"StartView> (recv) Starting New Convo with... %@", [aBuddy name]);
 	Conversation* convo = [[Conversation alloc]initWithFrame:_rect withBuddy:aBuddy andDelegate:self];
-	[convo addMessage:msg];
+	[convo recvMessage:msg];
 	[_conversations addObject:convo];	
-}
-
-- (void)alertSheet:(UIAlertSheet *)sheet buttonClicked:(int)button 
-{
-	[sheet dismiss];
-	if(EXIT)
-	{
-		sleep(3);
-		exit(1);
-	}
 }
 
 - (void)switchToConvo:(Buddy*)aBuddy
 {
+	[lock lock];
 	[_navBar showButtonsWithLeftTitle:@"Buddy List" rightTitle:@"Buddy Info" leftBack: YES];				
 	_accountsEditorViewBrowser	=	false;
 	_buddyViewBrowser			=	false;
@@ -231,6 +240,7 @@ enum {
 		if([[[[_conversations objectAtIndex:i]buddy]properName]isEqualToString:[aBuddy properName]])
 		{
 			NSLog(@"StartView> Going to existing Convo with... %@", [aBuddy name]);		
+			[lock unlock];
 			[_transitionView transition:1 toView:[_conversations objectAtIndex:i]];				
 			return;
 		}
@@ -239,6 +249,7 @@ enum {
 	NSLog(@"StartView> (Switch) Starting New Convo with... %@", [aBuddy name]);
 	Conversation* convo = [[Conversation alloc]initWithFrame:_rect withBuddy:aBuddy andDelegate:self];
 	[_conversations addObject:convo];	
+	[lock unlock];
 	[_transitionView transition:1 toView:[_conversations objectAtIndex:i]];			
 }
 
@@ -362,7 +373,7 @@ enum {
 			if(_conversationView)
 			{
 				NSLog(@"StartView>> LEFT -- CONVERSATION_VEW -- BACK_TO_BUDDYLIST");	
-				[self makeACoolMoveTo:ACCOUNT_EDITOR_VIEW];
+				[self makeACoolMoveTo:BUDDY_VIEW];
 				return;
 			}
 			break;

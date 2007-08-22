@@ -23,7 +23,7 @@
 	id _delegate;
 }
 - (id)initWithFrame:(struct CGRect)frame withBuddy:(Buddy*)aBuddy andDelegate:(id)delegate;
-- (void)addMessage:(NSString*)msg;
+- (void)recvMessage:(NSString*)msg;
 - (Buddy*)buddy;
 - (void)dealloc;
 @end

@@ -132,6 +132,7 @@ enum {
 				if([[[_buddies objectAtIndex:i]properName]isEqualToString:[aBuddy properName]])
 				{
 					[[_buddies objectAtIndex:i]setUnreadMsgs:0];
+					[[_buddies objectAtIndex:i]setInAConversation:YES];					
 					NSLog(@"BuddyView.m> You have read %@'s messages ",[aBuddy properName]);
 					[self reloadData];
 					return;
@@ -144,7 +145,7 @@ enum {
 				if([[[_buddies objectAtIndex:i]properName]isEqualToString:[aBuddy properName]])
 				{
 					recvd = YES;
-					[[_buddies objectAtIndex:i]setUnreadMsgs:1];
+					[[_buddies objectAtIndex:i]setUnreadMsgs:[_buddies objectAtIndex:i]+1];
 					NSLog(@"BuddyView.m> %@ has given you new messages",[aBuddy properName]);
 					[self reloadData];
 				}		

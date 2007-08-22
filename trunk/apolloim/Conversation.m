@@ -31,16 +31,20 @@
 			[convoView setAllowsRubberBanding:YES];
 			[convoView displayScrollerIndicators];
 			[convoView setOpaque:NO];
-			[self addSubview:convoView];
+			[self addSubview:convoView];			
 		}
 		return self;
 	}
 	
-	-(void)addMessage:(NSString*)msg;
+	-(void)recvMessage:(NSString*)msg;
 	{
-//		[convoView webView:_webView shouldInsertText:[msg stringByAppendingString:@"<br/><br/>"]
-  //          replacingDOMRange:fp16 givenAction:fp20];
-		NSLog(@"%@ >> %@", [buddy name], msg);
+		//I am awesome
+//		[[convoView _webView] insertText: @"THIS IS TEXT"];
+		[convoView setHTML:
+		[[convoView HTML]stringByAppendingString:[NSString stringWithFormat:@"<div><font color=\"blue\">%@</font>: %@</div>",[buddy name],msg]]];
+		
+//		NSLog(@"%@ >> %@", [buddy name], msg);
+//		NSLog(@"%@ Convo Dump> %@", [buddy name], [convoView text]);
 	}
 	
 	- (Buddy*)buddy
