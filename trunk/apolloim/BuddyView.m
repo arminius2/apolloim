@@ -145,7 +145,7 @@ enum {
 				if([[[_buddies objectAtIndex:i]properName]isEqualToString:[aBuddy properName]])
 				{
 					recvd = YES;
-					[[_buddies objectAtIndex:i]setUnreadMsgs:[_buddies objectAtIndex:i]+1];
+					[[_buddies objectAtIndex:i]setUnreadMsgs:[[_buddies objectAtIndex:i]unreadMsgs]+1];
 					NSLog(@"BuddyView.m> %@ has given you new messages",[aBuddy properName]);
 					[self reloadData];
 				}		
@@ -159,7 +159,7 @@ enum {
 				NSLog(@"BuddyView.m> In the future, we should get a buddy_list on sign on, and then do a check against who's online, and the rest are offline.");				
 				NSLog(@"BuddyView.m> That's for Beta 2. STAY TUNED.  PS This src is in yer buddylist warnin' yer dudes.");				
 				NSLog(@"BuddyView.m> ---------");
-				[aBuddy setUnreadMsgs:1];
+				[aBuddy setUnreadMsgs:[aBuddy unreadMsgs]+1];
 				[_buddies addObject:aBuddy];		
 			}
 			

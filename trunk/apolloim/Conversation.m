@@ -7,14 +7,13 @@
 //
 
 #import "Conversation.h"
-#import "UIKit/UIPreferencesTable.h"
-#import "UIKit/UIPreferencesTableCell.h"
-#import "UIKit/UIPreferencesTextTableCell.h"
 #import <UIKit/UIView-Hierarchy.h>
 #import <UIKit/UIView-Rendering.h>
-#import "UIKit/UISwitchControl.h"
 #import <UIKit/UIWindow.h>
 #import <UIKit/CDStructures.h>
+//#import <UIKit/UIWebView.h>
+
+
 #import "Buddy.h"
 
 @implementation Conversation
@@ -24,14 +23,19 @@
 		if ((self == [super initWithFrame: frame]) != nil) 
 		{
 			buddy = aBuddy;
-//			rect = frame;
+			_rect = frame;
 			_delegate = delegate;
 			convoView = [[UITextView alloc]initWithFrame:frame];
 			[convoView setEditable:NO];
 			[convoView setAllowsRubberBanding:YES];
-			[convoView displayScrollerIndicators];
 			[convoView setOpaque:NO];
+			[convoView setTextSize:14];
+			
 			[self addSubview:convoView];			
+			_msgBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(_rect.origin.x, 390.0f, _rect.size.width, 50.0f)];			
+			sendField = [[UITextField alloc] initWithFrame:CGRectMake(0,0,_rect.size.width,30.0f)];			
+			[_msgBar addSubview:sendField];
+			[self addSubview:_msgBar];			
 		}
 		return self;
 	}
@@ -39,12 +43,11 @@
 	-(void)recvMessage:(NSString*)msg;
 	{
 		//I am awesome
-//		[[convoView _webView] insertText: @"THIS IS TEXT"];
 		[convoView setHTML:
 		[[convoView HTML]stringByAppendingString:[NSString stringWithFormat:@"<div><font color=\"blue\">%@</font>: %@</div>",[buddy name],msg]]];
-		
-//		NSLog(@"%@ >> %@", [buddy name], msg);
-//		NSLog(@"%@ Convo Dump> %@", [buddy name], [convoView text]);
+		CGSize fullSize = [convoView contentSize];
+		[convoView scrollRectToVisible:CGRectMake(0.0f, fullSize.height - 20.0f,320.0f, fullSize.height) animated: YES];
+
 	}
 	
 	- (Buddy*)buddy

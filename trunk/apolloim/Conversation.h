@@ -8,19 +8,24 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <UIKit/UITextView.h>
+#import <UIKit/UITextField.h>
 #import <UIKit/UITransitionView.h>
+#import "ShellKeyboard.h"
 #import "Buddy.h"
 
 @interface Conversation : UIView 
 {
 	UITextView* convoView;
-	UINavigationBar *_navBar;
+	UITextField* sendField;
+	UINavigationBar *_msgBar;
 	UITransitionView *_transitionView;
     CGRect _rect;	
 	Buddy* buddy;
 
 	NSMutableArray *_accounts;
 	id _delegate;
+	
+	
 }
 - (id)initWithFrame:(struct CGRect)frame withBuddy:(Buddy*)aBuddy andDelegate:(id)delegate;
 - (void)recvMessage:(NSString*)msg;
