@@ -7,6 +7,7 @@
 //
 
 #import "Conversation.h"
+#import <UIKit/UIApplication.h>
 #import <UIKit/UIView-Hierarchy.h>
 #import <UIKit/UIView-Rendering.h>
 #import <UIKit/UIWindow.h>
@@ -28,7 +29,6 @@
 			[convoView setAllowsRubberBanding:YES];
 			[convoView setOpaque:NO];
 			[convoView setTextSize:14];
-			[convoView scrollToMakeCaretVisible:YES];
 			
 			[self addSubview:convoView];			
 			_msgBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(_rect.origin.x, 380.0f, _rect.size.width, 50.0f)];			
@@ -42,9 +42,19 @@
 	-(void)recvMessage:(NSString*)msg;
 	{
 		//I am awesome
-		[convoView setHTML:
-		[[convoView HTML]stringByAppendingString:[NSString stringWithFormat:@"<div><font color=\"blue\">%@</font>: %@</div>",[buddy name],msg]]];
+		[convoView scrollToMakeCaretVisible:YES];		
 		[convoView repositionCaretToVisibleRect];
+		
+		[convoView setHTML:
+		[
+		[NSString stringWithFormat:@"<div><font color=\"blue\">%@</font>: %@</div><hr>",[buddy name],msg]
+		stringByAppendingString:[convoView HTML]
+		]
+
+		];
+//		[UIApplication vibrateForDuration:2];
+		/*[convoView setHTML:
+		[[convoView HTML]stringByAppendingString:[NSString stringWithFormat:@"<div><font color=\"blue\">%@</font>: %@</div>",[buddy name],msg]]];*/
 
 //		[convoView scrollRectToVisible:CGRectMake(0.0f, [convoView contentSize].height - 1.0f, 320.0f,320) animated: YES];
 	}
