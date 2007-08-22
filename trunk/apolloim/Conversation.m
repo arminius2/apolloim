@@ -28,6 +28,7 @@
 			[convoView setAllowsRubberBanding:YES];
 			[convoView setOpaque:NO];
 			[convoView setTextSize:14];
+			[convoView scrollToMakeCaretVisible:YES];
 			
 			[self addSubview:convoView];			
 			_msgBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(_rect.origin.x, 380.0f, _rect.size.width, 50.0f)];			
@@ -43,6 +44,7 @@
 		//I am awesome
 		[convoView setHTML:
 		[[convoView HTML]stringByAppendingString:[NSString stringWithFormat:@"<div><font color=\"blue\">%@</font>: %@</div>",[buddy name],msg]]];
+		[convoView repositionCaretToVisibleRect];
 
 //		[convoView scrollRectToVisible:CGRectMake(0.0f, [convoView contentSize].height - 1.0f, 320.0f,320) animated: YES];
 	}

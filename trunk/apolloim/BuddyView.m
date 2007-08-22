@@ -181,12 +181,24 @@ enum {
 
 - (UITableCell *)table:(UITable *)table cellForRow:(int)row column:(UITableColumn *)col
 {
+	CGColorSpaceRef const colorSpace = CGColorSpaceCreateDeviceRGB();
+	float transparentComponents[4] = {0, 0, 0, 0};
+	
 	UIImageAndTextTableCell *cell = [[UIImageAndTextTableCell alloc] init];
 	[cell setTitle: [[_buddies objectAtIndex: row]name]];
 	if([[_buddies objectAtIndex:row]online])
 		[cell setImage:[UIImage applicationImageNamed: @"aim_online.png"]];	
 		else
 		[cell setImage:[UIImage applicationImageNamed: @"aim_away.png"]];	
+
+	if([[_buddies objectAtIndex: row]unreadMsgs] > 0)
+	{
+		UITextLabel *unreadmsgs	=	[[UITextLabel alloc] initWithFrame:CGRectMake(220.0f, 20.0f, 210.0f, 20.0f)];
+		[unreadmsgs setText: [NSString stringWithFormat:@"%d msgs",[[_buddies objectAtIndex: row]unreadMsgs]]];
+		[unreadmsgs setWrapsText:YES];
+		[unreadmsgs setBackgroundColor:CGColorCreate(colorSpace, transparentComponents)];			
+		[cell addSubview:unreadmsgs];
+	}	
 	return cell;
 }
 

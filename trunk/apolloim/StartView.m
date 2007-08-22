@@ -200,6 +200,7 @@ static NSRecursiveLock *lock;
 	int i=0,max=[_conversations count];
 	bool exist=NO;
 	NSLog(@"StartView> Mother fucking %@ wants to talk to me.h", [aBuddy properName]);	
+ 	[_buddyView updateBuddy:aBuddy withCode:AIM_RECV_MESG]; 	
 	for(i=0; i<max; i++)
 	{
 		if([[[[_conversations objectAtIndex:i]buddy]properName]isEqualToString:[aBuddy properName]])
@@ -213,8 +214,6 @@ static NSRecursiveLock *lock;
 			}
 		}	
  	}
- 	
- 	[_buddyView updateBuddy:aBuddy withCode:AIM_RECV_MESG];
 	
 	NSLog(@"StartView> (recv) Starting New Convo with... %@", [aBuddy name]);
 	Conversation* convo = [[Conversation alloc]initWithFrame:_rect withBuddy:aBuddy andDelegate:self];
