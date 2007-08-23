@@ -45,19 +45,29 @@
 		[convoView scrollToMakeCaretVisible:YES];		
 		[convoView repositionCaretToVisibleRect];
 		
-		[convoView setHTML:
+	/*	[convoView setHTML:
 		[
 		[NSString stringWithFormat:@"<div><font color=\"blue\">%@</font>: %@</div><hr>",[buddy name],msg]
 		stringByAppendingString:[convoView HTML]
 		]
 
-		];
+		];*/
 //		[UIApplication vibrateForDuration:2];
-		/*[convoView setHTML:
-		[[convoView HTML]stringByAppendingString:[NSString stringWithFormat:@"<div><font color=\"blue\">%@</font>: %@</div>",[buddy name],msg]]];*/
-
-//		[convoView scrollRectToVisible:CGRectMake(0.0f, [convoView contentSize].height - 1.0f, 320.0f,320) animated: YES];
+		[convoView setHTML:
+		[[convoView HTML]stringByAppendingString:[NSString stringWithFormat:@"<div><font color=\"blue\">%@</font>: %@</div>",[buddy name],msg]]];
+	
+		[self scrollToEnd];
 	}
+	
+- (void)scrollToEnd
+{
+  NSRange aRange;
+  aRange.location = 9999999; // horray for magic number
+  aRange.length = 1;
+  [convoView setSelectionRange:aRange];
+  [convoView scrollToMakeCaretVisible:YES];
+}
+
 	
 	- (Buddy*)buddy
 	{

@@ -126,7 +126,7 @@ enum {
 				}			
 			}
 			break;
-		case AIM_READ_MSGS:		
+		case AIM_READ_MSGS:	
 			for(i=0; i<max; i++)
 			{
 				if([[[_buddies objectAtIndex:i]properName]isEqualToString:[aBuddy properName]])

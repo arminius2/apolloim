@@ -30,5 +30,6 @@
 - (id)initWithFrame:(struct CGRect)frame withBuddy:(Buddy*)aBuddy andDelegate:(id)delegate;
 - (void)recvMessage:(NSString*)msg;
 - (Buddy*)buddy;
+- (void)scrollToEnd;
 - (void)dealloc;
 @end
