@@ -14,6 +14,7 @@
 #import <UIKit/CDStructures.h>
 //#import <UIKit/UIWebView.h>
 #import "Buddy.h"
+#import "ConvoBox.h"
 
 @implementation Conversation
 
@@ -24,13 +25,13 @@
 			buddy = aBuddy;
 			_rect = frame;
 			_delegate = delegate;
-			convoView = [[UITextView alloc]initWithFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width, 380.0f)];
+			convoView = [[ConvoBox alloc]initWithFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width, 380.0f)];
 			[convoView setEditable:NO];
 			[convoView setAllowsRubberBanding:YES];
 			[convoView setOpaque:NO];
 			[convoView setTextSize:14];
 			
-			[self addSubview:convoView];			
+			[self addSubview:convoView];
 			_msgBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(_rect.origin.x, 380.0f, _rect.size.width, 50.0f)];			
 			sendField = [[UITextField alloc] initWithFrame:CGRectMake(0,0,_rect.size.width,30.0f)];			
 			[_msgBar addSubview:sendField];
@@ -53,21 +54,11 @@
 
 		];*/
 //		[UIApplication vibrateForDuration:2];
-		[convoView setHTML:
-		[[convoView HTML]stringByAppendingString:[NSString stringWithFormat:@"<div><font color=\"blue\">%@</font>: %@</div>",[buddy name],msg]]];
+//		[convoView setHTML:
+//		[[convoView HTML]stringByAppendingString:[NSString stringWithFormat:@"<div><font color=\"blue\">%@</font>: %@</div>",[buddy name],msg]]];
 	
-		[self scrollToEnd];
-	}
-	
-- (void)scrollToEnd
-{
-  NSRange aRange;
-  aRange.location = 9999999; // horray for magic number
-  aRange.length = 1;
-  [convoView setSelectionRange:aRange];
-  [convoView scrollToMakeCaretVisible:YES];
-}
-
+		[convoBox insertText:[NSString stringWithFormat:@"<div><font color=\"blue\">%@</font>: %@</div>",[buddy name],msg]];
+	}	
 	
 	- (Buddy*)buddy
 	{

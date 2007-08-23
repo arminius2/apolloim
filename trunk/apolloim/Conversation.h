@@ -11,11 +11,12 @@
 #import <UIKit/UITextField.h>
 #import <UIKit/UITransitionView.h>
 #import "ShellKeyboard.h"
+#import "ConvoBox.h"
 #import "Buddy.h"
 
 @interface Conversation : UIView 
 {
-	UITextView* convoView;
+	ConvoBox* convoView;
 	UITextField* sendField;
 	UINavigationBar *_msgBar;
 	UITransitionView *_transitionView;
