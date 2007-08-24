@@ -1,5 +1,4 @@
-// ShellView.m
-#import "ShellView.h"
+#import "ConvoBox.h"
 
 #include <sys/types.h>
 #include <sys/uio.h>
@@ -7,7 +6,7 @@
 #import <UIKit/UIView-Rendering.h>
 #import "ShellKeyboard.h"
 
-//Dear mobile terminal,
+//Dear mobile terminal programmers,
 //you are 5x the hacker I am.
 //Thank you for open sourcing your code.
 //--alex
@@ -32,7 +31,7 @@
 
 - (id)initWithFrame:(struct CGRect)fp8
 {
-  debug(@"Created ShellView");
+  //debug(@"Created ShellView");
   id parent = [super initWithFrame:fp8];
 
   [self setText:@""];
@@ -73,11 +72,7 @@
 {
   // Insert at the end of the WebKit WebView
   [[[self _webView] webView] moveToEndOfDocument:self];
-
-  _ignoreInsertText = YES;
   [[self _webView] insertText:text];
-  _ignoreInsertText = NO;
-
   [self scrollToEnd];
 }
 

@@ -25,17 +25,23 @@
 			buddy = aBuddy;
 			_rect = frame;
 			_delegate = delegate;
-			convoView = [[ConvoBox alloc]initWithFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width, 380.0f)];
+			convoView = [[ConvoBox alloc]initWithFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width, 360.0f)];
 			[convoView setEditable:NO];
 			[convoView setAllowsRubberBanding:YES];
 			[convoView setOpaque:NO];
 			[convoView setTextSize:14];
+
+  float backcomponents[4] = {0, 0, 0, 0};	  CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+  
+			setBackgroundColor: CGColorCreate( colorSpace, backcomponents)];
 			
 			[self addSubview:convoView];
-			_msgBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(_rect.origin.x, 380.0f, _rect.size.width, 50.0f)];			
-			sendField = [[UITextField alloc] initWithFrame:CGRectMake(0,0,_rect.size.width,30.0f)];			
-			[_msgBar addSubview:sendField];
-			[self addSubview:_msgBar];			
+			_msgBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(_rect.origin.x, 360.0f, _rect.size.width, 70.0f)];			
+			sendField = [[UITextView alloc] initWithFrame:CGRectMake(_rect.origin.x, 370.0f, _rect.size.width, 40.0f)];		
+			[sendField setText:@"TEST"];c
+			[sendField setBackgroundColor: CGColorCreate( colorSpace, backcomponents)];
+			[self addSubview:sendField];
+			[self addSubview:_msgBar];
 		}
 		return self;
 	}
@@ -43,8 +49,8 @@
 	-(void)recvMessage:(NSString*)msg;
 	{
 		//I am awesome
-		[convoView scrollToMakeCaretVisible:YES];		
-		[convoView repositionCaretToVisibleRect];
+	
+
 		
 	/*	[convoView setHTML:
 		[
@@ -53,11 +59,16 @@
 		]
 
 		];*/
-//		[UIApplication vibrateForDuration:2];
-//		[convoView setHTML:
-//		[[convoView HTML]stringByAppendingString:[NSString stringWithFormat:@"<div><font color=\"blue\">%@</font>: %@</div>",[buddy name],msg]]];
-	
-		[convoBox insertText:[NSString stringWithFormat:@"<div><font color=\"blue\">%@</font>: %@</div>",[buddy name],msg]];
+
+		[convoView setHTML:
+		[[convoView HTML]stringByAppendingString:[NSString stringWithFormat:@"<div><font color=\"blue\">%@</font>: %@</div>",[buddy name],msg]]];
+		//[convoView repositionCaretToVisibleRect];
+		[convoView scrollToEnd];	
+	//	[UIApplication vibrateForDuration:2];
+		//[convoView insertText:[NSString stringWithFormat:@"<div><font color=\"blue\">%@</font>: %@</div>",[buddy name],msg]];
+		[convoView insertText:@"\n"];
+		//[convoView scrollToMakeCaretVisible:YES];	
+
 	}	
 	
 	- (Buddy*)buddy

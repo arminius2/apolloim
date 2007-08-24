@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>ApolloIM</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.alex.bsflit</string>	
+	<string>com.alexrocks.apolloim</string>	
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>0.1</string>
 	<key>CFBundleName</key>
@@ -21,6 +21,6 @@
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>NSPrincipalClass</key>
-	<string>MobileTerminal</string>
+	<string>ApolloIMApp</string>
 </dict>
 </plist>
