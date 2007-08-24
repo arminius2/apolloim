@@ -17,8 +17,9 @@
 @interface Conversation : UIView 
 {
 	ConvoBox* convoView;
-	UITextView* sendField;
+	UITextField* sendField;
 	UINavigationBar *_msgBar;
+	ShellKeyboard* keyboard;
 	UITransitionView *_transitionView;
     CGRect _rect;	
 	Buddy* buddy;

@@ -52,7 +52,7 @@
 	[self setFrame:CGRectMake(0.0f, 480.0, 320.0f, 480.0f)];
 
 //	struct CGAffineTransform trans = CGAffineTransformMakeTranslation(0, -270);  I modified the below line because it made my uiprefernces table work
-	struct CGAffineTransform trans = CGAffineTransformMakeTranslation(0, -270);
+	struct CGAffineTransform trans = CGAffineTransformMakeTranslation(0, -240);
 	UITransformAnimation *translate =
 	[[UITransformAnimation alloc] initWithTarget: self];
 	[translate setStartTransform: CGAffineTransformMake(1,0,0,1,0,0)];

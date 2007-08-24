@@ -187,7 +187,7 @@ static NSRecursiveLock *lock;
 	[sheet dismiss];
 	if(EXIT)
 	{
-		sleep(3);
+		//sleep(3);
 		exit(1);
 	}
 }

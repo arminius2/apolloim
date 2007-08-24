@@ -31,18 +31,20 @@
 			[convoView setOpaque:NO];
 			[convoView setTextSize:14];
 
-			float backcomponents[4] = {0, 0, 0, 0};	  
+			float backcomponents[4] = {10, 10, 10, 10};	  
 			CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-  
-			[convoView setBackgroundColor: CGColorCreate( colorSpace, backcomponents)];
 			
 			[self addSubview:convoView];
 			_msgBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(_rect.origin.x, 360.0f, _rect.size.width, 70.0f)];			
-			sendField = [[UITextView alloc] initWithFrame:CGRectMake(_rect.origin.x, 370.0f, _rect.size.width, 40.0f)];		
-			[sendField setText:@"TEST"];c
-			[sendField setBackgroundColor: CGColorCreate( colorSpace, backcomponents)];
+			
+			sendField = [[UITextField alloc] initWithFrame:CGRectMake(_rect.origin.x, 360.0f, _rect.size.width, 40.0f)];			
+		
+			keyboard = [[ShellKeyboard alloc] initWithFrame: CGRectMake(0.0f, 240.0, 320.0f, 480.0f)];
+			[keyboard setTapDelegate:sendField];
+			//[sendField setKeyboard:keyboard];
+			//[self addSubView:keyboard];
 			[self addSubview:sendField];
-			[self addSubview:_msgBar];
+			//[self addSubview:_msgBar];
 		}
 		return self;
 	}
