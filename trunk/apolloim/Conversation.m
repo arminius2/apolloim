@@ -31,9 +31,10 @@
 			[convoView setOpaque:NO];
 			[convoView setTextSize:14];
 
-  float backcomponents[4] = {0, 0, 0, 0};	  CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+			float backcomponents[4] = {0, 0, 0, 0};	  
+			CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
   
-			setBackgroundColor: CGColorCreate( colorSpace, backcomponents)];
+			[convoView setBackgroundColor: CGColorCreate( colorSpace, backcomponents)];
 			
 			[self addSubview:convoView];
 			_msgBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(_rect.origin.x, 360.0f, _rect.size.width, 70.0f)];			
