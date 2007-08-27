@@ -7,7 +7,6 @@
 		);
 		breakpoints = (
 			FA2121440C73CC7800D6ABA1 /* MainView.m:21 */,
-			FAED4AA30C81EE9D00BA2CF8 /* Conversation.m:41 */,
 		);
 		breakpointsGroup = FA211F930C73C20C00D6ABA1 /* XCBreakpointsBucket */;
 		codeSenseManager = FA211EC60C73B73200D6ABA1 /* Code sense */;
@@ -2968,6 +2967,41 @@
 			FAED56760C828B4000BA2CF8 /* PBXTextBookmark */ = FAED56760C828B4000BA2CF8 /* PBXTextBookmark */;
 			FAED567E0C828BAE00BA2CF8 /* PBXBookmark */ = FAED567E0C828BAE00BA2CF8 /* PBXBookmark */;
 			FAED56830C828BB100BA2CF8 /* PBXTextBookmark */ = FAED56830C828BB100BA2CF8 /* PBXTextBookmark */;
+			FAED56840C828C0B00BA2CF8 /* PBXBookmark */ = FAED56840C828C0B00BA2CF8 /* PBXBookmark */;
+			FAED56870C828C2200BA2CF8 /* PBXTextBookmark */ = FAED56870C828C2200BA2CF8 /* PBXTextBookmark */;
+			FAED56880C828C2200BA2CF8 /* PBXTextBookmark */ = FAED56880C828C2200BA2CF8 /* PBXTextBookmark */;
+			FAED56890C828C2200BA2CF8 /* PBXTextBookmark */ = FAED56890C828C2200BA2CF8 /* PBXTextBookmark */;
+			FAED568C0C828CA000BA2CF8 /* PBXTextBookmark */ = FAED568C0C828CA000BA2CF8 /* PBXTextBookmark */;
+			FAED568D0C828CD600BA2CF8 /* PBXTextBookmark */ = FAED568D0C828CD600BA2CF8 /* PBXTextBookmark */;
+			FAED56900C828D0100BA2CF8 /* PBXTextBookmark */ = FAED56900C828D0100BA2CF8 /* PBXTextBookmark */;
+			FAED56930C828D8B00BA2CF8 /* PBXTextBookmark */ = FAED56930C828D8B00BA2CF8 /* PBXTextBookmark */;
+			FAED56960C828DB500BA2CF8 /* PBXTextBookmark */ = FAED56960C828DB500BA2CF8 /* PBXTextBookmark */;
+			FAED56990C828E9E00BA2CF8 /* PBXTextBookmark */ = FAED56990C828E9E00BA2CF8 /* PBXTextBookmark */;
+			FAED569C0C828EF100BA2CF8 /* PBXTextBookmark */ = FAED569C0C828EF100BA2CF8 /* PBXTextBookmark */;
+			FAED56A00C828F6100BA2CF8 /* PBXTextBookmark */ = FAED56A00C828F6100BA2CF8 /* PBXTextBookmark */;
+			FAED56A10C828F6100BA2CF8 /* PBXTextBookmark */ = FAED56A10C828F6100BA2CF8 /* PBXTextBookmark */;
+			FAED56A40C828FB700BA2CF8 /* PBXTextBookmark */ = FAED56A40C828FB700BA2CF8 /* PBXTextBookmark */;
+			FAED56A90C82906400BA2CF8 /* PBXBookmark */ = FAED56A90C82906400BA2CF8 /* PBXBookmark */;
+			FAED56AE0C82906F00BA2CF8 /* PBXTextBookmark */ = FAED56AE0C82906F00BA2CF8 /* PBXTextBookmark */;
+			FAED56B20C8291A400BA2CF8 /* PBXTextBookmark */ = FAED56B20C8291A400BA2CF8 /* PBXTextBookmark */;
+			FAED56B30C8291A400BA2CF8 /* PBXTextBookmark */ = FAED56B30C8291A400BA2CF8 /* PBXTextBookmark */;
+			FAED56B60C8292D000BA2CF8 /* PBXTextBookmark */ = FAED56B60C8292D000BA2CF8 /* PBXTextBookmark */;
+			FAED56B80C82935300BA2CF8 /* PBXBookmark */ = FAED56B80C82935300BA2CF8 /* PBXBookmark */;
+			FAED56BB0C82935E00BA2CF8 /* PBXTextBookmark */ = FAED56BB0C82935E00BA2CF8 /* PBXTextBookmark */;
+			FAED56BC0C82935E00BA2CF8 /* PBXTextBookmark */ = FAED56BC0C82935E00BA2CF8 /* PBXTextBookmark */;
+			FAED56BD0C82935E00BA2CF8 /* PBXTextBookmark */ = FAED56BD0C82935E00BA2CF8 /* PBXTextBookmark */;
+			FAED56BE0C82935E00BA2CF8 /* PBXTextBookmark */ = FAED56BE0C82935E00BA2CF8 /* PBXTextBookmark */;
+			FAED56BF0C82935E00BA2CF8 /* PBXTextBookmark */ = FAED56BF0C82935E00BA2CF8 /* PBXTextBookmark */;
+			FAED56C20C82936300BA2CF8 /* PBXTextBookmark */ = FAED56C20C82936300BA2CF8 /* PBXTextBookmark */;
+			FAED56CC0C82939000BA2CF8 /* PBXTextBookmark */ = FAED56CC0C82939000BA2CF8 /* PBXTextBookmark */;
+			FAED56CD0C82939000BA2CF8 /* PBXTextBookmark */ = FAED56CD0C82939000BA2CF8 /* PBXTextBookmark */;
+			FAED56CE0C82939000BA2CF8 /* PBXTextBookmark */ = FAED56CE0C82939000BA2CF8 /* PBXTextBookmark */;
+			FAED56D20C8293AA00BA2CF8 /* PBXTextBookmark */ = FAED56D20C8293AA00BA2CF8 /* PBXTextBookmark */;
+			FAED56D30C8293AA00BA2CF8 /* PBXTextBookmark */ = FAED56D30C8293AA00BA2CF8 /* PBXTextBookmark */;
+			FAED56D70C8293C800BA2CF8 /* PBXTextBookmark */ = FAED56D70C8293C800BA2CF8 /* PBXTextBookmark */;
+			FAED56D80C8293C800BA2CF8 /* PBXTextBookmark */ = FAED56D80C8293C800BA2CF8 /* PBXTextBookmark */;
+			FAED56D90C8293C800BA2CF8 /* PBXTextBookmark */ = FAED56D90C8293C800BA2CF8 /* PBXTextBookmark */;
+			FAED56DC0C82943800BA2CF8 /* PBXTextBookmark */ = FAED56DC0C82943800BA2CF8 /* PBXTextBookmark */;
 		};
 		sourceControlManager = FA211EC50C73B73200D6ABA1 /* Source Control */;
 		userBuildSettings = {
@@ -3030,17 +3064,17 @@
 	};
 	FA211EF10C73B87D00D6ABA1 /* BuddyView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {711, 686}}";
-			sepNavSelRange = "{760, 0}";
-			sepNavVisRect = "{{0, 0}, {711, 429}}";
-			sepNavWindowFrame = "{{50, 444}, {750, 558}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1155, 686}}";
+			sepNavSelRange = "{1194, 0}";
+			sepNavVisRect = "{{0, 209}, {1155, 477}}";
+			sepNavWindowFrame = "{{50, 396}, {1194, 606}}";
 		};
 	};
 	FA211EF20C73B87D00D6ABA1 /* BuddyView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1076, 3206}}";
-			sepNavSelRange = "{6217, 0}";
-			sepNavVisRect = "{{0, 1639}, {872, 752}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1076, 3360}}";
+			sepNavSelRange = "{1497, 0}";
+			sepNavVisRect = "{{0, 267}, {872, 752}}";
 			sepNavWindowFrame = "{{50, 121}, {911, 881}}";
 		};
 	};
@@ -3094,17 +3128,17 @@
 	};
 	FA211F050C73B90100D6ABA1 /* StartView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {711, 1246}}";
-			sepNavSelRange = "{0, 760}";
-			sepNavVisRect = "{{0, 0}, {711, 429}}";
+			sepNavIntBoundsRect = "{{0, 0}, {872, 1246}}";
+			sepNavSelRange = "{1830, 0}";
+			sepNavVisRect = "{{0, 404}, {872, 752}}";
 			sepNavWindowFrame = "{{50, 444}, {750, 558}}";
 		};
 	};
 	FA211F060C73B90100D6ABA1 /* StartView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1089, 6762}}";
-			sepNavSelRange = "{4218, 0}";
-			sepNavVisRect = "{{0, 1176}, {1089, 532}}";
+			sepNavIntBoundsRect = "{{0, 0}, {980, 6762}}";
+			sepNavSelRange = "{10973, 0}";
+			sepNavVisRect = "{{0, 4055}, {872, 752}}";
 			sepNavWindowFrame = "{{50, 177}, {1073, 825}}";
 		};
 	};
@@ -3113,7 +3147,6 @@
 		name = "Project Breakpoints";
 		objects = (
 			FA2121440C73CC7800D6ABA1 /* MainView.m:21 */,
-			FAED4AA30C81EE9D00BA2CF8 /* Conversation.m:41 */,
 		);
 	};
 	FA2121350C73CC2000D6ABA1 /* MainView.m */ = {
@@ -3179,9 +3212,9 @@
 	};
 	FA6776E90C7A6E7B00DEC8EF /* Conversation.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1106, 2324}}";
-			sepNavSelRange = "{5028, 0}";
-			sepNavVisRect = "{{0, 1593}, {848, 731}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1155, 2324}}";
+			sepNavSelRange = "{4364, 0}";
+			sepNavVisRect = "{{0, 1847}, {1155, 477}}";
 			sepNavWindowFrame = "{{50, 142}, {887, 860}}";
 		};
 	};
@@ -3364,7 +3397,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = _rect;
 		rLen = 59;
-		rLoc = 2407;
+		rLoc = 2384;
 		rType = 0;
 		vrLen = 918;
 		vrLoc = 417;
@@ -3374,7 +3407,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 87";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1070;
 		vrLoc = 2625;
@@ -3484,7 +3517,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 88";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 867;
 		vrLoc = 2822;
@@ -3574,7 +3607,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 38";
 		rLen = 0;
-		rLoc = 2580;
+		rLoc = 2557;
 		rType = 0;
 		vrLen = 1925;
 		vrLoc = 641;
@@ -3664,7 +3697,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 71";
 		rLen = 0;
-		rLoc = 3699;
+		rLoc = 3676;
 		rType = 0;
 		vrLen = 895;
 		vrLoc = 2821;
@@ -3754,7 +3787,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 38";
 		rLen = 0;
-		rLoc = 2580;
+		rLoc = 2557;
 		rType = 0;
 		vrLen = 1902;
 		vrLoc = 517;
@@ -3844,7 +3877,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 38";
 		rLen = 0;
-		rLoc = 2580;
+		rLoc = 2557;
 		rType = 0;
 		vrLen = 1902;
 		vrLoc = 517;
@@ -3934,7 +3967,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 38";
 		rLen = 0;
-		rLoc = 2580;
+		rLoc = 2557;
 		rType = 0;
 		vrLen = 1362;
 		vrLoc = 1759;
@@ -4260,7 +4293,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "[send setFrame:CGRectMake(_rect.origin.x, _rect.origin.y, 50.0f, 30.0f)];";
 		rLen = 73;
-		rLoc = 2580;
+		rLoc = 2557;
 		rType = 0;
 		vrLen = 1774;
 		vrLoc = 517;
@@ -4360,7 +4393,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 39";
 		rLen = 0;
-		rLoc = 2628;
+		rLoc = 2605;
 		rType = 0;
 		vrLen = 1782;
 		vrLoc = 517;
@@ -4460,7 +4493,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 39";
 		rLen = 0;
-		rLoc = 2628;
+		rLoc = 2605;
 		rType = 0;
 		vrLen = 1782;
 		vrLoc = 517;
@@ -4560,7 +4593,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 86";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1191;
 		vrLoc = 2211;
@@ -4660,7 +4693,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 76";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1464;
 		vrLoc = 1601;
@@ -4760,7 +4793,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 103";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1007;
 		vrLoc = 3258;
@@ -4860,7 +4893,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 90";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 855;
 		vrLoc = 2931;
@@ -4960,7 +4993,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 102";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 855;
 		vrLoc = 2931;
@@ -5060,7 +5093,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = sendField;
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 855;
 		vrLoc = 2931;
@@ -5160,7 +5193,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 66";
 		rLen = 0;
-		rLoc = 3696;
+		rLoc = 3673;
 		rType = 0;
 		vrLen = 1195;
 		vrLoc = 2211;
@@ -5260,7 +5293,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 139";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 378;
 		vrLoc = 3978;
@@ -5360,7 +5393,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 73";
 		rLen = 0;
-		rLoc = 3700;
+		rLoc = 3677;
 		rType = 0;
 		vrLen = 1449;
 		vrLoc = 1601;
@@ -5460,7 +5493,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 89";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 843;
 		vrLoc = 2867;
@@ -5560,7 +5593,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 91";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 842;
 		vrLoc = 2867;
@@ -5660,7 +5693,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 73";
 		rLen = 0;
-		rLoc = 3700;
+		rLoc = 3677;
 		rType = 0;
 		vrLen = 1014;
 		vrLoc = 2211;
@@ -5780,7 +5813,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 86";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 849;
 		vrLoc = 2662;
@@ -5860,7 +5893,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 66";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1241;
 		vrLoc = 1224;
@@ -5960,7 +5993,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 77";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 854;
 		vrLoc = 1964;
@@ -6060,7 +6093,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 77";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 854;
 		vrLoc = 1964;
@@ -6160,7 +6193,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 77";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 854;
 		vrLoc = 1964;
@@ -6240,7 +6273,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 54";
 		rLen = 0;
-		rLoc = 3720;
+		rLoc = 3697;
 		rType = 0;
 		vrLen = 990;
 		vrLoc = 1601;
@@ -6330,7 +6363,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 54";
 		rLen = 0;
-		rLoc = 3720;
+		rLoc = 3697;
 		rType = 0;
 		vrLen = 990;
 		vrLoc = 1601;
@@ -6430,7 +6463,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 54";
 		rLen = 0;
-		rLoc = 3720;
+		rLoc = 3697;
 		rType = 0;
 		vrLen = 990;
 		vrLoc = 1601;
@@ -6520,7 +6553,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 54";
 		rLen = 0;
-		rLoc = 3720;
+		rLoc = 3697;
 		rType = 0;
 		vrLen = 990;
 		vrLoc = 1601;
@@ -6600,7 +6633,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 54";
 		rLen = 0;
-		rLoc = 3720;
+		rLoc = 3697;
 		rType = 0;
 		vrLen = 990;
 		vrLoc = 1601;
@@ -6700,7 +6733,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 73";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 990;
 		vrLoc = 1601;
@@ -6790,7 +6823,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 56";
 		rLen = 0;
-		rLoc = 3862;
+		rLoc = 3839;
 		rType = 0;
 		vrLen = 1561;
 		vrLoc = 580;
@@ -6930,7 +6963,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 56";
 		rLen = 0;
-		rLoc = 3862;
+		rLoc = 3839;
 		rType = 0;
 		vrLen = 1561;
 		vrLoc = 580;
@@ -7020,7 +7053,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 42";
 		rLen = 0;
-		rLoc = 2799;
+		rLoc = 2776;
 		rType = 0;
 		vrLen = 1586;
 		vrLoc = 580;
@@ -7150,7 +7183,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 42";
 		rLen = 0;
-		rLoc = 2799;
+		rLoc = 2776;
 		rType = 0;
 		vrLen = 1586;
 		vrLoc = 580;
@@ -7250,7 +7283,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 53";
 		rLen = 0;
-		rLoc = 3110;
+		rLoc = 3087;
 		rType = 0;
 		vrLen = 1415;
 		vrLoc = 851;
@@ -7480,7 +7513,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 54";
 		rLen = 0;
-		rLoc = 3718;
+		rLoc = 3695;
 		rType = 0;
 		vrLen = 1384;
 		vrLoc = 851;
@@ -7590,7 +7623,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 71";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 860;
 		vrLoc = 1583;
@@ -7756,7 +7789,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 71";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 860;
 		vrLoc = 1583;
@@ -7970,7 +8003,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 62";
 		rLen = 0;
-		rLoc = 3827;
+		rLoc = 3804;
 		rType = 0;
 		vrLen = 1560;
 		vrLoc = 851;
@@ -8090,7 +8123,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 65";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1403;
 		vrLoc = 1120;
@@ -8200,7 +8233,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 62";
 		rLen = 0;
-		rLoc = 3827;
+		rLoc = 3804;
 		rType = 0;
 		vrLen = 1403;
 		vrLoc = 1120;
@@ -8310,7 +8343,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 55";
 		rLen = 0;
-		rLoc = 3162;
+		rLoc = 3139;
 		rType = 0;
 		vrLen = 1405;
 		vrLoc = 1120;
@@ -8430,7 +8463,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = UIImageAndTextTableCell;
 		rLen = 23;
-		rLoc = 3124;
+		rLoc = 3101;
 		rType = 0;
 		vrLen = 1403;
 		vrLoc = 1120;
@@ -8530,7 +8563,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 59";
 		rLen = 0;
-		rLoc = 3696;
+		rLoc = 3673;
 		rType = 0;
 		vrLen = 1403;
 		vrLoc = 1120;
@@ -8640,7 +8673,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 59";
 		rLen = 0;
-		rLoc = 3696;
+		rLoc = 3673;
 		rType = 0;
 		vrLen = 1403;
 		vrLoc = 1120;
@@ -8750,7 +8783,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 59";
 		rLen = 0;
-		rLoc = 3696;
+		rLoc = 3673;
 		rType = 0;
 		vrLen = 1403;
 		vrLoc = 1120;
@@ -8860,7 +8893,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 73";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1019;
 		vrLoc = 1668;
@@ -8970,7 +9003,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 73";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1019;
 		vrLoc = 1668;
@@ -9190,7 +9223,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = UIImageAndTextTableCell;
 		rLen = 23;
-		rLoc = 3124;
+		rLoc = 3101;
 		rType = 0;
 		vrLen = 1087;
 		vrLoc = 0;
@@ -9958,7 +9991,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 72";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1203;
 		vrLoc = 1403;
@@ -10090,7 +10123,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 57";
 		rLen = 0;
-		rLoc = 3351;
+		rLoc = 3328;
 		rType = 0;
 		vrLen = 1552;
 		vrLoc = 837;
@@ -10180,7 +10213,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 57";
 		rLen = 0;
-		rLoc = 3351;
+		rLoc = 3328;
 		rType = 0;
 		vrLen = 1552;
 		vrLoc = 837;
@@ -10250,7 +10283,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 57";
 		rLen = 0;
-		rLoc = 3351;
+		rLoc = 3328;
 		rType = 0;
 		vrLen = 1552;
 		vrLoc = 837;
@@ -10260,7 +10293,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 57";
 		rLen = 0;
-		rLoc = 3316;
+		rLoc = 3293;
 		rType = 0;
 		vrLen = 1551;
 		vrLoc = 837;
@@ -10420,7 +10453,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 115";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 892;
 		vrLoc = 3091;
@@ -10504,7 +10537,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 115";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 892;
 		vrLoc = 3091;
@@ -10514,7 +10547,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 115";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 906;
 		vrLoc = 3091;
@@ -10524,7 +10557,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "[[ApolloTOC sharedInstance]disconnect];";
 		rLen = 39;
-		rLoc = 11615;
+		rLoc = 11629;
 		rType = 0;
 		vrLen = 1161;
 		vrLoc = 9314;
@@ -10950,7 +10983,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 52";
 		rLen = 0;
-		rLoc = 2863;
+		rLoc = 2840;
 		rType = 0;
 		vrLen = 1855;
 		vrLoc = 574;
@@ -11020,7 +11053,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 52";
 		rLen = 0;
-		rLoc = 2863;
+		rLoc = 2840;
 		rType = 0;
 		vrLen = 1855;
 		vrLoc = 574;
@@ -11094,7 +11127,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 113";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1119;
 		vrLoc = 2894;
@@ -11164,7 +11197,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 118";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1119;
 		vrLoc = 2894;
@@ -11254,7 +11287,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 117";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1078;
 		vrLoc = 3001;
@@ -11314,7 +11347,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 117";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1099;
 		vrLoc = 3001;
@@ -11384,7 +11417,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 117";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1111;
 		vrLoc = 3001;
@@ -11454,7 +11487,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 114";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1111;
 		vrLoc = 3001;
@@ -11524,7 +11557,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 96";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 961;
 		vrLoc = 2665;
@@ -11594,7 +11627,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 96";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 961;
 		vrLoc = 2665;
@@ -11698,7 +11731,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 96";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 961;
 		vrLoc = 2665;
@@ -11770,7 +11803,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 96";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 961;
 		vrLoc = 2665;
@@ -11780,7 +11813,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 101";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 961;
 		vrLoc = 2665;
@@ -11890,7 +11923,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 101";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1592;
 		vrLoc = 421;
@@ -12008,7 +12041,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: checkForUpdates:";
 		rLen = 0;
-		rLoc = 2125;
+		rLoc = 2129;
 		rType = 0;
 		vrLen = 853;
 		vrLoc = 677;
@@ -12028,7 +12061,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "-(void)checkForUpdates:(id)anObject";
 		rLen = 35;
-		rLoc = 15479;
+		rLoc = 15493;
 		rType = 0;
 		vrLen = 1109;
 		vrLoc = 13008;
@@ -12148,7 +12181,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "-(void)checkForUpdates:(id)anObject";
 		rLen = 35;
-		rLoc = 15479;
+		rLoc = 15493;
 		rType = 0;
 		vrLen = 1109;
 		vrLoc = 13008;
@@ -12158,7 +12191,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 419";
 		rLen = 0;
-		rLoc = 16093;
+		rLoc = 16107;
 		rType = 0;
 		vrLen = 1128;
 		vrLoc = 13008;
@@ -12338,7 +12371,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 97";
 		rLen = 0;
-		rLoc = 3878;
+		rLoc = 3880;
 		rType = 0;
 		vrLen = 1335;
 		vrLoc = 1918;
@@ -12542,7 +12575,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 77";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1788;
 		vrLoc = 1338;
@@ -12642,7 +12675,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 84";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1514;
 		vrLoc = 1837;
@@ -12742,7 +12775,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 61";
 		rLen = 0;
-		rLoc = 3322;
+		rLoc = 3299;
 		rType = 0;
 		vrLen = 1514;
 		vrLoc = 1837;
@@ -12832,7 +12865,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 61";
 		rLen = 0;
-		rLoc = 3322;
+		rLoc = 3299;
 		rType = 0;
 		vrLen = 1911;
 		vrLoc = 845;
@@ -12922,7 +12955,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 44";
 		rLen = 0;
-		rLoc = 2355;
+		rLoc = 2332;
 		rType = 0;
 		vrLen = 2034;
 		vrLoc = 478;
@@ -13040,7 +13073,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 44";
 		rLen = 0;
-		rLoc = 2355;
+		rLoc = 2332;
 		rType = 0;
 		vrLen = 2034;
 		vrLoc = 478;
@@ -13110,7 +13143,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 49";
 		rLen = 0;
-		rLoc = 2715;
+		rLoc = 2692;
 		rType = 0;
 		vrLen = 2048;
 		vrLoc = 478;
@@ -13180,7 +13213,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 49";
 		rLen = 0;
-		rLoc = 2700;
+		rLoc = 2677;
 		rType = 0;
 		vrLen = 2050;
 		vrLoc = 478;
@@ -13250,7 +13283,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 49";
 		rLen = 0;
-		rLoc = 2706;
+		rLoc = 2683;
 		rType = 0;
 		vrLen = 2052;
 		vrLoc = 478;
@@ -13320,7 +13353,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 49";
 		rLen = 0;
-		rLoc = 2706;
+		rLoc = 2683;
 		rType = 0;
 		vrLen = 2052;
 		vrLoc = 478;
@@ -13384,20 +13417,6 @@
 		rType = 0;
 		vrLen = 1933;
 		vrLoc = 5075;
-	};
-	FAED4AA30C81EE9D00BA2CF8 /* Conversation.m:41 */ = {
-		isa = PBXFileBreakpoint;
-		actions = (
-		);
-		breakpointStyle = 0;
-		continueAfterActions = 0;
-		delayBeforeContinue = 0;
-		fileReference = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
-		functionName = "-initWithFrame:withBuddy:andDelegate:";
-		hitCount = 0;
-		lineNumber = 41;
-		modificationTime = 209841821.508227;
-		state = 1;
 	};
 	FAED4AA60C81EEBB00BA2CF8 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -13568,7 +13587,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 49";
 		rLen = 0;
-		rLoc = 2719;
+		rLoc = 2696;
 		rType = 0;
 		vrLen = 2052;
 		vrLoc = 478;
@@ -13648,7 +13667,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 49";
 		rLen = 0;
-		rLoc = 2706;
+		rLoc = 2683;
 		rType = 0;
 		vrLen = 2052;
 		vrLoc = 478;
@@ -13888,7 +13907,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 49";
 		rLen = 0;
-		rLoc = 2719;
+		rLoc = 2696;
 		rType = 0;
 		vrLen = 2036;
 		vrLoc = 478;
@@ -14058,7 +14077,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 49";
 		rLen = 0;
-		rLoc = 2724;
+		rLoc = 2701;
 		rType = 0;
 		vrLen = 2041;
 		vrLoc = 666;
@@ -14164,7 +14183,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 51";
 		rLen = 0;
-		rLoc = 2799;
+		rLoc = 2776;
 		rType = 0;
 		vrLen = 2073;
 		vrLoc = 666;
@@ -14244,7 +14263,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 64";
 		rLen = 0;
-		rLoc = 3795;
+		rLoc = 3772;
 		rType = 0;
 		vrLen = 2073;
 		vrLoc = 666;
@@ -14384,7 +14403,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 49";
 		rLen = 0;
-		rLoc = 2704;
+		rLoc = 2681;
 		rType = 0;
 		vrLen = 2075;
 		vrLoc = 666;
@@ -14524,7 +14543,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 97";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1281;
 		vrLoc = 2764;
@@ -14594,7 +14613,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: recvMessage:";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1281;
 		vrLoc = 2764;
@@ -14734,7 +14753,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 50";
 		rLen = 0;
-		rLoc = 2719;
+		rLoc = 2696;
 		rType = 0;
 		vrLen = 2205;
 		vrLoc = 575;
@@ -14804,7 +14823,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 50";
 		rLen = 0;
-		rLoc = 2704;
+		rLoc = 2681;
 		rType = 0;
 		vrLen = 2205;
 		vrLoc = 575;
@@ -14874,7 +14893,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 50";
 		rLen = 0;
-		rLoc = 2702;
+		rLoc = 2679;
 		rType = 0;
 		vrLen = 2205;
 		vrLoc = 575;
@@ -14944,7 +14963,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 50";
 		rLen = 0;
-		rLoc = 2702;
+		rLoc = 2679;
 		rType = 0;
 		vrLen = 2205;
 		vrLoc = 575;
@@ -15014,7 +15033,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 50";
 		rLen = 0;
-		rLoc = 2719;
+		rLoc = 2696;
 		rType = 0;
 		vrLen = 2205;
 		vrLoc = 575;
@@ -15084,7 +15103,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 50";
 		rLen = 0;
-		rLoc = 2726;
+		rLoc = 2703;
 		rType = 0;
 		vrLen = 2205;
 		vrLoc = 575;
@@ -15154,7 +15173,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 50";
 		rLen = 0;
-		rLoc = 2719;
+		rLoc = 2696;
 		rType = 0;
 		vrLen = 2205;
 		vrLoc = 575;
@@ -15224,7 +15243,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 71";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1898;
 		vrLoc = 1369;
@@ -15294,7 +15313,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 65";
 		rLen = 0;
-		rLoc = 3729;
+		rLoc = 3706;
 		rType = 0;
 		vrLen = 1835;
 		vrLoc = 1301;
@@ -15358,7 +15377,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 389";
 		rLen = 0;
-		rLoc = 14656;
+		rLoc = 14670;
 		rType = 0;
 		vrLen = 1014;
 		vrLoc = 12643;
@@ -15368,7 +15387,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 65";
 		rLen = 0;
-		rLoc = 3729;
+		rLoc = 3706;
 		rType = 0;
 		vrLen = 1835;
 		vrLoc = 1301;
@@ -15378,7 +15397,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 65";
 		rLen = 0;
-		rLoc = 3729;
+		rLoc = 3706;
 		rType = 0;
 		vrLen = 2132;
 		vrLoc = 666;
@@ -15438,7 +15457,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 389";
 		rLen = 0;
-		rLoc = 14656;
+		rLoc = 14670;
 		rType = 0;
 		vrLen = 1014;
 		vrLoc = 12643;
@@ -15448,7 +15467,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 65";
 		rLen = 0;
-		rLoc = 3729;
+		rLoc = 3706;
 		rType = 0;
 		vrLen = 2132;
 		vrLoc = 666;
@@ -15498,7 +15517,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 65";
 		rLen = 0;
-		rLoc = 3729;
+		rLoc = 3706;
 		rType = 0;
 		vrLen = 2132;
 		vrLoc = 666;
@@ -15508,7 +15527,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 96";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1211;
 		vrLoc = 2270;
@@ -15518,7 +15537,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 389";
 		rLen = 0;
-		rLoc = 14656;
+		rLoc = 14670;
 		rType = 0;
 		vrLen = 1014;
 		vrLoc = 12643;
@@ -15592,7 +15611,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 389";
 		rLen = 0;
-		rLoc = 14656;
+		rLoc = 14670;
 		rType = 0;
 		vrLen = 1014;
 		vrLoc = 12643;
@@ -15666,7 +15685,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 76";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1569;
 		vrLoc = 1731;
@@ -15676,7 +15695,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 389";
 		rLen = 0;
-		rLoc = 14656;
+		rLoc = 14670;
 		rType = 0;
 		vrLen = 1014;
 		vrLoc = 12643;
@@ -15736,7 +15755,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 70";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1571;
 		vrLoc = 1731;
@@ -15746,7 +15765,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 389";
 		rLen = 0;
-		rLoc = 14656;
+		rLoc = 14670;
 		rType = 0;
 		vrLen = 1014;
 		vrLoc = 12643;
@@ -15816,7 +15835,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 70";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1571;
 		vrLoc = 1731;
@@ -15826,7 +15845,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 389";
 		rLen = 0;
-		rLoc = 14656;
+		rLoc = 14670;
 		rType = 0;
 		vrLen = 1014;
 		vrLoc = 12643;
@@ -15906,7 +15925,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 389";
 		rLen = 0;
-		rLoc = 14656;
+		rLoc = 14670;
 		rType = 0;
 		vrLen = 1014;
 		vrLoc = 12643;
@@ -15916,7 +15935,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 70";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1571;
 		vrLoc = 1731;
@@ -15976,7 +15995,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 70";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1805;
 		vrLoc = 1300;
@@ -15986,7 +16005,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 389";
 		rLen = 0;
-		rLoc = 14656;
+		rLoc = 14670;
 		rType = 0;
 		vrLen = 1014;
 		vrLoc = 12643;
@@ -16056,7 +16075,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 70";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1452;
 		vrLoc = 1880;
@@ -16076,7 +16095,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 389";
 		rLen = 0;
-		rLoc = 14656;
+		rLoc = 14670;
 		rType = 0;
 		vrLen = 1014;
 		vrLoc = 12643;
@@ -16146,7 +16165,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 70";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 2143;
 		vrLoc = 478;
@@ -16156,7 +16175,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 389";
 		rLen = 0;
-		rLoc = 14656;
+		rLoc = 14670;
 		rType = 0;
 		vrLen = 1014;
 		vrLoc = 12643;
@@ -16226,7 +16245,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 70";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 2143;
 		vrLoc = 478;
@@ -16236,7 +16255,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 389";
 		rLen = 0;
-		rLoc = 14656;
+		rLoc = 14670;
 		rType = 0;
 		vrLen = 1014;
 		vrLoc = 12643;
@@ -16296,7 +16315,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 63";
 		rLen = 0;
-		rLoc = 3306;
+		rLoc = 3283;
 		rType = 0;
 		vrLen = 2143;
 		vrLoc = 478;
@@ -16316,7 +16335,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 389";
 		rLen = 0;
-		rLoc = 14656;
+		rLoc = 14670;
 		rType = 0;
 		vrLen = 1014;
 		vrLoc = 12643;
@@ -16386,7 +16405,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 389";
 		rLen = 0;
-		rLoc = 14656;
+		rLoc = 14670;
 		rType = 0;
 		vrLen = 1014;
 		vrLoc = 12643;
@@ -16446,7 +16465,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 63";
 		rLen = 0;
-		rLoc = 3306;
+		rLoc = 3283;
 		rType = 0;
 		vrLen = 2143;
 		vrLoc = 478;
@@ -16466,7 +16485,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 389";
 		rLen = 0;
-		rLoc = 14656;
+		rLoc = 14670;
 		rType = 0;
 		vrLen = 1014;
 		vrLoc = 12643;
@@ -16526,7 +16545,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 63";
 		rLen = 0;
-		rLoc = 3306;
+		rLoc = 3283;
 		rType = 0;
 		vrLen = 2143;
 		vrLoc = 478;
@@ -16612,7 +16631,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 389";
 		rLen = 0;
-		rLoc = 14656;
+		rLoc = 14670;
 		rType = 0;
 		vrLen = 1172;
 		vrLoc = 11680;
@@ -16692,7 +16711,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 389";
 		rLen = 0;
-		rLoc = 14656;
+		rLoc = 14670;
 		rType = 0;
 		vrLen = 1172;
 		vrLoc = 11680;
@@ -16742,7 +16761,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 49";
 		rLen = 0;
-		rLoc = 2574;
+		rLoc = 2551;
 		rType = 0;
 		vrLen = 2312;
 		vrLoc = 574;
@@ -16772,7 +16791,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 389";
 		rLen = 0;
-		rLoc = 14656;
+		rLoc = 14670;
 		rType = 0;
 		vrLen = 1172;
 		vrLoc = 11680;
@@ -17796,7 +17815,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 182";
 		rLen = 0;
-		rLoc = 6713;
+		rLoc = 6715;
 		rType = 0;
 		vrLen = 1166;
 		vrLoc = 5281;
@@ -17826,7 +17845,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 182";
 		rLen = 0;
-		rLoc = 6713;
+		rLoc = 6715;
 		rType = 0;
 		vrLen = 1166;
 		vrLoc = 5281;
@@ -17836,7 +17855,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 182";
 		rLen = 0;
-		rLoc = 6713;
+		rLoc = 6715;
 		rType = 0;
 		vrLen = 1166;
 		vrLoc = 5281;
@@ -18356,7 +18375,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 394";
 		rLen = 0;
-		rLoc = 14760;
+		rLoc = 14774;
 		rType = 0;
 		vrLen = 867;
 		vrLoc = 12958;
@@ -18386,7 +18405,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 192";
 		rLen = 0;
-		rLoc = 7083;
+		rLoc = 7085;
 		rType = 0;
 		vrLen = 770;
 		vrLoc = 5965;
@@ -18416,7 +18435,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 192";
 		rLen = 0;
-		rLoc = 7083;
+		rLoc = 7085;
 		rType = 0;
 		vrLen = 770;
 		vrLoc = 5965;
@@ -18426,7 +18445,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 192";
 		rLen = 0;
-		rLoc = 7083;
+		rLoc = 7085;
 		rType = 0;
 		vrLen = 770;
 		vrLoc = 5965;
@@ -18556,7 +18575,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 187";
 		rLen = 0;
-		rLoc = 7082;
+		rLoc = 7084;
 		rType = 0;
 		vrLen = 927;
 		vrLoc = 5503;
@@ -18590,7 +18609,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 187";
 		rLen = 0;
-		rLoc = 7082;
+		rLoc = 7084;
 		rType = 0;
 		vrLen = 927;
 		vrLoc = 5503;
@@ -18600,7 +18619,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 162";
 		rLen = 0;
-		rLoc = 5316;
+		rLoc = 5347;
 		rType = 0;
 		vrLen = 857;
 		vrLoc = 3099;
@@ -18620,7 +18639,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 187";
 		rLen = 0;
-		rLoc = 7082;
+		rLoc = 7084;
 		rType = 0;
 		vrLen = 927;
 		vrLoc = 5503;
@@ -18630,7 +18649,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 162";
 		rLen = 0;
-		rLoc = 5316;
+		rLoc = 5347;
 		rType = 0;
 		vrLen = 857;
 		vrLoc = 3099;
@@ -18704,7 +18723,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 148";
 		rLen = 0;
-		rLoc = 4467;
+		rLoc = 4498;
 		rType = 0;
 		vrLen = 773;
 		vrLoc = 3183;
@@ -18734,7 +18753,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 148";
 		rLen = 0;
-		rLoc = 4424;
+		rLoc = 4455;
 		rType = 0;
 		vrLen = 781;
 		vrLoc = 3183;
@@ -18764,7 +18783,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 162";
 		rLen = 0;
-		rLoc = 5299;
+		rLoc = 5330;
 		rType = 0;
 		vrLen = 1145;
 		vrLoc = 3598;
@@ -18794,7 +18813,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 148";
 		rLen = 0;
-		rLoc = 4423;
+		rLoc = 4454;
 		rType = 0;
 		vrLen = 1230;
 		vrLoc = 3474;
@@ -18824,7 +18843,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = incrementMessages;
 		rLen = 17;
-		rLoc = 4450;
+		rLoc = 4481;
 		rType = 0;
 		vrLen = 1241;
 		vrLoc = 3474;
@@ -18854,7 +18873,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: setDelegate:";
 		rLen = 0;
-		rLoc = 5529;
+		rLoc = 5560;
 		rType = 0;
 		vrLen = 1055;
 		vrLoc = 3960;
@@ -18884,7 +18903,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 162";
 		rLen = 0;
-		rLoc = 5318;
+		rLoc = 5349;
 		rType = 0;
 		vrLen = 1169;
 		vrLoc = 3615;
@@ -18918,7 +18937,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 149";
 		rLen = 0;
-		rLoc = 4514;
+		rLoc = 4545;
 		rType = 0;
 		vrLen = 1277;
 		vrLoc = 3356;
@@ -18928,7 +18947,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 149";
 		rLen = 0;
-		rLoc = 4514;
+		rLoc = 4545;
 		rType = 0;
 		vrLen = 1277;
 		vrLoc = 3356;
@@ -18938,7 +18957,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 164";
 		rLen = 0;
-		rLoc = 6073;
+		rLoc = 6075;
 		rType = 0;
 		vrLen = 1175;
 		vrLoc = 4918;
@@ -18968,7 +18987,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 169";
 		rLen = 0;
-		rLoc = 6261;
+		rLoc = 6263;
 		rType = 0;
 		vrLen = 1175;
 		vrLoc = 4918;
@@ -18998,7 +19017,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = receiveMessage;
 		rLen = 14;
-		rLoc = 6466;
+		rLoc = 6468;
 		rType = 0;
 		vrLen = 1061;
 		vrLoc = 6496;
@@ -19028,7 +19047,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 214";
 		rLen = 0;
-		rLoc = 7934;
+		rLoc = 7936;
 		rType = 0;
 		vrLen = 1059;
 		vrLoc = 6496;
@@ -19058,7 +19077,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 201";
 		rLen = 0;
-		rLoc = 7301;
+		rLoc = 7303;
 		rType = 0;
 		vrLen = 779;
 		vrLoc = 6172;
@@ -19092,7 +19111,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 201";
 		rLen = 0;
-		rLoc = 7301;
+		rLoc = 7303;
 		rType = 0;
 		vrLen = 779;
 		vrLoc = 6172;
@@ -19102,7 +19121,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 201";
 		rLen = 0;
-		rLoc = 7301;
+		rLoc = 7303;
 		rType = 0;
 		vrLen = 779;
 		vrLoc = 6172;
@@ -19162,7 +19181,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 162";
 		rLen = 0;
-		rLoc = 5291;
+		rLoc = 5322;
 		rType = 0;
 		vrLen = 1158;
 		vrLoc = 3598;
@@ -19250,7 +19269,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 162";
 		rLen = 0;
-		rLoc = 5299;
+		rLoc = 5330;
 		rType = 0;
 		vrLen = 1144;
 		vrLoc = 3598;
@@ -19402,7 +19421,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 162";
 		rLen = 0;
-		rLoc = 5299;
+		rLoc = 5330;
 		rType = 0;
 		vrLen = 919;
 		vrLoc = 1627;
@@ -19470,7 +19489,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 201";
 		rLen = 0;
-		rLoc = 7301;
+		rLoc = 7303;
 		rType = 0;
 		vrLen = 1255;
 		vrLoc = 5041;
@@ -19510,7 +19529,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 201";
 		rLen = 0;
-		rLoc = 7301;
+		rLoc = 7303;
 		rType = 0;
 		vrLen = 1255;
 		vrLoc = 5041;
@@ -19557,7 +19576,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 201";
 		rLen = 0;
-		rLoc = 7301;
+		rLoc = 7303;
 		rType = 0;
 		vrLen = 1255;
 		vrLoc = 5041;
@@ -19657,7 +19676,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 201";
 		rLen = 0;
-		rLoc = 7301;
+		rLoc = 7303;
 		rType = 0;
 		vrLen = 1255;
 		vrLoc = 5041;
@@ -19727,7 +19746,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 201";
 		rLen = 0;
-		rLoc = 7301;
+		rLoc = 7303;
 		rType = 0;
 		vrLen = 1255;
 		vrLoc = 5041;
@@ -19787,7 +19806,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 201";
 		rLen = 0;
-		rLoc = 7301;
+		rLoc = 7303;
 		rType = 0;
 		vrLen = 1255;
 		vrLoc = 5041;
@@ -19827,7 +19846,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 201";
 		rLen = 0;
-		rLoc = 7301;
+		rLoc = 7303;
 		rType = 0;
 		vrLen = 1255;
 		vrLoc = 5041;
@@ -19837,7 +19856,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 178";
 		rLen = 0;
-		rLoc = 6626;
+		rLoc = 6628;
 		rType = 0;
 		vrLen = 1257;
 		vrLoc = 5041;
@@ -19907,7 +19926,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 178";
 		rLen = 0;
-		rLoc = 6626;
+		rLoc = 6628;
 		rType = 0;
 		vrLen = 1257;
 		vrLoc = 5041;
@@ -19947,7 +19966,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 178";
 		rLen = 0;
-		rLoc = 6626;
+		rLoc = 6628;
 		rType = 0;
 		vrLen = 1257;
 		vrLoc = 5041;
@@ -19986,7 +20005,7 @@
 		isa = PBXTextBookmark;
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		rLen = 5;
-		rLoc = 3105;
+		rLoc = 3136;
 		rType = 0;
 	};
 	FAED4EFA0C8254B900BA2CF8 /* PBXTextBookmark */ = {
@@ -20004,7 +20023,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 98";
 		rLen = 0;
-		rLoc = 3058;
+		rLoc = 3089;
 		rType = 0;
 		vrLen = 837;
 		vrLoc = 2078;
@@ -20024,7 +20043,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 178";
 		rLen = 0;
-		rLoc = 6626;
+		rLoc = 6628;
 		rType = 0;
 		vrLen = 1257;
 		vrLoc = 5041;
@@ -20102,7 +20121,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 178";
 		rLen = 0;
-		rLoc = 6626;
+		rLoc = 6628;
 		rType = 0;
 		vrLen = 1257;
 		vrLoc = 5041;
@@ -20130,7 +20149,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 49";
 		rLen = 0;
-		rLoc = 2504;
+		rLoc = 2481;
 		rType = 0;
 		vrLen = 1757;
 		vrLoc = 722;
@@ -20180,7 +20199,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 178";
 		rLen = 0;
-		rLoc = 6626;
+		rLoc = 6628;
 		rType = 0;
 		vrLen = 1257;
 		vrLoc = 5041;
@@ -20220,7 +20239,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "- (BOOL)respondsToSelector:(SEL)aSelector";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 883;
 		vrLoc = 3472;
@@ -20250,7 +20269,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 178";
 		rLen = 0;
-		rLoc = 6626;
+		rLoc = 6628;
 		rType = 0;
 		vrLen = 1257;
 		vrLoc = 5041;
@@ -20284,7 +20303,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -20328,7 +20347,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "- (BOOL)respondsToSelector:(SEL)aSelector";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 883;
 		vrLoc = 3472;
@@ -20348,7 +20367,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 178";
 		rLen = 0;
-		rLoc = 6626;
+		rLoc = 6628;
 		rType = 0;
 		vrLen = 1257;
 		vrLoc = 5041;
@@ -20368,7 +20387,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 49";
 		rLen = 0;
-		rLoc = 2488;
+		rLoc = 2465;
 		rType = 0;
 		vrLen = 1338;
 		vrLoc = 1635;
@@ -20378,7 +20397,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -20428,7 +20447,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 178";
 		rLen = 0;
-		rLoc = 6626;
+		rLoc = 6628;
 		rType = 0;
 		vrLen = 1257;
 		vrLoc = 5041;
@@ -20462,7 +20481,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 49";
 		rLen = 0;
-		rLoc = 2488;
+		rLoc = 2465;
 		rType = 0;
 		vrLen = 1338;
 		vrLoc = 1635;
@@ -20472,7 +20491,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -20522,7 +20541,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 178";
 		rLen = 0;
-		rLoc = 6626;
+		rLoc = 6628;
 		rType = 0;
 		vrLen = 1257;
 		vrLoc = 5041;
@@ -20542,7 +20561,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 178";
 		rLen = 0;
-		rLoc = 6626;
+		rLoc = 6628;
 		rType = 0;
 		vrLen = 1257;
 		vrLoc = 5041;
@@ -20552,7 +20571,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 218";
 		rLen = 0;
-		rLoc = 8005;
+		rLoc = 8007;
 		rType = 0;
 		vrLen = 2030;
 		vrLoc = 5687;
@@ -20572,7 +20591,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 49";
 		rLen = 0;
-		rLoc = 2488;
+		rLoc = 2465;
 		rType = 0;
 		vrLen = 1338;
 		vrLoc = 1635;
@@ -20582,7 +20601,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -20646,7 +20665,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 98";
 		rLen = 0;
-		rLoc = 3058;
+		rLoc = 3089;
 		rType = 0;
 		vrLen = 837;
 		vrLoc = 2078;
@@ -20666,7 +20685,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 218";
 		rLen = 0;
-		rLoc = 8005;
+		rLoc = 8007;
 		rType = 0;
 		vrLen = 2030;
 		vrLoc = 5687;
@@ -20686,7 +20705,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 49";
 		rLen = 0;
-		rLoc = 2488;
+		rLoc = 2465;
 		rType = 0;
 		vrLen = 1338;
 		vrLoc = 1635;
@@ -20696,7 +20715,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -20790,7 +20809,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 49";
 		rLen = 0;
-		rLoc = 2488;
+		rLoc = 2465;
 		rType = 0;
 		vrLen = 1338;
 		vrLoc = 1635;
@@ -20800,7 +20819,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -20864,7 +20883,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -20904,7 +20923,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 49";
 		rLen = 0;
-		rLoc = 2488;
+		rLoc = 2465;
 		rType = 0;
 		vrLen = 1338;
 		vrLoc = 1635;
@@ -20914,7 +20933,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -20974,7 +20993,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -21014,7 +21033,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 49";
 		rLen = 0;
-		rLoc = 2488;
+		rLoc = 2465;
 		rType = 0;
 		vrLen = 1338;
 		vrLoc = 1635;
@@ -21024,7 +21043,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -21104,7 +21123,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -21134,7 +21153,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 49";
 		rLen = 0;
-		rLoc = 2488;
+		rLoc = 2465;
 		rType = 0;
 		vrLen = 1338;
 		vrLoc = 1635;
@@ -21144,7 +21163,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -21224,7 +21243,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -21254,7 +21273,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 49";
 		rLen = 0;
-		rLoc = 2488;
+		rLoc = 2465;
 		rType = 0;
 		vrLen = 1338;
 		vrLoc = 1635;
@@ -21264,7 +21283,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -21324,7 +21343,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 98";
 		rLen = 0;
-		rLoc = 3058;
+		rLoc = 3089;
 		rType = 0;
 		vrLen = 837;
 		vrLoc = 2078;
@@ -21344,7 +21363,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "Account Editor";
 		rLen = 10;
-		rLoc = 10871;
+		rLoc = 10873;
 		rType = 0;
 		vrLen = 1756;
 		vrLoc = 8284;
@@ -21390,7 +21409,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -21420,7 +21439,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 49";
 		rLen = 0;
-		rLoc = 2488;
+		rLoc = 2465;
 		rType = 0;
 		vrLen = 1338;
 		vrLoc = 1635;
@@ -21430,7 +21449,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -21490,7 +21509,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 241";
 		rLen = 0;
-		rLoc = 8928;
+		rLoc = 8930;
 		rType = 0;
 		vrLen = 2024;
 		vrLoc = 6446;
@@ -21510,7 +21529,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -21540,7 +21559,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 49";
 		rLen = 0;
-		rLoc = 2488;
+		rLoc = 2465;
 		rType = 0;
 		vrLen = 1338;
 		vrLoc = 1635;
@@ -21550,7 +21569,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -21610,7 +21629,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 241";
 		rLen = 0;
-		rLoc = 8928;
+		rLoc = 8930;
 		rType = 0;
 		vrLen = 2024;
 		vrLoc = 6446;
@@ -21630,7 +21649,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -21660,7 +21679,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 49";
 		rLen = 0;
-		rLoc = 2488;
+		rLoc = 2465;
 		rType = 0;
 		vrLen = 1338;
 		vrLoc = 1635;
@@ -21670,7 +21689,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -21750,7 +21769,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -21780,7 +21799,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 49";
 		rLen = 0;
-		rLoc = 2488;
+		rLoc = 2465;
 		rType = 0;
 		vrLen = 1338;
 		vrLoc = 1635;
@@ -21790,7 +21809,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -21878,7 +21897,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 76";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1542;
 		vrLoc = 478;
@@ -21908,7 +21927,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -21938,7 +21957,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -22018,7 +22037,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 76";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1542;
 		vrLoc = 478;
@@ -22048,7 +22067,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -22078,7 +22097,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -22162,7 +22181,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 76";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1542;
 		vrLoc = 478;
@@ -22192,7 +22211,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -22222,7 +22241,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -22282,7 +22301,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 76";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1542;
 		vrLoc = 478;
@@ -22352,7 +22371,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -22382,7 +22401,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -22492,7 +22511,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -22522,7 +22541,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -22622,7 +22641,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -22652,7 +22671,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -22702,7 +22721,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "- (void)navigationBar:(UINavigationBar *)navbar buttonClicked:(int)button";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1403;
 		vrLoc = 3527;
@@ -22752,7 +22771,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -22782,7 +22801,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -22832,7 +22851,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 135";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1403;
 		vrLoc = 3527;
@@ -22872,7 +22891,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -22902,7 +22921,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -22952,7 +22971,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 135";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1403;
 		vrLoc = 3527;
@@ -22962,7 +22981,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 50";
 		rLen = 0;
-		rLoc = 2261;
+		rLoc = 2238;
 		rType = 0;
 		vrLen = 2700;
 		vrLoc = 543;
@@ -23002,7 +23021,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -23032,7 +23051,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -23082,7 +23101,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 73";
 		rLen = 0;
-		rLoc = 3365;
+		rLoc = 3342;
 		rType = 0;
 		vrLen = 2072;
 		vrLoc = 1721;
@@ -23122,7 +23141,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -23152,7 +23171,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -23202,7 +23221,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 96";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 2095;
 		vrLoc = 1721;
@@ -23242,7 +23261,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -23272,7 +23291,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -23322,7 +23341,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 96";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 2096;
 		vrLoc = 1721;
@@ -23362,7 +23381,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -23392,7 +23411,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -23442,7 +23461,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 87";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 2100;
 		vrLoc = 1721;
@@ -23482,7 +23501,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -23512,7 +23531,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -23562,7 +23581,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 79";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 2612;
 		vrLoc = 668;
@@ -23602,7 +23621,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -23632,7 +23651,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -23722,7 +23741,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -23752,7 +23771,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -23842,7 +23861,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -23872,7 +23891,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -23962,7 +23981,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -23992,7 +24011,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -24042,7 +24061,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 78";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 2608;
 		vrLoc = 668;
@@ -24082,7 +24101,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -24112,7 +24131,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -24162,7 +24181,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 71";
 		rLen = 0;
-		rLoc = 3633;
+		rLoc = 3610;
 		rType = 0;
 		vrLen = 2624;
 		vrLoc = 668;
@@ -24202,7 +24221,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -24232,7 +24251,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -24282,7 +24301,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 71";
 		rLen = 0;
-		rLoc = 3633;
+		rLoc = 3610;
 		rType = 0;
 		vrLen = 2621;
 		vrLoc = 668;
@@ -24322,7 +24341,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -24352,7 +24371,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -24402,7 +24421,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 87";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1574;
 		vrLoc = 3024;
@@ -24442,7 +24461,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -24472,7 +24491,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -24522,7 +24541,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 87";
 		rLen = 0;
-		rLoc = 3892;
+		rLoc = 3869;
 		rType = 0;
 		vrLen = 1574;
 		vrLoc = 3024;
@@ -24562,7 +24581,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -24592,7 +24611,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -24642,7 +24661,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 77";
 		rLen = 0;
-		rLoc = 3866;
+		rLoc = 3843;
 		rType = 0;
 		vrLen = 1578;
 		vrLoc = 3024;
@@ -24682,7 +24701,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -24712,7 +24731,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -24776,7 +24795,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 68";
 		rLen = 0;
-		rLoc = 3452;
+		rLoc = 3429;
 		rType = 0;
 		vrLen = 1572;
 		vrLoc = 3221;
@@ -24816,7 +24835,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -24846,7 +24865,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -24906,7 +24925,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 68";
 		rLen = 0;
-		rLoc = 3452;
+		rLoc = 3429;
 		rType = 0;
 		vrLen = 1572;
 		vrLoc = 3221;
@@ -24946,7 +24965,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -24976,7 +24995,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -25026,7 +25045,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 68";
 		rLen = 0;
-		rLoc = 3452;
+		rLoc = 3429;
 		rType = 0;
 		vrLen = 1572;
 		vrLoc = 3221;
@@ -25036,7 +25055,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 74";
 		rLen = 0;
-		rLoc = 3762;
+		rLoc = 3739;
 		rType = 0;
 		vrLen = 2598;
 		vrLoc = 959;
@@ -25076,7 +25095,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -25106,7 +25125,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -25156,7 +25175,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 74";
 		rLen = 0;
-		rLoc = 3762;
+		rLoc = 3739;
 		rType = 0;
 		vrLen = 2598;
 		vrLoc = 959;
@@ -25196,7 +25215,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -25226,7 +25245,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -25276,7 +25295,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 74";
 		rLen = 0;
-		rLoc = 3762;
+		rLoc = 3739;
 		rType = 0;
 		vrLen = 2598;
 		vrLoc = 959;
@@ -25316,7 +25335,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -25346,7 +25365,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -25396,7 +25415,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 74";
 		rLen = 0;
-		rLoc = 3762;
+		rLoc = 3739;
 		rType = 0;
 		vrLen = 2598;
 		vrLoc = 959;
@@ -25436,7 +25455,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -25466,7 +25485,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -25530,7 +25549,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 72";
 		rLen = 0;
-		rLoc = 3670;
+		rLoc = 3647;
 		rType = 0;
 		vrLen = 2623;
 		vrLoc = 959;
@@ -25570,7 +25589,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -25600,7 +25619,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -25660,7 +25679,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 72";
 		rLen = 0;
-		rLoc = 3670;
+		rLoc = 3647;
 		rType = 0;
 		vrLen = 2623;
 		vrLoc = 959;
@@ -25700,7 +25719,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -25730,7 +25749,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -25844,7 +25863,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 72";
 		rLen = 0;
-		rLoc = 3670;
+		rLoc = 3647;
 		rType = 0;
 		vrLen = 2623;
 		vrLoc = 959;
@@ -25884,7 +25903,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -25904,7 +25923,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -25924,7 +25943,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: navtitle";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1198;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -25934,7 +25953,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: 61";
 		rLen = 268;
-		rLoc = 2150;
+		rLoc = 2154;
 		rType = 0;
 		vrLen = 767;
 		vrLoc = 995;
@@ -25974,7 +25993,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 72";
 		rLen = 0;
-		rLoc = 3670;
+		rLoc = 3647;
 		rType = 0;
 		vrLen = 2623;
 		vrLoc = 959;
@@ -26024,7 +26043,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -26044,7 +26063,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: 61";
 		rLen = 268;
-		rLoc = 2150;
+		rLoc = 2154;
 		rType = 0;
 		vrLen = 767;
 		vrLoc = 995;
@@ -26084,7 +26103,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 72";
 		rLen = 0;
-		rLoc = 3670;
+		rLoc = 3647;
 		rType = 0;
 		vrLen = 2623;
 		vrLoc = 959;
@@ -26134,7 +26153,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -26198,7 +26217,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 72";
 		rLen = 0;
-		rLoc = 3670;
+		rLoc = 3647;
 		rType = 0;
 		vrLen = 2623;
 		vrLoc = 959;
@@ -26248,7 +26267,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -26272,7 +26291,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 181";
 		rLen = 0;
-		rLoc = 6777;
+		rLoc = 6779;
 		rType = 0;
 		vrLen = 1581;
 		vrLoc = 4822;
@@ -26332,7 +26351,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 72";
 		rLen = 0;
-		rLoc = 3670;
+		rLoc = 3647;
 		rType = 0;
 		vrLen = 2623;
 		vrLoc = 959;
@@ -26382,7 +26401,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -26402,7 +26421,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 181";
 		rLen = 0;
-		rLoc = 6777;
+		rLoc = 6779;
 		rType = 0;
 		vrLen = 1581;
 		vrLoc = 4822;
@@ -26412,7 +26431,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 181";
 		rLen = 0;
-		rLoc = 6877;
+		rLoc = 6879;
 		rType = 0;
 		vrLen = 1568;
 		vrLoc = 5131;
@@ -26462,7 +26481,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 72";
 		rLen = 0;
-		rLoc = 3670;
+		rLoc = 3647;
 		rType = 0;
 		vrLen = 2623;
 		vrLoc = 959;
@@ -26512,7 +26531,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -26546,7 +26565,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 181";
 		rLen = 0;
-		rLoc = 6877;
+		rLoc = 6879;
 		rType = 0;
 		vrLen = 1568;
 		vrLoc = 5131;
@@ -26586,7 +26605,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 72";
 		rLen = 0;
-		rLoc = 3670;
+		rLoc = 3647;
 		rType = 0;
 		vrLen = 2623;
 		vrLoc = 959;
@@ -26636,7 +26655,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -26666,7 +26685,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 181";
 		rLen = 0;
-		rLoc = 6877;
+		rLoc = 6879;
 		rType = 0;
 		vrLen = 1568;
 		vrLoc = 5131;
@@ -26706,7 +26725,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 72";
 		rLen = 0;
-		rLoc = 3670;
+		rLoc = 3647;
 		rType = 0;
 		vrLen = 2623;
 		vrLoc = 959;
@@ -26756,7 +26775,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -26800,7 +26819,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 181";
 		rLen = 0;
-		rLoc = 6877;
+		rLoc = 6879;
 		rType = 0;
 		vrLen = 1568;
 		vrLoc = 5131;
@@ -26840,7 +26859,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 72";
 		rLen = 0;
-		rLoc = 3670;
+		rLoc = 3647;
 		rType = 0;
 		vrLen = 2623;
 		vrLoc = 959;
@@ -26890,7 +26909,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -26910,7 +26929,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 72";
 		rLen = 0;
-		rLoc = 3670;
+		rLoc = 3647;
 		rType = 0;
 		vrLen = 2623;
 		vrLoc = 959;
@@ -26920,7 +26939,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 146";
 		rLen = 0;
-		rLoc = 5590;
+		rLoc = 5579;
 		rType = 0;
 		vrLen = 1269;
 		vrLoc = 3808;
@@ -26950,7 +26969,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 181";
 		rLen = 0;
-		rLoc = 6877;
+		rLoc = 6879;
 		rType = 0;
 		vrLen = 1568;
 		vrLoc = 5131;
@@ -27030,7 +27049,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -27070,7 +27089,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 146";
 		rLen = 0;
-		rLoc = 5590;
+		rLoc = 5579;
 		rType = 0;
 		vrLen = 1269;
 		vrLoc = 3808;
@@ -27090,7 +27109,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 181";
 		rLen = 0;
-		rLoc = 6877;
+		rLoc = 6879;
 		rType = 0;
 		vrLen = 1568;
 		vrLoc = 5131;
@@ -27160,7 +27179,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -27200,7 +27219,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 146";
 		rLen = 0;
-		rLoc = 5590;
+		rLoc = 5579;
 		rType = 0;
 		vrLen = 1269;
 		vrLoc = 3808;
@@ -27220,7 +27239,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 181";
 		rLen = 0;
-		rLoc = 6877;
+		rLoc = 6879;
 		rType = 0;
 		vrLen = 1568;
 		vrLoc = 5131;
@@ -27290,7 +27309,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -27310,7 +27329,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 70";
 		rLen = 0;
-		rLoc = 3524;
+		rLoc = 3501;
 		rType = 0;
 		vrLen = 2471;
 		vrLoc = 1316;
@@ -27350,7 +27369,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 181";
 		rLen = 0;
-		rLoc = 6877;
+		rLoc = 6879;
 		rType = 0;
 		vrLen = 1568;
 		vrLoc = 5131;
@@ -27420,7 +27439,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -27440,7 +27459,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 70";
 		rLen = 0;
-		rLoc = 3524;
+		rLoc = 3501;
 		rType = 0;
 		vrLen = 2471;
 		vrLoc = 1316;
@@ -27480,7 +27499,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 181";
 		rLen = 0;
-		rLoc = 6877;
+		rLoc = 6879;
 		rType = 0;
 		vrLen = 1568;
 		vrLoc = 5131;
@@ -27550,7 +27569,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -27570,7 +27589,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 57";
 		rLen = 0;
-		rLoc = 2863;
+		rLoc = 2840;
 		rType = 0;
 		vrLen = 2203;
 		vrLoc = 0;
@@ -27600,7 +27619,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 181";
 		rLen = 0;
-		rLoc = 6877;
+		rLoc = 6879;
 		rType = 0;
 		vrLen = 1568;
 		vrLoc = 5131;
@@ -27670,7 +27689,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -27698,7 +27717,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 181";
 		rLen = 0;
-		rLoc = 6877;
+		rLoc = 6879;
 		rType = 0;
 		vrLen = 1568;
 		vrLoc = 5131;
@@ -27708,7 +27727,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 298";
 		rLen = 0;
-		rLoc = 10815;
+		rLoc = 10817;
 		rType = 0;
 		vrLen = 1604;
 		vrLoc = 8662;
@@ -27718,7 +27737,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "bool\t\t\t\t_about;";
 		rLen = 17;
-		rLoc = 1694;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 741;
 		vrLoc = 415;
@@ -27747,7 +27766,7 @@
 		isa = PBXTextBookmark;
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "[[ConvoBox alloc]initWithFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width,  _rect.size.height - 30.0f)];";
-		rLen = 124;
+		rLen = 101;
 		rLoc = 2140;
 		rType = 0;
 		vrLen = 2239;
@@ -27758,7 +27777,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "[convoView setHTML:";
 		rLen = 21;
-		rLoc = 4772;
+		rLoc = 4757;
 		rType = 0;
 		vrLen = 1575;
 		vrLoc = 3258;
@@ -27848,7 +27867,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -27868,7 +27887,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 298";
 		rLen = 0;
-		rLoc = 10811;
+		rLoc = 10813;
 		rType = 0;
 		vrLen = 1600;
 		vrLoc = 8662;
@@ -27878,7 +27897,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "bool\t\t\t\t_about;";
 		rLen = 17;
-		rLoc = 1694;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 741;
 		vrLoc = 415;
@@ -27898,7 +27917,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "[convoView setHTML:";
 		rLen = 21;
-		rLoc = 4772;
+		rLoc = 4757;
 		rType = 0;
 		vrLen = 1575;
 		vrLoc = 3258;
@@ -27988,7 +28007,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -28008,7 +28027,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 311";
 		rLen = 0;
-		rLoc = 11255;
+		rLoc = 11267;
 		rType = 0;
 		vrLen = 1442;
 		vrLoc = 9464;
@@ -28018,7 +28037,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "bool\t\t\t\t_about;";
 		rLen = 17;
-		rLoc = 1694;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 741;
 		vrLoc = 415;
@@ -28038,7 +28057,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "[convoView setHTML:";
 		rLen = 21;
-		rLoc = 4772;
+		rLoc = 4757;
 		rType = 0;
 		vrLen = 1575;
 		vrLoc = 3258;
@@ -28128,7 +28147,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -28148,7 +28167,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = ABOUT_VIEW;
 		rLen = 10;
-		rLoc = 11003;
+		rLoc = 11015;
 		rType = 0;
 		vrLen = 1442;
 		vrLoc = 9464;
@@ -28158,7 +28177,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "bool\t\t\t\t_about;";
 		rLen = 17;
-		rLoc = 1694;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 741;
 		vrLoc = 415;
@@ -28178,7 +28197,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "[convoView setHTML:";
 		rLen = 21;
-		rLoc = 4772;
+		rLoc = 4757;
 		rType = 0;
 		vrLen = 1575;
 		vrLoc = 3258;
@@ -28268,7 +28287,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -28288,7 +28307,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 313";
 		rLen = 0;
-		rLoc = 11366;
+		rLoc = 11378;
 		rType = 0;
 		vrLen = 1429;
 		vrLoc = 9464;
@@ -28298,7 +28317,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "bool\t\t\t\t_about;";
 		rLen = 17;
-		rLoc = 1694;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 741;
 		vrLoc = 415;
@@ -28318,7 +28337,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "[convoView setHTML:";
 		rLen = 21;
-		rLoc = 4772;
+		rLoc = 4757;
 		rType = 0;
 		vrLen = 1575;
 		vrLoc = 3258;
@@ -28408,7 +28427,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -28438,7 +28457,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 78";
 		rLen = 0;
-		rLoc = 3229;
+		rLoc = 3231;
 		rType = 0;
 		vrLen = 1614;
 		vrLoc = 1747;
@@ -28448,7 +28467,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "bool\t\t\t\t_about;";
 		rLen = 17;
-		rLoc = 1694;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 741;
 		vrLoc = 415;
@@ -28458,7 +28477,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = aboutView;
 		rLen = 0;
-		rLoc = 1431;
+		rLoc = 1435;
 		rType = 0;
 		vrLen = 705;
 		vrLoc = 367;
@@ -28488,7 +28507,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "[convoView setHTML:";
 		rLen = 21;
-		rLoc = 4772;
+		rLoc = 4757;
 		rType = 0;
 		vrLen = 1575;
 		vrLoc = 3258;
@@ -28568,7 +28587,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -28588,7 +28607,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 78";
 		rLen = 0;
-		rLoc = 3229;
+		rLoc = 3231;
 		rType = 0;
 		vrLen = 1614;
 		vrLoc = 1747;
@@ -28598,7 +28617,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = aboutView;
 		rLen = 0;
-		rLoc = 1431;
+		rLoc = 1435;
 		rType = 0;
 		vrLen = 705;
 		vrLoc = 367;
@@ -28618,7 +28637,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "[convoView setHTML:";
 		rLen = 21;
-		rLoc = 4772;
+		rLoc = 4757;
 		rType = 0;
 		vrLen = 1575;
 		vrLoc = 3258;
@@ -28698,7 +28717,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -28718,7 +28737,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 419";
 		rLen = 0;
-		rLoc = 14747;
+		rLoc = 14761;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 13562;
@@ -28728,7 +28747,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = aboutView;
 		rLen = 0;
-		rLoc = 1431;
+		rLoc = 1435;
 		rType = 0;
 		vrLen = 705;
 		vrLoc = 367;
@@ -28748,7 +28767,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "[convoView setHTML:";
 		rLen = 21;
-		rLoc = 4772;
+		rLoc = 4757;
 		rType = 0;
 		vrLen = 1575;
 		vrLoc = 3258;
@@ -28828,7 +28847,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -28848,7 +28867,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 410";
 		rLen = 0;
-		rLoc = 14478;
+		rLoc = 14492;
 		rType = 0;
 		vrLen = 1228;
 		vrLoc = 13562;
@@ -28858,7 +28877,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = aboutView;
 		rLen = 0;
-		rLoc = 1431;
+		rLoc = 1435;
 		rType = 0;
 		vrLen = 705;
 		vrLoc = 367;
@@ -28878,7 +28897,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "[convoView setHTML:";
 		rLen = 21;
-		rLoc = 4772;
+		rLoc = 4757;
 		rType = 0;
 		vrLen = 1575;
 		vrLoc = 3258;
@@ -28958,7 +28977,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -28978,7 +28997,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = aboutView;
 		rLen = 0;
-		rLoc = 1431;
+		rLoc = 1435;
 		rType = 0;
 		vrLen = 705;
 		vrLoc = 367;
@@ -28988,7 +29007,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: _aboutView";
 		rLen = 0;
-		rLoc = 1264;
+		rLoc = 1268;
 		rType = 0;
 		vrLen = 706;
 		vrLoc = 367;
@@ -29008,7 +29027,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "[convoView setHTML:";
 		rLen = 21;
-		rLoc = 4772;
+		rLoc = 4757;
 		rType = 0;
 		vrLen = 1575;
 		vrLoc = 3258;
@@ -29088,7 +29107,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -29122,7 +29141,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: _aboutView";
 		rLen = 0;
-		rLoc = 1264;
+		rLoc = 1268;
 		rType = 0;
 		vrLen = 706;
 		vrLoc = 367;
@@ -29142,7 +29161,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "[convoView setHTML:";
 		rLen = 21;
-		rLoc = 4772;
+		rLoc = 4757;
 		rType = 0;
 		vrLen = 1575;
 		vrLoc = 3258;
@@ -29222,7 +29241,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -29242,7 +29261,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: _aboutView";
 		rLen = 0;
-		rLoc = 1264;
+		rLoc = 1268;
 		rType = 0;
 		vrLen = 706;
 		vrLoc = 367;
@@ -29262,7 +29281,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "[convoView setHTML:";
 		rLen = 21;
-		rLoc = 4772;
+		rLoc = 4757;
 		rType = 0;
 		vrLen = 1575;
 		vrLoc = 3258;
@@ -29342,7 +29361,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -29366,7 +29385,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 419";
 		rLen = 0;
-		rLoc = 14656;
+		rLoc = 14670;
 		rType = 0;
 		vrLen = 1602;
 		vrLoc = 13032;
@@ -29376,7 +29395,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: _aboutView";
 		rLen = 0;
-		rLoc = 1264;
+		rLoc = 1268;
 		rType = 0;
 		vrLen = 706;
 		vrLoc = 367;
@@ -29396,7 +29415,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "[convoView setHTML:";
 		rLen = 21;
-		rLoc = 4772;
+		rLoc = 4757;
 		rType = 0;
 		vrLen = 1575;
 		vrLoc = 3258;
@@ -29476,7 +29495,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -29496,7 +29515,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "[convoView setHTML:";
 		rLen = 21;
-		rLoc = 4772;
+		rLoc = 4757;
 		rType = 0;
 		vrLen = 1575;
 		vrLoc = 3258;
@@ -29506,7 +29525,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 135";
 		rLen = 0;
-		rLoc = 5397;
+		rLoc = 5386;
 		rType = 0;
 		vrLen = 1269;
 		vrLoc = 3810;
@@ -29516,7 +29535,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 419";
 		rLen = 0;
-		rLoc = 14656;
+		rLoc = 14670;
 		rType = 0;
 		vrLen = 1602;
 		vrLoc = 13032;
@@ -29526,7 +29545,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: _aboutView";
 		rLen = 0;
-		rLoc = 1264;
+		rLoc = 1268;
 		rType = 0;
 		vrLen = 706;
 		vrLoc = 367;
@@ -29616,7 +29635,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -29636,7 +29655,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 75";
 		rLen = 0;
-		rLoc = 3734;
+		rLoc = 3711;
 		rType = 0;
 		vrLen = 1966;
 		vrLoc = 1880;
@@ -29646,7 +29665,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 419";
 		rLen = 0;
-		rLoc = 14656;
+		rLoc = 14670;
 		rType = 0;
 		vrLen = 1602;
 		vrLoc = 13032;
@@ -29656,7 +29675,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: _aboutView";
 		rLen = 0;
-		rLoc = 1264;
+		rLoc = 1268;
 		rType = 0;
 		vrLen = 706;
 		vrLoc = 367;
@@ -29746,7 +29765,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -29766,7 +29785,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 308";
 		rLen = 0;
-		rLoc = 11042;
+		rLoc = 11054;
 		rType = 0;
 		vrLen = 1542;
 		vrLoc = 9530;
@@ -29776,7 +29795,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 77";
 		rLen = 0;
-		rLoc = 3827;
+		rLoc = 3804;
 		rType = 0;
 		vrLen = 1228;
 		vrLoc = 3861;
@@ -29786,7 +29805,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: _aboutView";
 		rLen = 0;
-		rLoc = 1264;
+		rLoc = 1268;
 		rType = 0;
 		vrLen = 706;
 		vrLoc = 367;
@@ -29876,7 +29895,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -29896,7 +29915,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 308";
 		rLen = 0;
-		rLoc = 11042;
+		rLoc = 11054;
 		rType = 0;
 		vrLen = 1542;
 		vrLoc = 9530;
@@ -29906,7 +29925,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: _aboutView";
 		rLen = 0;
-		rLoc = 1264;
+		rLoc = 1268;
 		rType = 0;
 		vrLen = 706;
 		vrLoc = 367;
@@ -29986,7 +30005,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -30016,7 +30035,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: _aboutView";
 		rLen = 0;
-		rLoc = 1264;
+		rLoc = 1268;
 		rType = 0;
 		vrLen = 706;
 		vrLoc = 367;
@@ -30096,7 +30115,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -30140,7 +30159,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 47";
 		rLen = 0;
-		rLoc = 2268;
+		rLoc = 2245;
 		rType = 0;
 		vrLen = 1798;
 		vrLoc = 1214;
@@ -30150,7 +30169,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 92";
 		rLen = 0;
-		rLoc = 3645;
+		rLoc = 3647;
 		rType = 0;
 		vrLen = 1552;
 		vrLoc = 2861;
@@ -30160,7 +30179,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: _aboutView";
 		rLen = 0;
-		rLoc = 1264;
+		rLoc = 1268;
 		rType = 0;
 		vrLen = 706;
 		vrLoc = 367;
@@ -30230,7 +30249,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -30250,7 +30269,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 47";
 		rLen = 0;
-		rLoc = 2268;
+		rLoc = 2245;
 		rType = 0;
 		vrLen = 1798;
 		vrLoc = 1214;
@@ -30260,7 +30279,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 58";
 		rLen = 0;
-		rLoc = 2949;
+		rLoc = 2926;
 		rType = 0;
 		vrLen = 1798;
 		vrLoc = 1214;
@@ -30280,7 +30299,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 92";
 		rLen = 0;
-		rLoc = 3645;
+		rLoc = 3647;
 		rType = 0;
 		vrLen = 1552;
 		vrLoc = 2861;
@@ -30290,7 +30309,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: _aboutView";
 		rLen = 0;
-		rLoc = 1264;
+		rLoc = 1268;
 		rType = 0;
 		vrLen = 706;
 		vrLoc = 367;
@@ -30360,7 +30379,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -30394,7 +30413,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 92";
 		rLen = 0;
-		rLoc = 3645;
+		rLoc = 3647;
 		rType = 0;
 		vrLen = 1552;
 		vrLoc = 2861;
@@ -30404,7 +30423,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 320";
 		rLen = 0;
-		rLoc = 11400;
+		rLoc = 11414;
 		rType = 0;
 		vrLen = 1846;
 		vrLoc = 10643;
@@ -30414,7 +30433,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: _aboutView";
 		rLen = 0;
-		rLoc = 1264;
+		rLoc = 1268;
 		rType = 0;
 		vrLen = 706;
 		vrLoc = 367;
@@ -30484,7 +30503,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -30504,7 +30523,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 320";
 		rLen = 0;
-		rLoc = 11400;
+		rLoc = 11414;
 		rType = 0;
 		vrLen = 1846;
 		vrLoc = 10643;
@@ -30524,7 +30543,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: _aboutView";
 		rLen = 0;
-		rLoc = 1264;
+		rLoc = 1268;
 		rType = 0;
 		vrLen = 706;
 		vrLoc = 367;
@@ -30594,7 +30613,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -30638,7 +30657,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 47";
 		rLen = 0;
-		rLoc = 2268;
+		rLoc = 2245;
 		rType = 0;
 		vrLen = 1787;
 		vrLoc = 959;
@@ -30648,7 +30667,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 320";
 		rLen = 0;
-		rLoc = 11400;
+		rLoc = 11414;
 		rType = 0;
 		vrLen = 1846;
 		vrLoc = 10643;
@@ -30658,7 +30677,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: _aboutView";
 		rLen = 0;
-		rLoc = 1264;
+		rLoc = 1268;
 		rType = 0;
 		vrLen = 706;
 		vrLoc = 367;
@@ -30728,7 +30747,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -30758,7 +30777,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 47";
 		rLen = 0;
-		rLoc = 2268;
+		rLoc = 2245;
 		rType = 0;
 		vrLen = 1787;
 		vrLoc = 959;
@@ -30768,7 +30787,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 320";
 		rLen = 0;
-		rLoc = 11400;
+		rLoc = 11414;
 		rType = 0;
 		vrLen = 1846;
 		vrLoc = 10643;
@@ -30778,7 +30797,7 @@
 		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
 		name = "StartView.h: _aboutView";
 		rLen = 0;
-		rLoc = 1264;
+		rLoc = 1268;
 		rType = 0;
 		vrLen = 706;
 		vrLoc = 367;
@@ -30848,7 +30867,7 @@
 		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
 		name = "BuddyView.m: 212";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 6868;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 2954;
@@ -30966,7 +30985,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 134";
 		rLen = 0;
-		rLoc = 4936;
+		rLoc = 4921;
 		rType = 0;
 		vrLen = 914;
 		vrLoc = 4537;
@@ -30986,7 +31005,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 134";
 		rLen = 0;
-		rLoc = 4936;
+		rLoc = 4921;
 		rType = 0;
 		vrLen = 914;
 		vrLoc = 4537;
@@ -30996,7 +31015,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 134";
 		rLen = 0;
-		rLoc = 4936;
+		rLoc = 4921;
 		rType = 0;
 		vrLen = 914;
 		vrLoc = 4537;
@@ -31066,7 +31085,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 143";
 		rLen = 0;
-		rLoc = 5333;
+		rLoc = 5322;
 		rType = 0;
 		vrLen = 918;
 		vrLoc = 4537;
@@ -31144,7 +31163,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 58";
 		rLen = 0;
-		rLoc = 2268;
+		rLoc = 2245;
 		rType = 0;
 		vrLen = 1710;
 		vrLoc = 1394;
@@ -31154,7 +31173,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 59";
 		rLen = 0;
-		rLoc = 2355;
+		rLoc = 2332;
 		rType = 0;
 		vrLen = 1713;
 		vrLoc = 1394;
@@ -31164,7 +31183,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 59";
 		rLen = 0;
-		rLoc = 2355;
+		rLoc = 2332;
 		rType = 0;
 		vrLen = 1713;
 		vrLoc = 1394;
@@ -31174,7 +31193,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 59";
 		rLen = 0;
-		rLoc = 2355;
+		rLoc = 2332;
 		rType = 0;
 		vrLen = 1713;
 		vrLoc = 1394;
@@ -31198,7 +31217,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 134";
 		rLen = 0;
-		rLoc = 4933;
+		rLoc = 4918;
 		rType = 0;
 		vrLen = 895;
 		vrLoc = 4567;
@@ -31218,7 +31237,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 134";
 		rLen = 0;
-		rLoc = 4933;
+		rLoc = 4918;
 		rType = 0;
 		vrLen = 895;
 		vrLoc = 4567;
@@ -31228,7 +31247,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 134";
 		rLen = 0;
-		rLoc = 4933;
+		rLoc = 4918;
 		rType = 0;
 		vrLen = 895;
 		vrLoc = 4567;
@@ -31248,7 +31267,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 57";
 		rLen = 0;
-		rLoc = 2261;
+		rLoc = 2238;
 		rType = 0;
 		vrLen = 2091;
 		vrLoc = 1394;
@@ -31258,7 +31277,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 57";
 		rLen = 0;
-		rLoc = 2261;
+		rLoc = 2238;
 		rType = 0;
 		vrLen = 2091;
 		vrLoc = 1394;
@@ -31268,7 +31287,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 122";
 		rLen = 0;
-		rLoc = 4218;
+		rLoc = 4220;
 		rType = 0;
 		vrLen = 1230;
 		vrLoc = 2999;
@@ -31278,7 +31297,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 57";
 		rLen = 0;
-		rLoc = 2261;
+		rLoc = 2238;
 		rType = 0;
 		vrLen = 2091;
 		vrLoc = 1394;
@@ -31288,7 +31307,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 57";
 		rLen = 0;
-		rLoc = 2261;
+		rLoc = 2238;
 		rType = 0;
 		vrLen = 2091;
 		vrLoc = 1394;
@@ -31298,7 +31317,7 @@
 		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
 		name = "StartView.m: 122";
 		rLen = 0;
-		rLoc = 4218;
+		rLoc = 4220;
 		rType = 0;
 		vrLen = 1230;
 		vrLoc = 2999;
@@ -31308,7 +31327,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 57";
 		rLen = 0;
-		rLoc = 2249;
+		rLoc = 2238;
 		rType = 0;
 		vrLen = 2104;
 		vrLoc = 1533;
@@ -31318,7 +31337,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 57";
 		rLen = 0;
-		rLoc = 2249;
+		rLoc = 2238;
 		rType = 0;
 		vrLen = 2104;
 		vrLoc = 1533;
@@ -31328,7 +31347,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 57";
 		rLen = 0;
-		rLoc = 2249;
+		rLoc = 2238;
 		rType = 0;
 		vrLen = 2104;
 		vrLoc = 1533;
@@ -31342,7 +31361,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 57";
 		rLen = 0;
-		rLoc = 2249;
+		rLoc = 2238;
 		rType = 0;
 		vrLen = 2104;
 		vrLoc = 1533;
@@ -31352,7 +31371,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 57";
 		rLen = 0;
-		rLoc = 2249;
+		rLoc = 2238;
 		rType = 0;
 		vrLen = 2104;
 		vrLoc = 1533;
@@ -31376,7 +31395,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 58";
 		rLen = 0;
-		rLoc = 2296;
+		rLoc = 2273;
 		rType = 0;
 		vrLen = 1819;
 		vrLoc = 1339;
@@ -31390,7 +31409,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 58";
 		rLen = 0;
-		rLoc = 2296;
+		rLoc = 2273;
 		rType = 0;
 		vrLen = 1819;
 		vrLoc = 1339;
@@ -31400,7 +31419,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 58";
 		rLen = 0;
-		rLoc = 2296;
+		rLoc = 2273;
 		rType = 0;
 		vrLen = 1819;
 		vrLoc = 1339;
@@ -31424,7 +31443,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = self;
 		rLen = 4;
-		rLoc = 2292;
+		rLoc = 2269;
 		rType = 0;
 		vrLen = 990;
 		vrLoc = 3258;
@@ -31434,7 +31453,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 144";
 		rLen = 0;
-		rLoc = 5397;
+		rLoc = 5386;
 		rType = 0;
 		vrLen = 922;
 		vrLoc = 4499;
@@ -31444,7 +31463,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 134";
 		rLen = 0;
-		rLoc = 4964;
+		rLoc = 4949;
 		rType = 0;
 		vrLen = 1074;
 		vrLoc = 4535;
@@ -31458,7 +31477,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 134";
 		rLen = 0;
-		rLoc = 4964;
+		rLoc = 4949;
 		rType = 0;
 		vrLen = 1074;
 		vrLoc = 4535;
@@ -31468,7 +31487,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 134";
 		rLen = 0;
-		rLoc = 4964;
+		rLoc = 4949;
 		rType = 0;
 		vrLen = 1074;
 		vrLoc = 4535;
@@ -31518,7 +31537,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 108";
 		rLen = 0;
-		rLoc = 4375;
+		rLoc = 4358;
 		rType = 0;
 		vrLen = 1274;
 		vrLoc = 3262;
@@ -31528,7 +31547,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 108";
 		rLen = 0;
-		rLoc = 4375;
+		rLoc = 4358;
 		rType = 0;
 		vrLen = 1274;
 		vrLoc = 3262;
@@ -31538,7 +31557,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 133";
 		rLen = 0;
-		rLoc = 4936;
+		rLoc = 4921;
 		rType = 0;
 		vrLen = 984;
 		vrLoc = 4661;
@@ -31548,7 +31567,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 133";
 		rLen = 0;
-		rLoc = 4936;
+		rLoc = 4921;
 		rType = 0;
 		vrLen = 984;
 		vrLoc = 4661;
@@ -31558,7 +31577,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 133";
 		rLen = 0;
-		rLoc = 4936;
+		rLoc = 4921;
 		rType = 0;
 		vrLen = 984;
 		vrLoc = 4661;
@@ -31646,7 +31665,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 143";
 		rLen = 0;
-		rLoc = 5331;
+		rLoc = 5320;
 		rType = 0;
 		vrLen = 960;
 		vrLoc = 4479;
@@ -31656,7 +31675,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 143";
 		rLen = 0;
-		rLoc = 5331;
+		rLoc = 5320;
 		rType = 0;
 		vrLen = 960;
 		vrLoc = 4479;
@@ -31666,7 +31685,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 143";
 		rLen = 0;
-		rLoc = 5331;
+		rLoc = 5320;
 		rType = 0;
 		vrLen = 960;
 		vrLoc = 4479;
@@ -31676,7 +31695,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 151";
 		rLen = 0;
-		rLoc = 5438;
+		rLoc = 5427;
 		rType = 0;
 		vrLen = 960;
 		vrLoc = 4479;
@@ -31686,7 +31705,7 @@
 		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
 		name = "Conversation.m: 151";
 		rLen = 0;
-		rLoc = 5438;
+		rLoc = 5427;
 		rType = 0;
 		vrLen = 960;
 		vrLoc = 4479;
@@ -31748,5 +31767,337 @@
 		rType = 0;
 		vrLen = 583;
 		vrLoc = 1500;
+	};
+	FAED56840C828C0B00BA2CF8 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
+	};
+	FAED56870C828C2200BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAE7F55C0C80DC3D005A2930 /* ConvoBox.m */;
+		name = "ConvoBox.m: 89";
+		rLen = 0;
+		rLoc = 2055;
+		rType = 0;
+		vrLen = 583;
+		vrLoc = 1500;
+	};
+	FAED56880C828C2200BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAE7F55C0C80DC3D005A2930 /* ConvoBox.m */;
+		name = "ConvoBox.m: 89";
+		rLen = 0;
+		rLoc = 2055;
+		rType = 0;
+		vrLen = 583;
+		vrLoc = 1500;
+	};
+	FAED56890C828C2200BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
+		name = "Conversation.m: 100";
+		rLen = 0;
+		rLoc = 4101;
+		rType = 0;
+		vrLen = 901;
+		vrLoc = 3602;
+	};
+	FAED568C0C828CA000BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
+		name = "Conversation.m: 57";
+		rLen = 0;
+		rLoc = 2238;
+		rType = 0;
+		vrLen = 1657;
+		vrLoc = 1139;
+	};
+	FAED568D0C828CD600BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
+		name = "Conversation.m: 57";
+		rLen = 0;
+		rLoc = 2238;
+		rType = 0;
+		vrLen = 1657;
+		vrLoc = 1139;
+	};
+	FAED56900C828D0100BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
+		name = "Conversation.m: 57";
+		rLen = 0;
+		rLoc = 2238;
+		rType = 0;
+		vrLen = 1638;
+		vrLoc = 1139;
+	};
+	FAED56930C828D8B00BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
+		name = "Conversation.m: 57";
+		rLen = 0;
+		rLoc = 2234;
+		rType = 0;
+		vrLen = 1638;
+		vrLoc = 1139;
+	};
+	FAED56960C828DB500BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
+		name = "Conversation.m: 52";
+		rLen = 0;
+		rLoc = 2021;
+		rType = 0;
+		vrLen = 1638;
+		vrLoc = 1139;
+	};
+	FAED56990C828E9E00BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
+		name = "Conversation.m: 57";
+		rLen = 0;
+		rLoc = 2234;
+		rType = 0;
+		vrLen = 1638;
+		vrLoc = 1139;
+	};
+	FAED569C0C828EF100BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
+		name = "Conversation.m: 143";
+		rLen = 0;
+		rLoc = 5317;
+		rType = 0;
+		vrLen = 918;
+		vrLoc = 4398;
+	};
+	FAED56A00C828F6100BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
+		name = "Conversation.m: 143";
+		rLen = 0;
+		rLoc = 5317;
+		rType = 0;
+		vrLen = 918;
+		vrLoc = 4398;
+	};
+	FAED56A10C828F6100BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
+		name = "Conversation.m: 108";
+		rLen = 0;
+		rLoc = 4364;
+		rType = 0;
+		vrLen = 909;
+		vrLoc = 3579;
+	};
+	FAED56A40C828FB700BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
+		name = "Conversation.m: 108";
+		rLen = 0;
+		rLoc = 4364;
+		rType = 0;
+		vrLen = 857;
+		vrLoc = 4779;
+	};
+	FAED56A90C82906400BA2CF8 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
+	};
+	FAED56AE0C82906F00BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
+		name = "BuddyView.m: 61";
+		rLen = 0;
+		rLoc = 1878;
+		rType = 0;
+		vrLen = 1426;
+		vrLoc = 931;
+	};
+	FAED56B20C8291A400BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
+		name = "BuddyView.m: 61";
+		rLen = 0;
+		rLoc = 1878;
+		rType = 0;
+		vrLen = 1426;
+		vrLoc = 931;
+	};
+	FAED56B30C8291A400BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
+		name = "BuddyView.m: 47";
+		rLen = 0;
+		rLoc = 1367;
+		rType = 0;
+		vrLen = 1426;
+		vrLoc = 931;
+	};
+	FAED56B60C8292D000BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
+		name = NO;
+		rLen = 2;
+		rLoc = 1876;
+		rType = 0;
+		vrLen = 1425;
+		vrLoc = 931;
+	};
+	FAED56B80C82935300BA2CF8 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
+	};
+	FAED56BB0C82935E00BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
+		name = NO;
+		rLen = 2;
+		rLoc = 1876;
+		rType = 0;
+		vrLen = 1578;
+		vrLoc = 5483;
+	};
+	FAED56BC0C82935E00BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
+		name = "StartView.m: 122";
+		rLen = 0;
+		rLoc = 4220;
+		rType = 0;
+		vrLen = 1909;
+		vrLoc = 933;
+	};
+	FAED56BD0C82935E00BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
+		name = NO;
+		rLen = 2;
+		rLoc = 1876;
+		rType = 0;
+		vrLen = 1578;
+		vrLoc = 5483;
+	};
+	FAED56BE0C82935E00BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
+		name = "StartView.m: 122";
+		rLen = 0;
+		rLoc = 4220;
+		rType = 0;
+		vrLen = 1909;
+		vrLoc = 933;
+	};
+	FAED56BF0C82935E00BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
+		name = "StartView.h: 43";
+		rLen = 0;
+		rLoc = 1268;
+		rType = 0;
+		vrLen = 1360;
+		vrLoc = 990;
+	};
+	FAED56C20C82936300BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
+		name = "StartView.h: initWithFrame:";
+		rLen = 0;
+		rLoc = 1830;
+		rType = 0;
+		vrLen = 1360;
+		vrLoc = 990;
+	};
+	FAED56CC0C82939000BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
+		name = "StartView.h: initWithFrame:";
+		rLen = 0;
+		rLoc = 1830;
+		rType = 0;
+		vrLen = 1360;
+		vrLoc = 990;
+	};
+	FAED56CD0C82939000BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA211F050C73B90100D6ABA1 /* StartView.h */;
+		name = "StartView.h: initWithFrame:";
+		rLen = 0;
+		rLoc = 1830;
+		rType = 0;
+		vrLen = 1360;
+		vrLoc = 990;
+	};
+	FAED56CE0C82939000BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
+		name = _aboutView;
+		rLen = 10;
+		rLoc = 11095;
+		rType = 0;
+		vrLen = 1684;
+		vrLoc = 10130;
+	};
+	FAED56D20C8293AA00BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
+		name = _aboutView;
+		rLen = 10;
+		rLoc = 11095;
+		rType = 0;
+		vrLen = 1684;
+		vrLoc = 10130;
+	};
+	FAED56D30C8293AA00BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
+		name = "StartView.m: 317";
+		rLen = 0;
+		rLoc = 10973;
+		rType = 0;
+		vrLen = 1653;
+		vrLoc = 10034;
+	};
+	FAED56D70C8293C800BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
+		name = "StartView.m: 317";
+		rLen = 0;
+		rLoc = 10973;
+		rType = 0;
+		vrLen = 1653;
+		vrLoc = 10034;
+	};
+	FAED56D80C8293C800BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
+		name = "StartView.m: 317";
+		rLen = 0;
+		rLoc = 10973;
+		rType = 0;
+		vrLen = 1653;
+		vrLoc = 10034;
+	};
+	FAED56D90C8293C800BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
+		name = "BuddyView.m: 48";
+		rLen = 0;
+		rLoc = 1452;
+		rType = 0;
+		vrLen = 1358;
+		vrLoc = 762;
+	};
+	FAED56DC0C82943800BA2CF8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA211EF20C73B87D00D6ABA1 /* BuddyView.m */;
+		name = "BuddyView.m: 48";
+		rLen = 0;
+		rLoc = 1452;
+		rType = 0;
+		vrLen = 1358;
+		vrLoc = 762;
 	};
 }

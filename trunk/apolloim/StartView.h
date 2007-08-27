@@ -24,7 +24,7 @@
 #import <UIKit/UITransitionView.h>
 #import "UIKIt/UITextLabel.h"
 #import "Account.h"
-#import "AboutView.h"
+//#import "AboutView.h"
 #import "AccountsView.h"
 #import "AccountEditorView.h"
 #import "Buddy.h"
@@ -40,7 +40,7 @@
 	ApolloTOC			*conn;
 	bool				EXIT;
 	
-	AboutView			*_aboutView;
+//	AboutView			*_aboutView;
 	AccountsView		*_accountsView;
 	Account				*CurrentAccount;
 	AccountEditorView	*accountEditor;

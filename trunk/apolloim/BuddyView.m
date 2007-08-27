@@ -45,7 +45,7 @@ enum {
 			width: frame.size.width
 		];
 		//NSLog(@"BuddyView>> init table...");
-		_table = [[UITable alloc] initWithFrame: CGRectMake(0, 0, frame.size.width, frame.size.height)];
+		_table = [[UITable alloc] initWithFrame: CGRectMake(0, 0, frame.size.width, 450.0f)]; //this should prolly be frame.size.height
 		[_table addTableColumn: col];
 		[_table setSeparatorStyle: 1];
 		[_table setDelegate: self];

@@ -54,7 +54,7 @@
 			[sendField setTextSize:14];			
 			[sendField setAlpha:50];			
 			
-			convoView = [[ConvoBox alloc]initWithFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width,  _rect.size.height /*- 30.0f*/)];
+			convoView = [[ConvoBox alloc]initWithFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width,  400.0f)];
 			[convoView setDelegate: self];  //This might not work, and I'm expecting it as such
 			
 
@@ -97,7 +97,7 @@
 	-(void)rollKeyboard
 	{	
 		[keyboard show:sendField withCell:cell];
-		[convoView setFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width,  (((_rect.size.height / 2) - 30.0f)/* + 30.0f*/))];
+		[convoView setFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width,  (((_rect.size.height / 2) /*- 30.0f*/)/* + 30.0f*/))];
 		_hidden = false;
 		NSLog(@"Showing...");		
 	}
@@ -105,7 +105,7 @@
 	-(void)foldKeyboard
 	{
 		[keyboard hide:sendField withCell:cell];
-		[convoView setFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width,  (((_rect.size.height * 2) + 30.0f)/* - 30.0f*/ ))];
+		[convoView setFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width,  (((_rect.size.height * 2) /*+ 30.0f*/)/* - 30.0f*/ ))];
 		NSLog(@"Hiding...");
 		_hidden = true;
 		
@@ -132,7 +132,7 @@
 		[[convoView HTML]stringByAppendingString:[NSString stringWithFormat:@"<div><font color=\"blue\">%@</font>: %@</div>",[buddy name],msg]]];
 		
 		[convoView scrollToEnd];			
-		[convoView insertText:@""];					
+		[convoView insertText:@"\n"];					
 	}	
 	
 	- (void)sendMessage
@@ -140,7 +140,7 @@
 		[convoView setHTML:
 		[[convoView HTML]stringByAppendingString:[NSString stringWithFormat:@"<div><font color=\"red\">%@</font>: %@</div>",[[ApolloTOC sharedInstance]userName],[sendField text]]]];
 		[[ApolloTOC sharedInstance]sendIM:[sendField text] toUser:[buddy name]];
-		[sendField setText:@""];
+		[sendField setText:@"\n"];
 		
 		[convoView scrollToEnd];
 		[convoView insertText:@""];						

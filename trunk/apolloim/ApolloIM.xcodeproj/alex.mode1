@@ -185,48 +185,7 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>FAED567F0C828BAE00BA2CF8</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>ConvoBox.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>FAED56820C828BB100BA2CF8</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>ConvoBox.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>FAED56830C828BB100BA2CF8</string>
-						<key>history</key>
-						<array>
-							<string>FAED567E0C828BAE00BA2CF8</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {1194, 509}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>50 452 1194 550 0 0 1280 1002 </string>
-			</dict>
-		</dict>
-	</array>
+	<array/>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -312,8 +271,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>29</integer>
-									<integer>27</integer>
+									<integer>22</integer>
+									<integer>20</integer>
 									<integer>10</integer>
 									<integer>0</integer>
 								</array>
@@ -534,7 +493,7 @@
 	<key>PerspectivesBarVisible</key>
 	<false/>
 	<key>PinnedNavigatorIdentifier</key>
-	<string>FAED567F0C828BAE00BA2CF8</string>
+	<string>FAED56AA0C82906500BA2CF8</string>
 	<key>ShelfIsVisible</key>
 	<false/>
 	<key>SourceDescription</key>
@@ -564,7 +523,6 @@
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>FAED454D0C81092700BA2CF8</string>
 		<string>/Users/alex/Desktop/apolloim/apolloim/ApolloIM.xcodeproj</string>
-		<string>FAED567F0C828BAE00BA2CF8</string>
 	</array>
 	<key>WindowString</key>
 	<string>586 64 827 938 0 0 1280 1002 </string>

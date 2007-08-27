@@ -86,7 +86,7 @@ static NSRecursiveLock *lock;
 		_buddyView		= [[BuddyView alloc]initWithFrame:rect];
 		[_buddyView		setDelegate:self];
 		_conversations	= [[NSMutableArray alloc]init];		
-		_aboutView		= [[AboutView alloc]initWithFrame:rect];
+//		_aboutView		= [[AboutView alloc]initWithFrame:rect];
 		
 //		NSLog(@"StartView.m>>  Transition view...");
 		_transitionView = [[UITransitionView alloc] initWithFrame: 
@@ -314,9 +314,9 @@ static NSRecursiveLock *lock;
 
 			_buddyViewBrowser			=	true;
 			[navtitle setTitle:@"Buddy List"];						
-			[_navBar showButtonsWithLeftTitle:@"Disconnect" rightTitle:@"Options" leftBack: YES];				
+			[_navBar showButtonsWithLeftTitle:@"Disconnect" rightTitle:nil /*@"Options"*/ leftBack: YES];				
 			break;		
-		case ABOUT_VIEW:
+/*		case ABOUT_VIEW:
 			NSLog(@"About view...");
 			[_transitionView transition:3 toView:_aboutView];
 			_accountsViewBrowser		=	false;
@@ -326,7 +326,7 @@ static NSRecursiveLock *lock;
 
 			_about						=	true;
 			[navtitle setTitle:@"Alex Rocks"];						
-			[_navBar showButtonsWithLeftTitle:@"Back" rightTitle:nil leftBack: YES];						
+			[_navBar showButtonsWithLeftTitle:@"Back" rightTitle:nil leftBack: YES];						*/
 		break;
 	}
 }
