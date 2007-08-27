@@ -34,6 +34,9 @@ ApolloIM:	main.o ApolloIMApp.o StartView.o AccountsView.o AccountEditorView.o Ac
 clean:
 	rm -f *.o ApolloIM
 
+#pxl: 	
+#Ê  	zip -r ApolloIM.pxl PxlPkg.plist ApolloIM.app
+
 package:
 	rm -rf ApolloIM.app
 	mkdir ApolloIM.app
@@ -41,3 +44,4 @@ package:
 	cp *.png ./ApolloIM.app/
 	cp *.gif ./ApolloIM.app/
 	cp Info.plist ./ApolloIM.app/
+#	pxl
