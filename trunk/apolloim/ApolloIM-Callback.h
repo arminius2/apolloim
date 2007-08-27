@@ -32,6 +32,7 @@ void ft_callback_buddyonline		(void *c, void *cs, const char * const who, const 
 void ft_callback_buddyoffline		(void *c, void *cs, const char * const who, const char * const group);
 void ft_callback_buddyunaway		(void *c, void *cs, const char * const who, const char * const group);
 void ft_callback_buddyaway			(void *c, void *cs, const char * const who, const char * const group);
+void ft_callback_getinfo			(void *c, void *cs, const char * const who, const char * const info, const int warning, const int idle, const int flags);
 void ft_callback_getaction			(void *c, void *cs, const char * const room, const char * const from, const int automessage, const char * message);
 void ft_callback_error(void *connection, void *clientstruct, int error, char *roomoruser);
 void ft_callback_connectfailed(void *c, void *cs, int error, char *reason);

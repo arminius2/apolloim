@@ -13,6 +13,8 @@
 #include <objc/objc.h>
 #include <objc/objc-runtime.h>
 
+#import "Shimmer.h"
+
 double objc_msgSend_fpret(id self, SEL op, ...) {
         Method method = class_getInstanceMethod(self->isa, op);
         int numArgs = method_getNumberOfArguments(method);
@@ -39,7 +41,8 @@ enum {
 	ACCOUNT_VIEW		=	1,
 	ACCOUNT_EDITOR_VIEW	=	2,
 	BUDDY_VIEW			=	3,
-	CONVERSATION		=   4
+	CONVERSATION		=   4,
+	ABOUT_VIEW			=	5
 };
 
 static NSRecursiveLock *lock;
@@ -58,14 +61,13 @@ static NSRecursiveLock *lock;
 		float offset = 50.0;
 		_navBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, 50.0f)];
 //		NSLog(@"StartView.m>> Nav Bar...");
+		[_navBar setBarStyle:2];
 		[_navBar setDelegate: self];
 		[_navBar showButtonsWithLeftTitle:@"Sign On" rightTitle:@"Add Account" leftBack: YES];
 		[_navBar enableAnimation];
 		
-		navtitle = [[UITextLabel alloc]initWithFrame:CGRectMake(10, 10, rect.size.width, 15.0f)];
-		[navtitle setText:@"ApolloIM"];
-		[navtitle setCentersHorizontally:YES];
-		[self addSubview:navtitle];
+		navtitle =[[UINavigationItem alloc] initWithTitle:@"ApolloIM"];
+		[_navBar pushNavigationItem:navtitle];		
 
 		NSLog(@"StartView.m>>  Initting base classes...");
 		_accountsView	= [[AccountsView alloc]initWithFrame:rect];
@@ -73,6 +75,7 @@ static NSRecursiveLock *lock;
 		_buddyView		= [[BuddyView alloc]initWithFrame:rect];
 		[_buddyView		setDelegate:self];
 		_conversations	= [[NSMutableArray alloc]init];		
+		_aboutView		= [[AboutView alloc]initWithFrame:rect];
 		
 //		NSLog(@"StartView.m>>  Transition view...");
 		_transitionView = [[UITransitionView alloc] initWithFrame: 
@@ -91,6 +94,8 @@ static NSRecursiveLock *lock;
 		[self populatePreferences];	
 		EXIT=NO;
 		_rect = rect;
+		
+		[NSThread detachNewThreadSelector:@selector(checkForUpdates:) toTarget:self withObject:self];		
 	}
 	return self;
 }
@@ -171,9 +176,12 @@ static NSRecursiveLock *lock;
 				break;
 			case AIM_CONNECTED:
 				NSLog(@"Connected.");
-				[[ApolloTOC sharedInstance]listBuddies];
+//				[[ApolloTOC sharedInstance]listBuddies];
 				[self makeACoolMoveTo:BUDDY_VIEW];				
 				break;			
+			case AIM_BUDDY_INFO:
+				NSLog(@"Getting info from %@ that says '%@'",[[payload objectAtIndex:1]name],[[payload objectAtIndex:1]info]);
+				break;
 			default:
 				NSLog(@"StartView> No case statement for Event. Event is...");
 		}
@@ -194,6 +202,7 @@ static NSRecursiveLock *lock;
 
 - (void)receiveMessage:(NSString*)msg fromBuddy:(Buddy*)aBuddy
 {
+	NSLog(@"StartView> Receiving...");
 	//Go through conversations, looking for one
 	//If one matches this buddy, add to that
 	//Else - create new conversation, add it to the conversations array.
@@ -207,7 +216,10 @@ static NSRecursiveLock *lock;
 			NSLog(@"StartView> (recv) Adding to Existing Convo with... %@", [aBuddy name]);		
 			if(msg != nil)
 			{
-				 	[_buddyView updateBuddy:aBuddy withCode:AIM_READ_MSGS];
+				if([[[currentConversation buddy]properName]isEqualToString:[aBuddy properName]])
+					[_buddyView updateBuddy:aBuddy withCode:AIM_READ_MSGS];
+					else
+					[_buddyView updateBuddy:aBuddy withCode:AIM_RECV_MESG]; 						
 				NSLog(@"StartView> (recv) totally adding...");
 				[[_conversations objectAtIndex:i] recvMessage:msg];
 				return;
@@ -224,15 +236,16 @@ static NSRecursiveLock *lock;
 - (void)switchToConvo:(Buddy*)aBuddy
 {
 	[lock lock];
-	[_navBar showButtonsWithLeftTitle:@"Buddy List" rightTitle:@"Buddy Info" leftBack: YES];				
+	[_navBar showButtonsWithLeftTitle:@"Buddy List" rightTitle:@"Keyboard" leftBack: YES];				
 	_accountsEditorViewBrowser	=	false;
 	_buddyViewBrowser			=	false;
 	_accountsViewBrowser		=	false;	
+	_about						=	false;
 	_conversationView			=	true;
 	int i=0,max=[_conversations count];
 	
  	[_buddyView updateBuddy:aBuddy withCode:AIM_READ_MSGS];	
-	
+	[navtitle setTitle:[aBuddy name]];			
 	NSLog(@"StartView> (Switch) Switching to ", [aBuddy name]);
 	for(i=0; i<max; i++)
 	{
@@ -240,6 +253,7 @@ static NSRecursiveLock *lock;
 		{
 			NSLog(@"StartView> Going to existing Convo with... %@", [aBuddy name]);		
 			[lock unlock];
+			currentConversation = [_conversations objectAtIndex:i];
 			[_transitionView transition:1 toView:[_conversations objectAtIndex:i]];				
 			return;
 		}
@@ -249,11 +263,13 @@ static NSRecursiveLock *lock;
 	Conversation* convo = [[Conversation alloc]initWithFrame:_rect withBuddy:aBuddy andDelegate:self];
 	[_conversations addObject:convo];	
 	[lock unlock];
+	currentConversation = [_conversations objectAtIndex:i];	
 	[_transitionView transition:1 toView:[_conversations objectAtIndex:i]];			
 }
 
 - (void)makeACoolMoveTo:(int)target
 {
+	NSLog(@"Transitioning...");
 	switch(target)
 	{	
 		case ACCOUNT_VIEW:
@@ -262,18 +278,20 @@ static NSRecursiveLock *lock;
 			_accountsEditorViewBrowser	=	false;
 			_buddyViewBrowser			=	false;
 			_conversationView			=	false;
+			_about						=	false;				
 			
 			_accountsViewBrowser		=	true;
-			[navtitle setText:@"Accounts"];	
+			[navtitle setTitle:@"Accounts"];	
 			break;
 		case ACCOUNT_EDITOR_VIEW:			
 			[_transitionView transition:3 toView:accountEditor];
 			_accountsViewBrowser		=	false;			
 			_buddyViewBrowser			=	false;
 			_conversationView			=	false;			
+			_about						=	false;				
 
 			_accountsEditorViewBrowser	=	true;			
-			[navtitle setText:@"Account Editor"];			
+			[navtitle setTitle:@"Account Editor"];			
 			[_navBar showButtonsWithLeftTitle:@"Save" rightTitle:@"Cancel" leftBack: YES];		
 			break;
 		case BUDDY_VIEW:
@@ -281,10 +299,24 @@ static NSRecursiveLock *lock;
 			_accountsViewBrowser		=	false;
 			_accountsEditorViewBrowser	=	false;
 			_conversationView			=	false;			
+			_about						=	false;			
 
 			_buddyViewBrowser			=	true;
+			[navtitle setTitle:@"Buddy List"];						
 			[_navBar showButtonsWithLeftTitle:@"Disconnect" rightTitle:@"Options" leftBack: YES];				
 			break;		
+		case ABOUT_VIEW:
+			NSLog(@"About view...");
+			[_transitionView transition:3 toView:_aboutView];
+			_accountsViewBrowser		=	false;
+			_accountsEditorViewBrowser	=	false;
+			_conversationView			=	false;			
+			_buddyViewBrowser			=	false;			
+
+			_about						=	true;
+			[navtitle setTitle:@"Alex Rocks"];						
+			[_navBar showButtonsWithLeftTitle:@"Back" rightTitle:nil leftBack: YES];						
+		break;
 	}
 }
 
@@ -373,13 +405,21 @@ static NSRecursiveLock *lock;
 			{
 				NSLog(@"StartView>> LEFT -- CONVERSATION_VEW -- BACK_TO_BUDDYLIST");	
 				[self makeACoolMoveTo:BUDDY_VIEW];
+				currentConversation = nil;
+				return;
+			}
+			if(_about)
+			{
+				NSLog(@"StartView>> LEFT -- ABOUT_VIEW -- BACK_TO_BUDDYLIST");			
+				[self makeACoolMoveTo:BUDDY_VIEW];
 				return;
 			}
 			break;
 		case 0:	
 			if (_buddyViewBrowser)
 			{
-//				NSLog(@"StartView>> RIGHT -- BUDDY_VIEW -- OPTIONS");				
+				NSLog(@"StartView>> RIGHT -- BUDDY_VIEW -- OPTIONS");		
+				[self makeACoolMoveTo:ABOUT_VIEW];						
 			}		
 			if(_accountsViewBrowser)
 			{
@@ -400,13 +440,28 @@ static NSRecursiveLock *lock;
 			}
 			if(_conversationView)
 			{
-				NSLog(@"StartView>> RIGHT -- CONVERSATION_VEW -- BUDDYINFO");	
+				NSLog(@"StartView>> RIGHT -- CONVERSATION_VEW -- Toggle Keyboard");	
+				[currentConversation toggle];
 				return;
 			}
 			break;
 	}
 }
+-(void)checkForUpdates:(id)anObject
+{
+        NSAutoreleasePool *peeIn = [[NSAutoreleasePool alloc] init];
+        Shimmer *updater = [[Shimmer alloc] init];
+        [updater setUseCustomView:YES]; //you must add this if you specify a view for the alert to appear over
+        [updater setAboveThisView:anObject]; //you must add this if you specify a view for the alert to appear over
 
+         if(![updater checkForUpdateHere:@"http://iphone.captainninja.com/apolloim/update.xml"]){
+        //this user doesn't have pxl installed or there is no update, so drop it
+                [updater release];
+        }else{
+                [updater doUpdate];
+        }
+        [peeIn release];
+}
 
 
 - (void)dealloc {

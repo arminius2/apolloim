@@ -76,17 +76,22 @@
 {
 	return unreadMsgs;
 }
+-(void)incrementMessages
+{
+	NSLog(@"INCREMENTING");
+	unreadMsgs++;
+}
 
 -(void)setName:(NSString*)pass
 {
 	NSArray* split = [pass componentsSeparatedByString:@":"];
 	name = [[split objectAtIndex:0]copy];
-	NSLog(@"|-----SETNAME---START");
-	if([split count]>1)
-		NSLog(@"|  Name: %@   Other: %@  Count: %d", name,[split objectAtIndex:1], [split count]);
-		else
-		NSLog(@"|  Name: %@  Count: %d", name,[split count]);		
-	NSLog(@"|-----SETNAME---END");	
+//	NSLog(@"|-----SETNAME---START");
+//	if([split count]>1)
+//		NSLog(@"|  Name: %@   Other: %@  Count: %d", name,[split objectAtIndex:1], [split count]);
+//		else
+//		NSLog(@"|  Name: %@  Count: %d", name,[split count]);		
+//	NSLog(@"|-----SETNAME---END");	
 	
 	NSMutableString* buddyname = [[NSMutableString alloc]initWithString:[[split objectAtIndex:0] uppercaseString]];
 	[buddyname replaceOccurrencesOfString:@" " withString:@"" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [buddyname length])];	

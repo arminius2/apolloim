@@ -3,15 +3,12 @@
 #import <UIKit/CDStructures.h>
 #import <UIKit/UITextView.h>
 
-@class ShellKeyboard;
-
 @interface ConvoBox : UITextView {
-  ShellKeyboard* _keyboard;
 }
 
 - (id)initWithFrame:(struct CGRect)fp8;
-- (void)setKeyboard:(ShellKeyboard*) keyboard;
+//- (void)setDelegate:(id)delegate;
 - (void)scrollToEnd;
 - (void)insertText:(NSString*)text;
-
+//- (void)mouseUp:(struct __GSEvent *)fp8;
 @end

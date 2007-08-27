@@ -94,6 +94,8 @@ static NSRecursiveLock *lock;
 - (BOOL)connectUsingUsername:(NSString*)username password:(NSString*)password
 {
     int success;
+	you = [[Buddy alloc]init];
+	[you setName:[username copy]];
 
     if ([self connected])
         return YES;
@@ -101,7 +103,7 @@ static NSRecursiveLock *lock;
 	NSLog(@"ApolloTOC> Preconnect...");
     [lock lock];
     ft_callback_storepass([password cString]);
-	NSLog(@"ApolloTOC> Password Stored... Connectiong..");
+	NSLog(@"ApolloTOC> Password Stored... Connecting..");
     success = firetalk_signon(ft_aim_connection, TOC_SERVER, TOC_PORT, [[username lowercaseString] cString]);
 	NSLog(@"ApolloTOC> Sign on request sent...");	
     [lock unlock];
@@ -135,6 +137,7 @@ static NSRecursiveLock *lock;
     while (connected == ApolloTOC_CONNECTING)
     {
         [self runloopCheck:nil]; 
+		status = NO;
         usleep(100); // wait for connection to either fail or succeed
     }
     
@@ -213,7 +216,7 @@ static NSRecursiveLock *lock;
     firetalk_register_callback(ft_aim_connection, FC_DOINIT, (ptrtofnct)ft_callback_doinit);
 //THESE ARE FAKES!!!
 //	firetalk_register_callback(ft_aim_connection, FC_IM_IDLEINFO, (ptrtofnct)ft_callback_buddyonline);
-//	firetalk_register_callback(ft_aim_connection, FC_IM_GOTINFO, (ptrtofnct)ft_callback_buddyonline);
+	firetalk_register_callback(ft_aim_connection, FC_IM_GOTINFO, (ptrtofnct)ft_callback_getinfo);
 	firetalk_register_callback(ft_aim_connection, FC_IM_USER_NICKCHANGED, (ptrtofnct)ft_callback_im_user_nickchanged);	
 	firetalk_register_callback(ft_aim_connection, FC_IM_BUDDYONLINE, (ptrtofnct)ft_callback_buddyonline);
 	firetalk_register_callback(ft_aim_connection, FC_IM_BUDDYOFFLINE, (ptrtofnct)ft_callback_buddyoffline);
@@ -242,11 +245,16 @@ static NSRecursiveLock *lock;
     NSLog(@"ApolloTOC: Error code %i recieved: %s", code, firetalk_strerror(code));
 }
 
+- (void)getInfo:(Buddy*)aBuddy
+{
+	firetalk_im_get_info(ft_aim_connection, [[aBuddy name]cString]);
+}
+
 - (void)connectionSucessful:(void *)ftConnection
 {
     [lock lock];
   //  firetalk_im_internal_add_buddy(ft_aim_connection, "dorkvahl2", "Default Group"); // my AIM name; change if you wish
-  //  firetalk_im_upload_buddies(ftConnection); // kick to allow-all-but-denied mode
+    firetalk_im_upload_buddies(ftConnection); // kick to allow-all-but-denied mode
 
     //firetalk_set_away(ft_aim_connection, "");
 
@@ -263,6 +271,7 @@ static NSRecursiveLock *lock;
 	[payload addObject:		@"8"];
 	[_delegate imEvent:		payload];
 	NSLog(@"ApolloTOC>  here's to the good ol' days...");
+	[self listBuddies];	
     // [self registerForText:@"Hello" target:self selector:@selector(parseHello:forUser:)];
 }
 
@@ -330,6 +339,31 @@ static NSRecursiveLock *lock;
 		[_delegate imEvent:		payload];			
         [self disconnect];
     }
+}
+
+
+- (NSString*) userName
+{
+	return [you name];
+}
+
+- (void)suspendApollo
+{
+	status = NO;
+	bastard = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(keepAlive) userInfo:nil repeats:YES];
+}
+
+- (void)keepAlive
+{
+	NSLog(@"JOHNNY FIVE - YOU'RE ALIVE");
+	
+}
+
+- (void)resumeApollo
+{
+	status = YES;
+	[bastard invalidate];
+	[self listBuddies];
 }
 
 @end

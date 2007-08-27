@@ -4,8 +4,6 @@
 #include <sys/uio.h>
 #include <unistd.h>
 #import <UIKit/UIView-Rendering.h>
-#import "ShellKeyboard.h"
-
 //Dear mobile terminal programmers,
 //you are 5x the hacker I am.
 //Thank you for open sourcing your code.
@@ -35,6 +33,7 @@
   id parent = [super initWithFrame:fp8];
 
   [self setText:@""];
+  [self setTextSize:14];
   [self setEditable:NO]; // don't mess up my pretty output
   [self setAllowsRubberBanding:YES];
   [self displayScrollerIndicators];
@@ -43,29 +42,25 @@
   return parent;
 }
 
-- (void)setKeyboard:(ShellKeyboard*) keyboard
+/*- (void)mouseUp:(struct __GSEvent *)fp8
 {
-  _keyboard=keyboard;
-}
-
-- (void)mouseUp:(struct __GSEvent *)fp8
-{
-  if ([self isScrolling]) {
-    // Ignore mouse events that cause scrolling
-  } else{
-    // NSLog(@"MouseUp: not scrolling\n");
-    [_keyboard toggle:self];
+  if (![self isScrolling]) 
+  {
+	[_delegate toggle];
   }
+  
   [super mouseUp:fp8];
-}
+}	*/
 
 - (void)scrollToEnd
 {
+  NSLog(@"Scrolling to end...");
   NSRange aRange;
   aRange.location = 9999999; // horray for magic number
   aRange.length = 1;
   [self setSelectionRange:aRange];
   [self scrollToMakeCaretVisible:YES];
+  [self setEditable:NO];
 }
 
 - (void)insertText:(NSString*)text

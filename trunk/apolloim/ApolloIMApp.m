@@ -1,5 +1,7 @@
 #import "ApolloIMApp.h"
 #import "StartView.h"
+#import "ApolloTOC.h"
+#import "ApolloIM-PrivateAccess.h"
 
 @implementation ApolloIMApp
 
@@ -19,6 +21,17 @@
 	[_window	orderFront:		self];
 	[_window	makeKey:		self];
 	[_window	_setHidden:		NO];
+}
+- (void)applicationSuspend:(struct __GSEvent *)event 
+{
+	NSLog(@"Suspending...");
+	//[[ApolloTOC sharedInstance]suspendApollo];
+}
+
+- (void)applicationResume:(struct __GSEvent *)event 
+{
+	NSLog(@"Resuming...");
+	//[[ApolloTOC sharedInstance]resumeApollo];	
 }
 
 - (void)applicationWillTerminate {

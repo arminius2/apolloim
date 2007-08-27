@@ -6,11 +6,19 @@
 //  Copyright 2007 __MyCompanyName__. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <UIKit/UITextView.h>
+#import "ConvoBox.h"
+#import <UIKit/UITransitionView.h>
 
-
-@interface AboutView : NSObject {
-
+@interface AboutView : UIView {
+    CGRect				_rect;	
+	ConvoBox		*aboutField;	
+	
 }
+
+- (id)initWithFrame:(struct CGRect)frame;
+- (void)dealloc;
 
 @end

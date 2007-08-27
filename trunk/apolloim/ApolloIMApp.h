@@ -2,7 +2,6 @@
 #import <UIKit/UIKit.h>
 #import <UIKit/UIAnimator.h>
 #import "StartView.h"
-#import "ShellKeyboard.h"
 
 @interface ApolloIMApp : UIApplication 
 {
@@ -12,4 +11,7 @@
 }
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification;
 - (void)applicationWillTerminate;
+- (void)applicationSuspend:(struct __GSEvent *)event;
+- (void)applicationResume:(struct __GSEvent *)event;
+
 @end

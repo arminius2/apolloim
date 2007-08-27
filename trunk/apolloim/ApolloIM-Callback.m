@@ -33,7 +33,7 @@
 #import "Buddy.h"
 
 #import "firetalk/firetalk.h"
-enum { 
+enum {
 	AIM_RECV_MESG		=	1,
 	AIM_BUDDY_ONLINE	=	2, 
 	AIM_BUDDY_OFFLINE	=	3, 
@@ -42,9 +42,10 @@ enum {
 	AIM_BUDDY_IDLE		=	6,	
 	AIM_BUDDY_MSG_RECV	=   7,
 	AIM_CONNECTED		=   8,
-	AIM_DISCONNECTED	=	9
+	AIM_DISCONNECTED	=	9,
+	AIM_READ_MSGS		=   10,
+	AIM_BUDDY_INFO		=	11	
 };
-
 char pass[1024]; // firetalk requests this at a later time; ApolloTOC sends it here and we store it until then
 
 void ft_callback_error(void *connection, void *clientstruct, int error, char *roomoruser)
@@ -76,7 +77,7 @@ void ft_callback_getmessage(void *c, void *cs, const char * const who, const int
 
 void ft_callback_listbuddy(void *c, void *cs, const char * const nickname, const char * const group, const int online, const int away, const long idle)
 {
-//	NSLog(@"ft_callback_listbuddy -- %@", [NSString stringWithCString:who]);
+	NSLog(@"ft_callback_listbuddy -- %@", [NSString stringWithCString:nickname]);
 	Buddy* buddy = [[Buddy alloc]initWithBuddyName:[NSString stringWithCString:nickname] group:[NSString stringWithCString:group] status:@"Unknown"	isOnline:(bool)away		   message:nil];
 	[[ApolloTOC sharedInstance] buddyUpdate:buddy withCode:AIM_BUDDY_AWAY];
 }
@@ -135,6 +136,18 @@ void ft_callback_buddyaway			(void *c, void *cs, const char * const who, const c
 void ft_callback_getaction			(void *c, void *cs, const char * const room, const char * const from, const int automessage, const char * message)
 {
 	NSLog(@"ft_callback_getaction");
+}
+
+void ft_callback_getinfo(void *c, void *cs, const char * const who, const char * const info, const int warning, const int idle, const int flags)
+{
+	Buddy* buddy = [[Buddy alloc]initWithBuddyName:
+		[NSString stringWithCString:who] 
+		group:@"UNKNOWN"
+		status:@"UNKNOWN"			
+		isOnline:true
+		message:nil];
+	[buddy setInfo:[NSString stringWithCString:info]];
+	[[ApolloTOC sharedInstance] buddyUpdate:buddy withCode:AIM_BUDDY_INFO];			
 }
 
 void ft_callback_disconnect(void *c, void *cs, const int error)

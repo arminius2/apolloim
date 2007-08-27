@@ -35,6 +35,7 @@
 -(void)addMessage:(NSString*)pass;
 -(void)setInAConversation:(bool)pass;
 -(void)setUnreadMsgs:(int)pass;
+-(void)incrementMessages;
 
 -(NSString*)name;
 -(NSString*)properName;

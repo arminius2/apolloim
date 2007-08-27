@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <UIKit/UINavigationItem.h>
 #import <UIKit/UITransitionView.h>
 #import "UIKIt/UITextLabel.h"
 #import "Account.h"
+#import "AboutView.h"
 #import "AccountsView.h"
 #import "AccountEditorView.h"
 #import "Buddy.h"
@@ -21,17 +23,18 @@
 {
 	UINavigationBar		*_navBar;
 	UITransitionView	*_transitionView;
-	UITextLabel			*navtitle;
+	UINavigationItem 	*navtitle;
 	CGRect				_rect;	
 	ApolloTOC			*conn;
 	bool				EXIT;
 	
+	AboutView			*_aboutView;
 	AccountsView		*_accountsView;
 	Account				*CurrentAccount;
 	AccountEditorView	*accountEditor;
 	BuddyView			*_buddyView;
-	Account*			active;
-
+	Account				*active;
+	
 	NSMutableArray		*_conversations;
 	Buddy				*currentConversationBuddy;
 	Conversation		*currentConversation;
@@ -42,7 +45,7 @@
 	bool				_accountsEditorViewBrowser;	
 	bool				_buddyViewBrowser;
 	bool				_conversationView;
-//	bool				_currentBuddyInfo;			
+	bool				_about;			
 }
 
 - (void)navigationBar:(UINavigationBar *)navbar buttonClicked:(int)button;
@@ -52,6 +55,7 @@
 - (void)receiveMessage:(NSString*)msg fromBuddy:(Buddy*)aBuddy;
 - (void)accountsView:(AccountsView *)acctView accountSelected:(Account *)selectedAccount;
 - (void)makeACoolMoveTo:(int)target;
+-(void)checkForUpdates:(id)anObject;
 - (void)dealloc;
 
 @end
@@ -66,5 +70,7 @@ enum {
 	AIM_BUDDY_MSG_RECV	=   7,
 	AIM_CONNECTED		=   8,
 	AIM_DISCONNECTED	=	9,
-	AIM_READ_MSGS		=   10
+	AIM_READ_MSGS		=   10,
+	AIM_BUDDY_INFO		=	11	
 };
+

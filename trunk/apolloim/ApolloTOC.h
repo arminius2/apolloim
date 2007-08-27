@@ -27,9 +27,12 @@ typedef enum {ApolloTOC_DISCONNECTED, ApolloTOC_CONNECTING, ApolloTOC_CONNECTED}
 	NSTimer* bastard;
 	
     BOOL willSendMarkup;
+	BOOL status;
     ApolloTOCConnectionStatus connected;
     void *ft_aim_connection;
 
+	Buddy *you;
+	
     NSString *infoMessage;
 	
 	id _delegate;
@@ -37,6 +40,7 @@ typedef enum {ApolloTOC_DISCONNECTED, ApolloTOC_CONNECTING, ApolloTOC_CONNECTED}
 
 + (void)initialize;
 + (id)sharedInstance;
+
 
 - (id)init;
 - (void)dealloc;
@@ -54,5 +58,12 @@ typedef enum {ApolloTOC_DISCONNECTED, ApolloTOC_CONNECTING, ApolloTOC_CONNECTED}
 
 - (void)sendIM:(NSString*)body toUser:(NSString*)user;
 - (void)buddyUpdate:(Buddy*)buddy withCode:(int)code;
+
+- (NSString*) userName;
+- (void)getInfo:(Buddy*)aBuddy;
+
+- (void)suspendApollo;
+- (void)resumeApollo;
+- (void)keepAlive;
 
 @end

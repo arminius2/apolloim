@@ -27,29 +27,29 @@ enum {
 {
 	if ((self == [super initWithFrame: frame]) != nil) 
 	{
-		NSLog(@"BuddyView>> Init BuddyView...");
+		//NSLog(@"BuddyView>> Init BuddyView...");
 		UITableColumn *col = [[UITableColumn alloc]
 			initWithTitle: @"Buddies"
 			identifier:@"buddies"
 			width: frame.size.width
 		];
-		NSLog(@"BuddyView>> init table...");
+		//NSLog(@"BuddyView>> init table...");
 		_table = [[UITable alloc] initWithFrame: CGRectMake(0, 0, frame.size.width, frame.size.height)];
 		[_table addTableColumn: col];
 		[_table setSeparatorStyle: 1];
 		[_table setDelegate: self];
 		[_table setDataSource: self];
 
-		NSLog(@"BuddyView>> init _accounts");
+		//NSLog(@"BuddyView>> init _accounts");
 		_buddies = [[NSMutableArray alloc] init];
 		buddyList = [[NSMutableArray alloc]init];
 		
 		_rowCount = 0;
 		_delegate = nil;
-		NSLog(@"BuddyView>> Adding table view...");
+		//NSLog(@"BuddyView>> Adding table view...");
 		[_table setAllowsRubberBanding:NO];
 		[self addSubview: _table];
-		NSLog(@"BuddyView>> Reloading data...");
+		//NSLog(@"BuddyView>> Reloading data...");
 		[self reloadData];				
 	}
 	return self;
@@ -69,7 +69,7 @@ enum {
 	//Search for buddy
 	//if username matches, replace new buddy object with it
 	//else add the buddy
-	NSLog(@"--------");
+	//NSLog(@"--------");
 //	NSLog(@"BuddyView.m> Buddy is %@", [aBuddy properName]);
 
 	switch(Code)
@@ -79,17 +79,17 @@ enum {
 			{	
 				if([[[_buddies objectAtIndex:i]properName]isEqualToString:[aBuddy properName]])
 				{
-					NSLog(@"BuddyView.m> %@ exists.  No add.", [aBuddy properName]);
+					//NSLog(@"BuddyView.m> %@ exists.  No add.", [aBuddy properName]);
 					return;
 				}
 			}
 			if([aBuddy online])
 			{
-				NSLog(@"BuddyView.m> %@ is online.",[aBuddy properName]);
+				//NSLog(@"BuddyView.m> %@ is online.",[aBuddy properName]);
 				[_buddies addObject:aBuddy];
 			}
 			else
-				NSLog(@"BuddyView.m> %@ is not online.",[aBuddy properName]);
+				//NSLog(@"BuddyView.m> %@ is not online.",[aBuddy properName]);
 			break;
 		case AIM_BUDDY_OFFLINE:
 			for(i=0; i<max; i++)
@@ -97,7 +97,7 @@ enum {
 				if([[[_buddies objectAtIndex:i]properName]isEqualToString:[aBuddy properName]])
 				{
 					[_buddies removeObjectAtIndex:i];
-					NSLog(@"BuddyView.m> %@ is offline --  was at index %d",[aBuddy properName], i);
+					//NSLog(@"BuddyView.m> %@ is offline --  was at index %d",[aBuddy properName], i);
 					[self reloadData];
 					return;
 				}			
@@ -109,7 +109,7 @@ enum {
 				if([[[_buddies objectAtIndex:i]properName]isEqualToString:[aBuddy properName]])
 				{
 					[[_buddies objectAtIndex:i]setOnline:NO];
-					NSLog(@"BuddyView.m> %@ is away",[aBuddy properName]);
+					//NSLog(@"BuddyView.m> %@ is away",[aBuddy properName]);
 					[self reloadData];
 					return;
 				}			
@@ -120,7 +120,7 @@ enum {
 				if([[[_buddies objectAtIndex:i]properName]isEqualToString:[aBuddy properName]])
 				{
 					[[_buddies objectAtIndex:i]setOnline:YES];
-					NSLog(@"BuddyView.m> %@ is back",[aBuddy properName]);
+					//NSLog(@"BuddyView.m> %@ is back",[aBuddy properName]);
 					[self reloadData];
 					return;
 				}			
@@ -145,21 +145,21 @@ enum {
 				if([[[_buddies objectAtIndex:i]properName]isEqualToString:[aBuddy properName]])
 				{
 					recvd = YES;
-					[[_buddies objectAtIndex:i]setUnreadMsgs:[[_buddies objectAtIndex:i]unreadMsgs]+1];
+					[[_buddies objectAtIndex:i]incrementMessages];
 					NSLog(@"BuddyView.m> %@ has given you new messages",[aBuddy properName]);
 					[self reloadData];
 				}		
 			}
 			if(!recvd)
 			{
-				NSLog(@"BuddyView.m> ---------");
-				NSLog(@"BuddyView.m> We don't have this buddy in our fucking list.  Bastard.");
-				NSLog(@"BuddyView.m> He might be our buddy, he might not be - point being, I want this to just work and not have to work properly.");
-				NSLog(@"BuddyView.m> For now, we're going to add him to the list.  Delete him if you want to.");
-				NSLog(@"BuddyView.m> In the future, we should get a buddy_list on sign on, and then do a check against who's online, and the rest are offline.");				
-				NSLog(@"BuddyView.m> That's for Beta 2. STAY TUNED.  PS This src is in yer buddylist warnin' yer dudes.");				
-				NSLog(@"BuddyView.m> ---------");
-				[aBuddy setUnreadMsgs:[aBuddy unreadMsgs]+1];
+				//NSLog(@"BuddyView.m> ---------");
+				//NSLog(@"BuddyView.m> We don't have this buddy in our fucking list.  Bastard.");
+				//NSLog(@"BuddyView.m> He might be our buddy, he might not be - point being, I want this to just work and not have to work properly.");
+				//NSLog(@"BuddyView.m> For now, we're going to add him to the list.  Delete him if you want to.");
+				//NSLog(@"BuddyView.m> In the future, we should get a buddy_list on sign on, and then do a check against who's online, and the rest are offline.");				
+				//NSLog(@"BuddyView.m> That's for Beta 2. STAY TUNED.  PS This src is in yer buddylist warnin' yer dudes.");				
+				//NSLog(@"BuddyView.m> ---------");
+				[aBuddy incrementMessages];
 				[_buddies addObject:aBuddy];		
 			}
 			
@@ -204,11 +204,11 @@ enum {
 
 - (void)tableRowSelected:(NSNotification *)notification 
 {
-	NSLog(@"BuddyView.m>--------");	
-	NSLog(@"BuddyView.m> %@ Selected",[[self selectedBuddy]name]);
-	NSLog(@"BuddyView.m> Moving to window from delegate...");
+	//NSLog(@"BuddyView.m>--------");	
+	//NSLog(@"BuddyView.m> %@ Selected",[[self selectedBuddy]name]);
+	//NSLog(@"BuddyView.m> Moving to window from delegate...");
 	[_delegate switchToConvo:[self selectedBuddy]];
-	NSLog(@"BuddyView.m>--------");	
+	//NSLog(@"BuddyView.m>--------");	
 }
 
 - (Buddy *)selectedBuddy 

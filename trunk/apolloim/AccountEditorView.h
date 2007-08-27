@@ -17,7 +17,6 @@
 #import "UIKit/UIPreferencesTextTableCell.h"
 #import "Account.h"
 #import "UIKit/UIKeyboard.h"
-#import "ShellKeyboard.h"
 
 @interface AccountEditorView : UIView 
 {
@@ -29,9 +28,7 @@
 		
 	UITextField			*usernameField;
 	UITextField			*passwordField;
-
-	ShellKeyboard*			_keyboard;
-		
+	
 	//Passed
 	NSString			*passwordEXIST;
 	NSString			*usernameEXIST;
