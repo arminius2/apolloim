@@ -1,5 +1,6 @@
 /*
  ApolloTOC.m: Objective-C firetalk interface.
+ By Alex C. Schaefer
  Modification of BoomBot's objc/firetalk wrapper
 
  This program is free software; you can redistribute it and/or modify

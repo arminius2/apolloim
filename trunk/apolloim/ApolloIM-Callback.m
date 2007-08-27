@@ -1,14 +1,7 @@
-//
-//  ApolloTOC-Callback.m
-//  BoomBot
-//
-//  Created by Josh on Sun Mar 02 2003.
-//
-
 /*
- ApolloTOC-Callback.m: Objective-C firetalk interface callbacks.
- Part of BoomBot.
- Copyright (C) 2006 Joshua Watzman.
+ ApolloTOC.m: Objective-C firetalk interface.
+ By Alex C. Schaefer
+ Modification of BoomBot's objc/firetalk wrapper
 
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -23,7 +16,7 @@
  You should have received a copy of the GNU General Public License
  along with this program; if not, write to the Free Software
  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
- */
+*/
 
 #import <Foundation/Foundation.h>
 

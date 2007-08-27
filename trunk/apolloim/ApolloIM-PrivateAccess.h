@@ -1,7 +1,7 @@
 /*
- BBTOC-PrivateAccess: Private header for BBTOC.
- Part of BoomBot.
- Copyright (C) 2006 Joshua Watzman.
+ ApolloTOC.m: Objective-C firetalk interface.
+ By Alex C. Schaefer
+ Modification of BoomBot's objc/firetalk wrapper
 
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -17,8 +17,6 @@
  along with this program; if not, write to the Free Software
  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
-
-// Don't use this unless you really need private access to BBTOC. BBTOC and BBTOC-Callback are the only ones that really do at this point. BBController should only need it to fake a sent message for direct chat.
 
 #import "ApolloTOC.h"
 
