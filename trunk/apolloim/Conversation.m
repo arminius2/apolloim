@@ -54,8 +54,9 @@
 			[sendField setTextSize:14];			
 			[sendField setAlpha:50];			
 			
-			convoView = [[ConvoBox alloc]initWithFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width,  _rect.size.height - 30.0f)];
-			//[convoView setDelegate: self];  //This might not work, and I'm expecting it as such
+			convoView = [[ConvoBox alloc]initWithFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width,  _rect.size.height /*- 30.0f*/)];
+			[convoView setDelegate: self];  //This might not work, and I'm expecting it as such
+			
 
 			keyboard = [[ShellKeyboard alloc]initWithFrame:CGRectMake(_rect.origin.x,450.0f, _rect.size.width, 300.0f)];
 			[keyboard setTapDelegate: self];
@@ -76,11 +77,11 @@
 			[cell addSubview:send];
 			[cell setFrame:CGRectMake(0.0f,450.0f, _rect.size.width, 30.0f)];
 										
-			_msgBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(_rect.origin.x, 380.0f, _rect.size.width, 30.0f)];
-			[_msgBar setDelegate: self];
+			//_msgBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(_rect.origin.x, 380.0f, _rect.size.width, 30.0f)];
+			//[_msgBar setDelegate: self];
 			//[_msgBar showButtonsWithLeftTitle:@"Buddy Info" rightTitle:nil leftBack: NO];
-			[_msgBar enableAnimation];							
-			[_msgBar setBarStyle:2];					
+			//[_msgBar enableAnimation];							
+			//[_msgBar setBarStyle:2];					
 																				
 			[self addSubview: convoView];
 		//	[self addSubview: _msgBar];
@@ -96,16 +97,15 @@
 	-(void)rollKeyboard
 	{	
 		[keyboard show:sendField withCell:cell];
-		[convoView setFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width,  (((_rect.size.height / 2) - 20.0f)/* + 30.0f*/))];
+		[convoView setFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width,  (((_rect.size.height / 2) - 30.0f)/* + 30.0f*/))];
 		_hidden = false;
-		NSLog(@"Showing...");
-		[convoView setEditable:NO];				
+		NSLog(@"Showing...");		
 	}
 	
 	-(void)foldKeyboard
 	{
 		[keyboard hide:sendField withCell:cell];
-		[convoView setFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width,  (((_rect.size.height * 2) + 20.0f)/* - 30.0f*/ ))];
+		[convoView setFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width,  (((_rect.size.height * 2) + 30.0f)/* - 30.0f*/ ))];
 		NSLog(@"Hiding...");
 		_hidden = true;
 		
@@ -130,9 +130,9 @@
 		//I am awesome
 		[convoView setHTML:
 		[[convoView HTML]stringByAppendingString:[NSString stringWithFormat:@"<div><font color=\"blue\">%@</font>: %@</div>",[buddy name],msg]]];
-		[convoView scrollToEnd];	
-		[convoView insertText:@""];
-		[convoView setEditable:NO];				
+		
+		[convoView scrollToEnd];			
+		[convoView insertText:@""];					
 	}	
 	
 	- (void)sendMessage
@@ -140,10 +140,10 @@
 		[convoView setHTML:
 		[[convoView HTML]stringByAppendingString:[NSString stringWithFormat:@"<div><font color=\"red\">%@</font>: %@</div>",[[ApolloTOC sharedInstance]userName],[sendField text]]]];
 		[[ApolloTOC sharedInstance]sendIM:[sendField text] toUser:[buddy name]];
-		[convoView scrollToEnd];
-		[convoView insertText:@""];		
-		[convoView setEditable:NO];
 		[sendField setText:@""];
+		
+		[convoView scrollToEnd];
+		[convoView insertText:@""];						
 	}
 	
 	- (Buddy*)buddy

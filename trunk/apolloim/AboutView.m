@@ -24,10 +24,11 @@
 	{
 		if ((self == [super initWithFrame: frame]) != nil) 
 		{
-		//	aboutField =[[ConvoBox alloc]initWithFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width,  _rect.size.height - 30.0f)];
-		//	[aboutField setHTML:@"<b>Test</b>"];
-		//	[self addSubview:aboutField];
+			aboutField =[[ConvoBox alloc]initWithFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width,  _rect.size.height)];
+			[aboutField setHTML:@"<b>Special Thanks to Doc, natetrue, wheat, Erica, Extremis (who got me a dev box - thank god), Ste, darkten, and Nervegas.  </b>"];
+			[self addSubview:aboutField];
 		}
+		return self;
 	}
 	-(void)dealloc
 	{

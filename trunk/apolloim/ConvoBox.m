@@ -53,7 +53,7 @@
 
   [self setText:@""];
   [self setTextSize:14];
-  [self setEditable:NO]; // don't mess up my pretty output
+  [self setEditable:NO];
   [self setAllowsRubberBanding:YES];
   [self displayScrollerIndicators];
   [self setOpaque:NO];
@@ -75,11 +75,10 @@
 {
   NSLog(@"Scrolling to end...");
   NSRange aRange;
-  aRange.location = 9999999; // horray for magic number
+  aRange.location = 9999999; 
   aRange.length = 1;
   [self setSelectionRange:aRange];
   [self scrollToMakeCaretVisible:YES];
-  [self setEditable:NO];
 }
 
 - (void)insertText:(NSString*)text

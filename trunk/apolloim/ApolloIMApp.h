@@ -29,7 +29,7 @@
 }
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification;
 - (void)applicationWillTerminate;
-- (void)applicationSuspend:(struct __GSEvent *)event;
-- (void)applicationResume:(struct __GSEvent *)event;
+//- (void)applicationSuspend:(struct __GSEvent *)event;
+//- (void)applicationResume:(struct __GSEvent *)event;
 
 @end

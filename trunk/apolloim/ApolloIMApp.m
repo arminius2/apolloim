@@ -40,7 +40,7 @@
 	[_window	makeKey:		self];
 	[_window	_setHidden:		NO];
 }
-- (void)applicationSuspend:(struct __GSEvent *)event 
+/*- (void)applicationSuspend:(struct __GSEvent *)event 
 {
 	NSLog(@"Suspending...");
 	//[[ApolloTOC sharedInstance]suspendApollo];
@@ -50,7 +50,7 @@
 {
 	NSLog(@"Resuming...");
 	//[[ApolloTOC sharedInstance]resumeApollo];	
-}
+}*/
 
 - (void)applicationWillTerminate {
 	[_window release];
