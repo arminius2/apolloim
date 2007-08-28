@@ -33,7 +33,6 @@
 		FA2125760C73E59200D6ABA1 /* AccountEditorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountEditorView.m; sourceTree = "<group>"; };
 		FA6776E80C7A6E7B00DEC8EF /* Conversation.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Conversation.h; sourceTree = "<group>"; };
 		FA6776E90C7A6E7B00DEC8EF /* Conversation.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Conversation.m; sourceTree = "<group>"; };
-		FAB97B920C75E0B2004956B5 /* firetalk.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = firetalk.h; path = firetalk/firetalk.h; sourceTree = "<group>"; };
 		FAB97BAF0C75E1F9004956B5 /* ApolloIM-Callback.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "ApolloIM-Callback.h"; sourceTree = "<group>"; };
 		FAB97BB00C75E1F9004956B5 /* ApolloIM-Callback.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = "ApolloIM-Callback.m"; sourceTree = "<group>"; };
 		FAB97BB10C75E1F9004956B5 /* ApolloIM-PrivateAccess.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "ApolloIM-PrivateAccess.h"; sourceTree = "<group>"; };
@@ -135,7 +134,6 @@
 		FA2121320C73CBF300D6ABA1 /* AIM */ = {
 			isa = PBXGroup;
 			children = (
-				FA684B7C0C75734700D20925 /* firetalk */,
 				FAB97BAF0C75E1F9004956B5 /* ApolloIM-Callback.h */,
 				FAB97BB00C75E1F9004956B5 /* ApolloIM-Callback.m */,
 				FAB97BB10C75E1F9004956B5 /* ApolloIM-PrivateAccess.h */,
@@ -143,14 +141,6 @@
 				FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */,
 			);
 			name = AIM;
-			sourceTree = "<group>";
-		};
-		FA684B7C0C75734700D20925 /* firetalk */ = {
-			isa = PBXGroup;
-			children = (
-				FAB97B920C75E0B2004956B5 /* firetalk.h */,
-			);
-			name = firetalk;
 			sourceTree = "<group>";
 		};
 		FAB983CD0C76932F004956B5 /* AccountViews */ = {

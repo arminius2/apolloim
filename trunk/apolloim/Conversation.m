@@ -54,7 +54,7 @@
 			[sendField setTextSize:14];			
 			[sendField setAlpha:50];			
 			
-			convoView = [[ConvoBox alloc]initWithFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width,  400.0f)];
+			convoView = [[ConvoBox alloc]initWithFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width,  30.0f)];
 			[convoView setDelegate: self];  //This might not work, and I'm expecting it as such
 			
 

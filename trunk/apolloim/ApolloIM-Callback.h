@@ -22,18 +22,19 @@
 
 // void ft_callback_setidle(void *c, long *idle);
 void ft_callback_im_user_nickchanged(void *c, void *cs, const char * const nickname);
+
+void ft_callback_listbuddy			(void *c, void *cs, const char * const nickname, const char * const group, const int online, const int away, const long idle);
 void ft_callback_buddyonline		(void *c, void *cs, const char * const who, const char * const group);
 void ft_callback_buddyoffline		(void *c, void *cs, const char * const who, const char * const group);
 void ft_callback_buddyunaway		(void *c, void *cs, const char * const who, const char * const group);
 void ft_callback_buddyaway			(void *c, void *cs, const char * const who, const char * const group);
 void ft_callback_getinfo			(void *c, void *cs, const char * const who, const char * const info, const int warning, const int idle, const int flags);
 void ft_callback_getaction			(void *c, void *cs, const char * const room, const char * const from, const int automessage, const char * message);
-void ft_callback_error(void *connection, void *clientstruct, int error, char *roomoruser);
-void ft_callback_connectfailed(void *c, void *cs, int error, char *reason);
-void ft_callback_doinit (void *c, void *cs, char *nickname);
-void ft_callback_getmessage(void *c, void *cs, const char * const who, const int automessage, const char * const message);
-void ft_callback_listbuddy(void *c, void *cs, const char * const nickname, const char * const group, const int online, const int away, const long idle);
-void ft_callback_disconnect(void *c, void *cs, const int error);
-void ft_callback_needpass(void *c, void *cs, char *p, const int size);
-void ft_callback_storepass(char* newpass);
+void ft_callback_error				(void *c, void *cs, const int error, const char * const roomoruser, const char * const description);
+void ft_callback_connectfailed		(void *c, void *cs, int error, char *reason);
+void ft_callback_doinit				(void *c, void *cs, char *nickname);
+void ft_callback_getmessage			(void *c, void *cs, const char * const who, const int automessage, const char * const message);
+void ft_callback_disconnect			(void *c, void *cs, const int error);
+void ft_callback_needpass			(void *c, void *cs, char *p, const int size);
+void ft_callback_storepass			(char* newpass);
 

@@ -41,10 +41,10 @@ enum {
 };
 char pass[1024]; // firetalk requests this at a later time; ApolloTOC sends it here and we store it until then
 
-void ft_callback_error(void *connection, void *clientstruct, int error, char *roomoruser)
+void ft_callback_error(void *c, void *cs, const int error, const char * const roomoruser, const char * const description)
 {
-//    NSLog(@"ft_callback_error");
-    [[ApolloTOC sharedInstance] error:error ftConnection:connection];
+    NSLog(@"ft_callback_error");
+    [[ApolloTOC sharedInstance] error:error ftConnection:c];
 }
 
 void ft_callback_connectfailed(void *c, void *cs, int error, char *reason)
@@ -55,7 +55,7 @@ void ft_callback_connectfailed(void *c, void *cs, int error, char *reason)
 
 void ft_callback_doinit (void *c, void *cs, char *nickname)
 {
-//     NSLog(@"ft_callback_doinit");
+     NSLog(@"ft_callback_doinit");
     [[ApolloTOC sharedInstance] connectionSucessful:c];
 }
 
@@ -126,11 +126,6 @@ void ft_callback_buddyaway			(void *c, void *cs, const char * const who, const c
 	[[ApolloTOC sharedInstance] buddyUpdate:buddy withCode:AIM_BUDDY_AWAY];		
 }
 
-void ft_callback_getaction			(void *c, void *cs, const char * const room, const char * const from, const int automessage, const char * message)
-{
-	NSLog(@"ft_callback_getaction");
-}
-
 void ft_callback_getinfo(void *c, void *cs, const char * const who, const char * const info, const int warning, const int idle, const int flags)
 {
 	Buddy* buddy = [[Buddy alloc]initWithBuddyName:
@@ -140,7 +135,7 @@ void ft_callback_getinfo(void *c, void *cs, const char * const who, const char *
 		isOnline:true
 		message:nil];
 	[buddy setInfo:[NSString stringWithCString:info]];
-	[[ApolloTOC sharedInstance] buddyUpdate:buddy withCode:AIM_BUDDY_INFO];			
+//	[[ApolloTOC sharedInstance] buddyUpdate:buddy withCode:AIM_BUDDY_INFO];			
 }
 
 void ft_callback_disconnect(void *c, void *cs, const int error)
