@@ -32,8 +32,8 @@
   CGRect kbFrame;
 }
 
-- (void)show:(UITextView*)sendView    withCell:(UIImageAndTextTableCell*) cell;
-- (void)hide:(UITextView*)sendView    withCell:(UIImageAndTextTableCell*) cell;
-- (void)toggle:(UITextView*)sendView  withCell:(UIImageAndTextTableCell*) cell;
+- (void)show:(UITextView*)sendView    withCell:(UIImageAndTextTableCell*) cell	forConvoBox:(ConvoBox*)box;
+- (void)hide:(UITextView*)sendView    withCell:(UIImageAndTextTableCell*) cell  forConvoBox:(ConvoBox*)box;
+- (void)toggle:(UITextView*)sendView  withCell:(UIImageAndTextTableCell*) cell	forConvoBox:(ConvoBox*)box;
 
 @end

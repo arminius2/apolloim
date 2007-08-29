@@ -53,7 +53,7 @@
 
   [self setText:@""];
   [self setTextSize:14];
-  [self setEditable:NO];
+  [self setEditable:YES];
   [self setAllowsRubberBanding:YES];
   [self displayScrollerIndicators];
   [self setOpaque:NO];
@@ -61,7 +61,7 @@
   return parent;
 }
 
-/*- (void)mouseUp:(struct __GSEvent *)fp8
+- (void)mouseUp:(struct __GSEvent *)fp8
 {
   if (![self isScrolling]) 
   {
@@ -69,7 +69,7 @@
   }
   
   [super mouseUp:fp8];
-}	*/
+}	
 
 - (void)scrollToEnd
 {
@@ -106,4 +106,8 @@
 	return NO;
 }
 
+- (BOOL)canBecomeFirstResponder
+{
+	return false;
+}
 @end

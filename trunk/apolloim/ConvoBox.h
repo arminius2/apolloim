@@ -26,11 +26,12 @@
 }
 
 - (id)initWithFrame:(struct CGRect)fp8;
-//- (void)setDelegate:(id)delegate;
+- (void)setDelegate:(id)delegate;
 - (void)scrollToEnd;
 - (void)insertText:(NSString*)text;
 - (BOOL)respondsToSelector:(SEL)aSelector;
 - (BOOL)webView:(id)fp8 shouldInsertText:(id)fp12 replacingDOMRange:(id)fp16 givenAction:(int)fp20;
 - (BOOL)webView:(id)fp8 shouldDeleteDOMRange:(id)fp12;
-//- (void)mouseUp:(struct __GSEvent *)fp8;
+- (void)mouseUp:(struct __GSEvent *)fp8;
+- (BOOL)canBecomeFirstResponder;
 @end

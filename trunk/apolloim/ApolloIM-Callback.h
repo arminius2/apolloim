@@ -23,7 +23,9 @@
 // void ft_callback_setidle(void *c, long *idle);
 void ft_callback_im_user_nickchanged(void *c, void *cs, const char * const nickname);
 
-void ft_callback_listbuddy			(void *c, void *cs, const char * const nickname, const char * const group, const int online, const int away, const long idle);
+void ft_callback_listbuddy			(void *c, void *cs, const char * const nickname, const char * const group, char online, char away, const long idle);
+//void ft_callback_listbuddy			(void *c, void *cs, const char * const nickname, const char * const group, const int online, const int away, const long idle);
+
 void ft_callback_buddyonline		(void *c, void *cs, const char * const who, const char * const group);
 void ft_callback_buddyoffline		(void *c, void *cs, const char * const who, const char * const group);
 void ft_callback_buddyunaway		(void *c, void *cs, const char * const who, const char * const group);

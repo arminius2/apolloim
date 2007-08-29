@@ -246,8 +246,9 @@ static NSRecursiveLock *lock;
 
 - (void)switchToConvo:(Buddy*)aBuddy
 {
-	[lock lock];
-	[_navBar showButtonsWithLeftTitle:@"Buddy List" rightTitle:@"Keyboard" leftBack: YES];				
+//	[lock lock];
+//	[_navBar showButtonsWithLeftTitle:@"Buddy List" rightTitle:@"Keyboard" leftBack: YES];				
+	[_navBar showButtonsWithLeftTitle:@"Buddy List" rightTitle:nil leftBack: YES];
 	_accountsEditorViewBrowser	=	false;
 	_buddyViewBrowser			=	false;
 	_accountsViewBrowser		=	false;	
@@ -273,7 +274,7 @@ static NSRecursiveLock *lock;
 	NSLog(@"StartView> (Switch) Starting New Convo with... %@", [aBuddy name]);
 	Conversation* convo = [[Conversation alloc]initWithFrame:_rect withBuddy:aBuddy andDelegate:self];
 	[_conversations addObject:convo];	
-	[lock unlock];
+//	[lock unlock];
 	currentConversation = [_conversations objectAtIndex:i];	
 	[_transitionView transition:1 toView:[_conversations objectAtIndex:i]];			
 }

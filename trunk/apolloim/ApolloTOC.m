@@ -144,18 +144,19 @@ static NSRecursiveLock *lock;
     
     if ([self connected])
 	{
+		firetalk_im_list_buddies(ft_aim_connection);		
         return YES;
 	}
     else
         return NO;
 }
 
-- (void)listBuddies
-{
-	[lock lock];
-	firetalk_im_list_buddies(ft_aim_connection);
-	[lock unlock];
-}
+//- (void)listBuddies
+//{
+//	[lock lock];
+//	firetalk_im_list_buddies(ft_aim_connection);
+//	[lock unlock];
+//}
 
 - (BOOL)connected
 {
@@ -250,10 +251,10 @@ static NSRecursiveLock *lock;
 - (void)connectionSucessful:(void *)ftConnection
 {
     [lock lock];
-    firetalk_im_internal_add_buddy(ft_aim_connection, "dorkvahl2", "Default Group"); // my AIM name; change if you wish
+    //firetalk_im_internal_add_buddy(ftConnection, "dorkvahl2", "Default Group"); // my AIM name; change if you wish
     firetalk_im_upload_buddies(ftConnection); // kick to allow-all-but-denied mode
 
-    firetalk_set_away(ft_aim_connection, "");
+    firetalk_set_away(ftConnection, "");
 
     if (infoMessage)
         firetalk_set_info(ftConnection, [infoMessage cString]);
@@ -269,9 +270,9 @@ static NSRecursiveLock *lock;
 	[_delegate imEvent:		payload];
 	NSLog(@"ApolloTOC>  here's to the good ol' days...");
 	[NSTimer scheduledTimerWithTimeInterval:15 target:self selector:@selector(keepAlive) userInfo:nil repeats:YES] ;	
-	[lock unlock];
-	
-	[self listBuddies];
+
+	firetalk_im_list_buddies(ftConnection);
+	[lock unlock];	
 }
 
 - (void)recievedMessage:(NSString*)message fromUser:(NSString*)user isAutomessage:(BOOL)automessage ftConnection:(void *)ftConnection
@@ -294,10 +295,6 @@ static NSRecursiveLock *lock;
 - (void)runloopCheck:(NSTimer*)timer
 {
     struct timeval timeout;
-
-	Buddy* aBuddy = [[Buddy alloc]init];
-	[aBuddy setName:@"WSJ"];
-//	[self getInfo:aBuddy];
 
   //  NSLog(@"Timer fired.");
     

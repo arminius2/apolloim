@@ -28,53 +28,76 @@
 #import <UIKit/UIView-Geometry.h>
 #import <UIKit/UIPreferencesTable.h>
 
+@interface UITextLoupe : UIView
+
+- (void)drawRect:(struct CGRect)fp8;
+
+@end
+
 @implementation ShellKeyboard
 
-- (void) show:(UITextView*)sendView withCell:(UIImageAndTextTableCell*) cell
+- (void) show:(UITextView*)sendView withCell:(UIImageAndTextTableCell*) cell forConvoBox:(ConvoBox*)box
 {
-	[sendView setBottomBufferHeight:(-5.0f)];
+	[sendView setBottomBufferHeight:(5.0f)];
 	
 	kbFrame = [self frame];
 	cellFrame = [cell frame];
 
-	[cell setFrame:CGRectMake(-10.0f, 185.0f, 320.0f, 20.0f)];
+//	[cell setFrame:CGRectMake(-10.0f, 185.0f, 320.0f, 20.0f)];
 
 	[self setTransform:CGAffineTransformMake(1,0,0,1,0,0)];
 	[self setFrame:CGRectMake(0.0f, 480.0, 320.0f, 480.0f)];
 
-	struct CGAffineTransform trans = CGAffineTransformMakeTranslation(0, -270);
-//	struct CGAffineTransform trans = CGAffineTransformMakeTranslation(0, -240);
-	UITransformAnimation *translate =
+    struct CGAffineTransform transKb = CGAffineTransformMakeTranslation(0, -280);
+    struct CGAffineTransform transCell = CGAffineTransformMakeTranslation(0, -210);	
+	
+	UITransformAnimation *translateKb =
 	[[UITransformAnimation alloc] initWithTarget: self];
-	[translate setStartTransform: CGAffineTransformMake(1,0,0,1,0,0)];
-	[translate setEndTransform: trans];
-	[[[UIAnimator alloc] init] addAnimation:translate withDuration:.2 start:YES];
+	[translateKb setStartTransform: CGAffineTransformMake(1,0,0,1,0,0)];
+	[translateKb setEndTransform: transKb];
+	
+	UITransformAnimation *translateCell =
+	[[UITransformAnimation alloc] initWithTarget: cell];
+	[translateCell setStartTransform: CGAffineTransformMake(1,0,0,1,0,0)];
+	[translateCell setEndTransform: transCell];	
+	
+	[[[UIAnimator alloc] init] addAnimation:translateKb withDuration:.5 start:YES];
+	[[[UIAnimator alloc] init] addAnimation:translateCell withDuration:.5 start:YES];	
 
 	_hidden = NO;
-	NSLog(@"SHELKEYBOARD SHOW COMPLETE");
 }
 
-- (void) hide:(UITextView*)sendView withCell:(UIImageAndTextTableCell*) cell
+- (void) hide:(UITextView*)sendView withCell:(UIImageAndTextTableCell*) cell forConvoBox:(ConvoBox*)box
 {
-  [cell setFrame:CGRectMake(0.0f,450.0f, 320.0f, 30.0f)];
+ // [cell setFrame:CGRectMake(-10.0f,380.0f, 320.0f, 20.0f)];
 
-  [sendView setBottomBufferHeight:(-5.0f)];  
+  [sendView setBottomBufferHeight:(5.0f)];  
   struct CGRect rect = [UIHardware fullScreenApplicationContentRect];
   rect.origin.x = rect.origin.y = 0.0f;
 //  [sendView setFrame:CGRectMake(15.0f, -6.0f, 320.0f - 70.0f, 10.0f)];
   [self setTransform:CGAffineTransformMake(1,0,0,1,0,0)];
   [self setFrame:CGRectMake(0.0f, 240.0, 320.0f, 480.0f)];
 
-  struct CGAffineTransform trans = CGAffineTransformMakeTranslation(0, 270);
-  UITransformAnimation *translate =
-    [[UITransformAnimation alloc] initWithTarget: self];
-  [translate setStartTransform: CGAffineTransformMake(1,0,0,1,0,0)];
-  [translate setEndTransform: trans];
-  [[[UIAnimator alloc] init] addAnimation:translate withDuration:.2 start:YES];
+    struct CGAffineTransform transKb = CGAffineTransformMakeTranslation(0, 280);
+    struct CGAffineTransform transCell = CGAffineTransformMakeTranslation(0, 210);	
+	
+	UITransformAnimation *translateKb =
+	[[UITransformAnimation alloc] initWithTarget: self];
+	[translateKb setStartTransform: CGAffineTransformMake(1,0,0,1,0,0)];
+	[translateKb setEndTransform: transKb];
+	
+	UITransformAnimation *translateCell =
+	[[UITransformAnimation alloc] initWithTarget: cell];
+	[translateCell setStartTransform: CGAffineTransformMake(1,0,0,1,0,0)];
+	[translateCell setEndTransform: transCell];	
+	
+	[[[UIAnimator alloc] init] addAnimation:translateKb withDuration:.5 start:YES];
+	[[[UIAnimator alloc] init] addAnimation:translateCell withDuration:.5 start:YES];
+
   _hidden = YES;
 }
 
-- (void) toggle:(UITextView*)sendView withCell:(UIImageAndTextTableCell*) cell
+- (void) toggle:(UITextView*)sendView withCell:(UIImageAndTextTableCell*) cell forConvoBox:(ConvoBox*)box
 {
   if (_hidden) {
     [self show:sendView withCell:cell];

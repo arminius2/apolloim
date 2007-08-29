@@ -68,9 +68,9 @@ void ft_callback_getmessage(void *c, void *cs, const char * const who, const int
 									ftConnection:c];
 }
 
-void ft_callback_listbuddy(void *c, void *cs, const char * const nickname, const char * const group, const int online, const int away, const long idle)
+void ft_callback_listbuddy(void *c, void *cs, const char * const nickname, const char * const group, char online, char away, const long idle)
 {
-	NSLog(@"ft_callback_listbuddy -- %@", [NSString stringWithCString:nickname]);
+	NSLog(@"ft_callback_listbuddy -- %@ -- ONLINE: %c   AWAY: %c   IDLE: %x", [NSString stringWithCString:nickname], online, away, idle);
 	Buddy* buddy = [[Buddy alloc]initWithBuddyName:[NSString stringWithCString:nickname] group:[NSString stringWithCString:group] status:@"Unknown"	isOnline:(bool)away		   message:nil];
 	[[ApolloTOC sharedInstance] buddyUpdate:buddy withCode:AIM_BUDDY_AWAY];
 }
