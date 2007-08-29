@@ -32,7 +32,7 @@
 
 - (void) show:(UITextView*)sendView withCell:(UIImageAndTextTableCell*) cell
 {
-	[sendView setBottomBufferHeight:(5.0f)];
+	[sendView setBottomBufferHeight:(-5.0f)];
 	
 	kbFrame = [self frame];
 	cellFrame = [cell frame];
@@ -58,7 +58,7 @@
 {
   [cell setFrame:CGRectMake(0.0f,450.0f, 320.0f, 30.0f)];
 
-  [sendView setBottomBufferHeight:(70.0f)];  
+  [sendView setBottomBufferHeight:(-5.0f)];  
   struct CGRect rect = [UIHardware fullScreenApplicationContentRect];
   rect.origin.x = rect.origin.y = 0.0f;
 //  [sendView setFrame:CGRectMake(15.0f, -6.0f, 320.0f - 70.0f, 10.0f)];

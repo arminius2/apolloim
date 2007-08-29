@@ -22,11 +22,15 @@
 #import <UIKit/UITextView.h>
 
 @interface ConvoBox : UITextView {
+	BOOL _ignoreInsertText;
 }
 
 - (id)initWithFrame:(struct CGRect)fp8;
 //- (void)setDelegate:(id)delegate;
 - (void)scrollToEnd;
 - (void)insertText:(NSString*)text;
+- (BOOL)respondsToSelector:(SEL)aSelector;
+- (BOOL)webView:(id)fp8 shouldInsertText:(id)fp12 replacingDOMRange:(id)fp16 givenAction:(int)fp20;
+- (BOOL)webView:(id)fp8 shouldDeleteDOMRange:(id)fp12;
 //- (void)mouseUp:(struct __GSEvent *)fp8;
 @end

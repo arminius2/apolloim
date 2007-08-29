@@ -85,8 +85,25 @@
 {
   // Insert at the end of the WebKit WebView
   [[[self _webView] webView] moveToEndOfDocument:self];
+  _ignoreInsertText = YES;
   [[self _webView] insertText:text];
+  _ignoreInsertText = NO;
   [self scrollToEnd];
+}
+- (BOOL)respondsToSelector:(SEL)aSelector
+	{
+	  NSLog(@"CONVOBOX>> Request for selector: %@", NSStringFromSelector(aSelector));
+	  return [super respondsToSelector:aSelector];
+	}
+
+- (BOOL)webView:(id)fp8 shouldInsertText:(id)fp12 replacingDOMRange:(id)fp16 givenAction:(int)fp20
+{
+	return NO;
+}
+
+- (BOOL)webView:(id)fp8 shouldDeleteDOMRange:(id)fp12
+{
+	return NO;
 }
 
 @end

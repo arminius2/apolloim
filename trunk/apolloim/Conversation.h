@@ -46,7 +46,7 @@
 - (void)rollKeyboard;	
 - (void)foldKeyboard;
 - (void)toggle;
-//- (BOOL)respondsToSelector:(SEL)aSelector;
+- (BOOL)respondsToSelector:(SEL)aSelector;
 - (void)recvMessage:(NSString*)msg;
 - (void)sendMessage;
 - (Buddy*)buddy;

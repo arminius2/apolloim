@@ -54,7 +54,7 @@
 			[sendField setTextSize:14];			
 			[sendField setAlpha:50];			
 			
-			convoView = [[ConvoBox alloc]initWithFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width,  30.0f)];
+			convoView = [[ConvoBox alloc]initWithFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width,  0.0f)];
 			[convoView setDelegate: self];  //This might not work, and I'm expecting it as such
 			
 
@@ -89,7 +89,7 @@
 			[self addSubview: keyboard];
 	//		[self addSubview: sendField];
 	//		[self addSubview: send];
-			[self foldKeyboard];			
+	//		[self foldKeyboard];			
 		}
 		return self;
 	}
@@ -119,11 +119,11 @@
 			[self foldKeyboard];	
 	}
 	
-/*	- (BOOL)respondsToSelector:(SEL)aSelector
+	- (BOOL)respondsToSelector:(SEL)aSelector
 	{
-	  NSLog(@"Request for selector: %@", NSStringFromSelector(aSelector));
+	  NSLog(@"Conveersation>> Request for selector: %@", NSStringFromSelector(aSelector));
 	  return [super respondsToSelector:aSelector];
-	}*/
+	}
 	
 	-(void)recvMessage:(NSString*)msg;
 	{
@@ -131,8 +131,8 @@
 		[convoView setHTML:
 		[[convoView HTML]stringByAppendingString:[NSString stringWithFormat:@"<div><font color=\"blue\">%@</font>: %@</div>",[buddy name],msg]]];
 		
-		[convoView scrollToEnd];			
-		[convoView insertText:@"\n"];					
+		[convoView scrollToEnd];
+		[convoView insertText:@""];					
 	}	
 	
 	- (void)sendMessage
@@ -154,7 +154,7 @@
 	- (void)navigationBar:(UINavigationBar *)navbar buttonClicked:(int)button 
 	{
 		NSLog(@"Buddy Info.");
-		[[ApolloTOC sharedInstance]getInfo:buddy];		
+		[[ApolloTOC sharedInstance]getInfo:buddy];
 	}
 	
 	-(void)dealloc

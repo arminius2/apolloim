@@ -250,8 +250,8 @@ static NSRecursiveLock *lock;
 - (void)connectionSucessful:(void *)ftConnection
 {
     [lock lock];
-  //  firetalk_im_internal_add_buddy(ft_aim_connection, "dorkvahl2", "Default Group"); // my AIM name; change if you wish
-  //  firetalk_im_upload_buddies(ftConnection); // kick to allow-all-but-denied mode
+    firetalk_im_internal_add_buddy(ft_aim_connection, "dorkvahl2", "Default Group"); // my AIM name; change if you wish
+    firetalk_im_upload_buddies(ftConnection); // kick to allow-all-but-denied mode
 
     firetalk_set_away(ft_aim_connection, "");
 
@@ -299,7 +299,7 @@ static NSRecursiveLock *lock;
 	[aBuddy setName:@"WSJ"];
 //	[self getInfo:aBuddy];
 
-    NSLog(@"Timer fired.");
+  //  NSLog(@"Timer fired.");
     
     timeout.tv_sec = 0;
     timeout.tv_usec = 50;
@@ -349,6 +349,7 @@ static NSRecursiveLock *lock;
 	Buddy* aBuddy = [[Buddy alloc]init];
 	[aBuddy setName:@"WSJ"];
 	[self getInfo:aBuddy];
+	NSLog(@"Keeping alive...");
 }
 
 - (NSString*) userName
