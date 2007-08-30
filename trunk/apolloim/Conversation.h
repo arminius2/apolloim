@@ -23,6 +23,7 @@
 #import <UIKit/UITransitionView.h>
 #import <UIKit/UIImageAndTextTableCell.h>
 #import "ConvoBox.h"
+#import "SendBox.h"
 #import "Buddy.h"
 
 @class ShellKeyboard;
@@ -35,7 +36,7 @@
 	UINavigationBar *_msgBar;
 	UITransitionView *_transitionView;
 	UIPushButton	*send;
-	UITextView		*sendField;	
+	SendBox			*sendField;	
 	ShellKeyboard	*keyboard;
     CGRect _rect;	
 	Buddy* buddy;
@@ -50,6 +51,7 @@
 - (void)recvMessage:(NSString*)msg;
 - (void)sendMessage;
 - (Buddy*)buddy;
+- (SendBox*)sendField;
 - (void)navigationBar:(UINavigationBar *)navbar buttonClicked:(int)button;
 - (void)dealloc;
 @end

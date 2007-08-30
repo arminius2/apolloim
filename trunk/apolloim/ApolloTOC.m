@@ -245,16 +245,17 @@ static NSRecursiveLock *lock;
 
 - (void)getInfo:(Buddy*)aBuddy
 {
+	[lock lock];
 	firetalk_im_get_info(ft_aim_connection, [[aBuddy name]cString]);
+	[lock unlock];
 }
 
 - (void)connectionSucessful:(void *)ftConnection
 {
     [lock lock];
-    //firetalk_im_internal_add_buddy(ftConnection, "dorkvahl2", "Default Group"); // my AIM name; change if you wish
     firetalk_im_upload_buddies(ftConnection); // kick to allow-all-but-denied mode
 
-    firetalk_set_away(ftConnection, "");
+    //firetalk_set_away(ftConnection, "");
 
     if (infoMessage)
         firetalk_set_info(ftConnection, [infoMessage cString]);
@@ -269,9 +270,9 @@ static NSRecursiveLock *lock;
 	[payload addObject:		@"8"];
 	[_delegate imEvent:		payload];
 	NSLog(@"ApolloTOC>  here's to the good ol' days...");
-	[NSTimer scheduledTimerWithTimeInterval:15 target:self selector:@selector(keepAlive) userInfo:nil repeats:YES] ;	
+	[NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(keepAlive) userInfo:nil repeats:YES] ;	
 
-	firetalk_im_list_buddies(ftConnection);
+//	firetalk_im_list_buddies(ftConnection);  //I think you work.
 	[lock unlock];	
 }
 

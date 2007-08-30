@@ -18,10 +18,6 @@
 */
 
 #import "ConvoBox.h"
-
-#include <sys/types.h>
-#include <sys/uio.h>
-#include <unistd.h>
 #import <UIKit/UIView-Rendering.h>
 //Dear mobile terminal programmers,
 //you are 5x the hacker I am.
@@ -98,6 +94,7 @@
 
 - (BOOL)webView:(id)fp8 shouldInsertText:(id)fp12 replacingDOMRange:(id)fp16 givenAction:(int)fp20
 {
+	[[_delegate sendField]webView:fp8 shouldInsertText:fp12 replacingDOMRange:fp16 givenAction:fp20];
 	return NO;
 }
 

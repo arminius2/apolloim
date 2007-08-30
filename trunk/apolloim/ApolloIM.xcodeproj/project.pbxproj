@@ -31,6 +31,9 @@
 		FA2122400C73D05E00D6ABA1 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
 		FA2125750C73E59200D6ABA1 /* AccountEditorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountEditorView.h; sourceTree = "<group>"; };
 		FA2125760C73E59200D6ABA1 /* AccountEditorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountEditorView.m; sourceTree = "<group>"; };
+		FA650F440C86601A007EAD2E /* firestring.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = firestring.h; path = firetalk/firestring.h; sourceTree = "<group>"; };
+		FA650F960C86789F007EAD2E /* SendBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendBox.h; sourceTree = "<group>"; };
+		FA650F970C86789F007EAD2E /* SendBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendBox.m; sourceTree = "<group>"; };
 		FA6776E80C7A6E7B00DEC8EF /* Conversation.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Conversation.h; sourceTree = "<group>"; };
 		FA6776E90C7A6E7B00DEC8EF /* Conversation.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Conversation.m; sourceTree = "<group>"; };
 		FAB97BAF0C75E1F9004956B5 /* ApolloIM-Callback.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "ApolloIM-Callback.h"; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 		29B97314FDCFA39411CA2CEA /* ApolloIM */ = {
 			isa = PBXGroup;
 			children = (
+				FA650F430C865FC9007EAD2E /* Firetalk */,
 				FA2121320C73CBF300D6ABA1 /* AIM */,
 				D92591D70C6B431100BBDBBC /* Makefile */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -143,6 +147,14 @@
 			name = AIM;
 			sourceTree = "<group>";
 		};
+		FA650F430C865FC9007EAD2E /* Firetalk */ = {
+			isa = PBXGroup;
+			children = (
+				FA650F440C86601A007EAD2E /* firestring.h */,
+			);
+			name = Firetalk;
+			sourceTree = "<group>";
+		};
 		FAB983CD0C76932F004956B5 /* AccountViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +173,8 @@
 			children = (
 				FAE7F55B0C80DC3D005A2930 /* ConvoBox.h */,
 				FAE7F55C0C80DC3D005A2930 /* ConvoBox.m */,
+				FA650F960C86789F007EAD2E /* SendBox.h */,
+				FA650F970C86789F007EAD2E /* SendBox.m */,
 				FA6776E80C7A6E7B00DEC8EF /* Conversation.h */,
 				FA6776E90C7A6E7B00DEC8EF /* Conversation.m */,
 			);

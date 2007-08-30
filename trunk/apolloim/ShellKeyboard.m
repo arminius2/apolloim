@@ -43,8 +43,6 @@
 	kbFrame = [self frame];
 	cellFrame = [cell frame];
 
-//	[cell setFrame:CGRectMake(-10.0f, 185.0f, 320.0f, 20.0f)];
-
 	[self setTransform:CGAffineTransformMake(1,0,0,1,0,0)];
 	[self setFrame:CGRectMake(0.0f, 480.0, 320.0f, 480.0f)];
 
@@ -62,14 +60,14 @@
 	[translateCell setEndTransform: transCell];	
 	
 	[[[UIAnimator alloc] init] addAnimation:translateKb withDuration:.5 start:YES];
-	[[[UIAnimator alloc] init] addAnimation:translateCell withDuration:.5 start:YES];	
-
+//	[[[UIAnimator alloc] init] addAnimation:translateCell withDuration:.5 start:YES];	
+	[cell setFrame:CGRectMake(-10.0f, 175.0f, 320.0f, 20.0f)];
 	_hidden = NO;
 }
 
 - (void) hide:(UITextView*)sendView withCell:(UIImageAndTextTableCell*) cell forConvoBox:(ConvoBox*)box
 {
- // [cell setFrame:CGRectMake(-10.0f,380.0f, 320.0f, 20.0f)];
+
 
   [sendView setBottomBufferHeight:(5.0f)];  
   struct CGRect rect = [UIHardware fullScreenApplicationContentRect];
@@ -79,7 +77,7 @@
   [self setFrame:CGRectMake(0.0f, 240.0, 320.0f, 480.0f)];
 
     struct CGAffineTransform transKb = CGAffineTransformMakeTranslation(0, 280);
-    struct CGAffineTransform transCell = CGAffineTransformMakeTranslation(0, 210);	
+    struct CGAffineTransform transCell = CGAffineTransformMakeTranslation(0, 200);
 	
 	UITransformAnimation *translateKb =
 	[[UITransformAnimation alloc] initWithTarget: self];
@@ -92,17 +90,17 @@
 	[translateCell setEndTransform: transCell];	
 	
 	[[[UIAnimator alloc] init] addAnimation:translateKb withDuration:.5 start:YES];
-	[[[UIAnimator alloc] init] addAnimation:translateCell withDuration:.5 start:YES];
-
+//	[[[UIAnimator alloc] init] addAnimation:translateCell withDuration:.5 start:YES];
+	[cell setFrame:CGRectMake(-10.0f,380.0f, 320.0f, 20.0f)];
   _hidden = YES;
 }
 
 - (void) toggle:(UITextView*)sendView withCell:(UIImageAndTextTableCell*) cell forConvoBox:(ConvoBox*)box
 {
   if (_hidden) {
-    [self show:sendView withCell:cell];
+    [self show:sendView withCell:cell forConvoBox:box];
   } else{
-    [self hide:sendView withCell:cell];
+    [self hide:sendView withCell:cell forConvoBox:box];
   }
 }
 

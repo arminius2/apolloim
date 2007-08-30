@@ -52,6 +52,17 @@
 //	[[ApolloTOC sharedInstance]resumeApollo];	
 }
 
+- (BOOL)applicationIsReadyToSuspend
+{
+	//Please?  Please work?
+	return NO;
+}
+
+- (BOOL)isSuspendingUnderLock
+{
+	return NO;
+}
+
 - (void)applicationWillTerminate {
 	[_window release];
 }

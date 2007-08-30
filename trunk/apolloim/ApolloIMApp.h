@@ -31,5 +31,8 @@
 - (void)applicationWillTerminate;
 - (void)applicationSuspend:(struct __GSEvent *)event;
 - (void)applicationResume:(struct __GSEvent *)event;
-
+- (BOOL)isSuspendingUnderLock;
+- (BOOL)applicationIsReadyToSuspend;
+//- (void)applicationDidResumeFromUnderLock;
+//- (void)applicationWillSuspendUnderLock;
 @end

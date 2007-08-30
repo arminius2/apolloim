@@ -48,21 +48,18 @@
 
 			//sendField = [[UITextView alloc] initWithFrame:CGRectMake(_rect.origin.x, 450.0f, _rect.size.width - 50.0f, 30.0f)];	
 			//sendField = [[UITextView alloc] initWithFrame:CGRectMake(_rect.origin.x + 15.0f, -6.0f, _rect.size.width - 70.0f, 10.0f)];
-			sendField = [[UITextView alloc] initWithFrame:CGRectMake(15.0f, -6.0f, 320.0f - 70.0f,20.0f)];			
-			[sendField setBackgroundColor: CGColorCreate( colorSpace, lovelyShadeOfTransparent)];
-			[sendField setEditable:YES];		
-			[sendField setTextSize:14];			
-			[sendField setAlpha:50];			
+			sendField = [[SendBox alloc] initWithFrame:CGRectMake(15.0f, -6.0f, 320.0f - 70.0f,30.0f)];			
+			[sendField setBackgroundColor: CGColorCreate( colorSpace, lovelyShadeOfTransparent)];	
+			[sendField setDelegate: self];		
 			
 			convoView = [[ConvoBox alloc]initWithFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width, 372.0f)];
-			[convoView setDelegate: self];  //This might not work, and I'm expecting it as such
-			
+			[convoView setDelegate: self];		
 
 			keyboard = [[ShellKeyboard alloc]initWithFrame:CGRectMake(_rect.origin.x,450.0f, _rect.size.width, 300.0f)];
 			[keyboard setTapDelegate: self];
 			send = [[UIPushButton alloc] initWithTitle:@"" autosizesToFit:NO];
 			//[send setFrame:CGRectMake(_rect.size.width-50.0f, 450.0f, 50.0f, 30.0f)];
-			[send setFrame:CGRectMake(_rect.size.width - 76.0f + 15.0f, -3.0f, 64.0f, 30.0f)];			
+			[send setFrame:CGRectMake(_rect.size.width - 76.0f + 15.0f, -3.0f, 64.0f, 40.0f)];			
 			[send setDrawsShadow: YES];
 			[send setEnabled:YES];
 			[send setTitle:@"Send"];
@@ -72,7 +69,7 @@
 			[send addTarget:self action:@selector(sendMessage) forEvents:1];
 
 			cell = [[UIImageAndTextTableCell alloc] init];
-			[cell setImage:[UIImage applicationImageNamed: @"Default.png"]];
+			[cell setImage:[UIImage applicationImageNamed: @"SendField.png"]];
 			[cell addSubview:sendField];
 			[cell addSubview:send];
 			[cell setFrame:CGRectMake(-10.0f,380.0f, _rect.size.width, 20.0f)];
@@ -84,8 +81,8 @@
 			//[_msgBar setBarStyle:2];					
 
 			[self addSubview: convoView];
-		//	[self addSubview: _msgBar];				
 			[self addSubview: cell];
+		//	[self addSubview: _msgBar];	
 			[self addSubview: keyboard];
 	//		[self addSubview: sendField];
 	//		[self addSubview: send];
@@ -97,18 +94,26 @@
 	
 	-(void)rollKeyboard
 	{	
-		[keyboard show:sendField withCell:cell forConvoBox:convoView];
-		[convoView setFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width,  186.0f)];
-		_hidden = false;
-		NSLog(@"Showing...");		
+		if(_hidden)
+		{
+			[keyboard show:sendField withCell:cell forConvoBox:convoView];
+			[convoView setFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width,  186.0f)];
+			NSLog(@"Showing...");	
+			_hidden = false;	
+		}
+		//[convoView scrollToEnd];
 	}
 	
 	-(void)foldKeyboard
 	{
-		[keyboard hide:sendField withCell:cell forConvoBox:convoView];
-		[convoView setFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width, 400.0f)];
-		NSLog(@"Hiding...");
-		_hidden = true;
+		if(!_hidden)
+		{
+			[keyboard hide:sendField withCell:cell forConvoBox:convoView];
+			[convoView setFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width, 372.0f)];
+			NSLog(@"Hiding...");
+			_hidden = true;
+			[convoView scrollToEnd];		
+		}
 	}
 	
 	-(void)toggle
@@ -121,7 +126,7 @@
 	
 	- (BOOL)respondsToSelector:(SEL)aSelector
 	{
-	  NSLog(@"Conveersation>> Request for selector: %@", NSStringFromSelector(aSelector));
+	  NSLog(@"CONVERSATION>> Request for selector: %@", NSStringFromSelector(aSelector));
 	  return [super respondsToSelector:aSelector];
 	}
 	
@@ -150,7 +155,10 @@
 	{
 		return buddy;
 	}
-	
+	- (SendBox*)sendField;
+	{
+		return sendField;
+	}	
 	- (void)navigationBar:(UINavigationBar *)navbar buttonClicked:(int)button 
 	{
 		NSLog(@"Buddy Info.");

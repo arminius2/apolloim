@@ -285,7 +285,7 @@ static NSRecursiveLock *lock;
 	switch(target)
 	{	
 		case ACCOUNT_VIEW:
-			[_navBar showButtonsWithLeftTitle:@"Sign On" rightTitle:@"Add Account" leftBack: YES];
+			[_navBar showButtonsWithLeftTitle:@"Sign On" rightTitle:@"Add Account" leftBack: NO];
 			[_transitionView transition:3 toView:_accountsView];	
 			_accountsEditorViewBrowser	=	false;
 			_buddyViewBrowser			=	false;
@@ -315,7 +315,7 @@ static NSRecursiveLock *lock;
 
 			_buddyViewBrowser			=	true;
 			[navtitle setTitle:@"Buddy List"];						
-			[_navBar showButtonsWithLeftTitle:@"Disconnect" rightTitle:nil /*@"Options"*/ leftBack: YES];				
+			[_navBar showButtonsWithLeftTitle:@"Disconnect" rightTitle:nil /*@"Options"*/ leftBack: NO];				
 			break;		
 /*		case ABOUT_VIEW:
 			NSLog(@"About view...");

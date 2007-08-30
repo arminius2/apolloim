@@ -31,6 +31,7 @@ typedef enum {ApolloTOC_DISCONNECTED, ApolloTOC_CONNECTING, ApolloTOC_CONNECTED}
 	BOOL status;
     ApolloTOCConnectionStatus connected;
     void *ft_aim_connection;
+	void *rainyday; //Preserve good handle
 
 	Buddy *you;
 	
