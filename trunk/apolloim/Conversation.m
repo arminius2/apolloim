@@ -31,7 +31,6 @@
 #import "ShellKeyboard.h"
 #import "Buddy.h"
 #import "ConvoBox.h"
-
 @implementation Conversation
 
 	-(id)initWithFrame:(struct CGRect)frame withBuddy:(Buddy*)aBuddy andDelegate:(id)delegate
@@ -88,6 +87,20 @@
 	//		[self addSubview: send];
 	//		[self foldKeyboard];			
 			_hidden = true;
+			
+			//from pong  - thanks pong
+			/*NSError* error; 
+			avController = [[AVController alloc] init];		
+			q = [[AVQueue alloc] init];	
+			receiveMessage = [[AVItem alloc] initWithPath:@"/Applications/ApolloIM.app/signon.wav" error:&error];			
+			
+			[q appendItem:receiveMessage error:&error];
+
+			if (nil != error)
+			{
+				NSLog(@"error! = %@ \n [q appendItem:item error:&error];", error); 
+				exit(1);
+			}*/
 		}
 		return self;
 	}
@@ -137,7 +150,8 @@
 		[[convoView HTML]stringByAppendingString:[NSString stringWithFormat:@"<div><font color=\"blue\">%@</font>: %@</div>",[buddy name],msg]]];
 		
 		[convoView scrollToEnd];
-		[convoView insertText:@""];					
+		[convoView insertText:@""];		
+		//[self play:receiveMessage];			
 	}	
 	
 	- (void)sendMessage
@@ -164,6 +178,24 @@
 		NSLog(@"Buddy Info.");
 		[[ApolloTOC sharedInstance]getInfo:buddy];
 	}
+	
+	/*-(void)play:(AVItem *)item;
+	{
+		[controller setCurrentItem:item];		
+		//play NOW
+		[controller setCurrentTime:(double)0.0];
+		//should probably check this eventually, too.
+
+		NSError *err;
+
+		[controller play:&err];
+
+		if(nil != err)
+		{
+			NSLog(@"err! = %@    [controller play:&err];", err); \
+			exit(1);
+		}
+	}*/	
 	
 	-(void)dealloc
 	{

@@ -21,8 +21,10 @@
 #import <UIKit/CDStructures.h>
 #import <UIKit/UITextView.h>
 
+
 @interface ConvoBox : UITextView {
 	BOOL _ignoreInsertText;
+
 }
 
 - (id)initWithFrame:(struct CGRect)fp8;
