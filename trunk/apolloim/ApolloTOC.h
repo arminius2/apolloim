@@ -19,6 +19,7 @@
 */
 
 #import <Foundation/Foundation.h>
+#import "libfiretalk/firetalk.h"
 #import "Buddy.h"
 
 typedef enum {ApolloTOC_DISCONNECTED, ApolloTOC_CONNECTING, ApolloTOC_CONNECTED} ApolloTOCConnectionStatus;
@@ -30,8 +31,7 @@ typedef enum {ApolloTOC_DISCONNECTED, ApolloTOC_CONNECTING, ApolloTOC_CONNECTED}
     BOOL willSendMarkup;
 	BOOL status;
     ApolloTOCConnectionStatus connected;
-    void *ft_aim_connection;
-	void *rainyday; //Preserve good handle
+    firetalk_t ft_aim_connection;
 
 	Buddy *you;
 	
@@ -54,6 +54,7 @@ typedef enum {ApolloTOC_DISCONNECTED, ApolloTOC_CONNECTING, ApolloTOC_CONNECTED}
 //- (void)listBuddies;
 - (BOOL)connected;
 - (void)disconnect;
+- (void)killHandle;
 
 - (BOOL)willSendMarkup;
 - (void)setWillSendMarkup:(BOOL)newSetting;
@@ -64,5 +65,6 @@ typedef enum {ApolloTOC_DISCONNECTED, ApolloTOC_CONNECTING, ApolloTOC_CONNECTED}
 - (NSString*) userName;
 - (void)getInfo:(Buddy*)aBuddy;
 - (void)keepAlive;
+
 
 @end

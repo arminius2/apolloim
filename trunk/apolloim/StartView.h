@@ -64,7 +64,7 @@
 - (id)initWithFrame:(CGRect)frame;
 - (void)imEvent:(NSMutableArray*)payload;
 - (void)populatePreferences;
-- (void)receiveMessage:(NSString*)msg fromBuddy:(Buddy*)aBuddy;
+- (void)receiveMessage:(NSString*)msg fromBuddy:(Buddy*)aBuddy isInfo:(BOOL)info;
 - (void)accountsView:(AccountsView *)acctView accountSelected:(Account *)selectedAccount;
 - (void)makeACoolMoveTo:(int)target;
 -(void)checkForUpdates:(id)anObject;

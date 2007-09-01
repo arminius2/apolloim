@@ -25,10 +25,6 @@
 #import "ConvoBox.h"
 #import "SendBox.h"
 #import "Buddy.h"
-/*#import "Celestial/Celestial.h"
-#import "Celestial/AVItem.h"
-#import "Celestial/AVController.h"
-#import "Celestial/AVQueue.h"*/
 
 @class ShellKeyboard;
 
@@ -45,12 +41,7 @@
     CGRect _rect;	
 	Buddy* buddy;
 	bool _hidden;	
-	id _delegate;
-	
-	AVController * avController;
-	AVItem * receiveMessage;		
-	AVQueue * q;
-	
+	id _delegate;		
 }
 - (id)initWithFrame:(struct CGRect)frame withBuddy:(Buddy*)aBuddy andDelegate:(id)delegate;
 - (void)rollKeyboard;	
@@ -59,9 +50,9 @@
 - (BOOL)respondsToSelector:(SEL)aSelector;
 - (void)recvMessage:(NSString*)msg;
 - (void)sendMessage;
+- (void)recvInfo:(NSString*)info;
 - (Buddy*)buddy;
 - (SendBox*)sendField;
 - (void)navigationBar:(UINavigationBar *)navbar buttonClicked:(int)button;
-- (void)play:(AVItem *)item;
 - (void)dealloc;
 @end

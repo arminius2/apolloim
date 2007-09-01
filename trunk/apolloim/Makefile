@@ -10,7 +10,7 @@ LDFLAGS = -lobjc \
           -framework CoreSurface \
           -framework Celestial \
           -framework CoreAudio \
-	  -L./firetalk \
+	  -L./libfiretalk \
 	  -lfiretalk \
           -larmfp 
 
@@ -19,7 +19,7 @@ LDFLAGS = -lobjc \
 all:	ApolloIM package
 
 ApolloIM:	main.o ApolloIMApp.o StartView.o AccountsView.o AccountEditorView.o Account.o  ApolloTOC.o ApolloIM-Callback.o  BuddyView.o Buddy.o Conversation.o ConvoBox.o ShellKeyboard.o Shimmer.o AboutView.o SendBox.o 
-		(cd firetalk && make static)
+#		(cd libfiretalk && make)
 		$(LD) $(LDFLAGS) -o $@ $^
 		
 

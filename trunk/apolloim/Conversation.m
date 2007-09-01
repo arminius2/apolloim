@@ -31,6 +31,7 @@
 #import "ShellKeyboard.h"
 #import "Buddy.h"
 #import "ConvoBox.h"
+
 @implementation Conversation
 
 	-(id)initWithFrame:(struct CGRect)frame withBuddy:(Buddy*)aBuddy andDelegate:(id)delegate
@@ -51,14 +52,14 @@
 			[sendField setBackgroundColor: CGColorCreate( colorSpace, lovelyShadeOfTransparent)];	
 			[sendField setDelegate: self];		
 			
-			convoView = [[ConvoBox alloc]initWithFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width, 372.0f)];
+			convoView = [[ConvoBox alloc]initWithFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width, 376.0f)];
 			[convoView setDelegate: self];		
 
 			keyboard = [[ShellKeyboard alloc]initWithFrame:CGRectMake(_rect.origin.x,450.0f, _rect.size.width, 300.0f)];
 			[keyboard setTapDelegate: self];
 			send = [[UIPushButton alloc] initWithTitle:@"" autosizesToFit:NO];
 			//[send setFrame:CGRectMake(_rect.size.width-50.0f, 450.0f, 50.0f, 30.0f)];
-			[send setFrame:CGRectMake(_rect.size.width - 76.0f + 15.0f, -3.0f, 64.0f, 40.0f)];			
+			[send setFrame:CGRectMake(_rect.size.width - 76.0f + 15.0f, -3.0f, 64.0f, 30.0f)];			
 			[send setDrawsShadow: YES];
 			[send setEnabled:YES];
 			[send setTitle:@"Send"];
@@ -71,7 +72,7 @@
 			[cell setImage:[UIImage applicationImageNamed: @"SendField.png"]];
 			[cell addSubview:sendField];
 			[cell addSubview:send];
-			[cell setFrame:CGRectMake(-10.0f,380.0f, _rect.size.width, 20.0f)];
+			[cell setFrame:CGRectMake(-10.0f,380.0f, _rect.size.width, 30.0f)];
 										
 			//_msgBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(_rect.origin.x, 380.0f, _rect.size.width, 30.0f)];
 			//[_msgBar setDelegate: self];
@@ -81,26 +82,9 @@
 
 			[self addSubview: convoView];
 			[self addSubview: cell];
-		//	[self addSubview: _msgBar];	
-			[self addSubview: keyboard];
-	//		[self addSubview: sendField];
-	//		[self addSubview: send];
-	//		[self foldKeyboard];			
+			[self addSubview: keyboard];		
 			_hidden = true;
-			
-			//from pong  - thanks pong
-			/*NSError* error; 
-			avController = [[AVController alloc] init];		
-			q = [[AVQueue alloc] init];	
-			receiveMessage = [[AVItem alloc] initWithPath:@"/Applications/ApolloIM.app/signon.wav" error:&error];			
-			
-			[q appendItem:receiveMessage error:&error];
 
-			if (nil != error)
-			{
-				NSLog(@"error! = %@ \n [q appendItem:item error:&error];", error); 
-				exit(1);
-			}*/
 		}
 		return self;
 	}
@@ -122,7 +106,7 @@
 		if(!_hidden)
 		{
 			[keyboard hide:sendField withCell:cell forConvoBox:convoView];
-			[convoView setFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width, 372.0f)];
+			[convoView setFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width, 376.0f)];
 			NSLog(@"Hiding...");
 			_hidden = true;
 			[convoView scrollToEnd];		
@@ -159,10 +143,18 @@
 		[convoView setHTML:
 		[[convoView HTML]stringByAppendingString:[NSString stringWithFormat:@"<div><font color=\"red\">%@</font>: %@</div>",[[ApolloTOC sharedInstance]userName],[sendField text]]]];
 		[[ApolloTOC sharedInstance]sendIM:[sendField text] toUser:[buddy name]];
-		[sendField setText:@"\n"];
+		[sendField setText:@""];
 		
 		[convoView scrollToEnd];
 		[convoView insertText:@""];
+	}
+	
+	- (void)recvInfo:(NSString*)info
+	{
+		[convoView setHTML:
+		[[convoView HTML]stringByAppendingString:[NSString stringWithFormat:@"<div><font color=\"gray\">%@'s info:<div>%@</div></font></div>",[buddy name],info]]];
+		[convoView scrollToEnd];
+		[convoView insertText:@""];		
 	}
 	
 	- (Buddy*)buddy
@@ -177,25 +169,7 @@
 	{
 		NSLog(@"Buddy Info.");
 		[[ApolloTOC sharedInstance]getInfo:buddy];
-	}
-	
-	/*-(void)play:(AVItem *)item;
-	{
-		[controller setCurrentItem:item];		
-		//play NOW
-		[controller setCurrentTime:(double)0.0];
-		//should probably check this eventually, too.
-
-		NSError *err;
-
-		[controller play:&err];
-
-		if(nil != err)
-		{
-			NSLog(@"err! = %@    [controller play:&err];", err); \
-			exit(1);
-		}
-	}*/	
+	}	
 	
 	-(void)dealloc
 	{

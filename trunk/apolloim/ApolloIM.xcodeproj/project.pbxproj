@@ -31,7 +31,6 @@
 		FA2122400C73D05E00D6ABA1 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
 		FA2125750C73E59200D6ABA1 /* AccountEditorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountEditorView.h; sourceTree = "<group>"; };
 		FA2125760C73E59200D6ABA1 /* AccountEditorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountEditorView.m; sourceTree = "<group>"; };
-		FA650F440C86601A007EAD2E /* firestring.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = firestring.h; path = firetalk/firestring.h; sourceTree = "<group>"; };
 		FA650F960C86789F007EAD2E /* SendBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendBox.h; sourceTree = "<group>"; };
 		FA650F970C86789F007EAD2E /* SendBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendBox.m; sourceTree = "<group>"; };
 		FA6776E80C7A6E7B00DEC8EF /* Conversation.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Conversation.h; sourceTree = "<group>"; };
@@ -41,6 +40,8 @@
 		FAB97BB10C75E1F9004956B5 /* ApolloIM-PrivateAccess.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "ApolloIM-PrivateAccess.h"; sourceTree = "<group>"; };
 		FAB97BB20C75E1F9004956B5 /* ApolloTOC.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ApolloTOC.h; sourceTree = "<group>"; };
 		FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ApolloTOC.m; sourceTree = "<group>"; };
+		FADC9D9F0C89121F00294A90 /* ApolloNotify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApolloNotify.h; sourceTree = "<group>"; };
+		FADC9DA00C89121F00294A90 /* ApolloNotify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApolloNotify.m; sourceTree = "<group>"; };
 		FADDECA50C74185B002AFA9D /* ShellKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellKeyboard.h; sourceTree = "<group>"; };
 		FADDECA60C74185B002AFA9D /* ShellKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShellKeyboard.m; sourceTree = "<group>"; };
 		FAE7F55B0C80DC3D005A2930 /* ConvoBox.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ConvoBox.h; sourceTree = "<group>"; };
@@ -71,7 +72,6 @@
 		29B97314FDCFA39411CA2CEA /* ApolloIM */ = {
 			isa = PBXGroup;
 			children = (
-				FA650F430C865FC9007EAD2E /* Firetalk */,
 				FA2121320C73CBF300D6ABA1 /* AIM */,
 				D92591D70C6B431100BBDBBC /* Makefile */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -86,6 +86,8 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				FADC9D9F0C89121F00294A90 /* ApolloNotify.h */,
+				FADC9DA00C89121F00294A90 /* ApolloNotify.m */,
 				D9C1849B0C6B467300A7383F /* ApolloIM_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -145,14 +147,6 @@
 				FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */,
 			);
 			name = AIM;
-			sourceTree = "<group>";
-		};
-		FA650F430C865FC9007EAD2E /* Firetalk */ = {
-			isa = PBXGroup;
-			children = (
-				FA650F440C86601A007EAD2E /* firestring.h */,
-			);
-			name = Firetalk;
 			sourceTree = "<group>";
 		};
 		FAB983CD0C76932F004956B5 /* AccountViews */ = {

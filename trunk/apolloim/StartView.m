@@ -183,15 +183,16 @@ static NSRecursiveLock *lock;
 				break;
 			case AIM_RECV_MESG:
 				NSLog(@"Received Message from %@ that says '%@'",[[payload objectAtIndex:1]name],[payload objectAtIndex:2]);
-				[self receiveMessage:(NSString*)[payload objectAtIndex:2] fromBuddy:(Buddy*)[payload objectAtIndex:1]];
+				[self receiveMessage:(NSString*)[payload objectAtIndex:2] fromBuddy:(Buddy*)[payload objectAtIndex:1] isInfo:NO];
 				break;
 			case AIM_CONNECTED:
 				NSLog(@"Connected.");
 //				[[ApolloTOC sharedInstance]listBuddies];
-				[self makeACoolMoveTo:BUDDY_VIEW];				
+				[self makeACoolMoveTo:BUDDY_VIEW];
 				break;			
 			case AIM_BUDDY_INFO:
 				NSLog(@"Getting info from %@ that says '%@'",[[payload objectAtIndex:1]name],[[payload objectAtIndex:1]info]);
+				[self receiveMessage:(NSString*)[[payload objectAtIndex:1]info] fromBuddy:(Buddy*)[payload objectAtIndex:1] isInfo:YES];				
 				break;
 			default:
 				NSLog(@"StartView> No case statement for Event. Event is...");
@@ -208,10 +209,12 @@ static NSRecursiveLock *lock;
 	{
 		//sleep(3);
 		exit(1);
+		//[self makeACoolMoveTo:ACCOUNT_VIEW];
+		//[[ApolloTOC sharedInstance] killHandle];
 	}
 }
 
-- (void)receiveMessage:(NSString*)msg fromBuddy:(Buddy*)aBuddy
+- (void)receiveMessage:(NSString*)msg fromBuddy:(Buddy*)aBuddy isInfo:(BOOL)info
 {
 	NSLog(@"StartView> Receiving...");
 	//Go through conversations, looking for one
@@ -225,15 +228,20 @@ static NSRecursiveLock *lock;
 		if([[[[_conversations objectAtIndex:i]buddy]properName]isEqualToString:[aBuddy properName]])
 		{
 			NSLog(@"StartView> (recv) Adding to Existing Convo with... %@", [aBuddy name]);		
-			if(msg != nil)
+			if(!info)
 			{
-				if([[[currentConversation buddy]properName]isEqualToString:[aBuddy properName]])
-					[_buddyView updateBuddy:aBuddy withCode:AIM_READ_MSGS];
-					else
-					[_buddyView updateBuddy:aBuddy withCode:AIM_RECV_MESG]; 						
-				NSLog(@"StartView> (recv) totally adding...");
-				[[_conversations objectAtIndex:i] recvMessage:msg];
-				return;
+				if(msg != nil)
+				{
+					if([[[currentConversation buddy]properName]isEqualToString:[aBuddy properName]])
+						[_buddyView updateBuddy:aBuddy withCode:AIM_READ_MSGS];
+						else
+						[_buddyView updateBuddy:aBuddy withCode:AIM_RECV_MESG]; 						
+					NSLog(@"StartView> (recv) totally adding...");
+					[[_conversations objectAtIndex:i] recvMessage:msg];
+					return;
+				}
+				else
+					[[_conversations objectAtIndex:i] recvInfo:msg];				
 			}
 		}	
  	}
@@ -247,8 +255,8 @@ static NSRecursiveLock *lock;
 - (void)switchToConvo:(Buddy*)aBuddy
 {
 //	[lock lock];
-//	[_navBar showButtonsWithLeftTitle:@"Buddy List" rightTitle:@"Keyboard" leftBack: YES];				
-	[_navBar showButtonsWithLeftTitle:@"Buddy List" rightTitle:nil leftBack: YES];
+//	[_navBar showButtonsWithLeftTitle:@"Buddy List" rightTitle:@"Buddy Info" leftBack: YES];				
+	[_navBar showButtonsWithLeftTitle:@"Buddy List" rightTitle:nil	leftBack: YES];
 	_accountsEditorViewBrowser	=	false;
 	_buddyViewBrowser			=	false;
 	_accountsViewBrowser		=	false;	
@@ -266,7 +274,8 @@ static NSRecursiveLock *lock;
 			NSLog(@"StartView> Going to existing Convo with... %@", [aBuddy name]);		
 			[lock unlock];
 			currentConversation = [_conversations objectAtIndex:i];
-			[_transitionView transition:1 toView:[_conversations objectAtIndex:i]];				
+			currentConversationBuddy = 	[[_conversations objectAtIndex:i]buddy];			
+			[_transitionView transition:1 toView:[_conversations objectAtIndex:i]];
 			return;
 		}
  	}
@@ -276,7 +285,8 @@ static NSRecursiveLock *lock;
 	[_conversations addObject:convo];	
 //	[lock unlock];
 	currentConversation = [_conversations objectAtIndex:i];	
-	[_transitionView transition:1 toView:[_conversations objectAtIndex:i]];			
+	currentConversationBuddy = 	[[_conversations objectAtIndex:i]buddy];	
+	[_transitionView transition:2 toView:[_conversations objectAtIndex:i]];			
 }
 
 - (void)makeACoolMoveTo:(int)target
@@ -341,6 +351,8 @@ static NSRecursiveLock *lock;
 			{
 //				NSLog(@"StartView>> LEFT -- BUDDY_VIEW -- DISCONNECTBUTTON");
 				[[ApolloTOC sharedInstance]disconnect];
+				//[self makeACoolMoveTo:ACCOUNT_VIEW];
+				//[[ApolloTOC sharedInstance] killHandle];
 				exit(1);
 			}
 			if (_accountsViewBrowser) 
@@ -371,7 +383,7 @@ static NSRecursiveLock *lock;
 				{
 					UIAlertSheet *sheet = [[UIAlertSheet alloc] initWithFrame: CGRectMake(0, 240, 320, 240)];
 					[sheet setTitle:@"Username/Password error"];
-//					[sheet setBodyText:@"Your username or password was blank.  Your account will have one of each.  Give that form another shot, slugger."];
+					[sheet setBodyText:@"Your username or password was blank.  Your account will have one of each.  Give that form another shot, slugger."];
 					[sheet addButtonWithTitle:@"OK"];
 					[sheet setDelegate: self];
 					[sheet presentSheetFromAboveView: accountEditor];
@@ -452,8 +464,8 @@ static NSRecursiveLock *lock;
 			}
 			if(_conversationView)
 			{
-				NSLog(@"StartView>> RIGHT -- CONVERSATION_VEW -- Toggle Keyboard");	
-				[currentConversation toggle];
+				NSLog(@"StartView>> RIGHT -- CONVERSATION_VEW -- BuddyInfo");	
+//				[[ApolloTOC sharedInstance] getInfo:currentConversationBuddy];
 				return;
 			}
 			break;

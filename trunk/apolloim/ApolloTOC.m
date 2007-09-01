@@ -22,11 +22,8 @@
 #import "ApolloTOC.h"
 #import "ApolloIM-PrivateAccess.h"
 #import "ApolloIM-Callback.h"
-
-#import "firetalk/firetalk.h"
-
+#import "libfiretalk/firetalk.h"
 typedef void (*ptrtofnct)(firetalk_t, void *, ...);
-
 const char* TOC_SERVER = "toc.oscar.aol.com";
 const int TOC_PORT = 9898;
 
@@ -51,6 +48,8 @@ static NSRecursiveLock *lock;
     
     return sharedInst;
 }
+
+
 
 - (id)init
 {
@@ -144,7 +143,7 @@ static NSRecursiveLock *lock;
     
     if ([self connected])
 	{
-		firetalk_im_list_buddies(ft_aim_connection);		
+		//firetalk_im_list_buddies(ft_aim_connection);		
         return YES;
 	}
     else
@@ -178,13 +177,20 @@ static NSRecursiveLock *lock;
     else
     {
         connected = ApolloTOC_DISCONNECTED;
-        firetalk_disconnect(ft_aim_connection); // this is ugly - want to call firetalk_disconnect last so -disconnected knows we ment to do this
+        firetalk_disconnect(ft_aim_connection); 
 		NSMutableArray* payload = 
 		[[NSMutableArray alloc]init];		
 		[payload addObject:		@"9"];
 		[_delegate imEvent:		payload];		
     }
     [lock unlock];
+}
+
+- (void)killHandle
+{
+	[lock lock];
+	firetalk_destroy_handle(ft_aim_connection);
+	[lock unlock];	
 }
 
 - (void)sendIM:(NSString*)body toUser:(NSString*)user
@@ -207,15 +213,25 @@ static NSRecursiveLock *lock;
 
 - (void)registerFiretalkCallbacks
 {
-	NSLog(@"ApolloTOC> Registering callbacks...");
+
     [lock lock];
+	int proto = firetalk_find_protocol("TOC2");
+	NSLog(@"ApolloTOC> Registering callbacks... %d", proto);
 	NSLog(@"ApolloTOC> Creating Handle...");	
-    ft_aim_connection = firetalk_create_handle(FP_AIMTOC2, NULL);
-	NSLog(@"ApolloTOC> Come on callbacks...");
+    ft_aim_connection = firetalk_create_handle(proto, NULL);
+	NSLog(@"ApolloTOC> Come on callbacks... %p", ft_aim_connection);
+		
+	if(ft_aim_connection == nil)
+	{
+		NSLog(@"Shit is fucked. Let's go get some tacobell.");
+		//[UIApp exit];
+		exit(40);	
+	}
+		
+    firetalk_register_callback(ft_aim_connection, FC_DOINIT, (ptrtofnct)ft_callback_doinit);
     firetalk_register_callback(ft_aim_connection, FC_ERROR, (ptrtofnct)ft_callback_error);
     firetalk_register_callback(ft_aim_connection, FC_CONNECTFAILED, (ptrtofnct)ft_callback_connectfailed);
     firetalk_register_callback(ft_aim_connection, FC_IM_GETMESSAGE, (ptrtofnct)ft_callback_getmessage);
-    firetalk_register_callback(ft_aim_connection, FC_DOINIT, (ptrtofnct)ft_callback_doinit);
     firetalk_register_callback(ft_aim_connection, FC_DISCONNECT, (ptrtofnct)ft_callback_disconnect);
 	firetalk_register_callback(ft_aim_connection, FC_NEEDPASS, (ptrtofnct)ft_callback_needpass);
 	firetalk_register_callback(ft_aim_connection, FC_IM_LISTBUDDY, (ptrtofnct)ft_callback_listbuddy);
@@ -236,7 +252,7 @@ static NSRecursiveLock *lock;
     // it's harmless, so ignore it
     if (code == 11)
 	{
-		[self keepAlive];
+		[self keepAlive];		
 	}
         return;
     
@@ -253,7 +269,7 @@ static NSRecursiveLock *lock;
 - (void)connectionSucessful:(void *)ftConnection
 {
     [lock lock];
-    firetalk_im_upload_buddies(ftConnection); // kick to allow-all-but-denied mode
+    //firetalk_im_upload_buddies(ftConnection); // kick to allow-all-but-denied mode
 
     //firetalk_set_away(ftConnection, "");
 
@@ -270,9 +286,10 @@ static NSRecursiveLock *lock;
 	[payload addObject:		@"8"];
 	[_delegate imEvent:		payload];
 	NSLog(@"ApolloTOC>  here's to the good ol' days...");
-	[NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(keepAlive) userInfo:nil repeats:YES] ;	
+//	[NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(keepAlive) userInfo:nil repeats:YES] ;	
 
-//	firetalk_im_list_buddies(ftConnection);  //I think you work.
+//	firetalk_im_list_buddies(ftConnection);  //Use this at start to get full buddy listing.  Will be necessary for groups.
+
 	[lock unlock];	
 }
 

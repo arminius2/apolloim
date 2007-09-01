@@ -25,7 +25,7 @@
 #import "ApolloIM-PrivateAccess.h"
 #import "Buddy.h"
 
-#import "firetalk/firetalk.h"
+#import "libfiretalk/firetalk.h"
 enum {
 	AIM_RECV_MESG		=	1,
 	AIM_BUDDY_ONLINE	=	2, 
@@ -39,7 +39,7 @@ enum {
 	AIM_READ_MSGS		=   10,
 	AIM_BUDDY_INFO		=	11	
 };
-char pass[1024]; // firetalk requests this at a later time; ApolloTOC sends it here and we store it until then
+char pass[1024];
 
 void ft_callback_error(void *c, void *cs, const int error, const char * const roomoruser, const char * const description)
 {
@@ -79,47 +79,49 @@ void ft_callback_im_user_nickchanged(void *c, void *cs, const char * const nickn
 {
 	NSLog(@"ft_callback_im_user_nickchanged-- %@", [NSString stringWithCString:nickname]);
 }
-void ft_callback_buddyonline		(void *c, void *cs, const char * const who, const char * const group)
+void ft_callback_buddyonline(void *c, void *cs, const char * const who)
 {
 	NSLog(@"ft_callback_buddyonline--%@", [NSString stringWithCString:who]);
 	Buddy* buddy = [[Buddy alloc]initWithBuddyName:
 		[NSString stringWithCString:who] 
-		group:[NSString stringWithCString:group] 
+		group:@"Unknown" 
 		status:@"Online"			
 		isOnline:true
 		message:nil];
 
 	[[ApolloTOC sharedInstance] buddyUpdate:buddy withCode:AIM_BUDDY_ONLINE];	
 }
-void ft_callback_buddyoffline		(void *c, void *cs, const char * const who, const char * const group)
+
+void ft_callback_buddyoffline		(void *c, void *cs, const char * const who)
 {
 	NSLog(@"ft_callback_buddyoffline--%@", [NSString stringWithCString:who]);
 	Buddy* buddy = [[Buddy alloc]initWithBuddyName:
 		[NSString stringWithCString:who] 
-		group:[NSString stringWithCString:group] 
+		group:@"Unknown"
 		status:@"offline"			
 		isOnline:false
 		message:nil];
 	[[ApolloTOC sharedInstance] buddyUpdate:buddy withCode:AIM_BUDDY_OFFLINE];		
-	
 }
-void ft_callback_buddyunaway		(void *c, void *cs, const char * const who, const char * const group)
+
+void ft_callback_buddyunaway		(void *c, void *cs, const char * const who)
 {
 	NSLog(@"ft_callback_buddyunaway--%@", [NSString stringWithCString:who]);
 	Buddy* buddy = [[Buddy alloc]initWithBuddyName:
 		[NSString stringWithCString:who] 
-		group:[NSString stringWithCString:group] 
+		group:@"Unknown" 
 		status:@"Available"			
 		isOnline:true
 		message:nil];
 	[[ApolloTOC sharedInstance] buddyUpdate:buddy withCode:AIM_BUDDY_UNAWAY];		
 }
-void ft_callback_buddyaway			(void *c, void *cs, const char * const who, const char * const group)
+
+void ft_callback_buddyaway			(void *c, void *cs, const char * const who)
 {
 	NSLog(@"ft_callback_buddyaway-- %@", [NSString stringWithCString:who]);
 	Buddy* buddy = [[Buddy alloc]initWithBuddyName:
 		[NSString stringWithCString:who] 
-		group:[NSString stringWithCString:group] 
+		group:@"Unknown" 
 		status:@"Away"			
 		isOnline:true
 		message:nil];
@@ -130,12 +132,13 @@ void ft_callback_getinfo(void *c, void *cs, const char * const who, const char *
 {
 	Buddy* buddy = [[Buddy alloc]initWithBuddyName:
 		[NSString stringWithCString:who] 
-		group:@"UNKNOWN"
-		status:@"UNKNOWN"			
+		group:@"Unknown"
+		status:@"UNKNOWN"
 		isOnline:true
 		message:nil];
 	[buddy setInfo:[NSString stringWithCString:info]];
-//	[[ApolloTOC sharedInstance] buddyUpdate:buddy withCode:AIM_BUDDY_INFO];			
+	//if!([[buddy name]isEqualToString:@"WSJ"])
+	[[ApolloTOC sharedInstance] buddyUpdate:buddy withCode:AIM_BUDDY_INFO];			
 }
 
 void ft_callback_disconnect(void *c, void *cs, const int error)
@@ -146,12 +149,12 @@ void ft_callback_disconnect(void *c, void *cs, const int error)
 
 void ft_callback_needpass(void *c, void *cs, char *p, const int size)
 {
-//     NSLog(@"ft_callback_needpass");
+    NSLog(@"ft_callback_needpass");
     strncpy(p, pass, size);
 }
 
 void ft_callback_storepass(char* newpass)
 {
-//    NSLog(@"ft_callback_storepass");
+    NSLog(@"ft_callback_storepass");
     strncpy(pass, newpass, 1024);
 }
