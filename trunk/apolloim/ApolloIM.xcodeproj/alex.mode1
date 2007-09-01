@@ -190,46 +190,6 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>FAF55B5B0C89F2790037FA4F</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>ApolloIM-Callback.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>FAF55B5C0C89F2790037FA4F</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>ApolloIM-Callback.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>FAF55B5D0C89F2790037FA4F</string>
-						<key>history</key>
-						<array>
-							<string>FAF55B580C89F2690037FA4F</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {1177, 610}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>72 127 1177 651 0 0 1280 778 </string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
 				<string>FAF55AF40C89F0060037FA4F</string>
 				<key>PBXProjectModuleLabel</key>
 				<string>ApolloTOC.m</string>
@@ -244,7 +204,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>FAF55B5E0C89F2790037FA4F</string>
+						<string>FAF55C1C0C89F96D0037FA4F</string>
 						<key>history</key>
 						<array>
 							<string>FAF55B520C89F2310037FA4F</string>
@@ -284,7 +244,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>FAF55B5F0C89F2790037FA4F</string>
+						<string>FAF55C1D0C89F96D0037FA4F</string>
 						<key>history</key>
 						<array>
 							<string>FAF55AB10C89ED3B0037FA4F</string>
@@ -324,7 +284,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>FAF55B600C89F2790037FA4F</string>
+						<string>FAF55C1E0C89F96D0037FA4F</string>
 						<key>history</key>
 						<array>
 							<string>FAF559570C89DA5D0037FA4F</string>
@@ -467,8 +427,9 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>3</integer>
-									<integer>1</integer>
+									<integer>15</integer>
+									<integer>11</integer>
+									<integer>8</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -717,7 +678,6 @@
 		<string>FAF55ABA0C89ED860037FA4F</string>
 		<string>FAF55AF40C89F0060037FA4F</string>
 		<string>/Users/alex/Desktop/apolloim/apolloim/ApolloIM.xcodeproj</string>
-		<string>FAF55B5B0C89F2790037FA4F</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 55 287 723 0 0 1280 778 </string>

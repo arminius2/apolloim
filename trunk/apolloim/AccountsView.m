@@ -125,6 +125,11 @@
 	return cell;
 }
 
+- (BOOL)respondsToSelector:(SEL)aSelector
+{
+  NSLog(@"ACCOUNTSVIEW>> Request for selector: %@", NSStringFromSelector(aSelector));
+  return [super respondsToSelector:aSelector];
+}
 - (void)tableRowSelected:(NSNotification *)notification {
 //	if( [_delegate respondsToSelector:@selector( accountsView:accountSelected: )] )
 //Will be replcaed by NSNotifcations because that's how the 31337 hackers do it

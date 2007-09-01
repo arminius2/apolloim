@@ -46,7 +46,6 @@
 	//int					serviceEXIST;	
 	//bool				enabledEXIST;	
 	bool				editOrnew; //true \ false
-	bool				DELETE; //should be false;
     CGRect _rect;	
 	
 	Account				*account;

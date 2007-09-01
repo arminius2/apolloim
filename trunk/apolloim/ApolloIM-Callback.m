@@ -137,7 +137,7 @@ void ft_callback_getinfo(void *c, void *cs, const char * const who, const char *
 		isOnline:true
 		message:nil];
 	if(![[buddy properName]isEqualToString:@"WSJ"])
-	{
+	{ 
 		[buddy setInfo:[NSString stringWithCString:info]];		
 		[[ApolloTOC sharedInstance] buddyUpdate:buddy withCode:AIM_BUDDY_INFO];			
 	}

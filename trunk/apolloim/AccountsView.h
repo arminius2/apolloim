@@ -21,8 +21,8 @@
 #import <UIKit/UITransitionView.h>
 #import <UIKit/UITableCell.h>
 #import <UIKit/UIImageAndTextTableCell.h>
+//#import "AccountCell.m"
 #import "Account.h"
-
 
 @interface AccountsView : UIView {
 	UINavigationBar *_navBar;
@@ -35,6 +35,7 @@
 	id _delegate;
 }
 - (id)initWithFrame:(CGRect)frame;
+- (BOOL)respondsToSelector:(SEL)aSelector;
 - (void)dealloc;
 - (void)reloadData;
 - (void)setDelegate:(id)delegate;
