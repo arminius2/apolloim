@@ -26,7 +26,7 @@
 #import "libfiretalk/firetalk.h"
 
 typedef void (*ptrtofnct)(firetalk_t, void *, ...);
-const char* TOC_SERVER = "toc.oscar.aol.com";
+const char* TOC_SERVER = "64.12.203.120";
 const int TOC_PORT = 9898;
 
 static id sharedInst;
@@ -104,14 +104,14 @@ static NSRecursiveLock *lock;
         return YES;
 
 	NSLog(@"ApolloTOC> Preconnect...");
-    [lock lock];
+//    [lock lock];
     ft_callback_storepass([password UTF8String]);
 	NSLog(@"ApolloTOC> Password Stored... Connecting..");
-    success = firetalk_signon(ft_aim_connection, TOC_SERVER, TOC_PORT, [[username lowercaseString] cString]);
+    success = firetalk_signon(ft_aim_connection, TOC_SERVER, TOC_PORT, [username cString]);
 	NSLog(@"ApolloTOC> Sign on request sent...");	
-    [lock unlock];
-	
-    if (success != FE_SUCCESS && success != FE_CONNECT)
+	//[lock unlock];		
+    
+    if (success != FE_SUCCESS)
     {
 		NSLog(@"ApolloTOC> Payload prep...");
 		NSMutableArray* payload = 
@@ -119,6 +119,7 @@ static NSRecursiveLock *lock;
 		[payload addObject:		@"9"];	
         switch (success)
         {
+			case FE_CONNECT: [payload addObject:@"Apollo Unable to connect."]; break;
             case FE_BADUSERPASS: [payload addObject:@"ApolloTOC: Bad user name or password."]; break;
             case FE_SERVER: [payload addObject:@"ApolloTOC: Can't find specfied server."]; break;            
 			case FE_SOCKET: [payload addObject:@"ApolloTOC: Your internet connection is not ready."]; break;            
@@ -144,7 +145,6 @@ static NSRecursiveLock *lock;
 		status = NO;
         usleep(100); // wait for connection to either fail or succeed
     }
-    
     if ([self connected])
 	{
 		//firetalk_im_list_buddies(ft_aim_connection);		
