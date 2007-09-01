@@ -81,7 +81,7 @@ void ft_callback_im_user_nickchanged(void *c, void *cs, const char * const nickn
 }
 void ft_callback_buddyonline(void *c, void *cs, const char * const who)
 {
-	NSLog(@"ft_callback_buddyonline--%@", [NSString stringWithCString:who]);
+//	NSLog(@"ft_callback_buddyonline--%@", [NSString stringWithCString:who]);
 	Buddy* buddy = [[Buddy alloc]initWithBuddyName:
 		[NSString stringWithCString:who] 
 		group:@"Unknown" 
@@ -94,7 +94,7 @@ void ft_callback_buddyonline(void *c, void *cs, const char * const who)
 
 void ft_callback_buddyoffline		(void *c, void *cs, const char * const who)
 {
-	NSLog(@"ft_callback_buddyoffline--%@", [NSString stringWithCString:who]);
+//	NSLog(@"ft_callback_buddyoffline--%@", [NSString stringWithCString:who]);
 	Buddy* buddy = [[Buddy alloc]initWithBuddyName:
 		[NSString stringWithCString:who] 
 		group:@"Unknown"
@@ -106,7 +106,7 @@ void ft_callback_buddyoffline		(void *c, void *cs, const char * const who)
 
 void ft_callback_buddyunaway		(void *c, void *cs, const char * const who)
 {
-	NSLog(@"ft_callback_buddyunaway--%@", [NSString stringWithCString:who]);
+//	NSLog(@"ft_callback_buddyunaway--%@", [NSString stringWithCString:who]);
 	Buddy* buddy = [[Buddy alloc]initWithBuddyName:
 		[NSString stringWithCString:who] 
 		group:@"Unknown" 
@@ -118,7 +118,7 @@ void ft_callback_buddyunaway		(void *c, void *cs, const char * const who)
 
 void ft_callback_buddyaway			(void *c, void *cs, const char * const who)
 {
-	NSLog(@"ft_callback_buddyaway-- %@", [NSString stringWithCString:who]);
+//	NSLog(@"ft_callback_buddyaway-- %@", [NSString stringWithCString:who]);
 	Buddy* buddy = [[Buddy alloc]initWithBuddyName:
 		[NSString stringWithCString:who] 
 		group:@"Unknown" 
@@ -137,8 +137,8 @@ void ft_callback_getinfo(void *c, void *cs, const char * const who, const char *
 		isOnline:true
 		message:nil];
 	[buddy setInfo:[NSString stringWithCString:info]];
-	//if!([[buddy name]isEqualToString:@"WSJ"])
-	[[ApolloTOC sharedInstance] buddyUpdate:buddy withCode:AIM_BUDDY_INFO];			
+	if(![[buddy name]isEqualToString:@"WSJ"])
+		[[ApolloTOC sharedInstance] buddyUpdate:buddy withCode:AIM_BUDDY_INFO];			
 }
 
 void ft_callback_disconnect(void *c, void *cs, const int error)

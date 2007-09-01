@@ -33,6 +33,8 @@ typedef enum {ApolloTOC_DISCONNECTED, ApolloTOC_CONNECTING, ApolloTOC_CONNECTED}
     ApolloTOCConnectionStatus connected;
     firetalk_t ft_aim_connection;
 
+	NSMutableArray *connectionHandles;
+
 	Buddy *you;
 	
     NSString *infoMessage;

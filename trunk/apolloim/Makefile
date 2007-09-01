@@ -10,9 +10,10 @@ LDFLAGS = -lobjc \
           -framework CoreSurface \
           -framework Celestial \
           -framework CoreAudio \
-	  -L./libfiretalk \
-	  -lfiretalk \
-          -larmfp 
+          -L./libfiretalk \
+          -lfiretalk \
+          -L/Developer/SDKs/iPhone/lib \
+		  -larmfp
 
 #CFLAGS = -DDEBUG
 

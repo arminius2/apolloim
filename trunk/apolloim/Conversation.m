@@ -123,7 +123,7 @@
 	
 	- (BOOL)respondsToSelector:(SEL)aSelector
 	{
-	  NSLog(@"CONVERSATION>> Request for selector: %@", NSStringFromSelector(aSelector));
+//	  NSLog(@"CONVERSATION>> Request for selector: %@", NSStringFromSelector(aSelector));
 	  return [super respondsToSelector:aSelector];
 	}
 	

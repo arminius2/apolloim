@@ -195,11 +195,10 @@ static NSRecursiveLock *lock;
 				[self receiveMessage:(NSString*)[[payload objectAtIndex:1]info] fromBuddy:(Buddy*)[payload objectAtIndex:1] isInfo:YES];				
 				break;
 			default:
-				NSLog(@"StartView> No case statement for Event. Event is...");
+			NSLog(@"StartView>> Event -- %d", [[NSString stringWithString:[payload objectAtIndex:0]]intValue]);
 		}
 	}
 	[lock unlock];
-	NSLog(@"StartView>> Event -- %d", [[NSString stringWithString:[payload objectAtIndex:0]]intValue]);
 }
 
 - (void)alertSheet:(UIAlertSheet *)sheet buttonClicked:(int)button 
@@ -227,7 +226,7 @@ static NSRecursiveLock *lock;
 	{
 		if([[[[_conversations objectAtIndex:i]buddy]properName]isEqualToString:[aBuddy properName]])
 		{
-			NSLog(@"StartView> (recv) Adding to Existing Convo with... %@", [aBuddy name]);		
+//			NSLog(@"StartView> (recv) Adding to Existing Convo with... %@", [aBuddy name]);		
 			if(!info)
 			{
 				if(msg != nil)
@@ -236,17 +235,19 @@ static NSRecursiveLock *lock;
 						[_buddyView updateBuddy:aBuddy withCode:AIM_READ_MSGS];
 						else
 						[_buddyView updateBuddy:aBuddy withCode:AIM_RECV_MESG]; 						
-					NSLog(@"StartView> (recv) totally adding...");
+//					NSLog(@"StartView> (recv) totally adding...");
 					[[_conversations objectAtIndex:i] recvMessage:msg];
-					return;
-				}
-				else
-					[[_conversations objectAtIndex:i] recvInfo:msg];				
+				}				
 			}
+			else
+			{
+				[[_conversations objectAtIndex:i] recvInfo:msg];			
+			}
+			return;			
 		}	
  	}
  	[_buddyView updateBuddy:aBuddy withCode:AIM_RECV_MESG]; 	
-	NSLog(@"StartView> (recv) Starting New Convo with... %@", [aBuddy name]);
+//	NSLog(@"StartView> (recv) Starting New Convo with... %@", [aBuddy name]);
 	Conversation* convo = [[Conversation alloc]initWithFrame:_rect withBuddy:aBuddy andDelegate:self];
 	[convo recvMessage:msg];
 	[_conversations addObject:convo];	

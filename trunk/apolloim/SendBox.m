@@ -30,7 +30,7 @@
 
 - (BOOL)respondsToSelector:(SEL)aSelector
 {
-  NSLog(@"SENDBOX>> Request for selector: %@", NSStringFromSelector(aSelector));
+//  NSLog(@"SENDBOX>> Request for selector: %@", NSStringFromSelector(aSelector));
   return [super respondsToSelector:aSelector];
 }
 

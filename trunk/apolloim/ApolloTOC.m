@@ -22,7 +22,9 @@
 #import "ApolloTOC.h"
 #import "ApolloIM-PrivateAccess.h"
 #import "ApolloIM-Callback.h"
+//New Firetalk - thanks to NAIM crew for helping me out and letting me use their wonderful code
 #import "libfiretalk/firetalk.h"
+
 typedef void (*ptrtofnct)(firetalk_t, void *, ...);
 const char* TOC_SERVER = "toc.oscar.aol.com";
 const int TOC_PORT = 9898;
@@ -49,8 +51,6 @@ static NSRecursiveLock *lock;
     return sharedInst;
 }
 
-
-
 - (id)init
 {
     self = [super init];
@@ -60,6 +60,8 @@ static NSRecursiveLock *lock;
     connected = ApolloTOC_DISCONNECTED;
     willSendMarkup = YES;
     [self registerFiretalkCallbacks];
+
+	connectionHandles = [[NSMutableArray alloc]init];
 
     [NSTimer scheduledTimerWithTimeInterval:0.20 target:self selector:@selector(runloopCheck:) userInfo:nil repeats:YES];
 
@@ -109,7 +111,7 @@ static NSRecursiveLock *lock;
 	NSLog(@"ApolloTOC> Sign on request sent...");	
     [lock unlock];
 	
-    if (success != FE_SUCCESS)
+    if (success != FE_SUCCESS && success != FE_CONNECT)
     {
 		NSLog(@"ApolloTOC> Payload prep...");
 		NSMutableArray* payload = 
@@ -119,11 +121,13 @@ static NSRecursiveLock *lock;
         {
             case FE_BADUSERPASS: [payload addObject:@"ApolloTOC: Bad user name or password."]; break;
             case FE_SERVER: [payload addObject:@"ApolloTOC: Can't find specfied server."]; break;            
+			case FE_SOCKET: [payload addObject:@"ApolloTOC: Your internet connection is not ready."]; break;            
             case FE_RESOLV: [payload addObject:@"ApolloTOC: Can't resolve specified server."]; break;            
+			case FE_BADCONNECTION: [payload addObject:@"ApolloTOC: Bad Connection."]; break;
+			case FE_VERSION: [payload addObject:@"ApolloTOC: Wrong Version."]; break;
             case FE_BLOCKED: [payload addObject:@"ApolloTOC: You have been blocked. Signing on too often/too fast?"]; break;
             case FE_USERDISCONNECT: [payload addObject:@"ApolloTOC: You're disconnected."]; break;
             case FE_DISCONNECT: [payload addObject:@"ApolloTOC: Server disconnected you."]; break;
-            case FE_BADCONNECTION: [payload addObject:@"ApolloTOC: Bad connection."]; break;
             case FE_UNKNOWN: [payload addObject:@"ApolloTOC: Unknown error. Generally caused by a slow or unreachable toc network at AOL."]; break;
             case FE_BADUSER: [payload addObject:@"ApolloTOC: Bad user name or password."]; break;
             default:
@@ -252,9 +256,9 @@ static NSRecursiveLock *lock;
     // it's harmless, so ignore it
     if (code == 11)
 	{
-		[self keepAlive];		
+		return;	
 	}
-        return;
+     
     
     NSLog(@"ApolloTOC: Error code %i recieved: %s", code, firetalk_strerror(code));
 }
@@ -262,7 +266,7 @@ static NSRecursiveLock *lock;
 - (void)getInfo:(Buddy*)aBuddy
 {
 	[lock lock];
-	firetalk_im_get_info(ft_aim_connection, [[aBuddy name]cString]);
+	firetalk_im_get_info(ft_aim_connection, [[[aBuddy name]lowercaseString]cString]);
 	[lock unlock];
 }
 
@@ -273,8 +277,8 @@ static NSRecursiveLock *lock;
 
     //firetalk_set_away(ftConnection, "");
 
-    if (infoMessage)
-        firetalk_set_info(ftConnection, [infoMessage cString]);
+//    if (infoMessage)
+//        firetalk_set_info(ftConnection, [infoMessage cString]);
     
     connected = ApolloTOC_CONNECTED;
 	
@@ -286,7 +290,7 @@ static NSRecursiveLock *lock;
 	[payload addObject:		@"8"];
 	[_delegate imEvent:		payload];
 	NSLog(@"ApolloTOC>  here's to the good ol' days...");
-//	[NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(keepAlive) userInfo:nil repeats:YES] ;	
+	[NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(keepAlive) userInfo:nil repeats:YES] ;	
 
 //	firetalk_im_list_buddies(ftConnection);  //Use this at start to get full buddy listing.  Will be necessary for groups.
 

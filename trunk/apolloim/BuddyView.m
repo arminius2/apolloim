@@ -178,7 +178,7 @@ enum {
 //		break;
 			
 	}		
-	NSLog(@"--------");	
+//	NSLog(@"--------");	
 	[self reloadData];
 }
 
