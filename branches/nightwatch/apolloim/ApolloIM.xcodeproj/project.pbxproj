@@ -1,0 +1,290 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXFileReference section */
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D90F56B90C6719EF007AE76B /* ApolloIMApp.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ApolloIMApp.m; sourceTree = "<group>"; };
+		D90F56BA0C6719EF007AE76B /* ApolloIMApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ApolloIMApp.h; sourceTree = "<group>"; };
+		D90F56E20C671CD1007AE76B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /Developer/SDKs/iPhone.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		D90F56E30C671CD1007AE76B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = /Developer/SDKs/iPhone.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = "<absolute>"; };
+		D92591D70C6B431100BBDBBC /* Makefile */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		D9C1849B0C6B467300A7383F /* ApolloIM_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ApolloIM_Prefix.pch; sourceTree = "<group>"; };
+		FA15D9960C7755BA002A6BD2 /* Buddy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buddy.h; sourceTree = "<group>"; };
+		FA15D9970C7755BA002A6BD2 /* Buddy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Buddy.m; sourceTree = "<group>"; };
+		FA211EF10C73B87D00D6ABA1 /* BuddyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuddyView.h; sourceTree = "<group>"; };
+		FA211EF20C73B87D00D6ABA1 /* BuddyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuddyView.m; sourceTree = "<group>"; };
+		FA211EF50C73B8A100D6ABA1 /* BuddyInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuddyInfoView.h; sourceTree = "<group>"; };
+		FA211EF60C73B8A100D6ABA1 /* BuddyInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuddyInfoView.m; sourceTree = "<group>"; };
+		FA211EFD0C73B8C400D6ABA1 /* AboutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutView.h; sourceTree = "<group>"; };
+		FA211EFE0C73B8C400D6ABA1 /* AboutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutView.m; sourceTree = "<group>"; };
+		FA211F010C73B8DD00D6ABA1 /* AccountsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountsView.h; sourceTree = "<group>"; };
+		FA211F020C73B8DD00D6ABA1 /* AccountsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountsView.m; sourceTree = "<group>"; };
+		FA211F050C73B90100D6ABA1 /* StartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartView.h; sourceTree = "<group>"; };
+		FA211F060C73B90100D6ABA1 /* StartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartView.m; sourceTree = "<group>"; };
+		FA21223F0C73D05E00D6ABA1 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		FA2122400C73D05E00D6ABA1 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		FA2125750C73E59200D6ABA1 /* AccountEditorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountEditorView.h; sourceTree = "<group>"; };
+		FA2125760C73E59200D6ABA1 /* AccountEditorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountEditorView.m; sourceTree = "<group>"; };
+		FA650F960C86789F007EAD2E /* SendBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendBox.h; sourceTree = "<group>"; };
+		FA650F970C86789F007EAD2E /* SendBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendBox.m; sourceTree = "<group>"; };
+		FA6776E80C7A6E7B00DEC8EF /* Conversation.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Conversation.h; sourceTree = "<group>"; };
+		FA6776E90C7A6E7B00DEC8EF /* Conversation.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Conversation.m; sourceTree = "<group>"; };
+		FAB97BAF0C75E1F9004956B5 /* ApolloIM-Callback.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "ApolloIM-Callback.h"; sourceTree = "<group>"; };
+		FAB97BB00C75E1F9004956B5 /* ApolloIM-Callback.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = "ApolloIM-Callback.m"; sourceTree = "<group>"; };
+		FAB97BB10C75E1F9004956B5 /* ApolloIM-PrivateAccess.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "ApolloIM-PrivateAccess.h"; sourceTree = "<group>"; };
+		FAB97BB20C75E1F9004956B5 /* ApolloTOC.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ApolloTOC.h; sourceTree = "<group>"; };
+		FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ApolloTOC.m; sourceTree = "<group>"; };
+		FADC9D9F0C89121F00294A90 /* ApolloNotify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApolloNotify.h; sourceTree = "<group>"; };
+		FADC9DA00C89121F00294A90 /* ApolloNotify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApolloNotify.m; sourceTree = "<group>"; };
+		FADDECA50C74185B002AFA9D /* ShellKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellKeyboard.h; sourceTree = "<group>"; };
+		FADDECA60C74185B002AFA9D /* ShellKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShellKeyboard.m; sourceTree = "<group>"; };
+		FAE7F55B0C80DC3D005A2930 /* ConvoBox.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ConvoBox.h; sourceTree = "<group>"; };
+		FAE7F55C0C80DC3D005A2930 /* ConvoBox.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ConvoBox.m; sourceTree = "<group>"; };
+		FAF55A570C89E9D70037FA4F /* AccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountCell.h; sourceTree = "<group>"; };
+		FAF55A580C89E9D70037FA4F /* AccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FA211F050C73B90100D6ABA1 /* StartView.h */,
+				FA211F060C73B90100D6ABA1 /* StartView.m */,
+				FAB983CD0C76932F004956B5 /* AccountViews */,
+				FA15D9910C775579002A6BD2 /* BuddyListViews */,
+				FAE7F55D0C80DC9B005A2930 /* IM Window */,
+				FA15D9920C775591002A6BD2 /* Views Of The Damned */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* ApolloIM */ = {
+			isa = PBXGroup;
+			children = (
+				FA2121320C73CBF300D6ABA1 /* AIM */,
+				D92591D70C6B431100BBDBBC /* Makefile */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = ApolloIM;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FADC9D9F0C89121F00294A90 /* ApolloNotify.h */,
+				FADC9DA00C89121F00294A90 /* ApolloNotify.m */,
+				D9C1849B0C6B467300A7383F /* ApolloIM_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D90F56E20C671CD1007AE76B /* Foundation.framework */,
+				D90F56E30C671CD1007AE76B /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA15D9910C775579002A6BD2 /* BuddyListViews */ = {
+			isa = PBXGroup;
+			children = (
+				FA211EF10C73B87D00D6ABA1 /* BuddyView.h */,
+				FA211EF20C73B87D00D6ABA1 /* BuddyView.m */,
+				FA211EF50C73B8A100D6ABA1 /* BuddyInfoView.h */,
+				FA211EF60C73B8A100D6ABA1 /* BuddyInfoView.m */,
+				FA15D9960C7755BA002A6BD2 /* Buddy.h */,
+				FA15D9970C7755BA002A6BD2 /* Buddy.m */,
+			);
+			name = BuddyListViews;
+			sourceTree = "<group>";
+		};
+		FA15D9920C775591002A6BD2 /* Views Of The Damned */ = {
+			isa = PBXGroup;
+			children = (
+				D90F56BA0C6719EF007AE76B /* ApolloIMApp.h */,
+				D90F56B90C6719EF007AE76B /* ApolloIMApp.m */,
+				FADDECA50C74185B002AFA9D /* ShellKeyboard.h */,
+				FADDECA60C74185B002AFA9D /* ShellKeyboard.m */,
+				FA211EFD0C73B8C400D6ABA1 /* AboutView.h */,
+				FA211EFE0C73B8C400D6ABA1 /* AboutView.m */,
+			);
+			name = "Views Of The Damned";
+			sourceTree = "<group>";
+		};
+		FA2121320C73CBF300D6ABA1 /* AIM */ = {
+			isa = PBXGroup;
+			children = (
+				FAB97BAF0C75E1F9004956B5 /* ApolloIM-Callback.h */,
+				FAB97BB00C75E1F9004956B5 /* ApolloIM-Callback.m */,
+				FAB97BB10C75E1F9004956B5 /* ApolloIM-PrivateAccess.h */,
+				FAB97BB20C75E1F9004956B5 /* ApolloTOC.h */,
+				FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */,
+			);
+			name = AIM;
+			sourceTree = "<group>";
+		};
+		FAB983CD0C76932F004956B5 /* AccountViews */ = {
+			isa = PBXGroup;
+			children = (
+				FAF55A570C89E9D70037FA4F /* AccountCell.h */,
+				FAF55A580C89E9D70037FA4F /* AccountCell.m */,
+				FA211F010C73B8DD00D6ABA1 /* AccountsView.h */,
+				FA211F020C73B8DD00D6ABA1 /* AccountsView.m */,
+				FA2125750C73E59200D6ABA1 /* AccountEditorView.h */,
+				FA2125760C73E59200D6ABA1 /* AccountEditorView.m */,
+				FA21223F0C73D05E00D6ABA1 /* Account.h */,
+				FA2122400C73D05E00D6ABA1 /* Account.m */,
+			);
+			name = AccountViews;
+			sourceTree = "<group>";
+		};
+		FAE7F55D0C80DC9B005A2930 /* IM Window */ = {
+			isa = PBXGroup;
+			children = (
+				FAE7F55B0C80DC3D005A2930 /* ConvoBox.h */,
+				FAE7F55C0C80DC3D005A2930 /* ConvoBox.m */,
+				FA650F960C86789F007EAD2E /* SendBox.h */,
+				FA650F970C86789F007EAD2E /* SendBox.m */,
+				FA6776E80C7A6E7B00DEC8EF /* Conversation.h */,
+				FA6776E90C7A6E7B00DEC8EF /* Conversation.m */,
+			);
+			name = "IM Window";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		D92591D10C6B42C700BBDBBC /* ApolloIM */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = D92591D40C6B42CE00BBDBBC /* Build configuration list for PBXLegacyTarget "ApolloIM" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			dependencies = (
+			);
+			name = ApolloIM;
+			passBuildSettingsInEnvironment = 1;
+			productName = ApolloIM;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ApolloIM" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* ApolloIM */;
+			projectDirPath = "";
+			targets = (
+				D92591D10C6B42C700BBDBBC /* ApolloIM */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm;
+				CC = "/usr/local/iphonedev/bin/arm-apple-darwin-cc";
+				CXX = "/usr/local/iphonedev/bin/arm-apple-darwin-cc";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD = "/usr/local/iphonedev/bin/arm-apple-darwin-cc";
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/iPhone.sdk;
+				SHARED_PRECOMPS_DIR = "/Library/Caches/com.apple.Xcode.iPhone.$(UID)/SharedPrecompiledHeaders";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm;
+				CC = "/usr/local/iphonedev/bin/arm-apple-darwin-cc";
+				CXX = "/usr/local/iphonedev/bin/arm-apple-darwin-cc";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD = "/usr/local/iphonedev/bin/arm-apple-darwin-cc";
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/iPhone.sdk;
+				SHARED_PRECOMPS_DIR = "/Library/Caches/com.apple.Xcode.iPhone.$(UID)/SharedPrecompiledHeaders";
+			};
+			name = Release;
+		};
+		D92591D50C6B42CE00BBDBBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = ApolloIM;
+			};
+			name = Debug;
+		};
+		D92591D60C6B42CE00BBDBBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				PRODUCT_NAME = ApolloIM;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ApolloIM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D92591D40C6B42CE00BBDBBC /* Build configuration list for PBXLegacyTarget "ApolloIM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D92591D50C6B42CE00BBDBBC /* Debug */,
+				D92591D60C6B42CE00BBDBBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
