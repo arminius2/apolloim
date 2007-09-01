@@ -120,7 +120,7 @@ enum {
 				if([[[_buddies objectAtIndex:i]properName]isEqualToString:[aBuddy properName]])
 				{
 					[[_buddies objectAtIndex:i]setOnline:NO];
-					//NSLog(@"BuddyView.m> %@ is away",[aBuddy properName]);
+					NSLog(@"BuddyView.m> %@ is away",[aBuddy properName]);
 					[self reloadData];
 					return;
 				}			
@@ -131,7 +131,7 @@ enum {
 				if([[[_buddies objectAtIndex:i]properName]isEqualToString:[aBuddy properName]])
 				{
 					[[_buddies objectAtIndex:i]setOnline:YES];
-					//NSLog(@"BuddyView.m> %@ is back",[aBuddy properName]);
+					NSLog(@"BuddyView.m> %@ is back",[aBuddy properName]);
 					[self reloadData];
 					return;
 				}			

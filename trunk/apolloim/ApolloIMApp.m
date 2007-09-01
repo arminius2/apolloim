@@ -43,6 +43,7 @@
 - (void)applicationSuspend:(struct __GSEvent *)event 
 {
 	NSLog(@"Suspending...");
+	[startView closeActiveKeyboard];
 //	[[ApolloTOC sharedInstance]suspendApollo];
 }
 

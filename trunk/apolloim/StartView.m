@@ -213,6 +213,11 @@ static NSRecursiveLock *lock;
 	}
 }
 
+- (void)closeActiveKeyboard
+{
+	[currentConversation foldKeyboard];
+}
+
 - (void)receiveMessage:(NSString*)msg fromBuddy:(Buddy*)aBuddy isInfo:(BOOL)info
 {
 	NSLog(@"StartView> Receiving...");

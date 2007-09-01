@@ -58,6 +58,7 @@ if ((self == [super initWithFrame: frame]) != nil) {
 //		[[_table keyboard]setFrame:CGRectMake(0.0f, 0.0f, 0.0f, 0.0f)];
 
 		[self setMode:		 false];
+		DELETE = false;
 		_delegate = nil;
 	}
 	return self;

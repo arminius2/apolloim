@@ -46,6 +46,8 @@
 		FADDECA60C74185B002AFA9D /* ShellKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShellKeyboard.m; sourceTree = "<group>"; };
 		FAE7F55B0C80DC3D005A2930 /* ConvoBox.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ConvoBox.h; sourceTree = "<group>"; };
 		FAE7F55C0C80DC3D005A2930 /* ConvoBox.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ConvoBox.m; sourceTree = "<group>"; };
+		FAF55A570C89E9D70037FA4F /* AccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountCell.h; sourceTree = "<group>"; };
+		FAF55A580C89E9D70037FA4F /* AccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -152,6 +154,8 @@
 		FAB983CD0C76932F004956B5 /* AccountViews */ = {
 			isa = PBXGroup;
 			children = (
+				FAF55A570C89E9D70037FA4F /* AccountCell.h */,
+				FAF55A580C89E9D70037FA4F /* AccountCell.m */,
 				FA211F010C73B8DD00D6ABA1 /* AccountsView.h */,
 				FA211F020C73B8DD00D6ABA1 /* AccountsView.m */,
 				FA2125750C73E59200D6ABA1 /* AccountEditorView.h */,

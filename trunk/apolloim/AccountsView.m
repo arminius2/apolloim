@@ -127,6 +127,7 @@
 
 - (void)tableRowSelected:(NSNotification *)notification {
 //	if( [_delegate respondsToSelector:@selector( accountsView:accountSelected: )] )
+//Will be replcaed by NSNotifcations because that's how the 31337 hackers do it
 		[_delegate accountsView:self accountSelected:[self selectedAccount]];	
 }
 

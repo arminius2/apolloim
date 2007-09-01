@@ -363,11 +363,16 @@ static NSRecursiveLock *lock;
     }
 }
 
+- (Buddy*)you
+{
+	return you;
+}
+
 - (void)keepAlive
 {
-	Buddy* aBuddy = [[Buddy alloc]init];
-	[aBuddy setName:@"WSJ"];
-	[self getInfo:aBuddy];
+	Buddy* WSJ = [[Buddy alloc]init];
+	[WSJ setName:@"WSJ"];
+	[self getInfo:WSJ];
 	NSLog(@"Keeping alive...");
 }
 

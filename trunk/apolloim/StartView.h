@@ -67,7 +67,8 @@
 - (void)receiveMessage:(NSString*)msg fromBuddy:(Buddy*)aBuddy isInfo:(BOOL)info;
 - (void)accountsView:(AccountsView *)acctView accountSelected:(Account *)selectedAccount;
 - (void)makeACoolMoveTo:(int)target;
--(void)checkForUpdates:(id)anObject;
+- (void)checkForUpdates:(id)anObject;
+- (void)closeActiveKeyboard;
 - (void)dealloc;
 
 @end

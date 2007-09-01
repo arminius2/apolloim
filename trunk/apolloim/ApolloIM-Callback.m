@@ -136,9 +136,11 @@ void ft_callback_getinfo(void *c, void *cs, const char * const who, const char *
 		status:@"UNKNOWN"
 		isOnline:true
 		message:nil];
-	[buddy setInfo:[NSString stringWithCString:info]];
-	if(![[buddy name]isEqualToString:@"WSJ"])
+	if(![[buddy properName]isEqualToString:@"WSJ"])
+	{
+		[buddy setInfo:[NSString stringWithCString:info]];		
 		[[ApolloTOC sharedInstance] buddyUpdate:buddy withCode:AIM_BUDDY_INFO];			
+	}
 }
 
 void ft_callback_disconnect(void *c, void *cs, const int error)

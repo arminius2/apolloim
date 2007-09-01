@@ -65,6 +65,7 @@ typedef enum {ApolloTOC_DISCONNECTED, ApolloTOC_CONNECTING, ApolloTOC_CONNECTED}
 - (void)buddyUpdate:(Buddy*)buddy withCode:(int)code;
 
 - (NSString*) userName;
+- (Buddy*)you;
 - (void)getInfo:(Buddy*)aBuddy;
 - (void)keepAlive;
 
