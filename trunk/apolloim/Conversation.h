@@ -22,7 +22,7 @@
 #import <UIKit/UITextField.h>
 #import <UIKit/UITransitionView.h>
 #import <UIKit/UIImageAndTextTableCell.h>
-#import "ConvoBox.h"
+#import "ConversationView.h"
 #import "SendBox.h"
 #import "Buddy.h"
 
@@ -32,16 +32,19 @@
 {
 	UIImageAndTextTableCell* cell;
 
-	ConvoBox* convoView;
+	ConversationView* convoView;
 	UINavigationBar *_msgBar;
 	UITransitionView *_transitionView;
-	UIPushButton	*send;
+	UIPushButton	*sendBtn;
 	SendBox			*sendField;	
 	ShellKeyboard	*keyboard;
     CGRect _rect;	
 	Buddy* buddy;
 	bool _hidden;	
-	id _delegate;		
+	id _delegate;
+	
+	CGRect conv_rect_orig, conv_rect_keyboard;
+	CGRect send_rect_orig, send_rect_keyboard;
 }
 - (id)initWithFrame:(struct CGRect)frame withBuddy:(Buddy*)aBuddy andDelegate:(id)delegate;
 - (void)rollKeyboard;	

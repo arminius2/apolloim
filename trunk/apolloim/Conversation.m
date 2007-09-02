@@ -1,6 +1,6 @@
 /*
  ApolloTOC.m: Objective-C firetalk interface.
- By Alex C. Schaefer
+ By Alex C. Schaefer, Adam Bellmore
 
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -26,53 +26,86 @@
 #import <UIKit/UIImage.h>
 #import <UIKit/UIPushButton.h>
 #import <UIKit/CDStructures.h>
+#import <UIKit/UIBox.h>
 #import "ApolloTOC.h"
 #import "ApolloIM-PrivateAccess.h"
 #import "ShellKeyboard.h"
 #import "Buddy.h"
-#import "ConvoBox.h"
+#import "ConversationView.h"
 
 @implementation Conversation
 
 	-(id)initWithFrame:(struct CGRect)frame withBuddy:(Buddy*)aBuddy andDelegate:(id)delegate
 	{
+		float send_view_height = 30.0f;
+		float send_text_width = 0.8f * frame.size.width;
+		float left_buf = 0.03 * frame.size.width;
+		float send_button_width = frame.size.width - (left_buf+send_text_width+left_buf);
+		float kb_height = 215.0f;
+		
+		NSLog(@"Creating Conversation with dimensions(%f, %f, %f, %f)", frame.origin.x, frame.origin.y,
+				frame.size.width, frame.size.height);
 		if ((self == [super initWithFrame: frame]) != nil) 
 		{	
 			float lovelyShadeOfGreen[4] = {.1, .9, .1, 1};
 			float lovelyShadeOfTransparent[4] = {0, 0, 0, 0};
+			float black[4] = {0.0, 0.0, 0.0, 1.0};
 			CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();				
 			buddy = aBuddy;
 			_rect = frame;
 			_delegate = delegate;
 			
-
-			//sendField = [[UITextView alloc] initWithFrame:CGRectMake(_rect.origin.x, 450.0f, _rect.size.width - 50.0f, 30.0f)];	
-			//sendField = [[UITextView alloc] initWithFrame:CGRectMake(_rect.origin.x + 15.0f, -6.0f, _rect.size.width - 70.0f, 10.0f)];
-			sendField = [[SendBox alloc] initWithFrame:CGRectMake(15.0f, -6.0f, 320.0f - 70.0f,30.0f)];			
-			[sendField setBackgroundColor: CGColorCreate( colorSpace, lovelyShadeOfTransparent)];	
-			[sendField setDelegate: self];		
-			
-			convoView = [[ConvoBox alloc]initWithFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width, 376.0f)];
-			[convoView setDelegate: self];		
-
+			// Set up the conversation box first
+			conv_rect_orig = CGRectMake(_rect.origin.x,_rect.origin.y, 
+									_rect.size.width, _rect.size.height-send_view_height);
+			conv_rect_keyboard = CGRectMake(_rect.origin.x,_rect.origin.y, 
+									_rect.size.width, _rect.size.height-(send_view_height+kb_height));
+			convoView = [[ConversationView alloc]
+					initWithFrame: conv_rect_orig
+					withBuddy: aBuddy
+					andDelegate: self];
+					
+			// Set up the keyboard
 			keyboard = [[ShellKeyboard alloc]initWithFrame:CGRectMake(_rect.origin.x,450.0f, _rect.size.width, 300.0f)];
 			[keyboard setTapDelegate: self];
-			send = [[UIPushButton alloc] initWithTitle:@"" autosizesToFit:NO];
-			//[send setFrame:CGRectMake(_rect.size.width-50.0f, 450.0f, 50.0f, 30.0f)];
-			[send setFrame:CGRectMake(_rect.size.width - 76.0f + 15.0f, -3.0f, 64.0f, 30.0f)];			
-			[send setDrawsShadow: YES];
-			[send setEnabled:YES];
-			[send setTitle:@"Send"];
-			[send setStretchBackground:YES];
-			[send setBackground:[UIImage applicationImageNamed:@"SendButton.png"] forState:0];
-			[send setBackground:[UIImage applicationImageNamed:@"SendButtonPressed.png"] forState:1];
-			[send addTarget:self action:@selector(sendMessage) forEvents:1];
 
+			// Set up the send box
+			CGRect line_rect = CGRectMake(0,0, _rect.size.width, 1);
+			UIBox * bg_line = [[UIBox alloc] initWithFrame:line_rect];
+			[bg_line setBackgroundColor: CGColorCreate(colorSpace, black)];
+
+			CGRect bg_rect = CGRectMake(0, 0, _rect.size.width, send_view_height);
+			UIBox * send_bg = [[UIBox alloc] initWithFrame:bg_rect];
+			[send_bg addSubview:bg_line];
+			
+			sendField = [[SendBox alloc] initWithFrame:CGRectMake(left_buf, 0.0f, 
+										send_text_width, send_view_height)];			
+			[sendField setBackgroundColor: CGColorCreate(colorSpace, lovelyShadeOfTransparent)];	
+			[sendField setDelegate: self];		
+
+			sendBtn = [[UIPushButton alloc] initWithTitle:@"" autosizesToFit:NO];
+			[sendBtn setFrame:CGRectMake(left_buf+send_text_width+left_buf, 0.0f, 
+									send_button_width, send_view_height)];			
+			[sendBtn setDrawsShadow: YES];
+			[sendBtn setEnabled:YES];
+			[sendBtn setTitle:@"Send"];
+			[sendBtn setStretchBackground:YES];
+			[sendBtn setTitleColor: CGColorCreate(colorSpace, black)];
+			[sendBtn addTarget:self action:@selector(sendMessage) forEvents:1];
+
+			send_rect_orig = CGRectMake(0.0, 
+									_rect.size.height - send_view_height, 
+									_rect.size.width, 
+									send_view_height);
+			send_rect_keyboard = CGRectMake(0.0, 
+									_rect.size.height - (send_view_height+kb_height), 
+									_rect.size.width, 
+									send_view_height);
 			cell = [[UIImageAndTextTableCell alloc] init];
-			[cell setImage:[UIImage applicationImageNamed: @"SendField.png"]];
+			[cell setFrame:send_rect_orig];
+			[cell addSubview:send_bg];
 			[cell addSubview:sendField];
-			[cell addSubview:send];
-			[cell setFrame:CGRectMake(-10.0f,380.0f, _rect.size.width, 30.0f)];
+			[cell addSubview:sendBtn];
 										
 			//_msgBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(_rect.origin.x, 380.0f, _rect.size.width, 30.0f)];
 			//[_msgBar setDelegate: self];
@@ -94,11 +127,12 @@
 		if(_hidden)
 		{
 			[keyboard show:sendField withCell:cell forConvoBox:convoView];
-			[convoView setFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width,  186.0f)];
+			[convoView setFrame:conv_rect_keyboard];
+			[cell setFrame:send_rect_keyboard];
 			NSLog(@"Showing...");	
 			_hidden = false;	
 		}
-		//[convoView scrollToEnd];
+		[convoView scrollToEnd];
 	}
 	
 	-(void)foldKeyboard
@@ -106,7 +140,8 @@
 		if(!_hidden)
 		{
 			[keyboard hide:sendField withCell:cell forConvoBox:convoView];
-			[convoView setFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width, 376.0f)];
+			[convoView setFrame:conv_rect_orig];
+			[cell setFrame:send_rect_orig];
 			NSLog(@"Hiding...");
 			_hidden = true;
 			[convoView scrollToEnd];		
@@ -129,6 +164,8 @@
 	
 	-(void)recvMessage:(NSString*)msg;
 	{
+		[convoView appendToConversation:msg fromUser:[buddy properName]];
+		/*
 		//I am awesome
 		[convoView setHTML:
 		[[convoView HTML]stringByAppendingString:[NSString stringWithFormat:@"<div><font color=\"blue\">%@</font>: %@</div>",[buddy name],msg]]];
@@ -136,25 +173,19 @@
 		[convoView scrollToEnd];
 		[convoView insertText:@""];		
 		//[self play:receiveMessage];			
+		*/
 	}	
 	
 	- (void)sendMessage
 	{
-		[convoView setHTML:
-		[[convoView HTML]stringByAppendingString:[NSString stringWithFormat:@"<div><font color=\"red\">%@</font>: %@</div>",[[ApolloTOC sharedInstance]userName],[sendField text]]]];
+		[convoView appendToConversation:[sendField text] fromUser:@"self"];
 		[[ApolloTOC sharedInstance]sendIM:[sendField text] toUser:[buddy name]];
 		[sendField setText:@""];
-		
-		[convoView scrollToEnd];
-		[convoView insertText:@""];
 	}
 	
 	- (void)recvInfo:(NSString*)info
 	{
-		[convoView setHTML:
-		[[convoView HTML]stringByAppendingString:[NSString stringWithFormat:@"<div><font color=\"gray\">%@'s info:<div>%@</div></font></div>",[buddy name],info]]];
-		[convoView scrollToEnd];
-		[convoView insertText:@""];		
+		[convoView appendToConversation:[sendField info] fromUser:@"error"];	
 	}
 	
 	- (Buddy*)buddy
