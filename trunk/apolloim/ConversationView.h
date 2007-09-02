@@ -32,5 +32,7 @@
 }
 - (id)initWithFrame:(struct CGRect)frame withBuddy:(Buddy*)aBuddy andDelegate:(id)delegate;
 - (void)dealloc;
-- (BOOL)appendToConversation:(NSString *)text fromUser:(NSString *)user;
+- (BOOL)appendToConversation:(NSString *)text fromUser:(Buddy *)user;
+- (void)scrollToEnd;
+
 @end
