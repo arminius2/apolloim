@@ -25,18 +25,24 @@
 @implementation ConversationView
 -(id)initWithFrame:(struct CGRect)frame withBuddy:(Buddy*)aBuddy andDelegate:(id)delegate
 {
-	if ((self == [super initWithFrame: frame]) != nil) {
+	NSLog(@"Creating ConversationView with dimensions(%f, %f, %f, %f)", frame.origin.x, frame.origin.y,
+				frame.size.width, frame.size.height);
+	if ((self == [super initWithFrame: frame]) != nil) 
+	{
 		_rect = CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
 	
 		[self setAdjustForContentSizeChange:YES];
 		[self setContentSize: CGSizeMake(frame.size.width, frame.size.height)];
 		[self setOpaque:YES];
 
-		_delegate = nil;
+		_delegate = delegate;
 		
 		_conversation = [[NSMutableArray alloc] init];
-		
-		current_y = 0.0;
+
+		UIBox * box = [[UIBox alloc] initWithFrame:frame];
+		[self addSubview: box];
+		[self setContentSize: frame.size];
+		current_y = frame.size.height;
 	}
 	return self;
 }
@@ -47,7 +53,7 @@
 	[super dealloc];
 }
 
-- (BOOL)appendToConversation:(NSString *)text fromUser:(NSString *)user
+- (BOOL)appendToConversation:(NSString *)text fromUser:(Buddy *)user
 {
 	float seperator = 10.0f;
 	float text_height = 18.0f;
@@ -62,7 +68,7 @@
 	[username setWrapsText:YES];
 	[username setText:user];
 	
-	if([user isEqualToString:[_buddy properName]])
+	if(user != nil)
 		[username setColor:CGColorCreate(colorSpace, their_color)];
 	else
 		[username setColor:CGColorCreate(colorSpace, self_color)];
@@ -144,9 +150,20 @@
 	
 	[self setContentSize: CGSizeMake(_rect.size.width, height)];
 
-	[self scrollRectToVisible: new_area];
+	[self scrollRectToVisible: sep_area animated:YES];
 
 	return YES;
+}
+
+- (void) scrollToEnd
+{
+	CGRect to_view = CGRectMake(0, [self contentSize].height-1, [self contentSize].width, 1);
+	[self scrollRectToVisible: to_view animated:YES]; 
+}
+
+- (void)contentMouseUpInView:(id)fp8 withEvent:(struct GSEvent *)fp12
+{
+	[_delegate toggle];
 }
 
 
