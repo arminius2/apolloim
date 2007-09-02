@@ -1,6 +1,7 @@
 CC = arm-apple-darwin-cc 
 LD = $(CC)
-LDFLAGS = -lobjc \
+LDFLAGS =  \
+	  -lobjc \
           -framework CoreFoundation \
           -framework Foundation \
           -framework UIKit \
@@ -19,7 +20,7 @@ LDFLAGS = -lobjc \
 
 all:	ApolloIM package
 
-ApolloIM:	main.o ApolloIMApp.o StartView.o AccountsView.o AccountEditorView.o Account.o  ApolloTOC.o ApolloIM-Callback.o  BuddyView.o Buddy.o Conversation.o ConvoBox.o ShellKeyboard.o Shimmer.o AboutView.o SendBox.o 
+ApolloIM:	main.o ApolloIMApp.o StartView.o AccountsView.o AccountEditorView.o Account.o  ApolloTOC.o ApolloIM-Callback.o  BuddyView.o Buddy.o Conversation.o ConversationView.o ShellKeyboard.o Shimmer.o AboutView.o SendBox.o 
 #		(cd libfiretalk && make)
 		$(LD) $(LDFLAGS) -o $@ $^
 		
