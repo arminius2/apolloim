@@ -36,7 +36,7 @@
 
 @implementation ShellKeyboard
 
-- (void) show:(UITextView*)sendView withCell:(UIImageAndTextTableCell*) cell forConvoBox:(ConvoBox*)box
+- (void) show:(UITextView*)sendView withCell:(UIImageAndTextTableCell*) cell forConvoBox:(ConversationView*)box
 {
 	[sendView setBottomBufferHeight:(5.0f)];
 	
@@ -65,7 +65,7 @@
 	_hidden = NO;
 }
 
-- (void) hide:(UITextView*)sendView withCell:(UIImageAndTextTableCell*) cell forConvoBox:(ConvoBox*)box
+- (void) hide:(UITextView*)sendView withCell:(UIImageAndTextTableCell*) cell forConvoBox:(ConversationView*)box
 {
 
 
@@ -95,7 +95,7 @@
   _hidden = YES;
 }
 
-- (void) toggle:(UITextView*)sendView withCell:(UIImageAndTextTableCell*) cell forConvoBox:(ConvoBox*)box
+- (void) toggle:(UITextView*)sendView withCell:(UIImageAndTextTableCell*) cell forConvoBox:(ConversationView*)box
 {
   if (_hidden) {
     [self show:sendView withCell:cell forConvoBox:box];

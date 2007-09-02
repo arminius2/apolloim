@@ -23,7 +23,8 @@
 #import <UIKit/UIKeyboard.h>
 #import <UIKit/UIImageAndTextTableCell.h>
 #import <UIKit/UIPreferencesTable.h>
-#import "ConvoBox.h"
+#import <UIKit/UITextView.h>
+#import "ConversationView.h"
 
 @interface ShellKeyboard : UIKeyboard
 {
@@ -32,8 +33,8 @@
   CGRect kbFrame;
 }
 
-- (void)show:(UITextView*)sendView    withCell:(UIImageAndTextTableCell*) cell	forConvoBox:(ConvoBox*)box;
-- (void)hide:(UITextView*)sendView    withCell:(UIImageAndTextTableCell*) cell  forConvoBox:(ConvoBox*)box;
-- (void)toggle:(UITextView*)sendView  withCell:(UIImageAndTextTableCell*) cell	forConvoBox:(ConvoBox*)box;
+- (void)show:(UITextView*)sendView    withCell:(UIImageAndTextTableCell*) cell	forConvoBox:(ConversationView*)box;
+- (void)hide:(UITextView*)sendView    withCell:(UIImageAndTextTableCell*) cell  forConvoBox:(ConversationView*)box;
+- (void)toggle:(UITextView*)sendView  withCell:(UIImageAndTextTableCell*) cell	forConvoBox:(ConversationView*)box;
 
 @end

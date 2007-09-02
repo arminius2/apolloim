@@ -20,12 +20,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <UIKit/UITextView.h>
-#import "ConvoBox.h"
+#import "ConversationView.h"
 #import <UIKit/UITransitionView.h>
 
 @interface AboutView : UIView {
     CGRect				_rect;	
-	ConvoBox		*aboutField;	
+	ConversationView		*aboutField;	
 	
 }
 

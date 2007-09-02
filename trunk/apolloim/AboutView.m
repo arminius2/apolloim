@@ -24,8 +24,7 @@
 	{
 		if ((self == [super initWithFrame: frame]) != nil) 
 		{
-			aboutField =[[ConvoBox alloc]initWithFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width,  _rect.size.height)];
-			[aboutField setHTML:@"<b>Special Thanks to Doc, natetrue, wheat, Erica, Extremis (who got me a dev box - thank god), Ste, darkten, and Nervegas.  </b>"];
+			aboutField =[[ConversationView alloc]initWithFrame:CGRectMake(_rect.origin.x,_rect.origin.y, _rect.size.width,  _rect.size.height)];
 			[self addSubview:aboutField];
 		}
 		return self;
