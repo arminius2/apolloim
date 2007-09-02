@@ -20,6 +20,7 @@
 #import "StartView.h"
 #import "ApolloTOC.h"
 #import "ApolloIM-PrivateAccess.h"
+#import <UIKit/UIBox.h>
 
 @implementation ApolloIMApp
 
@@ -27,6 +28,8 @@
 	NSLog(@"ApolloIMApp.m>> Loading..");
 	struct CGRect rect	=	[UIHardware fullScreenApplicationContentRect];
 	rect.origin.x		=	rect.origin.y = 0.0f;
+	rect.size.width = 320.0;
+	rect.size.height = 465.0;
 
 	NSLog(@"ApolloIMApp.m>> Initing _window...");
 	_window = [[UIWindow alloc] initWithContentRect:rect];	
@@ -39,7 +42,25 @@
 	[_window	orderFront:		self];
 	[_window	makeKey:		self];
 	[_window	_setHidden:		NO];
+	
+	/*
+	float x = 0.0f;
+	float y = 50.0f;
+	int i;
+	for(i=0; i<10; i++)
+	{
+		float lovelyShadeOfGreen[4] = {.1, .9, .1, 1};
+		CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();	
+		CGRect frame = CGRectMake(x, 0, 4, y);
+		UIBox * b = [[UIBox alloc] initWithFrame: frame];
+		[b setBackgroundColor: CGColorCreate( colorSpace, lovelyShadeOfGreen)];
+		[startView addSubview:b];
+		x+=8.0f;
+		y+=1.0f;
+	}
+	*/
 }
+
 - (void)applicationSuspend:(struct __GSEvent *)event 
 {
 	NSLog(@"Suspending...");

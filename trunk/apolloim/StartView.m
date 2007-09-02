@@ -61,6 +61,7 @@ static NSRecursiveLock *lock;
 @implementation StartView
 - (id)initWithFrame:(struct CGRect)rect 
 {	
+	int menu_height = 50.0f;
 	CGColorSpaceRef const colorSpace = CGColorSpaceCreateDeviceRGB();
 	float transparentComponents[4] = {0, 0, 0, 0};
 	float grayComponents[4] = {0.55, 0.55, 0.55, 1};
@@ -68,8 +69,14 @@ static NSRecursiveLock *lock;
 	
 	if ((self == [super initWithFrame: rect]) != nil) 
 	{
+		// Make the subviews rect first
+		sub_views_rect = CGRectMake(rect.origin.x, 
+								rect.origin.y, 
+								rect.size.width, 
+								rect.size.height-menu_height);
+	
 		NSLog(@"StartView.m>>  Init startview...");
-		float offset = 50.0;
+
 		_navBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, 50.0f)];
 //		NSLog(@"StartView.m>> Nav Bar...");
 		[_navBar setBarStyle:2];
@@ -90,7 +97,7 @@ static NSRecursiveLock *lock;
 		
 //		NSLog(@"StartView.m>>  Transition view...");
 		_transitionView = [[UITransitionView alloc] initWithFrame: 
-			CGRectMake(rect.origin.x, offset, rect.size.width, rect.size.height - offset)
+			CGRectMake(rect.origin.x, menu_height, rect.size.width, rect.size.height - menu_height)
 		];
 	
 //		NSLog(@"StartView.m>>  Starting navbar...");
@@ -253,7 +260,7 @@ static NSRecursiveLock *lock;
  	}
  	[_buddyView updateBuddy:aBuddy withCode:AIM_RECV_MESG]; 	
 //	NSLog(@"StartView> (recv) Starting New Convo with... %@", [aBuddy name]);
-	Conversation* convo = [[Conversation alloc]initWithFrame:_rect withBuddy:aBuddy andDelegate:self];
+	Conversation* convo = [[Conversation alloc]initWithFrame:sub_views_rect withBuddy:aBuddy andDelegate:self];
 	[convo recvMessage:msg];
 	[_conversations addObject:convo];	
 }
@@ -287,7 +294,7 @@ static NSRecursiveLock *lock;
  	}
 
 	NSLog(@"StartView> (Switch) Starting New Convo with... %@", [aBuddy name]);
-	Conversation* convo = [[Conversation alloc]initWithFrame:_rect withBuddy:aBuddy andDelegate:self];
+	Conversation* convo = [[Conversation alloc]initWithFrame:sub_views_rect withBuddy:aBuddy andDelegate:self];
 	[_conversations addObject:convo];	
 //	[lock unlock];
 	currentConversation = [_conversations objectAtIndex:i];	

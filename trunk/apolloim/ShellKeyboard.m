@@ -61,7 +61,7 @@
 	
 	[[[UIAnimator alloc] init] addAnimation:translateKb withDuration:.1 start:YES];
 //	[[[UIAnimator alloc] init] addAnimation:translateCell withDuration:.5 start:YES];	
-	[cell setFrame:CGRectMake(-10.0f, 175.0f, 320.0f, 20.0f)];
+//	[cell setFrame:CGRectMake(-10.0f, 175.0f, 320.0f, 20.0f)];
 	_hidden = NO;
 }
 
@@ -91,7 +91,7 @@
 	
 	[[[UIAnimator alloc] init] addAnimation:translateKb withDuration:.5 start:YES];
 //	[[[UIAnimator alloc] init] addAnimation:translateCell withDuration:.5 start:YES];
-	[cell setFrame:CGRectMake(-10.0f,380.0f, 320.0f, 20.0f)];
+//	[cell setFrame:CGRectMake(-10.0f,380.0f, 320.0f, 20.0f)];
   _hidden = YES;
 }
 

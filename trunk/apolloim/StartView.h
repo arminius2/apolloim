@@ -37,6 +37,7 @@
 	UITransitionView	*_transitionView;
 	UINavigationItem 	*navtitle;
 	CGRect				_rect;	
+	CGRect				sub_views_rect;
 	ApolloTOC			*conn;
 	bool				EXIT;
 	
