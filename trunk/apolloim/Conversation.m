@@ -164,7 +164,7 @@
 	
 	-(void)recvMessage:(NSString*)msg;
 	{
-		[convoView appendToConversation:msg fromUser:[buddy properName]];
+		[convoView appendToConversation:msg fromUser:buddy];
 		/*
 		//I am awesome
 		[convoView setHTML:
@@ -178,14 +178,14 @@
 	
 	- (void)sendMessage
 	{
-		[convoView appendToConversation:[sendField text] fromUser:@"self"];
+		[convoView appendToConversation:[sendField text] fromUser:nil];
 		[[ApolloTOC sharedInstance]sendIM:[sendField text] toUser:[buddy name]];
 		[sendField setText:@""];
 	}
 	
 	- (void)recvInfo:(NSString*)info
 	{
-		[convoView appendToConversation:[sendField info] fromUser:@"error"];	
+		[convoView appendToConversation:[sendField info] fromUser:nil];	
 	}
 	
 	- (Buddy*)buddy

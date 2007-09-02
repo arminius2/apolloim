@@ -66,12 +66,17 @@
 	CGRect user_area = CGRectMake(0.0f, current_y, width, text_height);
 	UITextLabel * username = [[UITextLabel alloc] initWithFrame:user_area];
 	[username setWrapsText:YES];
-	[username setText:user];
 	
 	if(user != nil)
+	{
+		[username setText:[user name]];
 		[username setColor:CGColorCreate(colorSpace, their_color)];
+	}
 	else
+	{
+		[username setText:@"My Self"];
 		[username setColor:CGColorCreate(colorSpace, self_color)];
+	}
 		
 	[self addSubview: username];
 	current_y += text_height;
