@@ -37,10 +37,6 @@
 		_conversation = [[NSMutableArray alloc] init];
 		
 		current_y = 0.0;
-		
-		int i = 0;
-		for(i; i<40; i++)
-			[self appendToConversation: @"Hi mom! How are you?!~? I miss you something fiece and you crappy banana boats!" fromUser: @"humajime"];
 	}
 	return self;
 }
