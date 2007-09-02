@@ -327,7 +327,7 @@ static NSRecursiveLock *lock;
     {		
         if (firetalk_select_custom(0,NULL,NULL,NULL,&timeout) < 0) {
             NSLog(@"ApolloTOC: Error: firetalk_select failed.");
-             [NSApp terminate:self];
+		exit(-1);
         }
     }
 }
