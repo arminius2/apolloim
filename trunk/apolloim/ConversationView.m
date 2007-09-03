@@ -53,6 +53,36 @@
 	[super dealloc];
 }
 
+- (BOOL) removeHTML:(NSMutableString *) from
+{
+	int del = 0;
+	int i = 0;
+	for(i; i< ([from length]); i++)
+	{
+		BOOL deleted = NO;
+		if([from characterAtIndex: i] == '<')
+			del ++;
+			
+		if(del > 0)
+		{
+			deleted = YES;
+		}
+		
+		if([from characterAtIndex: i] == '>')
+		{
+			if(del > 0)
+				del --;
+		}
+		
+		if(deleted)
+		{
+			NSRange r = NSMakeRange(i, 1);
+			[from deleteCharactersInRange: r];
+			i--;
+		}
+	}
+}
+
 - (BOOL)appendToConversation:(NSString *)text fromUser:(Buddy *)user
 {
 	float seperator = 10.0f;
@@ -85,6 +115,7 @@
 	
 	NSMutableString * m_text = [NSMutableString stringWithCapacity: [text length]];
 	[m_text insertString:text atIndex:0];
+	[self removeHTML:m_text];
 	
 	BOOL all_drawn = NO;
 	while(!all_drawn)
@@ -99,35 +130,59 @@
 										new_area.origin.y,
 										new_area.size.width,
 										new_area.size.height);
+		float conv_width = width - 25.0;
 		UITextLabel * conv = [[UITextLabel alloc] initWithFrame:conv_area];
 		[conv setWrapsText:YES];
 		
 		float text_width;
 		BOOL short_enough = NO;
+		NSString * first_fit = nil;
 		while(!short_enough)
 		{
 			[conv setText: buf];
 			text_width = [conv textSize].width;
-			if(text_width <= width && [buf characterAtIndex:[buf length]-1] == (unichar)' ')
+			
+			// set the first string to fit.  if all else fails, use this
+			if(text_width <= conv_width && first_fit == nil)
+			{
+				first_fit = [NSString stringWithString: buf];
+			}
+			
+			if(text_width <= conv_width && [buf characterAtIndex:[buf length]-1] == (unichar)' ')
 			{
 				short_enough = YES;
 			}
-			else if(text_width <= width && [buf characterAtIndex:[buf length]-1] == (unichar)'\t')
+			else if(text_width <= conv_width && [buf characterAtIndex:[buf length]-1] == (unichar)'\t')
 			{
 				short_enough = YES;
 			}
-			else if(text_width <= width && [buf characterAtIndex:[buf length]-1] == (unichar)'\n')
+			else if(text_width <= conv_width && [buf characterAtIndex:[buf length]-1] == (unichar)'\n')
 			{
 				short_enough = YES;
 			}
-			else if(text_width <= width && [buf isEqualToString: m_text])
+			else if(text_width <= conv_width && [buf isEqualToString: m_text])
 			{
 				short_enough = YES;
 			}
 			else
 			{
-				NSRange r = NSMakeRange([buf length] - 1, 1);
-				[buf deleteCharactersInRange: r];
+				if([buf length] > 0)
+				{
+					NSRange r = NSMakeRange([buf length] - 1, 1);
+					[buf deleteCharactersInRange: r];
+				}
+				else
+				{
+					NSLog(@"Out of String");
+					
+					//buf = [NSMutableString stringWithCapacity: [first_fit length]];
+					//[buf insertString:first_fit atIndex:0];
+					[buf setString: first_fit];
+					[conv setText: buf];
+					short_enough = YES;
+					
+					NSLog(first_fit);
+				}
 			}
 		}
 		[self addSubview: bk];
