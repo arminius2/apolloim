@@ -41,7 +41,7 @@
 	CGRect				_rect;	
 	CGRect				sub_views_rect;
 	ApolloTOC			*conn;
-	bool				EXIT;
+	bool				EDGE;
 	bool				okayToConnect;
 	
 //	AboutView			*_aboutView;

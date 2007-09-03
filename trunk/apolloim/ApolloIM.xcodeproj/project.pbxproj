@@ -35,6 +35,8 @@
 		FA60D2140C8C87E100A90DEE /* ConversationView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ConversationView.m; sourceTree = "<group>"; };
 		FA60D3080C8C9E4500A90DEE /* ApolloNotificationController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ApolloNotificationController.h; sourceTree = "<group>"; };
 		FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ApolloNotificationController.m; sourceTree = "<group>"; };
+		FA60D6360C8CC18100A90DEE /* AcctTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcctTable.h; sourceTree = "<group>"; };
+		FA60D6370C8CC18100A90DEE /* AcctTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcctTable.m; sourceTree = "<group>"; };
 		FA650F960C86789F007EAD2E /* SendBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendBox.h; sourceTree = "<group>"; };
 		FA650F970C86789F007EAD2E /* SendBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendBox.m; sourceTree = "<group>"; };
 		FA6776E80C7A6E7B00DEC8EF /* Conversation.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Conversation.h; sourceTree = "<group>"; };
@@ -48,8 +50,8 @@
 		FADDECA60C74185B002AFA9D /* ShellKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShellKeyboard.m; sourceTree = "<group>"; };
 		FAE7F55B0C80DC3D005A2930 /* ConvoBox.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ConvoBox.h; sourceTree = "<group>"; };
 		FAE7F55C0C80DC3D005A2930 /* ConvoBox.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ConvoBox.m; sourceTree = "<group>"; };
-		FAF55A570C89E9D70037FA4F /* AccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountCell.h; sourceTree = "<group>"; };
-		FAF55A580C89E9D70037FA4F /* AccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountCell.m; sourceTree = "<group>"; };
+		FAF55A570C89E9D70037FA4F /* AcctCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcctCell.h; sourceTree = "<group>"; };
+		FAF55A580C89E9D70037FA4F /* AcctCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcctCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -164,12 +166,14 @@
 			children = (
 				FA60D1360C8C7B4100A90DEE /* Acct.h */,
 				FA60D1370C8C7B4100A90DEE /* Acct.m */,
-				FAF55A570C89E9D70037FA4F /* AccountCell.h */,
-				FAF55A580C89E9D70037FA4F /* AccountCell.m */,
+				FAF55A570C89E9D70037FA4F /* AcctCell.h */,
+				FAF55A580C89E9D70037FA4F /* AcctCell.m */,
 				FA211F010C73B8DD00D6ABA1 /* AccountsView.h */,
 				FA211F020C73B8DD00D6ABA1 /* AccountsView.m */,
 				FA2125750C73E59200D6ABA1 /* AccountEditorView.h */,
 				FA2125760C73E59200D6ABA1 /* AccountEditorView.m */,
+				FA60D6360C8CC18100A90DEE /* AcctTable.h */,
+				FA60D6370C8CC18100A90DEE /* AcctTable.m */,
 			);
 			name = AccountViews;
 			sourceTree = "<group>";

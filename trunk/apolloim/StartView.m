@@ -84,14 +84,15 @@ extern UIApplication *UIApp;
 		[self makeACoolMoveTo:ACCOUNT_VIEW];
 		prefFile = [[NSString alloc]initWithString:@"/var/root/Library/Preferences/ApolloIM_Version(.1)"];	
 		[self populatePreferences];	
-		EXIT=NO;
 		_rect = rect;
+		EDGE=NO;
 
 		
 		if([[NetworkController sharedInstance]isNetworkUp])
 		{
-			NSLog(@"Network is up.");
-			NSLog(@"This is a stub incase I need to do something else with network.  Like.  I don't know.  Something.");
+			NSLog(@"NetworkController>> Network is up.");
+			NSLog(@"NetworkController>> This is a stub incase I need to do something else with network.  Like.  I don't know.  Something.");
+			EDGE = NO;
 		}
 		else
 		{
@@ -102,6 +103,7 @@ extern UIApplication *UIApp;
 				[[NetworkController sharedInstance]bringUpEdge];
 				[[NetworkController sharedInstance]keepEdgeUp];				
 				NSLog(@"StartView Init> Edge has been broughtten!");		
+				EDGE = YES;
 			}
 		}		
 		
@@ -171,7 +173,7 @@ extern UIApplication *UIApp;
 			case AIM_DISCONNECTED:
 				NSLog(@"You have been disconnected.");
 				okayToConnect = NO;
-				//EXIT = YES;	
+
 				UIAlertSheet *sheet = [[UIAlertSheet alloc] initWithFrame: CGRectMake(0, 220, 320, 220)];
 				[sheet setTitle:[active username]];
 				if([payload count]>1)
@@ -215,13 +217,6 @@ extern UIApplication *UIApp;
 	[sheet dismiss];
 	okayToConnect = YES;
 	[ApolloTOC dump];
-	if(EXIT)
-	{
-		//sleep(3);
-		exit(1);
-		//[self makeACoolMoveTo:ACCOUNT_VIEW];
-		//[[ApolloTOC sharedInstance] killHandle];
-	}
 }
 
 - (void)closeActiveKeyboard
@@ -366,11 +361,7 @@ extern UIApplication *UIApp;
 		case 1:
 			if (_buddyViewBrowser)
 			{
-				//NSLog(@"StartView>> LEFT -- BUDDY_VIEW -- DISCONNECTBUTTON");
 				[[ApolloTOC sharedInstance]disconnect];
-				//[self makeACoolMoveTo:ACCOUNT_VIEW];
-				//[[ApolloTOC sharedInstance] killHandle];
-				//exit(1);
 			}
 			if (_accountsViewBrowser) 
 			{

@@ -15,6 +15,8 @@
 	AVQueue *q;
 	AVController *controller;
 	
+	bool soundEnabled;
+	
 	int totalUnreadMessages;
 	double resumetime;
 }
@@ -26,13 +28,19 @@
 
 -(void)receiveUnreadMessages:(int)msgCount;  //increment total unread messages
 -(void)switchToConvoWithMsgs:(int)msgCount;  //decrement total unread messages
+-(void)clearBadges;
 
 -(void)playGoAway;
 -(void)playComeBack;
 -(void)playSendIm;
--(void)playRecvIm;
+-(void)playRecvIm;							//increment total unread messages
 -(void)playSignOff;
 -(void)playSignon;
+
+-(void)vibrateBitches;						//this one goes out to all the ladies
+
+-(void)setSoundEnabled:(bool)enable;
+-(bool)soundEnabled;
 
 -(BOOL)respondsToSelector:(SEL)aSelector;
 -(void)stop;

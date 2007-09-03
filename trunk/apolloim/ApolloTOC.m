@@ -189,6 +189,8 @@ static NSRecursiveLock *lock;
     [lock lock];
     firetalk_im_send_message(ft_aim_connection, [user cString], [body cString], 0);
     [lock unlock];
+	
+	[[ApolloNotificationController sharedInstance]playSendIm];
 }
 
 - (void)buddyUpdate:(Buddy*)buddy withCode:(int)code
@@ -284,7 +286,7 @@ static NSRecursiveLock *lock;
 - (void)recievedMessage:(NSString*)message fromUser:(NSString*)user isAutomessage:(BOOL)automessage ftConnection:(void *)ftConnection
 {
 	NSLog(@"ApolloTOC: Recieved message from %@, is auto: %i.\n%@", user, automessage, message);
-	
+	[[ApolloNotificationController sharedInstance]playRecvIm];	
 	Buddy* yourBuddy = [[Buddy alloc]init];
 	[yourBuddy setName:user];
 	

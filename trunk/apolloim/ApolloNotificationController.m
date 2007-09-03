@@ -5,6 +5,8 @@
 #import <Celestial/AVItem.h>
 #import <Celestial/AVController-AVController_Celeste.h>
 
+//Special thankyou to Jonathan Saggau, nice code mate.
+
 //From Aaron hillegass
 #define LogMethod() NSLog(@"-[%@ %s]", self, _cmd)
 
@@ -44,6 +46,8 @@ extern UIApplication *UIApp;
 		
 		[UIApp removeApplicationBadge];
 		totalUnreadMessages = 0;
+		
+		soundEnabled = YES;
 		
 		//Sound declarations
 //		NSString *path = [[NSBundle mainBundle] pathForResource:@"ApolloRecv" ofType:@"wav" inDirectory:@"/"];
@@ -144,6 +148,9 @@ extern UIApplication *UIApp;
 			NSLog(@"err! = %@ \n [q appendItem:item error:&err];", err);
 			exit(1);
 		}					*/																
+
+		[UIApp setStatusBarCustomText:@"ApolloIM"];
+
 	}
 	return self;
 }
@@ -168,6 +175,16 @@ comeBack*/
 	[super dealloc];
 }
 
+- (bool)soundEnabled
+{
+	return soundEnabled;
+}
+
+- (void)setSoundEnabled:(bool)enable
+{
+	soundEnabled = enable;
+}
+
 -(void)playSignOff
 {
 	[self play:signOff];
@@ -181,8 +198,6 @@ comeBack*/
 -(void)playRecvIm
 {
 	[self play:recvIm];
-	totalUnreadMessages++;
-	[UIApp setApplicationBadge:[NSString stringWithFormat:@"%u",totalUnreadMessages]];
 }
 
 -(void)receiveUnreadMessages:(int)msgCount  //should just do playRecvIm
@@ -225,20 +240,28 @@ comeBack*/
 	[self play:comeBack];
 }
 
+-(void)vibrateBitches
+{
+//	CTServerConnectionCreate(&kCFAllocatorDefault, a_function_pointer_to_a_callback, SOMETHING);
+}
+
 -(void)play:(AVItem *)item
 {
-	[controller setCurrentItem:item];
-	//play NOW
-	[controller setCurrentTime:(double)0.0];
-	//should probably check this eventually, too.
-	//- (BOOL)isCurrentItemReady;
-	NSError *err;
-	[controller play:&err];
-	if(nil != err)
+	if(soundEnabled)  //this will be moved to individual options to allow customized which sounds on/off.  I am lazy right now.
 	{
-		NSLog(@"err! = %@    [controller play:&err];", err); 
-		exit(1);
+		NSLog(@"Playing.");
+		[controller setCurrentItem:item];
+		[controller setCurrentTime:(double)0.0];
+		NSError *err;
+		[controller play:&err];
+		if(nil != err)
+		{
+			NSLog(@"err! = %@    [controller play:&err];", err); 
+			exit(1);
+		}
 	}
+	else
+		NSLog(@"NOT PLAYING CAUSE I WAS TOLD NOT TO GOD MOM IM TELLING DAD");
 }
 
 - (BOOL)respondsToSelector:(SEL)aSelector

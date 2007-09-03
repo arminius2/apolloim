@@ -45,7 +45,7 @@ enum {
 			width: frame.size.width
 		];
 		//NSLog(@"BuddyView>> init table...");
-		_table = [[UITable alloc] initWithFrame: CGRectMake(0, 0, frame.size.width, 410.0f)]; //this should prolly be frame.size.height
+		_table = [[UITable alloc] initWithFrame: CGRectMake(0, 0, frame.size.width, 415.0f)]; //this should prolly be frame.size.height
 		[_table addTableColumn: col];
 		[_table setSeparatorStyle: 1];
 		[_table setDelegate: self];
@@ -157,8 +157,7 @@ enum {
 				if([[[_buddies objectAtIndex:i]properName]isEqualToString:[aBuddy properName]])
 				{
 					recvd = YES;
-					[[ApolloNotificationController sharedInstance]playRecvIm];
-//					[[ApolloNotificationController sharedInstance]receiveUnreadMessages:1];				
+					[[ApolloNotificationController sharedInstance]receiveUnreadMessages:1];				
 					[[_buddies objectAtIndex:i]incrementMessages];
 					NSLog(@"BuddyView.m> %@ has given you new messages",[aBuddy properName]);
 					[self reloadData];

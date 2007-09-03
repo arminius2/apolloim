@@ -104,7 +104,7 @@ if ((self == [super initWithFrame: frame]) != nil) {
 						[usernameField setText:[account username]];	
 				} 
 				 else 
-//				if(row == 1) 
+				if(row == 1) 
 				{
 					[cell setTitle:							@"Password"];
 					[[cell textField]setText:				passwordEXIST];

@@ -19,6 +19,7 @@
 */
 
 #import <Foundation/Foundation.h>
+#import "ApolloNotificationController.h"
 #import "libfiretalk/firetalk.h"
 #import "Buddy.h"
 
