@@ -173,7 +173,7 @@
 				}
 				else
 				{
-					NSLog(@"Out of String");
+					//NSLog(@"Out of String");
 					
 					//buf = [NSMutableString stringWithCapacity: [first_fit length]];
 					//[buf insertString:first_fit atIndex:0];
@@ -181,7 +181,7 @@
 					[conv setText: buf];
 					short_enough = YES;
 					
-					NSLog(first_fit);
+					//NSLog(first_fit);
 				}
 			}
 		}
