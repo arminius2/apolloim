@@ -23,7 +23,10 @@
 + (id)sharedInstance;
 
 -(id)init;
--(void)switchToConvoWithMsgs:(int)msgCount;
+
+-(void)receiveUnreadMessages:(int)msgCount;  //increment total unread messages
+-(void)switchToConvoWithMsgs:(int)msgCount;  //decrement total unread messages
+
 -(void)playGoAway;
 -(void)playComeBack;
 -(void)playSendIm;
@@ -33,7 +36,6 @@
 
 -(BOOL)respondsToSelector:(SEL)aSelector;
 -(void)stop;
--(void)resume:(AVItem *)item;
 -(void)queueItemWasAdded:(id)fp8;
 
 @end

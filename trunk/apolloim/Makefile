@@ -45,6 +45,7 @@ package:
 	cp ApolloIM ./ApolloIM.app/
 	cp *.png ./ApolloIM.app/
 	cp *.gif ./ApolloIM.app/
+	cp *.aiff ./ApolloIM.app/
 	cp Info.plist ./ApolloIM.app/
 	chmod 644 ./ApolloIM.app/*
 	chmod 755 ./ApolloIM.app/ApolloIM

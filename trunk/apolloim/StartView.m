@@ -19,6 +19,7 @@
 #import "StartView.h"
 #import "ApolloTOC.h"
 #import "ApolloIM-PrivateAccess.h"
+#import "ApolloNotificationController.h"
 
 enum { 
 	ACCOUNT_VIEW		=	1,
@@ -180,7 +181,14 @@ extern UIApplication *UIApp;
 				[sheet addButtonWithTitle:@"OK"];
 				[sheet setDelegate: self];
 				[sheet presentSheetFromAboveView: self];	
-				[self makeACoolMoveTo:ACCOUNT_VIEW];					
+				[self makeACoolMoveTo:ACCOUNT_VIEW];		
+				//Reinit conversations and buddyviews
+				[_buddyView		release];
+				_buddyView		= [[BuddyView alloc]initWithFrame:_rect];
+				[_buddyView		setDelegate:self];
+				[_conversations release];
+				_conversations	= [[NSMutableArray alloc]init];
+				[[ApolloNotificationController sharedInstance]clearBadges];
 				break;
 			case AIM_RECV_MESG:
 				NSLog(@"Received Message from %@ that says '%@'",[[payload objectAtIndex:1]name],[payload objectAtIndex:2]);

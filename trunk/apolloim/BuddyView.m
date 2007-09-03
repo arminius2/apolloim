@@ -142,12 +142,13 @@ enum {
 			{
 				if([[[_buddies objectAtIndex:i]properName]isEqualToString:[aBuddy properName]])
 				{
+					[[ApolloNotificationController sharedInstance]switchToConvoWithMsgs:[[_buddies objectAtIndex: i]unreadMsgs]];
 					[[_buddies objectAtIndex:i]setUnreadMsgs:0];
 					[[_buddies objectAtIndex:i]setInAConversation:YES];					
 					NSLog(@"BuddyView.m> You have read %@'s messages ",[aBuddy properName]);
 					[self reloadData];
 					return;
-				}			
+				}
 			}
 			break;
 		case AIM_RECV_MESG:		
@@ -156,10 +157,12 @@ enum {
 				if([[[_buddies objectAtIndex:i]properName]isEqualToString:[aBuddy properName]])
 				{
 					recvd = YES;
+					[[ApolloNotificationController sharedInstance]playRecvIm];
+//					[[ApolloNotificationController sharedInstance]receiveUnreadMessages:1];				
 					[[_buddies objectAtIndex:i]incrementMessages];
 					NSLog(@"BuddyView.m> %@ has given you new messages",[aBuddy properName]);
 					[self reloadData];
-				}		
+				}
 			}
 			if(!recvd)
 			{

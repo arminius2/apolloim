@@ -23,6 +23,7 @@
 #import "Acct.h"
 #import "Buddy.h"
 #import "Conversation.h"
+#import "ApolloNotificationController.h"
 
 @interface BuddyView : UIView {
 	UINavigationBar *_navBar;

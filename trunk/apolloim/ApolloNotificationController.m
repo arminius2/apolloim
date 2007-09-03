@@ -97,10 +97,9 @@ extern UIApplication *UIApp;
 		}		
 
 		controller = [[AVController alloc] init];
+//		controller = [AVController avController];
 		[controller setDelegate:self];
-		[controller setVibrationEnabled:YES];
-		if([controller vibrationEnabled])
-			NSLog(@"VIBRATION IS ENABLED");
+		[controller setVibrationEnabled:YES];		
 		
 		q = [[AVQueue alloc] init];
 		
@@ -118,7 +117,7 @@ extern UIApplication *UIApp;
 			exit(1);
 		}
 		
-		[q appendItem:signOn error:&err];
+/*		[q appendItem:signOn error:&err];
 		if (nil != err)
 		{
 			NSLog(@"err! = %@ \n [q appendItem:item error:&err];", err);
@@ -144,7 +143,7 @@ extern UIApplication *UIApp;
 		{
 			NSLog(@"err! = %@ \n [q appendItem:item error:&err];", err);
 			exit(1);
-		}																					
+		}					*/																
 	}
 	return self;
 }
@@ -182,19 +181,33 @@ comeBack*/
 -(void)playRecvIm
 {
 	[self play:recvIm];
-	[UIApp vibrateForDuration:2];
 	totalUnreadMessages++;
 	[UIApp setApplicationBadge:[NSString stringWithFormat:@"%u",totalUnreadMessages]];
-	NSLog(@"PLEASE START VIBRATING.");	
+}
+
+-(void)receiveUnreadMessages:(int)msgCount  //should just do playRecvIm
+{
+	totalUnreadMessages+=msgCount;
+	[UIApp setApplicationBadge:[NSString stringWithFormat:@"%u",totalUnreadMessages]];
+	NSLog(@"Set count to %d",msgCount);	
 }
 
 -(void)switchToConvoWithMsgs:(int)msgCount
 {
-	if(totalUnreadMessages - msgCount > 0)
+	totalUnreadMessages-=msgCount;
+	[UIApp setApplicationBadge:[NSString stringWithFormat:@"%u",totalUnreadMessages]];
+	NSLog(@"Decrementing badge...");
+	if(totalUnreadMessages == 0)
 	{
-		totalUnreadMessages-=msgCount;
-		[UIApp setApplicationBadge:[NSString stringWithFormat:@"%u",totalUnreadMessages]];	
+		[UIApp removeApplicationBadge];
+		NSLog(@"Clearing badge...");
 	}
+}
+
+-(void)clearBadges
+{	
+	totalUnreadMessages = 0;
+	[UIApp removeApplicationBadge];
 }
 
 -(void)playSendIm
@@ -214,48 +227,16 @@ comeBack*/
 
 -(void)play:(AVItem *)item
 {
-	NSError *err;
-	AVItem*  current = [controller currentItem];
-	resumetime = [controller currentTime];
-
-	[controller pause];
-	NSLog(@"KICK THIS PIG");
-
 	[controller setCurrentItem:item];
+	//play NOW
 	[controller setCurrentTime:(double)0.0];
-
-	NSLog(@"Playing...");
-	[controller play:&err];
-	if(nil != err)
-	{
-		NSLog(@"err! = %@ [controller play:&err];", err);
-		exit(1);
-	}
-	
-//	[self performSelector:@selector(resume:) withObject:current afterDelay:2.0];
-}
-
--(void)resume:(AVItem *)item
-{
+	//should probably check this eventually, too.
+	//- (BOOL)isCurrentItemReady;
 	NSError *err;
-	[controller pause];
-	NSLog(@"KICK THIS PIG");
-
-	[controller setCurrentItem:item];
-	if([controller resumePlayback:resumetime error:&err])
-	{
-		NSLog(@"Resuming old song...");
-		if(nil != err)
-		{
-			NSLog(@"err! = %@ [controller play:&err];", err);
-			exit(1);
-		}		
-	}
-	
 	[controller play:&err];
 	if(nil != err)
 	{
-		NSLog(@"err! = %@ [controller play:&err];", err);
+		NSLog(@"err! = %@    [controller play:&err];", err); 
 		exit(1);
 	}
 }

@@ -85,7 +85,9 @@
 	return NO;
 }
 
-- (void)applicationWillTerminate {
+- (void)applicationWillTerminate 
+{
+	[UIApp removeApplicationBadge];
 	[_window release];
 }
 
