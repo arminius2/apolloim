@@ -21,6 +21,8 @@
 #import <UIKit/UIAnimator.h>
 #import "StartView.h"
 
+extern UIApplication *UIApp;
+
 @interface ApolloIMApp : UIApplication 
 {
     UIWindow		*_window;
@@ -33,6 +35,7 @@
 - (void)applicationResume:(struct __GSEvent *)event;
 - (BOOL)isSuspendingUnderLock;
 - (BOOL)applicationIsReadyToSuspend;
+- (BOOL) suspendRemainInMemory;
 //- (void)applicationDidResumeFromUnderLock;
 //- (void)applicationWillSuspendUnderLock;
 @end

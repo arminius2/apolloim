@@ -19,34 +19,6 @@
 #import "StartView.h"
 #import "ApolloTOC.h"
 #import "ApolloIM-PrivateAccess.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <objc/objc.h>
-#include <objc/objc-runtime.h>
-
-#import "Shimmer.h"
-
-double objc_msgSend_fpret(id self, SEL op, ...) {
-        Method method = class_getInstanceMethod(self->isa, op);
-        int numArgs = method_getNumberOfArguments(method);
-
-        if(numArgs == 2) {
-                double (*imp)(id, SEL);
-            imp = (double (*)(id, SEL))method->method_imp;
-            return imp(self, op);
-        } else if(numArgs == 3) {
-                // FIXME: this code assumes the 3rd arg is 4 bytes
-                va_list ap;
-                va_start(ap, op);
-                double (*imp)(id, SEL, void *);
-            imp = (double (*)(id, SEL, void *))method->method_imp;
-            return imp(self, op, va_arg(ap, void *));
-        }
-
-        // FIXME: need to work with multiple arguments/types
-        fprintf(stderr, "ERROR: objc_msgSend_fpret, called on <%s %p> with selector %s, had to return 0.0\n", object_getClassName(self), self, sel_getName(op));
-        return 0.0;
-}
 
 enum { 
 	ACCOUNT_VIEW		=	1,
@@ -57,6 +29,7 @@ enum {
 };
 
 static NSRecursiveLock *lock;
+extern UIApplication *UIApp;
 
 @implementation StartView
 - (id)initWithFrame:(struct CGRect)rect 
@@ -108,12 +81,31 @@ static NSRecursiveLock *lock;
 //		NSLog(@"StartView.m>>  Transitioning...");
 
 		[self makeACoolMoveTo:ACCOUNT_VIEW];
-		prefFile = [[NSString alloc]initWithString:@"/var/root/Library/ApolloIM"];	
+		prefFile = [[NSString alloc]initWithString:@"/var/root/Library/Preferences/ApolloIM_Version(.1)"];	
 		[self populatePreferences];	
 		EXIT=NO;
 		_rect = rect;
+
 		
-		[NSThread detachNewThreadSelector:@selector(checkForUpdates:) toTarget:self withObject:self];		
+		if([[NetworkController sharedInstance]isNetworkUp])
+		{
+			NSLog(@"Network is up.");
+			NSLog(@"This is a stub incase I need to do something else with network.  Like.  I don't know.  Something.");
+		}
+		else
+		{
+			if(![[NetworkController sharedInstance]isEdgeUp])
+			{
+				sleep(5);
+				NSLog(@"StartView Init> But can you bring Edge up?");
+				[[NetworkController sharedInstance]bringUpEdge];
+				[[NetworkController sharedInstance]keepEdgeUp];				
+				NSLog(@"StartView Init> Edge has been broughtten!");		
+			}
+		}		
+		
+		[NSThread detachNewThreadSelector:@selector(checkForUpdates:) toTarget:self withObject:self];
+		okayToConnect = YES;		
 	}
 	return self;
 }
@@ -140,7 +132,7 @@ static NSRecursiveLock *lock;
 	[NSKeyedArchiver archiveRootObject:[_accountsView accounts] toFile:prefFile];
 }
 
-- (void)accountsView:(AccountsView *)acctView accountSelected:(Account *)selectedAccount 
+- (void)accountsView:(AccountsView *)acctView accountSelected:(Acct *)selectedAccount 
 {
 	accountEditor = [[AccountEditorView alloc]initWithFrame:_rect];
 	[accountEditor setAccount:selectedAccount];
@@ -177,7 +169,8 @@ static NSRecursiveLock *lock;
 				break;
 			case AIM_DISCONNECTED:
 				NSLog(@"You have been disconnected.");
-				EXIT = YES;				
+				okayToConnect = NO;
+				//EXIT = YES;	
 				UIAlertSheet *sheet = [[UIAlertSheet alloc] initWithFrame: CGRectMake(0, 220, 320, 220)];
 				[sheet setTitle:[active username]];
 				if([payload count]>1)
@@ -186,7 +179,8 @@ static NSRecursiveLock *lock;
 					[sheet setBodyText:@"You have been disconnected."];
 				[sheet addButtonWithTitle:@"OK"];
 				[sheet setDelegate: self];
-				[sheet presentSheetFromAboveView: self];		
+				[sheet presentSheetFromAboveView: self];	
+				[self makeACoolMoveTo:ACCOUNT_VIEW];					
 				break;
 			case AIM_RECV_MESG:
 				NSLog(@"Received Message from %@ that says '%@'",[[payload objectAtIndex:1]name],[payload objectAtIndex:2]);
@@ -211,6 +205,8 @@ static NSRecursiveLock *lock;
 - (void)alertSheet:(UIAlertSheet *)sheet buttonClicked:(int)button 
 {
 	[sheet dismiss];
+	okayToConnect = YES;
+	[ApolloTOC dump];
 	if(EXIT)
 	{
 		//sleep(3);
@@ -308,7 +304,6 @@ static NSRecursiveLock *lock;
 	switch(target)
 	{	
 		case ACCOUNT_VIEW:
-			[_navBar showButtonsWithLeftTitle:@"Sign On" rightTitle:@"Add Account" leftBack: NO];
 			[_transitionView transition:3 toView:_accountsView];	
 			_accountsEditorViewBrowser	=	false;
 			_buddyViewBrowser			=	false;
@@ -317,6 +312,7 @@ static NSRecursiveLock *lock;
 			
 			_accountsViewBrowser		=	true;
 			[navtitle setTitle:@"Accounts"];	
+			[_navBar showButtonsWithLeftTitle:@"Sign On" rightTitle:@"Add Account" leftBack: NO];			
 			break;
 		case ACCOUNT_EDITOR_VIEW:			
 			[_transitionView transition:3 toView:accountEditor];
@@ -362,30 +358,33 @@ static NSRecursiveLock *lock;
 		case 1:
 			if (_buddyViewBrowser)
 			{
-//				NSLog(@"StartView>> LEFT -- BUDDY_VIEW -- DISCONNECTBUTTON");
+				//NSLog(@"StartView>> LEFT -- BUDDY_VIEW -- DISCONNECTBUTTON");
 				[[ApolloTOC sharedInstance]disconnect];
 				//[self makeACoolMoveTo:ACCOUNT_VIEW];
 				//[[ApolloTOC sharedInstance] killHandle];
-				exit(1);
+				//exit(1);
 			}
 			if (_accountsViewBrowser) 
 			{
 //				NSLog(@"StartView>> LEFT -- ACCOUNT_VIEW -- SIGNON");
-				active = [_accountsView getActive];
-				if(active == nil)
+				if(okayToConnect)
 				{
-					UIAlertSheet *sheet = [[UIAlertSheet alloc] initWithFrame: CGRectMake(0, 240, 320, 240)];
-					[sheet setTitle:@"No Active Account Set."];
-					[sheet setBodyText:@"The 'active account' is the account you wish to sign on with.  Please set an active account and try again."];
-					[sheet addButtonWithTitle:@"OK"];
-					[sheet setDelegate: self];
-					[sheet presentSheetFromAboveView: self];					
-				}
-				else
-				{
-					NSLog(@"StartView>> Initiating a connection...");
-					[[ApolloTOC sharedInstance] setDelegate:self];
-					[[ApolloTOC sharedInstance] connectUsingUsername:[active username] password:[active password]];
+					active = [_accountsView getActive];
+					if(active == nil)
+					{
+						UIAlertSheet *sheet = [[UIAlertSheet alloc] initWithFrame: CGRectMake(0, 240, 320, 240)];
+						[sheet setTitle:@"No Active Account Set."];
+						[sheet setBodyText:@"The 'active account' is the account you wish to sign on with.  Please set an active account and try again."];
+						[sheet addButtonWithTitle:@"OK"];
+						[sheet setDelegate: self];
+						[sheet presentSheetFromAboveView: self];					
+					}
+					else
+					{
+						NSLog(@"StartView>> Initiating a connection...");
+						[[ApolloTOC sharedInstance] setDelegate:self];
+						[[ApolloTOC sharedInstance] connectUsingUsername:[active username] password:[active password]];
+					}
 				}
 				return;
 			}        
@@ -404,7 +403,7 @@ static NSRecursiveLock *lock;
 				else
 				{												
 //					NSLog(@"LEFT -- ACCOUNT_VIEW_EDITOR -- SAVE");
-					Account* EditedAccount = [accountEditor getAccount];		
+					Acct* EditedAccount = [accountEditor getAccount];		
 					if(![accountEditor getMode])
 					{
 //						NSLog(@"ADD ACCOUNT");
@@ -469,7 +468,7 @@ static NSRecursiveLock *lock;
 			if(_accountsEditorViewBrowser)
 			{		
 				[self makeACoolMoveTo:ACCOUNT_VIEW];	
-				Account *temp = [accountEditor getAccount];
+				Acct *temp = [accountEditor getAccount];
 /*				NSLog(@"USERNAME: %@",	[temp username]);
 				NSLog(@"PASSWORD: %@",	[temp password]);
 				NSLog(@"ENABLED:  %d",  [temp enabled]);*/

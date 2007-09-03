@@ -22,7 +22,7 @@
 #import <UIKit/UITableCell.h>
 #import <UIKit/UIImageAndTextTableCell.h>
 //#import "AccountCell.m"
-#import "Account.h"
+#import "Acct.h"
 
 @interface AccountsView : UIView {
 	UINavigationBar *_navBar;
@@ -41,12 +41,12 @@
 - (void)setDelegate:(id)delegate;
 - (int)numberOfRowsInTable:(UITable *)table;
 - (UIImageAndTextTableCell *)table:(UITable *)table cellForRow:(int)row column:(UITableColumn *)col;
-- (Account *)selectedAccount;
-- (void)updateAccount:(Account*)aAccount withAccount:(Account*)thisAccount;
-- (void)addAccount:(Account*)aAccount;
+- (Acct *)selectedAccount;
+- (void)updateAccount:(Acct*)aAccount withAccount:(Acct*)thisAccount;
+- (void)addAccount:(Acct*)aAccount;
 - (void)tableRowSelected:(NSNotification *)notification;
 - (NSArray*)accounts;
 - (void)setAccounts:(NSMutableArray*)accounts;
-- (void)singleActive:(Account*)ActiveAccount;					
-- (Account *)getActive;
+- (void)singleActive:(Acct*)ActiveAccount;					
+- (Acct *)getActive;
 @end

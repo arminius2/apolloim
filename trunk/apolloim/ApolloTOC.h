@@ -26,7 +26,7 @@ typedef enum {ApolloTOC_DISCONNECTED, ApolloTOC_CONNECTING, ApolloTOC_CONNECTED}
 
 @interface ApolloTOC : NSObject
 {
-	NSTimer* bastard;
+	NSTimer* keepAlive;
 	
     BOOL willSendMarkup;
 	BOOL status;
@@ -44,7 +44,7 @@ typedef enum {ApolloTOC_DISCONNECTED, ApolloTOC_CONNECTING, ApolloTOC_CONNECTED}
 
 + (void)initialize;
 + (id)sharedInstance;
-
++ (id)dump;
 
 - (id)init;
 - (void)dealloc;

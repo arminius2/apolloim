@@ -1,7 +1,9 @@
-CC = arm-apple-darwin-cc 
+CC = /usr/local/arm-apple-darwin/bin/gcc -I/Developer/SDKs/iPhone/include
 LD = $(CC)
-LDFLAGS =  \
-	  -lobjc \
+LDFLAGS = -Wl,-syslibroot,/Developer/SDKs/iPhone/heavenly \
+          -L/Developer/SDKs/iPhone/lib \
+          -L/Developer/SDKs/iPhone/heavenly/System/Library/Frameworks \
+          -framework Message \
           -framework CoreFoundation \
           -framework Foundation \
           -framework UIKit \
@@ -13,14 +15,14 @@ LDFLAGS =  \
           -framework CoreAudio \
           -L./libfiretalk \
           -lfiretalk \
-          -L/Developer/SDKs/iPhone/lib \
-		  -larmfp
+	  -lobjc \
+          -larmfp
 
 #CFLAGS = -DDEBUG
 
 all:	ApolloIM package
 
-ApolloIM:	main.o ApolloIMApp.o StartView.o AccountsView.o AccountEditorView.o Account.o  ApolloTOC.o ApolloIM-Callback.o  BuddyView.o Buddy.o Conversation.o ConversationView.o ShellKeyboard.o Shimmer.o AboutView.o SendBox.o 
+ApolloIM:	main.o ApolloIMApp.o StartView.o AccountsView.o AccountEditorView.o Acct.o  ApolloTOC.o ApolloIM-Callback.o  BuddyView.o Buddy.o Conversation.o ConversationView.o ShellKeyboard.o Shimmer.o AboutView.o ApolloNotificationController.o SendBox.o
 #		(cd libfiretalk && make)
 		$(LD) $(LDFLAGS) -o $@ $^
 		
@@ -37,9 +39,6 @@ ApolloIM:	main.o ApolloIMApp.o StartView.o AccountsView.o AccountEditorView.o Ac
 clean:
 	rm -f *.o ApolloIM
 
-#pxl: 	
-#Ê  	zip -r ApolloIM.pxl PxlPkg.plist ApolloIM.app
-
 package:
 	rm -rf ApolloIM.app
 	mkdir ApolloIM.app
@@ -49,4 +48,3 @@ package:
 	cp Info.plist ./ApolloIM.app/
 	chmod 644 ./ApolloIM.app/*
 	chmod 755 ./ApolloIM.app/ApolloIM
-#	pxl

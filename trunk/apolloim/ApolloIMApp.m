@@ -89,4 +89,9 @@
 	[_window release];
 }
 
+- (BOOL) suspendRemainInMemory
+{
+	return YES;
+}
+
 @end

@@ -17,10 +17,12 @@
  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 #import "ConversationView.h"
-#import "Account.h"
+#import "Acct.h"
 #import <UIKit/UITextLabel.h>
 #import <UIKit/UITextView.h>
 #import <UIKit/UIBox.h>
+#import "ApolloTOC.h"
+#import "ApolloIM-PrivateAccess.h"
 
 @implementation ConversationView
 -(id)initWithFrame:(struct CGRect)frame withBuddy:(Buddy*)aBuddy andDelegate:(id)delegate
@@ -104,7 +106,7 @@
 	}
 	else
 	{
-		[username setText:@"My Self"];
+		[username setText:[[[ApolloTOC sharedInstance]you]name]];
 		[username setColor:CGColorCreate(colorSpace, self_color)];
 	}
 		

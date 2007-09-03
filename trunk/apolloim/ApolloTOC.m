@@ -51,6 +51,11 @@ static NSRecursiveLock *lock;
     return sharedInst;
 }
 
++ (id)dump
+{
+	sharedInst = NO;
+}
+
 - (id)init
 {
     self = [super init];
@@ -104,12 +109,13 @@ static NSRecursiveLock *lock;
         return YES;
 
 	NSLog(@"ApolloTOC> Preconnect...");
-//    [lock lock];
+   [lock lock];
+    ft_callback_storepass("");
     ft_callback_storepass([password UTF8String]);
-	NSLog(@"ApolloTOC> Password Stored... Connecting..");
+	NSLog(@"ApolloTOC> Password Stored... Connecting.. %@",username);
     success = firetalk_signon(ft_aim_connection, TOC_SERVER, TOC_PORT, [username cString]);
 	NSLog(@"ApolloTOC> Sign on request sent...");	
-	//[lock unlock];		
+	[lock unlock];		
     
     if (success != FE_SUCCESS)
     {
@@ -167,27 +173,6 @@ static NSRecursiveLock *lock;
         return YES;
     else
         return NO;
-}
-
-- (void)disconnect
-{
-    
-    if (connected == ApolloTOC_DISCONNECTED)
-        return;
-    
-    [lock lock];
-    if (connected == ApolloTOC_CONNECTING)
-        connected = ApolloTOC_DISCONNECTED;
-    else
-    {
-        connected = ApolloTOC_DISCONNECTED;
-        firetalk_disconnect(ft_aim_connection); 
-		NSMutableArray* payload = 
-		[[NSMutableArray alloc]init];		
-		[payload addObject:		@"9"];
-		[_delegate imEvent:		payload];		
-    }
-    [lock unlock];
 }
 
 - (void)killHandle
@@ -290,9 +275,8 @@ static NSRecursiveLock *lock;
 	[payload addObject:		@"8"];
 	[_delegate imEvent:		payload];
 	NSLog(@"ApolloTOC>  here's to the good ol' days...");
-	[NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(keepAlive) userInfo:nil repeats:YES] ;	
+	keepAlive = [NSTimer scheduledTimerWithTimeInterval:15 target:self selector:@selector(keepAlive) userInfo:nil repeats:YES] ;	
 
-//	firetalk_im_list_buddies(ftConnection);  //Use this at start to get full buddy listing.  Will be necessary for groups.
 
 	[lock unlock];	
 }
@@ -347,20 +331,49 @@ static NSRecursiveLock *lock;
     willSendMarkup = newSetting;
 }
 
+- (void)disconnect
+{    
+    if (connected == ApolloTOC_DISCONNECTED)
+	{
+		NSLog(@"Can't disconnect if disconnected.");
+        return;
+	}
+    
+    [lock lock];
+    if (connected == ApolloTOC_CONNECTING)
+	{
+		NSLog(@"Connecting Clause");
+		connected = ApolloTOC_DISCONNECTED;
+	}
+    else
+    {
+		NSLog(@"Setting to disconnect.");	
+//        connected = ApolloTOC_DISCONNECTED;
+        firetalk_disconnect(ft_aim_connection);
+    }
+    [lock unlock];
+}
+
 - (void)disconnected:(void *)ftConnection reason:(int)reason
 {
     if (connected != ApolloTOC_DISCONNECTED) // if we think we're connected and we get here, there's a problem
     {
+		[lock lock];
         NSLog(@"ApolloTOC: Error: Disconnected by remote host! Trying to cleanly disconnect; other error messages may follow.");
         NSLog(@"Reason: %s", firetalk_strerror(reason));
-	
+		connected = ApolloTOC_DISCONNECTED;
 		NSMutableArray* payload = 
 		[[NSMutableArray alloc]init];	
 		[payload addObject:		@"9"];
 		[payload addObject:		[NSString stringWithCString:firetalk_strerror(reason)]];
-		[_delegate imEvent:		payload];			
-        [self disconnect];
+		[_delegate imEvent:		payload];
+		firetalk_destroy_handle(ft_aim_connection);
+		ft_aim_connection = NULL;
+		[keepAlive invalidate];
+		[lock unlock];
     }
+	else
+		NSLog(@"This is pretty much impossible.  WTF M8");
 }
 
 - (Buddy*)you

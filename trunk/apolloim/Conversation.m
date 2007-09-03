@@ -178,9 +178,13 @@
 	
 	- (void)sendMessage
 	{
-		[convoView appendToConversation:[sendField text] fromUser:nil];
-		[[ApolloTOC sharedInstance]sendIM:[sendField text] toUser:[buddy name]];
-		[sendField setText:@""];
+		//Fix for crash if empty
+		if(![[sendField text]isEqualToString:@""])
+		{
+			[convoView appendToConversation:[sendField text] fromUser:nil];
+			[[ApolloTOC sharedInstance]sendIM:[sendField text] toUser:[buddy name]];
+			[sendField setText:@""];
+		}
 	}
 	
 	- (void)recvInfo:(NSString*)info
@@ -196,6 +200,7 @@
 	{
 		return sendField;
 	}	
+	
 	- (void)navigationBar:(UINavigationBar *)navbar buttonClicked:(int)button 
 	{
 		NSLog(@"Buddy Info.");

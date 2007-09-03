@@ -25,7 +25,7 @@
 #import "UIKit/UISwitchControl.h"
 #import "UIKit/UIPreferencesTableCell.h"
 #import "UIKit/UIPreferencesTextTableCell.h"
-#import "Account.h"
+#import "Acct.h"
 #import "UIKit/UIKeyboard.h"
 
 @interface AccountEditorView : UIView 
@@ -48,7 +48,7 @@
 	bool				editOrnew; //true \ false
     CGRect _rect;	
 	
-	Account				*account;
+	Acct				*account;
 	id _delegate;
 }
 
@@ -56,8 +56,8 @@
 - (void)setMode:(bool)_mode;
 - (bool)getMode;
 - (void)dealloc;
-- (Account*)getAccount;
-- (void)setAccount:(Account*)theAccount;
+- (Acct*)getAccount;
+- (void)setAccount:(Acct*)theAccount;
 - (void)setDelegate:(id)delegate;
 - (BOOL)preferencesTable:(UIPreferencesTable *)aTable isLabelGroup:(int)group;
 - (float)preferencesTable:(UIPreferencesTable *)aTable heightForRow:(int)row inGroup:(int)group withProposedHeight:(float)proposed ;

@@ -22,14 +22,16 @@
 #import <UIKit/UIKit.h>
 #import <UIKit/UINavigationItem.h>
 #import <UIKit/UITransitionView.h>
-#import "UIKIt/UITextLabel.h"
-#import "Account.h"
-//#import "AboutView.h"
+#import <Message/NetworkController.h>
+#import <UIKIt/UITextLabel.h>
+#import "Acct.h"
 #import "AccountsView.h"
 #import "AccountEditorView.h"
 #import "Buddy.h"
 #import "BuddyView.h"
 #import "ApolloTOC.h"
+#import "Shimmer.h"
+#import "ApolloNotificationController.h"
 
 @interface StartView : UIView 
 {
@@ -40,13 +42,14 @@
 	CGRect				sub_views_rect;
 	ApolloTOC			*conn;
 	bool				EXIT;
+	bool				okayToConnect;
 	
 //	AboutView			*_aboutView;
 	AccountsView		*_accountsView;
-	Account				*CurrentAccount;
+	Acct				*CurrentAccount;
 	AccountEditorView	*accountEditor;
 	BuddyView			*_buddyView;
-	Account				*active;
+	Acct				*active;
 	
 	NSMutableArray		*_conversations;
 	Buddy				*currentConversationBuddy;
@@ -66,7 +69,7 @@
 - (void)imEvent:(NSMutableArray*)payload;
 - (void)populatePreferences;
 - (void)receiveMessage:(NSString*)msg fromBuddy:(Buddy*)aBuddy isInfo:(BOOL)info;
-- (void)accountsView:(AccountsView *)acctView accountSelected:(Account *)selectedAccount;
+- (void)accountsView:(AccountsView *)acctView accountSelected:(Acct *)selectedAccount;
 - (void)makeACoolMoveTo:(int)target;
 - (void)checkForUpdates:(id)anObject;
 - (void)closeActiveKeyboard;

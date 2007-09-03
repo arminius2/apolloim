@@ -17,7 +17,7 @@
  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 #import "AccountsView.h"
-#import "Account.h"
+#import "Acct.h"
 #import <UIKit/UITextLabel.h>
 
 @implementation AccountsView
@@ -56,13 +56,13 @@
 	[super dealloc];
 }
 
-- (void)updateAccount:(Account*)aAccount withAccount:(Account*)thisAccount
+- (void)updateAccount:(Acct*)aAccount withAccount:(Acct*)thisAccount
 {
 	[_accounts replaceObjectAtIndex:[_accounts indexOfObject:aAccount] withObject:thisAccount];
 	[_table reloadData];
 }
 
-- (void)addAccount:(Account*)aAccount
+- (void)addAccount:(Acct*)aAccount
 {
 	[_accounts addObject:aAccount];
 	_rowCount++;
@@ -136,7 +136,7 @@
 		[_delegate accountsView:self accountSelected:[self selectedAccount]];	
 }
 
-- (Account *)selectedAccount {
+- (Acct *)selectedAccount {
 	if ([_table selectedRow] == -1)
 		return nil;
 	//NSLog(@"AccountsView>> ACCOUNT SELECTED: %@",  [[_accounts objectAtIndex:[_table selectedRow]]username]);
@@ -149,7 +149,7 @@
 	[self reloadData];
 }
 
-- (void)singleActive:(Account*)ActiveAccount
+- (void)singleActive:(Acct*)ActiveAccount
 {
 	//NSLog(@"Finding other actives...");
 	int i=0, max=_rowCount;
@@ -163,7 +163,7 @@
 	}
 }
 
-- (Account *)getActive
+- (Acct *)getActive
 {
 	int i=0, max=_rowCount;
 	for(i=0; i<max; i++)

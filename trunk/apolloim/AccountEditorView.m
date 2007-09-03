@@ -20,7 +20,7 @@
 #import "AccountEditorView.h"
 #import "UIKit/UITextView.h"
 #import "UIKit/UITransformAnimation.h"
-#import "Account.h"
+#import "Acct.h"
 #import <UIKit/UIView-Hierarchy.h>
 #import <UIKit/UIView-Rendering.h>
 #import "UIKit/UISwitchControl.h"
@@ -168,7 +168,7 @@ if ((self == [super initWithFrame: frame]) != nil) {
 	return editOrnew;
 }
 
--(void)setAccount:(Account*)theAccount
+-(void)setAccount:(Acct*)theAccount
 {
 	account = theAccount;
 
@@ -178,11 +178,11 @@ if ((self == [super initWithFrame: frame]) != nil) {
 	//NSLog(@"AccountEditorView>> Account Set: %@", [theAccount username]);
 }
 
--(Account*)getAccount
+-(Acct*)getAccount
 {
 
 	//NSLog(@"AccountEditorView>> Retreiving username...");
-	Account* getaccount = [[Account alloc]init];
+	Acct* getaccount = [[Acct alloc]init];
 	[getaccount setUsername:[usernameField text]];
 	//NSLog(@"AccountEditorView>> Retreiving password...");
 	[getaccount setPassword:[passwordField text]];

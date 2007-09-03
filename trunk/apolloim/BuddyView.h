@@ -20,7 +20,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <UIKit/UITransitionView.h>
-#import "Account.h"
+#import "Acct.h"
 #import "Buddy.h"
 #import "Conversation.h"
 
