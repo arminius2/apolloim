@@ -123,7 +123,6 @@ enum {
 				{
 					[[_buddies objectAtIndex:i]setOnline:NO];
 					NSLog(@"BuddyView.m> %@ is away",[aBuddy properName]);
-//					[[ApolloTOC sharedInstance] getInfo:aBuddy];
 					[self reloadData];
 					return;
 				}			
@@ -134,8 +133,7 @@ enum {
 				if([[[_buddies objectAtIndex:i]properName]isEqualToString:[aBuddy properName]])
 				{
 					[[_buddies objectAtIndex:i]setOnline:YES];
-					NSLog(@"BuddyView.m> %@ is back",[aBuddy properName]);
-//					[[ApolloTOC sharedInstance] getInfo:aBuddy];					
+					NSLog(@"BuddyView.m> %@ is back",[aBuddy properName]);		
 					[self reloadData];
 					return;
 				}			

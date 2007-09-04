@@ -203,7 +203,7 @@ extern UIApplication *UIApp;
 				break;			
 			case AIM_BUDDY_INFO:
 				NSLog(@"Getting info from %@ that says '%@'",[[payload objectAtIndex:1]name],[[payload objectAtIndex:1]info]);
-//				[self receiveMessage:(NSString*)[[payload objectAtIndex:1]info] fromBuddy:(Buddy*)[payload objectAtIndex:1] isInfo:YES];				
+				[self receiveMessage:(NSString*)[[payload objectAtIndex:1]info] fromBuddy:(Buddy*)[payload objectAtIndex:1] isInfo:YES];				
 				break;
 			default:
 			NSLog(@"StartView>> Event -- %d", [[NSString stringWithString:[payload objectAtIndex:0]]intValue]);
@@ -242,12 +242,13 @@ extern UIApplication *UIApp;
 			{
 				if(msg != nil)
 				{
+
 					if([[[currentConversation buddy]properName]isEqualToString:[aBuddy properName]])
 						[_buddyView updateBuddy:aBuddy withCode:AIM_READ_MSGS];
 						else
 						[_buddyView updateBuddy:aBuddy withCode:AIM_RECV_MESG]; 						
-//					NSLog(@"StartView> (recv) totally adding...");
-					[[_conversations objectAtIndex:i] recvMessage:msg];
+
+					[[_conversations objectAtIndex:i] recvMessage:msg isStatusMessage:info];
 				}				
 			}
 			else
@@ -260,7 +261,7 @@ extern UIApplication *UIApp;
  	[_buddyView updateBuddy:aBuddy withCode:AIM_RECV_MESG]; 	
 //	NSLog(@"StartView> (recv) Starting New Convo with... %@", [aBuddy name]);
 	Conversation* convo = [[Conversation alloc]initWithFrame:sub_views_rect withBuddy:aBuddy andDelegate:self];
-	[convo recvMessage:msg];
+	[convo recvMessage:msg isStatusMessage:info];
 	[_conversations addObject:convo];	
 }
 

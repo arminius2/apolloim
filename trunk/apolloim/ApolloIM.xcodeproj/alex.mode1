@@ -190,24 +190,24 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>FA60D7AB0C8CD4FB00A90DEE</string>
+				<string>FA60D8300C8CDDCB00A90DEE</string>
 				<key>PBXProjectModuleLabel</key>
-				<string>StartView.m</string>
+				<string>BuddyView.m</string>
 				<key>PBXSplitModuleInNavigatorKey</key>
 				<dict>
 					<key>Split0</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
-						<string>FA60D7AC0C8CD4FB00A90DEE</string>
+						<string>FA60D8310C8CDDCB00A90DEE</string>
 						<key>PBXProjectModuleLabel</key>
-						<string>StartView.m</string>
+						<string>BuddyView.m</string>
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>FA60D7C70C8CD5A400A90DEE</string>
+						<string>FA60D8460C8CDDEA00A90DEE</string>
 						<key>history</key>
 						<array>
-							<string>FA60D7BF0C8CD57D00A90DEE</string>
+							<string>FA60D82D0C8CDDB300A90DEE</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -219,51 +219,11 @@
 			<key>Geometry</key>
 			<dict>
 				<key>Frame</key>
-				<string>{{0, 20}, {925, 657}}</string>
+				<string>{{0, 20}, {911, 681}}</string>
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>252 80 925 698 0 0 1280 778 </string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>FA60D78B0C8CD44400A90DEE</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>ApolloIM-Callback.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>FA60D78C0C8CD44400A90DEE</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>ApolloIM-Callback.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>FA60D7C80C8CD5A400A90DEE</string>
-						<key>history</key>
-						<array>
-							<string>FA60D77A0C8CD25800A90DEE</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {1177, 610}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>72 127 1177 651 0 0 1280 778 </string>
+				<string>125 56 911 722 0 0 1280 778 </string>
 			</dict>
 		</dict>
 		<dict>
@@ -284,7 +244,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>FA60D7C90C8CD5A400A90DEE</string>
+						<string>FA60D8470C8CDDEA00A90DEE</string>
 						<key>history</key>
 						<array>
 							<string>FA60D74A0C8CCF4A00A90DEE</string>
@@ -324,7 +284,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>FA60D7CA0C8CD5A400A90DEE</string>
+						<string>FA60D8480C8CDDEA00A90DEE</string>
 						<key>history</key>
 						<array>
 							<string>FA60D75F0C8CD10300A90DEE</string>
@@ -431,14 +391,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>21</integer>
-									<integer>15</integer>
+									<integer>28</integer>
+									<integer>26</integer>
 									<integer>9</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 127}, {265, 664}}</string>
+							<string>{{0, 194}, {265, 664}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -679,9 +639,8 @@
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>FA60D76A0C8CD15100A90DEE</string>
 		<string>FA60D76D0C8CD15100A90DEE</string>
-		<string>FA60D78B0C8CD44400A90DEE</string>
-		<string>FA60D7AB0C8CD4FB00A90DEE</string>
 		<string>/Users/alex/Desktop/apolloim/apolloim/ApolloIM.xcodeproj</string>
+		<string>FA60D8300C8CDDCB00A90DEE</string>
 	</array>
 	<key>WindowString</key>
 	<string>6 55 287 723 0 0 1280 778 </string>
@@ -908,7 +867,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CDD528C0622207200134675</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>AccountsView.h</string>
+										<string>Conversation.m</string>
 										<key>StatusBarVisibility</key>
 										<true/>
 									</dict>
@@ -929,6 +888,8 @@
 							<string>425pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>

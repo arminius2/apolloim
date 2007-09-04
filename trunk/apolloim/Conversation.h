@@ -51,7 +51,7 @@
 - (void)foldKeyboard;
 - (void)toggle;
 - (BOOL)respondsToSelector:(SEL)aSelector;
-- (void)recvMessage:(NSString*)msg;
+- (void)recvMessage:(NSString*)msg isStatusMessage:(BOOL)statusMessage;
 - (void)sendMessage;
 - (void)recvInfo:(NSString*)info;
 - (Buddy*)buddy;

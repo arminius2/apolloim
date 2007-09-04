@@ -93,7 +93,7 @@
 	
 	float self_color[4] = {0.0, 0.0, 1.0, 1.0};
 	float their_color[4] = {1.0, 0.0, 0.0, 1.0};
-	float status_color[4] = {0.0, 1.0, 1.0, 1.0};	
+	float status_color[4] = {1.0, 0.0, 1.0, 1.0};	
 	
 	CGColorSpaceRef const colorSpace = CGColorSpaceCreateDeviceRGB();
 	

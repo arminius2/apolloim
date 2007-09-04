@@ -162,9 +162,9 @@
 	  return [super respondsToSelector:aSelector];
 	}
 	
-	-(void)recvMessage:(NSString*)msg;
+	-(void)recvMessage:(NSString*)msg isStatusMessage:(BOOL)statusMessage
 	{
-		[convoView appendToConversation:msg fromUser:buddy];
+		[convoView appendToConversation:msg fromUser:buddy  isStatusMessage:statusMessage];
 		/*
 		//I am awesome
 		[convoView setHTML:
@@ -181,7 +181,7 @@
 		//Fix for crash if empty
 		if(![[sendField text]isEqualToString:@""])
 		{
-			[convoView appendToConversation:[sendField text] fromUser:nil];
+			[convoView appendToConversation:[sendField text] fromUser:nil isStatusMessage:NO];
 			[[ApolloTOC sharedInstance]sendIM:[sendField text] toUser:[buddy name]];
 			[sendField setText:@""];
 		}
