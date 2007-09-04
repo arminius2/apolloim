@@ -75,6 +75,7 @@
 	NSLog(@"Resuming...");
 //	[[ApolloTOC sharedInstance]resumeApollo];
 	[startView resume];
+	[[ApolloNotificationController sharedInstance] clearBadges];
 }
 
 - (BOOL)applicationIsReadyToSuspend
