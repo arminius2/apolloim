@@ -67,6 +67,8 @@
 {
 	NSLog(@"Suspending...");
 	[startView closeActiveKeyboard];
+	[startView resume];
+	[[ApolloNotificationController sharedInstance] clearBadges];
 //	[[ApolloTOC sharedInstance]suspendApollo];
 }
 
@@ -91,6 +93,8 @@
 
 - (void)applicationWillTerminate 
 {
+	
+	[[ApolloNotificationController sharedInstance] clearBadges];
 	[UIApp removeApplicationBadge];
 	[_window release];
 }

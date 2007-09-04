@@ -255,7 +255,10 @@ int callback(void *connection, CFStringRef string, CFDictionaryRef dictionary, v
 -(void)receiveUnreadMessages:(int)msgCount  //should just do playRecvIm
 {
 	totalUnreadMessages+=msgCount;
-	[UIApp setApplicationBadge:[NSString stringWithFormat:@"%u",totalUnreadMessages]];
+	if(totalUnreadMessages <= 20)
+		[UIApp setApplicationBadge:[NSString stringWithFormat:@"%u",totalUnreadMessages]];
+	else
+		[UIApp setApplicationBadge:@"20+"];
 	NSLog(@"Set count to %d",msgCount);	
 }
 
