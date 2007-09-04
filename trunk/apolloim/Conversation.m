@@ -203,8 +203,8 @@
 	
 	- (void)navigationBar:(UINavigationBar *)navbar buttonClicked:(int)button 
 	{
-		NSLog(@"Buddy Info.");
-		[[ApolloTOC sharedInstance]getInfo:buddy];
+//		NSLog(@"Buddy Info.");
+//		[[ApolloTOC sharedInstance]getInfo:buddy];
 	}	
 	
 	-(void)dealloc

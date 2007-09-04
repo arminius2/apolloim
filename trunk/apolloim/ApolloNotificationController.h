@@ -15,7 +15,8 @@
 	AVQueue *q;
 	AVController *controller;
 	
-	bool soundEnabled;
+	BOOL soundEnabled;
+	BOOL vibrateEnabled;
 	
 	int totalUnreadMessages;
 	double resumetime;
@@ -36,14 +37,18 @@
 -(void)playRecvIm;							//increment total unread messages
 -(void)playSignOff;
 -(void)playSignon;
-
--(void)vibrateBitches;						//this one goes out to all the ladies
+-(void)vibrateThread;			//These two functions go out to all the lonely ladies out there
+-(void)vibrateForDuration;
 
 -(void)setSoundEnabled:(bool)enable;
--(bool)soundEnabled;
+-(BOOL)soundEnabled;
+-(void)setVibrateEnabled:(bool)enable;
+-(BOOL) vibrateEnabled;
 
 -(BOOL)respondsToSelector:(SEL)aSelector;
 -(void)stop;
 -(void)queueItemWasAdded:(id)fp8;
+
+int callback(void *connection, CFStringRef string, CFDictionaryRef dictionary, void *data);
 
 @end

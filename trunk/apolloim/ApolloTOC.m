@@ -219,12 +219,7 @@ static NSRecursiveLock *lock;
 		exit(40);	
 	}
 		
-/*
-void ft_callback_buddytyping		(void *c, void *cs, const char * const who, const int typing);
-void ft_callback_buddyidle			(void *c, void *cs, const char * const who, const long idle);
-void ft_callback_buddystatus		(void *c, void *cs, const char * const who, const char *message);
-*/		
-		
+
     firetalk_register_callback(ft_aim_connection, FC_DOINIT, (ptrtofnct)ft_callback_doinit);
     firetalk_register_callback(ft_aim_connection, FC_ERROR, (ptrtofnct)ft_callback_error);
     firetalk_register_callback(ft_aim_connection, FC_CONNECTFAILED, (ptrtofnct)ft_callback_connectfailed);
@@ -238,9 +233,9 @@ void ft_callback_buddystatus		(void *c, void *cs, const char * const who, const 
 	firetalk_register_callback(ft_aim_connection, FC_IM_BUDDYAWAY, (ptrtofnct)ft_callback_buddyaway);
 	firetalk_register_callback(ft_aim_connection, FC_IM_BUDDYUNAWAY, (ptrtofnct)ft_callback_buddyunaway);		
 	firetalk_register_callback(ft_aim_connection, FC_IM_GOTINFO, (ptrtofnct)ft_callback_getinfo);
-	firetalk_register_callback(ft_aim_connection, FC_IM_TYPINGINFO, (ptrtofnct)ft_callback_buddytyping);
+//	firetalk_register_callback(ft_aim_connection, FC_IM_TYPINGINFO, (ptrtofnct)ft_callback_buddytyping); //Does work, not implemented
 	firetalk_register_callback(ft_aim_connection, FC_IM_IDLEINFO, (ptrtofnct)ft_callback_buddyidle);
-	firetalk_register_callback(ft_aim_connection, FC_IM_STATUSINFO, (ptrtofnct)ft_callback_buddystatus);	
+//	firetalk_register_callback(ft_aim_connection, FC_IM_STATUSINFO, (ptrtofnct)ft_callback_buddystatus);	 //doesn't work
 	
     [lock unlock];
     NSLog(@"ApolloTOC: firetalk callbacks registered.");

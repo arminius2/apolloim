@@ -4,7 +4,9 @@
 #import <Celestial/AVQueue.h>
 #import <Celestial/AVItem.h>
 #import <Celestial/AVController-AVController_Celeste.h>
-
+#include <CoreFoundation/CoreFoundation.h>
+#include <stdio.h>
+#include <time.h>
 //Special thankyou to Jonathan Saggau, nice code mate.
 
 //From Aaron hillegass
@@ -14,6 +16,9 @@ static id sharedInst;
 static NSRecursiveLock *lock;
 
 extern UIApplication *UIApp;
+
+extern void * _CTServerConnectionCreate(CFAllocatorRef, int (*)(void *, CFStringRef, CFDictionaryRef, void *), int *);
+extern int _CTServerConnectionSetVibratorState(int *, void *, int, int, int, int, int);
 
 @interface ApolloNotificationController (PrivateAPI)
 -(void)play:(AVItem *)item;
@@ -48,6 +53,7 @@ extern UIApplication *UIApp;
 		totalUnreadMessages = 0;
 		
 		soundEnabled = YES;
+		vibrateEnabled = YES;
 		
 		//Sound declarations
 //		NSString *path = [[NSBundle mainBundle] pathForResource:@"ApolloRecv" ofType:@"wav" inDirectory:@"/"];
@@ -155,6 +161,32 @@ extern UIApplication *UIApp;
 	return self;
 }
 
+-(void)vibrateForDuration
+{
+	[NSThread detachNewThreadSelector:@selector(vibrateThread) toTarget:self withObject:nil];
+}
+
+-(void)vibrateThread
+{
+//This all should work.  But it doesn't.  So fuck that noise.
+
+	system("/Applications/ApolloIM.app/vibrator");
+	
+/*	int x = 0;    
+	NSLog(@"Connecting to telephony...");
+	int connection = _CTServerConnectionCreate(kCFAllocatorDefault, callback, &x);    
+	NSLog(@"Setting vibrator state...");
+	int ret = _CTServerConnectionSetVibratorState(&x, connection, 3, 10, 10, 10, 10);    
+	NSLog(@"Timing it...");
+	time_t now = time(NULL);    	
+	while (time(NULL) - now < 10)
+	{
+	}	
+	NSLog(@"Killing vibrator...");	
+	_CTServerConnectionSetVibratorState(&x, connection, 0, 10, 10, 10, 10);*/
+	
+	
+}
 
 - (void)dealloc
 {
@@ -175,12 +207,30 @@ comeBack*/
 	[super dealloc];
 }
 
-- (bool)soundEnabled
+int callback(void *connection, CFStringRef string, CFDictionaryRef dictionary, void *data) 
+{
+    return 1;
+}
+
+
+;
+
+-(void)setVibrateEnabled:(bool)enable
+{
+	vibrateEnabled = enable;	
+}
+
+-(BOOL) vibrateEnabled
+{
+	return vibrateEnabled;
+}
+
+-(BOOL)soundEnabled
 {
 	return soundEnabled;
 }
 
-- (void)setSoundEnabled:(bool)enable
+-(void)setSoundEnabled:(bool)enable
 {
 	soundEnabled = enable;
 }
@@ -193,6 +243,11 @@ comeBack*/
 -(void)playSignon
 {
 	[self play:signOn];
+}
+
+-(void)playSendIm
+{
+	[self play:sendIm];	
 }
 
 -(void)playRecvIm
@@ -225,11 +280,6 @@ comeBack*/
 	[UIApp removeApplicationBadge];
 }
 
--(void)playSendIm
-{
-	[self play:sendIm];
-}
-
 -(void)playGoAway
 {
 	[self play:goAway];
@@ -238,11 +288,6 @@ comeBack*/
 -(void)playComeBack
 {
 	[self play:comeBack];
-}
-
--(void)vibrateBitches
-{
-//	CTServerConnectionCreate(&kCFAllocatorDefault, a_function_pointer_to_a_callback, SOMETHING);
 }
 
 -(void)play:(AVItem *)item
@@ -260,8 +305,8 @@ comeBack*/
 			exit(1);
 		}
 	}
-	else
-		NSLog(@"NOT PLAYING CAUSE I WAS TOLD NOT TO GOD MOM IM TELLING DAD");
+	if(vibrateEnabled)
+		[self vibrateForDuration];
 }
 
 - (BOOL)respondsToSelector:(SEL)aSelector

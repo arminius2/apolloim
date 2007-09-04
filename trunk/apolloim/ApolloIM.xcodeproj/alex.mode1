@@ -190,64 +190,24 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>FA60D76D0C8CD15100A90DEE</string>
+				<string>FA60D93B0C8CF83700A90DEE</string>
 				<key>PBXProjectModuleLabel</key>
-				<string>firetalk.h</string>
+				<string>ApolloNotificationController.m</string>
 				<key>PBXSplitModuleInNavigatorKey</key>
 				<dict>
 					<key>Split0</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
-						<string>FA60D76E0C8CD15100A90DEE</string>
+						<string>FA60D93C0C8CF83700A90DEE</string>
 						<key>PBXProjectModuleLabel</key>
-						<string>firetalk.h</string>
+						<string>ApolloNotificationController.m</string>
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>FA60D84B0C8CDE1100A90DEE</string>
+						<string>FA60D9420C8CF89500A90DEE</string>
 						<key>history</key>
 						<array>
-							<string>FA60D74A0C8CCF4A00A90DEE</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {817, 676}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>178 61 817 717 0 0 1280 778 </string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>FA60D76A0C8CD15100A90DEE</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>ApolloTOC.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>FA60D76B0C8CD15100A90DEE</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>ApolloTOC.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>FA60D84C0C8CDE1100A90DEE</string>
-						<key>history</key>
-						<array>
-							<string>FA60D75F0C8CD10300A90DEE</string>
+							<string>FA60D9410C8CF89500A90DEE</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -263,7 +223,7 @@
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>481 56 763 722 0 0 1280 778 </string>
+				<string>211 56 763 722 0 0 1280 778 </string>
 			</dict>
 		</dict>
 	</array>
@@ -351,14 +311,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>28</integer>
-									<integer>26</integer>
+									<integer>12</integer>
+									<integer>10</integer>
 									<integer>9</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 194}, {265, 664}}</string>
+							<string>{{0, 14}, {265, 664}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -597,9 +557,8 @@
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>FA60D4D70C8CB1B400A90DEE</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
-		<string>FA60D76A0C8CD15100A90DEE</string>
-		<string>FA60D76D0C8CD15100A90DEE</string>
 		<string>/Users/alex/Desktop/apolloim/apolloim/ApolloIM.xcodeproj</string>
+		<string>FA60D93B0C8CF83700A90DEE</string>
 	</array>
 	<key>WindowString</key>
 	<string>6 55 287 723 0 0 1280 778 </string>
@@ -821,12 +780,14 @@
 							<key>Dock</key>
 							<array>
 								<dict>
+									<key>BecomeActive</key>
+									<true/>
 									<key>ContentConfiguration</key>
 									<dict>
 										<key>PBXProjectModuleGUID</key>
 										<string>1CDD528C0622207200134675</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Conversation.m</string>
+										<string>BuddyInfoView.h</string>
 										<key>StatusBarVisibility</key>
 										<true/>
 									</dict>
@@ -847,8 +808,6 @@
 							<string>425pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>

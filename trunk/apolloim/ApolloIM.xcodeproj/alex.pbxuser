@@ -739,6 +739,79 @@
 			FA60D8480C8CDDEA00A90DEE /* PBXTextBookmark */ = FA60D8480C8CDDEA00A90DEE /* PBXTextBookmark */;
 			FA60D84B0C8CDE1100A90DEE /* PBXTextBookmark */ = FA60D84B0C8CDE1100A90DEE /* PBXTextBookmark */;
 			FA60D84C0C8CDE1100A90DEE /* PBXTextBookmark */ = FA60D84C0C8CDE1100A90DEE /* PBXTextBookmark */;
+			FA60D85A0C8CE93800A90DEE /* PBXBookmark */ = FA60D85A0C8CE93800A90DEE /* PBXBookmark */;
+			FA60D85F0C8CE95600A90DEE /* PBXTextBookmark */ = FA60D85F0C8CE95600A90DEE /* PBXTextBookmark */;
+			FA60D8620C8CE96F00A90DEE /* PBXTextBookmark */ = FA60D8620C8CE96F00A90DEE /* PBXTextBookmark */;
+			FA60D8700C8CE9EF00A90DEE /* PBXTextBookmark */ = FA60D8700C8CE9EF00A90DEE /* PBXTextBookmark */;
+			FA60D8710C8CE9EF00A90DEE /* PBXTextBookmark */ = FA60D8710C8CE9EF00A90DEE /* PBXTextBookmark */;
+			FA60D8720C8CE9EF00A90DEE /* PBXTextBookmark */ = FA60D8720C8CE9EF00A90DEE /* PBXTextBookmark */;
+			FA60D8730C8CE9EF00A90DEE /* PBXTextBookmark */ = FA60D8730C8CE9EF00A90DEE /* PBXTextBookmark */;
+			FA60D8740C8CE9EF00A90DEE /* PBXTextBookmark */ = FA60D8740C8CE9EF00A90DEE /* PBXTextBookmark */;
+			FA60D8750C8CE9EF00A90DEE /* PBXTextBookmark */ = FA60D8750C8CE9EF00A90DEE /* PBXTextBookmark */;
+			FA60D8760C8CE9EF00A90DEE /* PBXTextBookmark */ = FA60D8760C8CE9EF00A90DEE /* PBXTextBookmark */;
+			FA60D8770C8CEA6100A90DEE /* PBXBookmark */ = FA60D8770C8CEA6100A90DEE /* PBXBookmark */;
+			FA60D8780C8CEA6200A90DEE /* PBXBookmark */ = FA60D8780C8CEA6200A90DEE /* PBXBookmark */;
+			FA60D87D0C8CEA8E00A90DEE /* PBXTextBookmark */ = FA60D87D0C8CEA8E00A90DEE /* PBXTextBookmark */;
+			FA60D8800C8CEA8E00A90DEE /* PBXTextBookmark */ = FA60D8800C8CEA8E00A90DEE /* PBXTextBookmark */;
+			FA60D8830C8CEACC00A90DEE /* PBXTextBookmark */ = FA60D8830C8CEACC00A90DEE /* PBXTextBookmark */;
+			FA60D8840C8CEACC00A90DEE /* PBXTextBookmark */ = FA60D8840C8CEACC00A90DEE /* PBXTextBookmark */;
+			FA60D8870C8CEB1300A90DEE /* PBXTextBookmark */ = FA60D8870C8CEB1300A90DEE /* PBXTextBookmark */;
+			FA60D8880C8CEB1300A90DEE /* PBXTextBookmark */ = FA60D8880C8CEB1300A90DEE /* PBXTextBookmark */;
+			FA60D88F0C8CEBBB00A90DEE /* PBXTextBookmark */ = FA60D88F0C8CEBBB00A90DEE /* PBXTextBookmark */;
+			FA60D8920C8CEBD000A90DEE /* PBXTextBookmark */ = FA60D8920C8CEBD000A90DEE /* PBXTextBookmark */;
+			FA60D8960C8CEBE300A90DEE /* PBXTextBookmark */ = FA60D8960C8CEBE300A90DEE /* PBXTextBookmark */;
+			FA60D8990C8CEC0200A90DEE /* PBXTextBookmark */ = FA60D8990C8CEC0200A90DEE /* PBXTextBookmark */;
+			FA60D89D0C8CEC1D00A90DEE /* PBXTextBookmark */ = FA60D89D0C8CEC1D00A90DEE /* PBXTextBookmark */;
+			FA60D8A00C8CEC2A00A90DEE /* PBXTextBookmark */ = FA60D8A00C8CEC2A00A90DEE /* PBXTextBookmark */;
+			FA60D8A30C8CEC5300A90DEE /* PBXTextBookmark */ = FA60D8A30C8CEC5300A90DEE /* PBXTextBookmark */;
+			FA60D8A90C8CEC6500A90DEE /* PBXTextBookmark */ = FA60D8A90C8CEC6500A90DEE /* PBXTextBookmark */;
+			FA60D8B00C8CEC8100A90DEE /* PBXTextBookmark */ = FA60D8B00C8CEC8100A90DEE /* PBXTextBookmark */;
+			FA60D8B10C8CEC8100A90DEE /* PBXTextBookmark */ = FA60D8B10C8CEC8100A90DEE /* PBXTextBookmark */;
+			FA60D8B40C8CEC9E00A90DEE /* PBXBookmark */ = FA60D8B40C8CEC9E00A90DEE /* PBXBookmark */;
+			FA60D8B90C8CECA300A90DEE /* PBXTextBookmark */ = FA60D8B90C8CECA300A90DEE /* PBXTextBookmark */;
+			FA60D8C10C8CED6200A90DEE /* PBXBookmark */ = FA60D8C10C8CED6200A90DEE /* PBXBookmark */;
+			FA60D8C60C8CEDC700A90DEE /* PBXTextBookmark */ = FA60D8C60C8CEDC700A90DEE /* PBXTextBookmark */;
+			FA60D8CB0C8CEDDC00A90DEE /* PBXTextBookmark */ = FA60D8CB0C8CEDDC00A90DEE /* PBXTextBookmark */;
+			FA60D8CE0C8CEE0400A90DEE /* PBXTextBookmark */ = FA60D8CE0C8CEE0400A90DEE /* PBXTextBookmark */;
+			FA60D8D30C8CEE1E00A90DEE /* PBXTextBookmark */ = FA60D8D30C8CEE1E00A90DEE /* PBXTextBookmark */;
+			FA60D8D60C8CEE5D00A90DEE /* PBXTextBookmark */ = FA60D8D60C8CEE5D00A90DEE /* PBXTextBookmark */;
+			FA60D8D90C8CEE7700A90DEE /* PBXTextBookmark */ = FA60D8D90C8CEE7700A90DEE /* PBXTextBookmark */;
+			FA60D8DE0C8CEEB400A90DEE /* PBXTextBookmark */ = FA60D8DE0C8CEEB400A90DEE /* PBXTextBookmark */;
+			FA60D8DF0C8CEEB400A90DEE /* PBXTextBookmark */ = FA60D8DF0C8CEEB400A90DEE /* PBXTextBookmark */;
+			FA60D8E20C8CEECD00A90DEE /* PBXTextBookmark */ = FA60D8E20C8CEECD00A90DEE /* PBXTextBookmark */;
+			FA60D8E70C8CEEE900A90DEE /* PBXTextBookmark */ = FA60D8E70C8CEEE900A90DEE /* PBXTextBookmark */;
+			FA60D8EA0C8CEF0200A90DEE /* PBXTextBookmark */ = FA60D8EA0C8CEF0200A90DEE /* PBXTextBookmark */;
+			FA60D8ED0C8CEF2300A90DEE /* PBXTextBookmark */ = FA60D8ED0C8CEF2300A90DEE /* PBXTextBookmark */;
+			FA60D8F00C8CEF7100A90DEE /* PBXTextBookmark */ = FA60D8F00C8CEF7100A90DEE /* PBXTextBookmark */;
+			FA60D8F30C8CEF7A00A90DEE /* PBXTextBookmark */ = FA60D8F30C8CEF7A00A90DEE /* PBXTextBookmark */;
+			FA60D8F60C8CEF7D00A90DEE /* PBXTextBookmark */ = FA60D8F60C8CEF7D00A90DEE /* PBXTextBookmark */;
+			FA60D8F90C8CEF8200A90DEE /* PBXTextBookmark */ = FA60D8F90C8CEF8200A90DEE /* PBXTextBookmark */;
+			FA60D8FC0C8CEF8F00A90DEE /* PBXTextBookmark */ = FA60D8FC0C8CEF8F00A90DEE /* PBXTextBookmark */;
+			FA60D8FF0C8CEFC100A90DEE /* PBXTextBookmark */ = FA60D8FF0C8CEFC100A90DEE /* PBXTextBookmark */;
+			FA60D9000C8CEFCB00A90DEE /* PBXBookmark */ = FA60D9000C8CEFCB00A90DEE /* PBXBookmark */;
+			FA60D9050C8CEFCD00A90DEE /* PBXTextBookmark */ = FA60D9050C8CEFCD00A90DEE /* PBXTextBookmark */;
+			FA60D9060C8CEFCD00A90DEE /* PBXTextBookmark */ = FA60D9060C8CEFCD00A90DEE /* PBXTextBookmark */;
+			FA60D9090C8CEFF500A90DEE /* PBXTextBookmark */ = FA60D9090C8CEFF500A90DEE /* PBXTextBookmark */;
+			FA60D90A0C8CEFF500A90DEE /* PBXTextBookmark */ = FA60D90A0C8CEFF500A90DEE /* PBXTextBookmark */;
+			FA60D90D0C8CF07100A90DEE /* PBXTextBookmark */ = FA60D90D0C8CF07100A90DEE /* PBXTextBookmark */;
+			FA60D90E0C8CF07100A90DEE /* PBXTextBookmark */ = FA60D90E0C8CF07100A90DEE /* PBXTextBookmark */;
+			FA60D9130C8CF3B300A90DEE /* PBXTextBookmark */ = FA60D9130C8CF3B300A90DEE /* PBXTextBookmark */;
+			FA60D9180C8CF54600A90DEE /* PBXTextBookmark */ = FA60D9180C8CF54600A90DEE /* PBXTextBookmark */;
+			FA60D9190C8CF55100A90DEE /* PBXTextBookmark */ = FA60D9190C8CF55100A90DEE /* PBXTextBookmark */;
+			FA60D91C0C8CF59E00A90DEE /* PBXTextBookmark */ = FA60D91C0C8CF59E00A90DEE /* PBXTextBookmark */;
+			FA60D91D0C8CF5D400A90DEE /* PBXTextBookmark */ = FA60D91D0C8CF5D400A90DEE /* PBXTextBookmark */;
+			FA60D9220C8CF5D600A90DEE /* PBXTextBookmark */ = FA60D9220C8CF5D600A90DEE /* PBXTextBookmark */;
+			FA60D9230C8CF5D600A90DEE /* PBXTextBookmark */ = FA60D9230C8CF5D600A90DEE /* PBXTextBookmark */;
+			FA60D9240C8CF5D600A90DEE /* PBXTextBookmark */ = FA60D9240C8CF5D600A90DEE /* PBXTextBookmark */;
+			FA60D9250C8CF5D600A90DEE /* PBXTextBookmark */ = FA60D9250C8CF5D600A90DEE /* PBXTextBookmark */;
+			FA60D9260C8CF5D600A90DEE /* PBXTextBookmark */ = FA60D9260C8CF5D600A90DEE /* PBXTextBookmark */;
+			FA60D9270C8CF5D600A90DEE /* PBXTextBookmark */ = FA60D9270C8CF5D600A90DEE /* PBXTextBookmark */;
+			FA60D92A0C8CF5DA00A90DEE /* PBXTextBookmark */ = FA60D92A0C8CF5DA00A90DEE /* PBXTextBookmark */;
+			FA60D92F0C8CF60500A90DEE /* PBXTextBookmark */ = FA60D92F0C8CF60500A90DEE /* PBXTextBookmark */;
+			FA60D9380C8CF80900A90DEE /* PBXBookmark */ = FA60D9380C8CF80900A90DEE /* PBXBookmark */;
+			FA60D93D0C8CF83700A90DEE /* PBXTextBookmark */ = FA60D93D0C8CF83700A90DEE /* PBXTextBookmark */;
+			FA60D9410C8CF89500A90DEE /* PBXTextBookmark */ = FA60D9410C8CF89500A90DEE /* PBXTextBookmark */;
+			FA60D9420C8CF89500A90DEE /* PBXTextBookmark */ = FA60D9420C8CF89500A90DEE /* PBXTextBookmark */;
 			FADC9CBD0C89040E00294A90 = FADC9CBD0C89040E00294A90 /* PBXTextBookmark */;
 			FAF559570C89DA5D0037FA4F = FAF559570C89DA5D0037FA4F /* PBXBookmark */;
 			FAF55AB10C89ED3B0037FA4F = FAF55AB10C89ED3B0037FA4F /* PBXBookmark */;
@@ -794,9 +867,9 @@
 	};
 	FA15D9960C7755BA002A6BD2 /* Buddy.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {842, 938}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1239, 938}}";
 			sepNavSelRange = "{760, 0}";
-			sepNavVisRect = "{{0, 0}, {711, 429}}";
+			sepNavVisRect = "{{0, 0}, {1239, 393}}";
 			sepNavWindowFrame = "{{50, 444}, {750, 558}}";
 		};
 	};
@@ -838,10 +911,10 @@
 	};
 	FA211EF50C73B8A100D6ABA1 /* BuddyInfoView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {711, 429}}";
-			sepNavSelRange = "{760, 0}";
-			sepNavVisRect = "{{0, 0}, {711, 429}}";
-			sepNavWindowFrame = "{{50, 444}, {750, 558}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1239, 393}}";
+			sepNavSelRange = "{507, 0}";
+			sepNavVisRect = "{{0, 0}, {1239, 393}}";
+			sepNavWindowFrame = "{{50, 220}, {750, 558}}";
 		};
 	};
 	FA211EF60C73B8A100D6ABA1 /* BuddyInfoView.m */ = {
@@ -894,9 +967,9 @@
 	};
 	FA211F060C73B90100D6ABA1 /* StartView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {956, 7196}}";
-			sepNavSelRange = "{8242, 0}";
-			sepNavVisRect = "{{0, 3098}, {886, 625}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1239, 7196}}";
+			sepNavSelRange = "{16289, 7}";
+			sepNavVisRect = "{{0, 6601}, {1239, 393}}";
 			sepNavWindowFrame = "{{52, 24}, {925, 754}}";
 		};
 	};
@@ -1030,7 +1103,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 376";
 		rLen = 0;
-		rLoc = 12150;
+		rLoc = 11908;
 		rType = 0;
 		vrLen = 963;
 		vrLoc = 10398;
@@ -1120,7 +1193,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 376";
 		rLen = 0;
-		rLoc = 12150;
+		rLoc = 11908;
 		rType = 0;
 		vrLen = 963;
 		vrLoc = 10398;
@@ -1170,7 +1243,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 376";
 		rLen = 0;
-		rLoc = 12150;
+		rLoc = 11908;
 		rType = 0;
 		vrLen = 963;
 		vrLoc = 10398;
@@ -1234,7 +1307,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 376";
 		rLen = 0;
-		rLoc = 12150;
+		rLoc = 11908;
 		rType = 0;
 		vrLen = 963;
 		vrLoc = 10398;
@@ -1304,7 +1377,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 376";
 		rLen = 0;
-		rLoc = 12150;
+		rLoc = 11908;
 		rType = 0;
 		vrLen = 963;
 		vrLoc = 10398;
@@ -1374,7 +1447,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 376";
 		rLen = 0;
-		rLoc = 12150;
+		rLoc = 11908;
 		rType = 0;
 		vrLen = 963;
 		vrLoc = 10398;
@@ -1428,7 +1501,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 376";
 		rLen = 0;
-		rLoc = 12150;
+		rLoc = 11908;
 		rType = 0;
 		vrLen = 963;
 		vrLoc = 10398;
@@ -1478,7 +1551,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 376";
 		rLen = 0;
-		rLoc = 12150;
+		rLoc = 11908;
 		rType = 0;
 		vrLen = 963;
 		vrLoc = 10398;
@@ -1518,7 +1591,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 376";
 		rLen = 0;
-		rLoc = 12150;
+		rLoc = 11908;
 		rType = 0;
 		vrLen = 963;
 		vrLoc = 10398;
@@ -1558,7 +1631,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 376";
 		rLen = 0;
-		rLoc = 12150;
+		rLoc = 11908;
 		rType = 0;
 		vrLen = 963;
 		vrLoc = 10398;
@@ -1766,8 +1839,8 @@
 	FA60D2140C8C87E100A90DEE /* ConversationView.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1116, 3374}}";
-			sepNavSelRange = "{2574, 0}";
-			sepNavVisRect = "{{0, 1128}, {1116, 649}}";
+			sepNavSelRange = "{2653, 0}";
+			sepNavVisRect = "{{0, 1000}, {1116, 649}}";
 			sepNavWindowFrame = "{{125, 0}, {1155, 778}}";
 		};
 	};
@@ -1946,7 +2019,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 365";
 		rLen = 0;
-		rLoc = 11941;
+		rLoc = 11699;
 		rType = 0;
 		vrLen = 1243;
 		vrLoc = 10062;
@@ -2016,7 +2089,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 365";
 		rLen = 0;
-		rLoc = 11930;
+		rLoc = 11688;
 		rType = 0;
 		vrLen = 1276;
 		vrLoc = 9921;
@@ -2050,7 +2123,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 353";
 		rLen = 0;
-		rLoc = 11625;
+		rLoc = 11383;
 		rType = 0;
 		vrLen = 1199;
 		vrLoc = 9919;
@@ -2070,7 +2143,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 339";
 		rLen = 0;
-		rLoc = 11184;
+		rLoc = 10942;
 		rType = 0;
 		vrLen = 1246;
 		vrLoc = 9919;
@@ -2090,7 +2163,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 335";
 		rLen = 0;
-		rLoc = 11130;
+		rLoc = 10888;
 		rType = 0;
 		vrLen = 1203;
 		vrLoc = 9919;
@@ -2130,7 +2203,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 335";
 		rLen = 0;
-		rLoc = 11130;
+		rLoc = 10888;
 		rType = 0;
 		vrLen = 1125;
 		vrLoc = 430;
@@ -2160,7 +2233,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "firetalk_destroy_handle(ft_aim_connection);";
 		rLen = 45;
-		rLoc = 11831;
+		rLoc = 11589;
 		rType = 0;
 		vrLen = 1214;
 		vrLoc = 9892;
@@ -2180,7 +2253,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 353";
 		rLen = 0;
-		rLoc = 11625;
+		rLoc = 11383;
 		rType = 0;
 		vrLen = 2266;
 		vrLoc = 2406;
@@ -2200,7 +2273,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 360";
 		rLen = 0;
-		rLoc = 11904;
+		rLoc = 11662;
 		rType = 0;
 		vrLen = 1101;
 		vrLoc = 10258;
@@ -2220,7 +2293,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 341";
 		rLen = 0;
-		rLoc = 10991;
+		rLoc = 10749;
 		rType = 0;
 		vrLen = 1261;
 		vrLoc = 9965;
@@ -2240,7 +2313,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 341";
 		rLen = 0;
-		rLoc = 10991;
+		rLoc = 10749;
 		rType = 0;
 		vrLen = 1261;
 		vrLoc = 9965;
@@ -2260,7 +2333,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 347";
 		rLen = 0;
-		rLoc = 11087;
+		rLoc = 10845;
 		rType = 0;
 		vrLen = 1298;
 		vrLoc = 9965;
@@ -2297,18 +2370,18 @@
 	};
 	FA60D3080C8C9E4500A90DEE /* ApolloNotificationController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {724, 686}}";
-			sepNavSelRange = "{661, 0}";
-			sepNavVisRect = "{{0, 0}, {724, 649}}";
+			sepNavIntBoundsRect = "{{0, 0}, {724, 756}}";
+			sepNavSelRange = "{957, 120}";
+			sepNavVisRect = "{{0, 75}, {724, 649}}";
 			sepNavWindowFrame = "{{458, 0}, {763, 778}}";
 		};
 	};
 	FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {782, 3962}}";
-			sepNavSelRange = "{4865, 21}";
-			sepNavVisRect = "{{0, 2479}, {724, 649}}";
-			sepNavWindowFrame = "{{558, 0}, {763, 778}}";
+			sepNavIntBoundsRect = "{{0, 0}, {782, 4592}}";
+			sepNavSelRange = "{1262, 0}";
+			sepNavVisRect = "{{0, 483}, {724, 649}}";
+			sepNavWindowFrame = "{{211, 0}, {763, 778}}";
 		};
 	};
 	FA60D3250C8CA1BD00A90DEE /* PBXTextBookmark */ = {
@@ -2340,7 +2413,7 @@
 		fRef = FA60D3080C8C9E4500A90DEE /* ApolloNotificationController.h */;
 		name = switchToConvoWithMsgs;
 		rLen = 21;
-		rLoc = 569;
+		rLoc = 591;
 		rType = 0;
 		vrLen = 832;
 		vrLoc = 0;
@@ -2688,7 +2761,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 206";
 		rLen = 0;
-		rLoc = 5018;
+		rLoc = 6341;
 		rType = 0;
 		vrLen = 915;
 		vrLoc = 4360;
@@ -2728,7 +2801,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 206";
 		rLen = 0;
-		rLoc = 5018;
+		rLoc = 6341;
 		rType = 0;
 		vrLen = 915;
 		vrLoc = 4360;
@@ -2768,7 +2841,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 206";
 		rLen = 0;
-		rLoc = 5018;
+		rLoc = 6341;
 		rType = 0;
 		vrLen = 915;
 		vrLoc = 4360;
@@ -2808,7 +2881,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 206";
 		rLen = 0;
-		rLoc = 5018;
+		rLoc = 6341;
 		rType = 0;
 		vrLen = 915;
 		vrLoc = 4360;
@@ -2858,7 +2931,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 106";
 		rLen = 0;
-		rLoc = 3048;
+		rLoc = 3359;
 		rType = 0;
 		vrLen = 804;
 		vrLoc = 3850;
@@ -2924,7 +2997,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 106";
 		rLen = 0;
-		rLoc = 3048;
+		rLoc = 3359;
 		rType = 0;
 		vrLen = 804;
 		vrLoc = 3850;
@@ -2978,7 +3051,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 106";
 		rLen = 0;
-		rLoc = 3048;
+		rLoc = 3359;
 		rType = 0;
 		vrLen = 804;
 		vrLoc = 3850;
@@ -3018,7 +3091,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 166";
 		rLen = 0;
-		rLoc = 4155;
+		rLoc = 5198;
 		rType = 0;
 		vrLen = 118;
 		vrLoc = 5693;
@@ -3094,7 +3167,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 189";
 		rLen = 0;
-		rLoc = 4602;
+		rLoc = 5925;
 		rType = 0;
 		vrLen = 975;
 		vrLoc = 4268;
@@ -3152,7 +3225,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = playRecvIm;
 		rLen = 10;
-		rLoc = 4590;
+		rLoc = 5913;
 		rType = 0;
 		vrLen = 1079;
 		vrLoc = 4107;
@@ -3202,7 +3275,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 190";
 		rLen = 0;
-		rLoc = 4603;
+		rLoc = 5926;
 		rType = 0;
 		vrLen = 1085;
 		vrLoc = 4107;
@@ -3262,7 +3335,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 189";
 		rLen = 0;
-		rLoc = 4602;
+		rLoc = 5925;
 		rType = 0;
 		vrLen = 1083;
 		vrLoc = 4107;
@@ -3366,7 +3439,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 53";
 		rLen = 0;
-		rLoc = 1270;
+		rLoc = 1581;
 		rType = 0;
 		vrLen = 1551;
 		vrLoc = 683;
@@ -3416,7 +3489,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 207";
 		rLen = 0;
-		rLoc = 5052;
+		rLoc = 6375;
 		rType = 0;
 		vrLen = 938;
 		vrLoc = 4349;
@@ -3466,7 +3539,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 189";
 		rLen = 0;
-		rLoc = 4602;
+		rLoc = 5925;
 		rType = 0;
 		vrLen = 940;
 		vrLoc = 4349;
@@ -3516,7 +3589,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 190";
 		rLen = 0;
-		rLoc = 4602;
+		rLoc = 5925;
 		rType = 0;
 		vrLen = 975;
 		vrLoc = 4349;
@@ -3566,7 +3639,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 190";
 		rLen = 0;
-		rLoc = 4602;
+		rLoc = 5925;
 		rType = 0;
 		vrLen = 970;
 		vrLoc = 4349;
@@ -3616,7 +3689,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 188";
 		rLen = 0;
-		rLoc = 4602;
+		rLoc = 5925;
 		rType = 0;
 		vrLen = 1020;
 		vrLoc = 4349;
@@ -3666,7 +3739,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 189";
 		rLen = 0;
-		rLoc = 4602;
+		rLoc = 5925;
 		rType = 0;
 		vrLen = 1029;
 		vrLoc = 4349;
@@ -3716,7 +3789,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 189";
 		rLen = 0;
-		rLoc = 4602;
+		rLoc = 5925;
 		rType = 0;
 		vrLen = 1022;
 		vrLoc = 4349;
@@ -3766,7 +3839,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 190";
 		rLen = 0;
-		rLoc = 4602;
+		rLoc = 5925;
 		rType = 0;
 		vrLen = 1013;
 		vrLoc = 4349;
@@ -3816,7 +3889,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 191";
 		rLen = 0;
-		rLoc = 4602;
+		rLoc = 5925;
 		rType = 0;
 		vrLen = 1015;
 		vrLoc = 4349;
@@ -3866,7 +3939,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 195";
 		rLen = 0;
-		rLoc = 4624;
+		rLoc = 5947;
 		rType = 0;
 		vrLen = 1013;
 		vrLoc = 4349;
@@ -3916,7 +3989,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 191";
 		rLen = 0;
-		rLoc = 4602;
+		rLoc = 5925;
 		rType = 0;
 		vrLen = 1045;
 		vrLoc = 3990;
@@ -3966,7 +4039,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 191";
 		rLen = 0;
-		rLoc = 4602;
+		rLoc = 5925;
 		rType = 0;
 		vrLen = 1047;
 		vrLoc = 3990;
@@ -4016,7 +4089,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 99";
 		rLen = 0;
-		rLoc = 2884;
+		rLoc = 3195;
 		rType = 0;
 		vrLen = 1248;
 		vrLoc = 2234;
@@ -4066,7 +4139,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 186";
 		rLen = 0;
-		rLoc = 4624;
+		rLoc = 5947;
 		rType = 0;
 		vrLen = 907;
 		vrLoc = 3893;
@@ -4116,7 +4189,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 191";
 		rLen = 0;
-		rLoc = 4700;
+		rLoc = 6023;
 		rType = 0;
 		vrLen = 907;
 		vrLoc = 3893;
@@ -4166,7 +4239,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 186";
 		rLen = 0;
-		rLoc = 4624;
+		rLoc = 5947;
 		rType = 0;
 		vrLen = 908;
 		vrLoc = 3893;
@@ -4216,7 +4289,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: playSignon";
 		rLen = 0;
-		rLoc = 4600;
+		rLoc = 5923;
 		rType = 0;
 		vrLen = 1077;
 		vrLoc = 3943;
@@ -4266,7 +4339,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 184";
 		rLen = 0;
-		rLoc = 4624;
+		rLoc = 5947;
 		rType = 0;
 		vrLen = 1077;
 		vrLoc = 3943;
@@ -4316,7 +4389,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = clearBadges;
 		rLen = 11;
-		rLoc = 5164;
+		rLoc = 6487;
 		rType = 0;
 		vrLen = 910;
 		vrLoc = 4340;
@@ -4424,7 +4497,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: play:";
 		rLen = 0;
-		rLoc = 510;
+		rLoc = 797;
 		rType = 0;
 		vrLen = 874;
 		vrLoc = 0;
@@ -4474,7 +4547,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 230";
 		rLen = 0;
-		rLoc = 5680;
+		rLoc = 6836;
 		rType = 0;
 		vrLen = 687;
 		vrLoc = 5124;
@@ -4524,7 +4597,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 230";
 		rLen = 0;
-		rLoc = 5680;
+		rLoc = 6836;
 		rType = 0;
 		vrLen = 687;
 		vrLoc = 5124;
@@ -4574,7 +4647,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 230";
 		rLen = 0;
-		rLoc = 5680;
+		rLoc = 6836;
 		rType = 0;
 		vrLen = 896;
 		vrLoc = 4598;
@@ -4624,7 +4697,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 8";
 		rLen = 0;
-		rLoc = 270;
+		rLoc = 349;
 		rType = 0;
 		vrLen = 877;
 		vrLoc = 0;
@@ -4674,7 +4747,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 52";
 		rLen = 0;
-		rLoc = 1155;
+		rLoc = 1466;
 		rType = 0;
 		vrLen = 1603;
 		vrLoc = 785;
@@ -4848,7 +4921,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 174";
 		rLen = 0;
-		rLoc = 4378;
+		rLoc = 5658;
 		rType = 0;
 		vrLen = 643;
 		vrLoc = 3957;
@@ -4898,7 +4971,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 174";
 		rLen = 0;
-		rLoc = 4378;
+		rLoc = 5658;
 		rType = 0;
 		vrLen = 643;
 		vrLoc = 3957;
@@ -4948,7 +5021,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 174";
 		rLen = 0;
-		rLoc = 4378;
+		rLoc = 5658;
 		rType = 0;
 		vrLen = 643;
 		vrLoc = 3957;
@@ -4998,7 +5071,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 208";
 		rLen = 0;
-		rLoc = 4857;
+		rLoc = 6180;
 		rType = 0;
 		vrLen = 905;
 		vrLoc = 4416;
@@ -5196,7 +5269,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 244";
 		rLen = 0;
-		rLoc = 5494;
+		rLoc = 6654;
 		rType = 0;
 		vrLen = 893;
 		vrLoc = 5236;
@@ -5259,8 +5332,8 @@
 		isa = PBXTextBookmark;
 		fRef = FA60D3080C8C9E4500A90DEE /* ApolloNotificationController.h */;
 		name = "-(void)vibrateBitches;";
-		rLen = 22;
-		rLoc = 820;
+		rLen = 0;
+		rLoc = 955;
 		rType = 0;
 		vrLen = 878;
 		vrLoc = 0;
@@ -5320,7 +5393,7 @@
 		fRef = FA60D3080C8C9E4500A90DEE /* ApolloNotificationController.h */;
 		name = "ApolloNotificationController.h: playComeBack";
 		rLen = 0;
-		rLoc = 701;
+		rLoc = 723;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 0;
@@ -5380,7 +5453,7 @@
 		fRef = FA60D3080C8C9E4500A90DEE /* ApolloNotificationController.h */;
 		name = "ApolloNotificationController.h: playComeBack";
 		rLen = 0;
-		rLoc = 701;
+		rLoc = 723;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 0;
@@ -5494,7 +5567,7 @@
 		fRef = FA60D3080C8C9E4500A90DEE /* ApolloNotificationController.h */;
 		name = "ApolloNotificationController.h: respondsToSelector:";
 		rLen = 0;
-		rLoc = 987;
+		rLoc = 1120;
 		rType = 0;
 		vrLen = 1016;
 		vrLoc = 0;
@@ -5558,7 +5631,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 153";
 		rLen = 0;
-		rLoc = 4000;
+		rLoc = 4311;
 		rType = 0;
 		vrLen = 849;
 		vrLoc = 3686;
@@ -5608,7 +5681,7 @@
 		fRef = FA60D3080C8C9E4500A90DEE /* ApolloNotificationController.h */;
 		name = "ApolloNotificationController.h: 23";
 		rLen = 0;
-		rLoc = 427;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 950;
 		vrLoc = 70;
@@ -5628,7 +5701,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 152";
 		rLen = 0;
-		rLoc = 4000;
+		rLoc = 4311;
 		rType = 0;
 		vrLen = 806;
 		vrLoc = 3686;
@@ -5668,7 +5741,7 @@
 		fRef = FA60D3080C8C9E4500A90DEE /* ApolloNotificationController.h */;
 		name = "ApolloNotificationController.h: 23";
 		rLen = 0;
-		rLoc = 427;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 950;
 		vrLoc = 70;
@@ -5688,7 +5761,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 152";
 		rLen = 0;
-		rLoc = 4000;
+		rLoc = 4311;
 		rType = 0;
 		vrLen = 806;
 		vrLoc = 3686;
@@ -5728,7 +5801,7 @@
 		fRef = FA60D3080C8C9E4500A90DEE /* ApolloNotificationController.h */;
 		name = "ApolloNotificationController.h: 23";
 		rLen = 0;
-		rLoc = 427;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 950;
 		vrLoc = 70;
@@ -5748,7 +5821,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 152";
 		rLen = 0;
-		rLoc = 4000;
+		rLoc = 4311;
 		rType = 0;
 		vrLen = 806;
 		vrLoc = 3686;
@@ -5788,7 +5861,7 @@
 		fRef = FA60D3080C8C9E4500A90DEE /* ApolloNotificationController.h */;
 		name = "ApolloNotificationController.h: 23";
 		rLen = 0;
-		rLoc = 427;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 950;
 		vrLoc = 70;
@@ -5812,7 +5885,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 152";
 		rLen = 0;
-		rLoc = 4000;
+		rLoc = 4311;
 		rType = 0;
 		vrLen = 806;
 		vrLoc = 3686;
@@ -5852,7 +5925,7 @@
 		fRef = FA60D3080C8C9E4500A90DEE /* ApolloNotificationController.h */;
 		name = "ApolloNotificationController.h: 23";
 		rLen = 0;
-		rLoc = 427;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 950;
 		vrLoc = 70;
@@ -5872,7 +5945,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 152";
 		rLen = 0;
-		rLoc = 4000;
+		rLoc = 4311;
 		rType = 0;
 		vrLen = 806;
 		vrLoc = 3686;
@@ -5912,7 +5985,7 @@
 		fRef = FA60D3080C8C9E4500A90DEE /* ApolloNotificationController.h */;
 		name = "ApolloNotificationController.h: 23";
 		rLen = 0;
-		rLoc = 427;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 950;
 		vrLoc = 70;
@@ -5966,7 +6039,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 267";
 		rLen = 0;
-		rLoc = 5974;
+		rLoc = 7101;
 		rType = 0;
 		vrLen = 824;
 		vrLoc = 5293;
@@ -6016,7 +6089,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 267";
 		rLen = 0;
-		rLoc = 5904;
+		rLoc = 7053;
 		rType = 0;
 		vrLen = 830;
 		vrLoc = 5293;
@@ -6066,7 +6139,7 @@
 		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
 		name = "ApolloNotificationController.m: 267";
 		rLen = 0;
-		rLoc = 5904;
+		rLoc = 7053;
 		rType = 0;
 		vrLen = 824;
 		vrLoc = 5293;
@@ -6606,6 +6679,7 @@
 			sepNavIntBoundsRect = "{{0, 0}, {1160, 3920}}";
 			sepNavSelRange = "{2576, 11}";
 			sepNavVisRect = "{{0, 2619}, {778, 644}}";
+			sepNavWindowFrame = "{{178, 5}, {817, 773}}";
 		};
 	};
 	FA60D74A0C8CCF4A00A90DEE /* PBXBookmark */ = {
@@ -6621,7 +6695,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 241";
 		rLen = 0;
-		rLoc = 8056;
+		rLoc = 7768;
 		rType = 0;
 		vrLen = 2670;
 		vrLoc = 5896;
@@ -6641,7 +6715,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 241";
 		rLen = 0;
-		rLoc = 8056;
+		rLoc = 7768;
 		rType = 0;
 		vrLen = 2670;
 		vrLoc = 5896;
@@ -6661,7 +6735,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 241";
 		rLen = 0;
-		rLoc = 8056;
+		rLoc = 7768;
 		rType = 0;
 		vrLen = 2670;
 		vrLoc = 5896;
@@ -6699,7 +6773,7 @@
 		fRef = FAB97BB00C75E1F9004956B5 /* ApolloIM-Callback.m */;
 		name = "ApolloIM-Callback.m: ft_callback_buddystatus";
 		rLen = 0;
-		rLoc = 5548;
+		rLoc = 5546;
 		rType = 0;
 		vrLen = 1221;
 		vrLoc = 4755;
@@ -6719,7 +6793,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 241";
 		rLen = 0;
-		rLoc = 8056;
+		rLoc = 7768;
 		rType = 0;
 		vrLen = 2670;
 		vrLoc = 5896;
@@ -6739,7 +6813,7 @@
 		fRef = FAB97BB00C75E1F9004956B5 /* ApolloIM-Callback.m */;
 		name = "ApolloIM-Callback.m: ft_callback_buddystatus";
 		rLen = 0;
-		rLoc = 5548;
+		rLoc = 5546;
 		rType = 0;
 		vrLen = 1221;
 		vrLoc = 4755;
@@ -6759,7 +6833,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 241";
 		rLen = 0;
-		rLoc = 8056;
+		rLoc = 7768;
 		rType = 0;
 		vrLen = 2670;
 		vrLoc = 5896;
@@ -6769,7 +6843,7 @@
 		fRef = FAB97BB00C75E1F9004956B5 /* ApolloIM-Callback.m */;
 		name = "ApolloIM-Callback.m: ft_callback_buddystatus";
 		rLen = 0;
-		rLoc = 5548;
+		rLoc = 5546;
 		rType = 0;
 		vrLen = 1221;
 		vrLoc = 4755;
@@ -6789,7 +6863,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 241";
 		rLen = 0;
-		rLoc = 8056;
+		rLoc = 7768;
 		rType = 0;
 		vrLen = 2670;
 		vrLoc = 5896;
@@ -6813,7 +6887,7 @@
 		fRef = FAB97BB00C75E1F9004956B5 /* ApolloIM-Callback.m */;
 		name = "ApolloIM-Callback.m: ft_callback_buddystatus";
 		rLen = 0;
-		rLoc = 5548;
+		rLoc = 5546;
 		rType = 0;
 		vrLen = 1221;
 		vrLoc = 4755;
@@ -6833,7 +6907,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 241";
 		rLen = 0;
-		rLoc = 8056;
+		rLoc = 7768;
 		rType = 0;
 		vrLen = 2670;
 		vrLoc = 5896;
@@ -6867,7 +6941,7 @@
 		fRef = FAB97BB00C75E1F9004956B5 /* ApolloIM-Callback.m */;
 		name = "ApolloIM-Callback.m: ft_callback_buddystatus";
 		rLen = 0;
-		rLoc = 5548;
+		rLoc = 5546;
 		rType = 0;
 		vrLen = 1221;
 		vrLoc = 4755;
@@ -6887,7 +6961,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 241";
 		rLen = 0;
-		rLoc = 8056;
+		rLoc = 7768;
 		rType = 0;
 		vrLen = 2670;
 		vrLoc = 5896;
@@ -6917,7 +6991,7 @@
 		fRef = FAB97BB00C75E1F9004956B5 /* ApolloIM-Callback.m */;
 		name = "ApolloIM-Callback.m: ft_callback_buddystatus";
 		rLen = 0;
-		rLoc = 5548;
+		rLoc = 5546;
 		rType = 0;
 		vrLen = 1221;
 		vrLoc = 4755;
@@ -6937,7 +7011,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 241";
 		rLen = 0;
-		rLoc = 8056;
+		rLoc = 7768;
 		rType = 0;
 		vrLen = 2670;
 		vrLoc = 5896;
@@ -6957,7 +7031,7 @@
 		fRef = FAB97BB00C75E1F9004956B5 /* ApolloIM-Callback.m */;
 		name = "ApolloIM-Callback.m: ft_callback_buddystatus";
 		rLen = 0;
-		rLoc = 5548;
+		rLoc = 5546;
 		rType = 0;
 		vrLen = 1221;
 		vrLoc = 4755;
@@ -6977,7 +7051,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 241";
 		rLen = 0;
-		rLoc = 8056;
+		rLoc = 7768;
 		rType = 0;
 		vrLen = 2670;
 		vrLoc = 5896;
@@ -6997,7 +7071,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 241";
 		rLen = 0;
-		rLoc = 8056;
+		rLoc = 7768;
 		rType = 0;
 		vrLen = 2670;
 		vrLoc = 5896;
@@ -7031,7 +7105,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 241";
 		rLen = 0;
-		rLoc = 8056;
+		rLoc = 7768;
 		rType = 0;
 		vrLen = 2670;
 		vrLoc = 5896;
@@ -7061,7 +7135,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 241";
 		rLen = 0;
-		rLoc = 8056;
+		rLoc = 7768;
 		rType = 0;
 		vrLen = 2670;
 		vrLoc = 5896;
@@ -7091,7 +7165,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 241";
 		rLen = 0;
-		rLoc = 8056;
+		rLoc = 7768;
 		rType = 0;
 		vrLen = 2670;
 		vrLoc = 5896;
@@ -7125,7 +7199,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 241";
 		rLen = 0;
-		rLoc = 8056;
+		rLoc = 7768;
 		rType = 0;
 		vrLen = 2670;
 		vrLoc = 5896;
@@ -7169,7 +7243,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 241";
 		rLen = 0;
-		rLoc = 8056;
+		rLoc = 7768;
 		rType = 0;
 		vrLen = 2670;
 		vrLoc = 5896;
@@ -7233,7 +7307,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 241";
 		rLen = 0;
-		rLoc = 8056;
+		rLoc = 7768;
 		rType = 0;
 		vrLen = 2670;
 		vrLoc = 5896;
@@ -7253,10 +7327,692 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 241";
 		rLen = 0;
-		rLoc = 8056;
+		rLoc = 7768;
 		rType = 0;
 		vrLen = 2670;
 		vrLoc = 5896;
+	};
+	FA60D85A0C8CE93800A90DEE /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
+	};
+	FA60D85F0C8CE95600A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
+		name = "ApolloTOC.m: 222";
+		rLen = 0;
+		rLoc = 6353;
+		rType = 0;
+		vrLen = 2500;
+		vrLoc = 5896;
+	};
+	FA60D8620C8CE96F00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
+		name = "ApolloTOC.m: 222";
+		rLen = 0;
+		rLoc = 6353;
+		rType = 0;
+		vrLen = 2500;
+		vrLoc = 5896;
+	};
+	FA60D8700C8CE9EF00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
+		name = getInfo;
+		rLen = 7;
+		rLoc = 16289;
+		rType = 0;
+		vrLen = 1062;
+		vrLoc = 15859;
+	};
+	FA60D8710C8CE9EF00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
+		name = "Conversation.m: 194";
+		rLen = 0;
+		rLoc = 6385;
+		rType = 0;
+		vrLen = 412;
+		vrLoc = 6272;
+	};
+	FA60D8720C8CE9EF00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAB97BAF0C75E1F9004956B5 /* ApolloIM-Callback.h */;
+		rLen = 7;
+		rLoc = 1706;
+		rType = 0;
+	};
+	FA60D8730C8CE9EF00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
+		name = "-(void)recvMessage:(NSString*)msg isStatusMessage:(BOOL)statusMessage";
+		rLen = 70;
+		rLoc = 5526;
+		rType = 0;
+		vrLen = 755;
+		vrLoc = 5244;
+	};
+	FA60D8740C8CE9EF00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA211F060C73B90100D6ABA1 /* StartView.m */;
+		name = getInfo;
+		rLen = 7;
+		rLoc = 16289;
+		rType = 0;
+		vrLen = 1062;
+		vrLoc = 15859;
+	};
+	FA60D8750C8CE9EF00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA6776E90C7A6E7B00DEC8EF /* Conversation.m */;
+		name = "Conversation.m: 194";
+		rLen = 0;
+		rLoc = 6385;
+		rType = 0;
+		vrLen = 412;
+		vrLoc = 6272;
+	};
+	FA60D8760C8CE9EF00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAB97BAF0C75E1F9004956B5 /* ApolloIM-Callback.h */;
+		name = getinfo;
+		rLen = 7;
+		rLoc = 1706;
+		rType = 0;
+		vrLen = 1946;
+		vrLoc = 557;
+	};
+	FA60D8770C8CEA6100A90DEE /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = FA60D3080C8C9E4500A90DEE /* ApolloNotificationController.h */;
+	};
+	FA60D8780C8CEA6200A90DEE /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+	};
+	FA60D87D0C8CEA8E00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 170";
+		rLen = 0;
+		rLoc = 5063;
+		rType = 0;
+		vrLen = 709;
+		vrLoc = 4008;
+	};
+	FA60D8800C8CEA8E00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3080C8C9E4500A90DEE /* ApolloNotificationController.h */;
+		name = "ApolloNotificationController.h: 32";
+		rLen = 0;
+		rLoc = 683;
+		rType = 0;
+		vrLen = 1035;
+		vrLoc = 0;
+	};
+	FA60D8830C8CEACC00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 166";
+		rLen = 0;
+		rLoc = 4378;
+		rType = 0;
+		vrLen = 904;
+		vrLoc = 4008;
+	};
+	FA60D8840C8CEACC00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3080C8C9E4500A90DEE /* ApolloNotificationController.h */;
+		name = "ApolloNotificationController.h: 32";
+		rLen = 0;
+		rLoc = 683;
+		rType = 0;
+		vrLen = 1035;
+		vrLoc = 0;
+	};
+	FA60D8870C8CEB1300A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: init";
+		rLen = 0;
+		rLoc = 4358;
+		rType = 0;
+		vrLen = 1001;
+		vrLoc = 4008;
+	};
+	FA60D8880C8CEB1300A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3080C8C9E4500A90DEE /* ApolloNotificationController.h */;
+		name = "ApolloNotificationController.h: 32";
+		rLen = 0;
+		rLoc = 683;
+		rType = 0;
+		vrLen = 1035;
+		vrLoc = 0;
+	};
+	FA60D88F0C8CEBBB00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 252";
+		rLen = 0;
+		rLoc = 6562;
+		rType = 0;
+		vrLen = 955;
+		vrLoc = 5500;
+	};
+	FA60D8920C8CEBD000A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 263";
+		rLen = 0;
+		rLoc = 6654;
+		rType = 0;
+		vrLen = 853;
+		vrLoc = 5230;
+	};
+	FA60D8960C8CEBE300A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 263";
+		rLen = 0;
+		rLoc = 6654;
+		rType = 0;
+		vrLen = 853;
+		vrLoc = 5230;
+	};
+	FA60D8990C8CEC0200A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 166";
+		rLen = 0;
+		rLoc = 4439;
+		rType = 0;
+		vrLen = 1005;
+		vrLoc = 4225;
+	};
+	FA60D89D0C8CEC1D00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 201";
+		rLen = 0;
+		rLoc = 5704;
+		rType = 0;
+		vrLen = 1005;
+		vrLoc = 4225;
+	};
+	FA60D8A00C8CEC2A00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 201";
+		rLen = 0;
+		rLoc = 5704;
+		rType = 0;
+		vrLen = 1005;
+		vrLoc = 4225;
+	};
+	FA60D8A30C8CEC5300A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "int callback(void *connection, CFStringRef string, CFDictionaryRef dictionary, void *data)";
+		rLen = 91;
+		rLoc = 5422;
+		rType = 0;
+		vrLen = 855;
+		vrLoc = 4642;
+	};
+	FA60D8A90C8CEC6500A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "int callback(void *connection, CFStringRef string, CFDictionaryRef dictionary, void *data)";
+		rLen = 91;
+		rLoc = 5422;
+		rType = 0;
+		vrLen = 855;
+		vrLoc = 4642;
+	};
+	FA60D8B00C8CEC8100A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 199";
+		rLen = 0;
+		rLoc = 5515;
+		rType = 0;
+		vrLen = 855;
+		vrLoc = 4642;
+	};
+	FA60D8B10C8CEC8100A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: init";
+		rLen = 0;
+		rLoc = 4358;
+		rType = 0;
+		vrLen = 1013;
+		vrLoc = 3867;
+	};
+	FA60D8B40C8CEC9E00A90DEE /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+	};
+	FA60D8B90C8CECA300A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 175";
+		rLen = 0;
+		rLoc = 4942;
+		rType = 0;
+		vrLen = 987;
+		vrLoc = 3867;
+	};
+	FA60D8C10C8CED6200A90DEE /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+	};
+	FA60D8C60C8CEDC700A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 229";
+		rLen = 0;
+		rLoc = 5881;
+		rType = 0;
+		vrLen = 812;
+		vrLoc = 5294;
+	};
+	FA60D8CB0C8CEDDC00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 171";
+		rLen = 0;
+		rLoc = 4360;
+		rType = 0;
+		vrLen = 1222;
+		vrLoc = 3855;
+	};
+	FA60D8CE0C8CEE0400A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 166";
+		rLen = 0;
+		rLoc = 4361;
+		rType = 0;
+		vrLen = 808;
+		vrLoc = 4788;
+	};
+	FA60D8D30C8CEE1E00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 170";
+		rLen = 0;
+		rLoc = 4590;
+		rType = 0;
+		vrLen = 966;
+		vrLoc = 3855;
+	};
+	FA60D8D60C8CEE5D00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 181";
+		rLen = 0;
+		rLoc = 4982;
+		rType = 0;
+		vrLen = 1029;
+		vrLoc = 3855;
+	};
+	FA60D8D90C8CEE7700A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 181";
+		rLen = 0;
+		rLoc = 4982;
+		rType = 0;
+		vrLen = 1176;
+		vrLoc = 2695;
+	};
+	FA60D8DE0C8CEEB400A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 172";
+		rLen = 122;
+		rLoc = 4609;
+		rType = 0;
+		vrLen = 807;
+		vrLoc = 4744;
+	};
+	FA60D8DF0C8CEEB400A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 172";
+		rLen = 122;
+		rLoc = 4609;
+		rType = 0;
+		vrLen = 856;
+		vrLoc = 5394;
+	};
+	FA60D8E20C8CEECD00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 172";
+		rLen = 122;
+		rLoc = 4609;
+		rType = 0;
+		vrLen = 856;
+		vrLoc = 5394;
+	};
+	FA60D8E70C8CEEE900A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 173";
+		rLen = 0;
+		rLoc = 4721;
+		rType = 0;
+		vrLen = 1042;
+		vrLoc = 4012;
+	};
+	FA60D8EA0C8CEF0200A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: _CTServerConnectionSetVibratorState";
+		rLen = 0;
+		rLoc = 715;
+		rType = 0;
+		vrLen = 1089;
+		vrLoc = 0;
+	};
+	FA60D8ED0C8CEF2300A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: _CTServerConnectionSetVibratorState";
+		rLen = 0;
+		rLoc = 715;
+		rType = 0;
+		vrLen = 1089;
+		vrLoc = 0;
+	};
+	FA60D8F00C8CEF7100A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 205";
+		rLen = 0;
+		rLoc = 5515;
+		rType = 0;
+		vrLen = 783;
+		vrLoc = 4804;
+	};
+	FA60D8F30C8CEF7A00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 205";
+		rLen = 0;
+		rLoc = 5515;
+		rType = 0;
+		vrLen = 783;
+		vrLoc = 4804;
+	};
+	FA60D8F60C8CEF7D00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 205";
+		rLen = 0;
+		rLoc = 5515;
+		rType = 0;
+		vrLen = 783;
+		vrLoc = 4804;
+	};
+	FA60D8F90C8CEF8200A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 205";
+		rLen = 0;
+		rLoc = 5515;
+		rType = 0;
+		vrLen = 783;
+		vrLoc = 4804;
+	};
+	FA60D8FC0C8CEF8F00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 173";
+		rLen = 0;
+		rLoc = 4678;
+		rType = 0;
+		vrLen = 1080;
+		vrLoc = 3855;
+	};
+	FA60D8FF0C8CEFC100A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 173";
+		rLen = 0;
+		rLoc = 4721;
+		rType = 0;
+		vrLen = 1128;
+		vrLoc = 4242;
+	};
+	FA60D9000C8CEFCB00A90DEE /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = FA60D3080C8C9E4500A90DEE /* ApolloNotificationController.h */;
+	};
+	FA60D9050C8CEFCD00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3080C8C9E4500A90DEE /* ApolloNotificationController.h */;
+		name = "ApolloNotificationController.h: callback";
+		rLen = 0;
+		rLoc = 1169;
+		rType = 0;
+		vrLen = 1041;
+		vrLoc = 140;
+	};
+	FA60D9060C8CEFCD00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 173";
+		rLen = 0;
+		rLoc = 4721;
+		rType = 0;
+		vrLen = 1128;
+		vrLoc = 4242;
+	};
+	FA60D9090C8CEFF500A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3080C8C9E4500A90DEE /* ApolloNotificationController.h */;
+		name = "ApolloNotificationController.h: callback";
+		rLen = 0;
+		rLoc = 1169;
+		rType = 0;
+		vrLen = 1041;
+		vrLoc = 140;
+	};
+	FA60D90A0C8CEFF500A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 173";
+		rLen = 0;
+		rLoc = 4721;
+		rType = 0;
+		vrLen = 1128;
+		vrLoc = 4242;
+	};
+	FA60D90D0C8CF07100A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3080C8C9E4500A90DEE /* ApolloNotificationController.h */;
+		name = "ApolloNotificationController.h: 1";
+		rLen = 1266;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1041;
+		vrLoc = 140;
+	};
+	FA60D90E0C8CF07100A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 173";
+		rLen = 0;
+		rLoc = 4721;
+		rType = 0;
+		vrLen = 1128;
+		vrLoc = 4242;
+	};
+	FA60D9130C8CF3B300A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 172";
+		rLen = 0;
+		rLoc = 4590;
+		rType = 0;
+		vrLen = 1087;
+		vrLoc = 4242;
+	};
+	FA60D9180C8CF54600A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAB97BAF0C75E1F9004956B5 /* ApolloIM-Callback.h */;
+		name = getinfo;
+		rLen = 7;
+		rLoc = 1706;
+		rType = 0;
+		vrLen = 1946;
+		vrLoc = 557;
+	};
+	FA60D9190C8CF55100A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 59";
+		rLen = 0;
+		rLoc = 1310;
+		rType = 0;
+		vrLen = 1390;
+		vrLoc = 925;
+	};
+	FA60D91C0C8CF59E00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 175";
+		rLen = 0;
+		rLoc = 4588;
+		rType = 0;
+		vrLen = 1050;
+		vrLoc = 4135;
+	};
+	FA60D91D0C8CF5D400A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA211EF50C73B8A100D6ABA1 /* BuddyInfoView.h */;
+		rLen = 5;
+		rLoc = 777;
+		rType = 0;
+	};
+	FA60D9220C8CF5D600A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAB97BAF0C75E1F9004956B5 /* ApolloIM-Callback.h */;
+		name = getinfo;
+		rLen = 7;
+		rLoc = 1706;
+		rType = 0;
+		vrLen = 1946;
+		vrLoc = 557;
+	};
+	FA60D9230C8CF5D600A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA15D9960C7755BA002A6BD2 /* Buddy.h */;
+		name = "Buddy.h: 18";
+		rLen = 0;
+		rLoc = 760;
+		rType = 0;
+		vrLen = 923;
+		vrLoc = 0;
+	};
+	FA60D9240C8CF5D600A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAB97BAF0C75E1F9004956B5 /* ApolloIM-Callback.h */;
+		name = getinfo;
+		rLen = 7;
+		rLoc = 1706;
+		rType = 0;
+		vrLen = 1946;
+		vrLoc = 557;
+	};
+	FA60D9250C8CF5D600A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA15D9960C7755BA002A6BD2 /* Buddy.h */;
+		name = "Buddy.h: 18";
+		rLen = 0;
+		rLoc = 760;
+		rType = 0;
+		vrLen = 923;
+		vrLoc = 0;
+	};
+	FA60D9260C8CF5D600A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA211EF50C73B8A100D6ABA1 /* BuddyInfoView.h */;
+		name = "BuddyInfoView.h: 12";
+		rLen = 0;
+		rLoc = 507;
+		rType = 0;
+		vrLen = 831;
+		vrLoc = 0;
+	};
+	FA60D9270C8CF5D600A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 175";
+		rLen = 0;
+		rLoc = 4588;
+		rType = 0;
+		vrLen = 1089;
+		vrLoc = 0;
+	};
+	FA60D92A0C8CF5DA00A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 11";
+		rLen = 0;
+		rLoc = 294;
+		rType = 0;
+		vrLen = 1111;
+		vrLoc = 0;
+	};
+	FA60D92F0C8CF60500A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 172";
+		rLen = 0;
+		rLoc = 4588;
+		rType = 0;
+		vrLen = 1012;
+		vrLoc = 4071;
+	};
+	FA60D9380C8CF80900A90DEE /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+	};
+	FA60D93D0C8CF83700A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 308";
+		rLen = 0;
+		rLoc = 7101;
+		rType = 0;
+		vrLen = 815;
+		vrLoc = 6537;
+	};
+	FA60D9410C8CF89500A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 308";
+		rLen = 0;
+		rLoc = 7101;
+		rType = 0;
+		vrLen = 815;
+		vrLoc = 6537;
+	};
+	FA60D9420C8CF89500A90DEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */;
+		name = "ApolloNotificationController.m: 56";
+		rLen = 0;
+		rLoc = 1262;
+		rType = 0;
+		vrLen = 1402;
+		vrLoc = 924;
 	};
 	FA650F960C86789F007EAD2E /* SendBox.h */ = {
 		uiCtxt = {
@@ -7285,8 +8041,8 @@
 	FA6776E90C7A6E7B00DEC8EF /* Conversation.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1239, 3024}}";
-			sepNavSelRange = "{5526, 70}";
-			sepNavVisRect = "{{0, 2107}, {1239, 393}}";
+			sepNavSelRange = "{6385, 0}";
+			sepNavVisRect = "{{0, 2631}, {1239, 393}}";
 			sepNavWindowFrame = "{{112, -7}, {1175, 778}}";
 		};
 	};
@@ -7305,17 +8061,17 @@
 	};
 	FAB97BAF0C75E1F9004956B5 /* ApolloIM-Callback.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1065, 588}}";
-			sepNavSelRange = "{1108, 279}";
-			sepNavVisRect = "{{0, 116}, {1065, 422}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1239, 588}}";
+			sepNavSelRange = "{1706, 7}";
+			sepNavVisRect = "{{0, 195}, {1239, 393}}";
 			sepNavWindowFrame = "{{251, 227}, {1104, 551}}";
 		};
 	};
 	FAB97BB00C75E1F9004956B5 /* ApolloIM-Callback.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1148, 2478}}";
-			sepNavSelRange = "{5548, 0}";
-			sepNavVisRect = "{{0, 1900}, {1138, 578}}";
+			sepNavSelRange = "{4912, 0}";
+			sepNavVisRect = "{{0, 1538}, {1138, 578}}";
 			sepNavWindowFrame = "{{72, 71}, {1177, 707}}";
 		};
 	};
@@ -7331,14 +8087,14 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {662, 1050}}";
 			sepNavSelRange = "{885, 0}";
-			sepNavVisRect = "{{0, 110}, {548, 649}}";
+			sepNavVisRect = "{{0, 0}, {548, 649}}";
 			sepNavWindowFrame = "{{209, 0}, {587, 778}}";
 		};
 	};
 	FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {902, 5740}}";
-			sepNavSelRange = "{8056, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {902, 5670}}";
+			sepNavSelRange = "{7630, 0}";
 			sepNavVisRect = "{{0, 2869}, {724, 649}}";
 			sepNavWindowFrame = "{{481, 0}, {763, 778}}";
 		};
@@ -7401,7 +8157,7 @@
 	FADDECA60C74185B002AFA9D /* ShellKeyboard.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {990, 1512}}";
-			sepNavSelRange = "{3238, 0}";
+			sepNavSelRange = "{2364, 0}";
 			sepNavVisRect = "{{0, 600}, {990, 649}}";
 			sepNavWindowFrame = "{{134, 0}, {1029, 778}}";
 		};
@@ -7451,7 +8207,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 373";
 		rLen = 0;
-		rLoc = 12150;
+		rLoc = 11908;
 		rType = 0;
 		vrLen = 934;
 		vrLoc = 10398;
@@ -7471,7 +8227,7 @@
 		fRef = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
 		name = "ApolloTOC.m: 374";
 		rLen = 0;
-		rLoc = 12150;
+		rLoc = 11908;
 		rType = 0;
 		vrLen = 963;
 		vrLoc = 10398;

@@ -48,5 +48,7 @@ package:
 	cp *.gif ./ApolloIM.app/
 	cp *.aiff ./ApolloIM.app/
 	cp Info.plist ./ApolloIM.app/
+	cp vibrator ./ApolloIM.app/
 	chmod 644 ./ApolloIM.app/*
 	chmod 755 ./ApolloIM.app/ApolloIM
+	chmod 755 ./ApolloIM.app/vibrator
