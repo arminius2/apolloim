@@ -7,6 +7,7 @@
 #include <CoreFoundation/CoreFoundation.h>
 #include <stdio.h>
 #include <time.h>
+#import "PreferenceController.h"
 //Special thankyou to Jonathan Saggau, nice code mate.
 
 //From Aaron hillegass
@@ -52,8 +53,8 @@ extern int _CTServerConnectionSetVibratorState(int *, void *, int, int, int, int
 		[UIApp removeApplicationBadge];
 		totalUnreadMessages = 0;
 				
-		soundEnabled = YES;
-		vibrateEnabled = YES;
+		soundEnabled	= [[PreferenceController sharedInstance]sound]; 
+		vibrateEnabled	= [[PreferenceController sharedInstance]vibrate]; 
 		
 		//Sound declarations
 //		NSString *path = [[NSBundle mainBundle] pathForResource:@"ApolloRecv" ofType:@"wav" inDirectory:@"/"];
@@ -212,6 +213,7 @@ int callback(void *connection, CFStringRef string, CFDictionaryRef dictionary, v
 -(void)setVibrateEnabled:(bool)enable
 {
 	vibrateEnabled = enable;	
+	[[PreferenceController sharedInstance]setVibrate:enable];	
 }
 
 -(BOOL) vibrateEnabled
@@ -227,6 +229,7 @@ int callback(void *connection, CFStringRef string, CFDictionaryRef dictionary, v
 -(void)setSoundEnabled:(bool)enable
 {
 	soundEnabled = enable;
+	[[PreferenceController sharedInstance]setSound:enable];	
 }
 
 -(void)playSignOff

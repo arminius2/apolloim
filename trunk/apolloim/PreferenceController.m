@@ -65,7 +65,7 @@ static NSRecursiveLock *lock;
 {
 	NSLog(@"Writing...");
 	[[NSString stringWithFormat:@"%d|%d", sound, vibrate]
-	writeToFile:@"/Applications/ApolloIM.app/prefs" atomically:NO encoding:NSUTF8StringEncoding error:nil];
+	writeToFile:@"/Applications/ApolloIM.app/prefs" atomically:YES encoding:NSUTF8StringEncoding error:nil];
 	NSLog(@"Written.");
 }
 
@@ -88,5 +88,6 @@ static NSRecursiveLock *lock;
 		[self write];
 	}
 	NSLog(@"Green means go.");
+	NSLog(@"SOUND %d VIBRATE %d", sound, vibrate);
 }
 @end

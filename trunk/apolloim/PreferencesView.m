@@ -15,7 +15,7 @@
  along with this program; if not, write to the Free Software
  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
-
+#import "PreferenceController.h"
 #import "PreferencesView.h"
 #import "UIKit/UITextView.h"
 #import "UIKit/UITransformAnimation.h"
@@ -57,9 +57,7 @@
 		[soundSwitch setValue:[[ApolloNotificationController sharedInstance]soundEnabled]];
 		
 		vibrateSwitch = [[UISwitchControl alloc]initWithFrame:CGRectMake(200.0f, 10.0f, 320.0f, 480.0f)];
-		[vibrateSwitch setValue:[[ApolloNotificationController sharedInstance]vibrateEnabled]];
-		
-		
+		[vibrateSwitch setValue:[[ApolloNotificationController sharedInstance]vibrateEnabled]];			
 	}
 	return self;
 }
@@ -129,7 +127,7 @@
 {
 	[[ApolloNotificationController sharedInstance]setSoundEnabled:[soundSwitch value]];
 	[[ApolloNotificationController sharedInstance]setVibrateEnabled:[vibrateSwitch value]];
-	NSLog(@"Preferences Saved");
+	NSLog(@"!!!!!!!!!!!!!!!Preferences Saved");
 }
 
 @end

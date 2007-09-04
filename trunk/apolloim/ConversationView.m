@@ -36,6 +36,8 @@
 		[self setAdjustForContentSizeChange:YES];
 		[self setContentSize: CGSizeMake(frame.size.width, frame.size.height)];
 		[self setOpaque:YES];
+		
+		[self setAllowsRubberBanding:NO];
 
 		_delegate = delegate;
 		

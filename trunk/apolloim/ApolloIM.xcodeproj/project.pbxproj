@@ -29,6 +29,8 @@
 		FA211F060C73B90100D6ABA1 /* StartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartView.m; sourceTree = "<group>"; };
 		FA2125750C73E59200D6ABA1 /* AccountEditorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountEditorView.h; sourceTree = "<group>"; };
 		FA2125760C73E59200D6ABA1 /* AccountEditorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountEditorView.m; sourceTree = "<group>"; };
+		FA2793CF0C8D2A840032E1C0 /* PreferencesView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PreferencesView.h; sourceTree = "<group>"; };
+		FA2793D00C8D2A840032E1C0 /* PreferencesView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = PreferencesView.m; sourceTree = "<group>"; };
 		FA5EE80E0C8D089100A0B03F /* PreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
 		FA5EE80F0C8D089100A0B03F /* PreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferenceController.m; sourceTree = "<group>"; };
 		FA60D1360C8C7B4100A90DEE /* Acct.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Acct.h; sourceTree = "<group>"; };
@@ -135,6 +137,8 @@
 		FA15D9920C775591002A6BD2 /* Views Of The Damned */ = {
 			isa = PBXGroup;
 			children = (
+				FA2793CF0C8D2A840032E1C0 /* PreferencesView.h */,
+				FA2793D00C8D2A840032E1C0 /* PreferencesView.m */,
 				D90F56BA0C6719EF007AE76B /* ApolloIMApp.h */,
 				D90F56B90C6719EF007AE76B /* ApolloIMApp.m */,
 				FA211EFD0C73B8C400D6ABA1 /* AboutView.h */,
