@@ -190,46 +190,6 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>FA60D8300C8CDDCB00A90DEE</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>BuddyView.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>FA60D8310C8CDDCB00A90DEE</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>BuddyView.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>FA60D8460C8CDDEA00A90DEE</string>
-						<key>history</key>
-						<array>
-							<string>FA60D82D0C8CDDB300A90DEE</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {911, 681}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>125 56 911 722 0 0 1280 778 </string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
 				<string>FA60D76D0C8CD15100A90DEE</string>
 				<key>PBXProjectModuleLabel</key>
 				<string>firetalk.h</string>
@@ -244,7 +204,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>FA60D8470C8CDDEA00A90DEE</string>
+						<string>FA60D84B0C8CDE1100A90DEE</string>
 						<key>history</key>
 						<array>
 							<string>FA60D74A0C8CCF4A00A90DEE</string>
@@ -284,7 +244,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>FA60D8480C8CDDEA00A90DEE</string>
+						<string>FA60D84C0C8CDE1100A90DEE</string>
 						<key>history</key>
 						<array>
 							<string>FA60D75F0C8CD10300A90DEE</string>
@@ -640,7 +600,6 @@
 		<string>FA60D76A0C8CD15100A90DEE</string>
 		<string>FA60D76D0C8CD15100A90DEE</string>
 		<string>/Users/alex/Desktop/apolloim/apolloim/ApolloIM.xcodeproj</string>
-		<string>FA60D8300C8CDDCB00A90DEE</string>
 	</array>
 	<key>WindowString</key>
 	<string>6 55 287 723 0 0 1280 778 </string>
