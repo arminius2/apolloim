@@ -18,6 +18,8 @@
 */
 
 #import "BuddyView.h"
+#import "ApolloTOC.h"
+#import "ApolloIM-PrivateAccess.h"
 
 enum {
 	AIM_RECV_MESG		=	1,
@@ -121,6 +123,7 @@ enum {
 				{
 					[[_buddies objectAtIndex:i]setOnline:NO];
 					NSLog(@"BuddyView.m> %@ is away",[aBuddy properName]);
+//					[[ApolloTOC sharedInstance] getInfo:aBuddy];
 					[self reloadData];
 					return;
 				}			
@@ -132,6 +135,7 @@ enum {
 				{
 					[[_buddies objectAtIndex:i]setOnline:YES];
 					NSLog(@"BuddyView.m> %@ is back",[aBuddy properName]);
+//					[[ApolloTOC sharedInstance] getInfo:aBuddy];					
 					[self reloadData];
 					return;
 				}			

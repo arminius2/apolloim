@@ -203,7 +203,7 @@ extern UIApplication *UIApp;
 				break;			
 			case AIM_BUDDY_INFO:
 				NSLog(@"Getting info from %@ that says '%@'",[[payload objectAtIndex:1]name],[[payload objectAtIndex:1]info]);
-				[self receiveMessage:(NSString*)[[payload objectAtIndex:1]info] fromBuddy:(Buddy*)[payload objectAtIndex:1] isInfo:YES];				
+//				[self receiveMessage:(NSString*)[[payload objectAtIndex:1]info] fromBuddy:(Buddy*)[payload objectAtIndex:1] isInfo:YES];				
 				break;
 			default:
 			NSLog(@"StartView>> Event -- %d", [[NSString stringWithString:[payload objectAtIndex:0]]intValue]);
@@ -267,8 +267,8 @@ extern UIApplication *UIApp;
 - (void)switchToConvo:(Buddy*)aBuddy
 {
 //	[lock lock];
-//	[_navBar showButtonsWithLeftTitle:@"Buddy List" rightTitle:@"Buddy Info" leftBack: YES];				
-	[_navBar showButtonsWithLeftTitle:@"Buddy List" rightTitle:nil	leftBack: YES];
+	[_navBar showButtonsWithLeftTitle:@"Buddy List" rightTitle:@"Buddy Info" leftBack: YES];				
+//	[_navBar showButtonsWithLeftTitle:@"Buddy List" rightTitle:nil	leftBack: YES];
 	_accountsEditorViewBrowser	=	false;
 	_buddyViewBrowser			=	false;
 	_accountsViewBrowser		=	false;	
@@ -403,6 +403,12 @@ extern UIApplication *UIApp;
 				{												
 //					NSLog(@"LEFT -- ACCOUNT_VIEW_EDITOR -- SAVE");
 					Acct* EditedAccount = [accountEditor getAccount];		
+					if([accountEditor delete])
+					{
+						NSLog(@"DELETE ACCOUNT");
+						[_accountsView deleteAccount:EditedAccount];						
+					}
+					else
 					if(![accountEditor getMode])
 					{
 //						NSLog(@"ADD ACCOUNT");
@@ -476,7 +482,7 @@ extern UIApplication *UIApp;
 			if(_conversationView)
 			{
 				NSLog(@"StartView>> RIGHT -- CONVERSATION_VEW -- BuddyInfo");	
-//				[[ApolloTOC sharedInstance] getInfo:currentConversationBuddy];
+				[[ApolloTOC sharedInstance] getInfo:currentConversationBuddy];
 				return;
 			}
 			break;

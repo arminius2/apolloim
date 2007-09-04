@@ -143,6 +143,20 @@ void ft_callback_getinfo(void *c, void *cs, const char * const who, const char *
 	}
 }
 
+void ft_callback_buddytyping		(void *c, void *cs, const char * const who, const int typing)
+{
+    NSLog(@"ft_callback_buddytyping %@ - %d", [NSString stringWithCString:who], typing);
+}
+void ft_callback_buddyidle			(void *c, void *cs, const char * const who, const long idle)
+{
+    NSLog(@"ft_callback_buddyinfo %@ - %l", [NSString stringWithCString:who], idle);
+}
+
+void ft_callback_buddystatus		(void *c, void *cs, const char * const who, const char *message)
+{
+    NSLog(@"ft_callback_buddyStatus %@ - %s",[NSString stringWithCString:who],message);
+}
+
 void ft_callback_disconnect(void *c, void *cs, const int error)
 {
     NSLog(@"ft_callback_disconnect");

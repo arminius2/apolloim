@@ -44,6 +44,7 @@
 - (Acct *)selectedAccount;
 - (void)updateAccount:(Acct*)aAccount withAccount:(Acct*)thisAccount;
 - (void)addAccount:(Acct*)aAccount;
+- (void)deleteAccount:(Acct*)aAccount;
 - (void)tableRowSelected:(NSNotification *)notification;
 - (NSArray*)accounts;
 - (void)setAccounts:(NSMutableArray*)accounts;

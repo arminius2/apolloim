@@ -25,16 +25,19 @@
 #import "UIKit/UISwitchControl.h"
 #import "UIKit/UIPreferencesTableCell.h"
 #import "UIKit/UIPreferencesTextTableCell.h"
+#import <UIKit/UIPushButton.h>
 #import "Acct.h"
 #import "UIKit/UIKeyboard.h"
 
 @interface AccountEditorView : UIView 
 {
+	UIPreferencesTextTableCell *_deleteCell;
 	UINavigationBar		*_navBar;
 	UITransitionView	*_transitionView;
 	UIPreferencesTable	*_table;
 	UISegmentedControl	*typeSelection;
 	UISwitchControl		*enabledSwitch;	
+	UIPushButton		*killButton;
 		
 	UITextField			*usernameField;
 	UITextField			*passwordField;
@@ -45,6 +48,7 @@
 	NSString			*connectionEXIST;
 	//int					serviceEXIST;	
 	//bool				enabledEXIST;	
+	bool				delete;
 	bool				editOrnew; //true \ false
     CGRect _rect;	
 	
@@ -58,7 +62,10 @@
 - (void)dealloc;
 - (Acct*)getAccount;
 - (void)setAccount:(Acct*)theAccount;
+- (void)alertSheet:(UIAlertSheet *)sheet buttonClicked:(int)button;
 - (void)setDelegate:(id)delegate;
+- (void)toggleDelete;
+- (BOOL)delete;
 - (BOOL)preferencesTable:(UIPreferencesTable *)aTable isLabelGroup:(int)group;
 - (float)preferencesTable:(UIPreferencesTable *)aTable heightForRow:(int)row inGroup:(int)group withProposedHeight:(float)proposed ;
 - (int)numberOfGroupsInPreferencesTable:(UIPreferencesTable *)aTable ;

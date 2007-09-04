@@ -69,6 +69,22 @@
 	[_table reloadData];	
 }
 
+- (void)deleteAccount:(Acct*)aAccount
+{
+	NSLog(@"%@ is at index %d of %d",[aAccount username],[_accounts indexOfObject:aAccount], _rowCount);
+	int i=0; 
+	for(i=0; i<_rowCount; i++)
+	{
+		if([[[_accounts objectAtIndex:i]username]isEqualToString:[aAccount username]])
+		{
+			[_accounts removeObjectAtIndex:i];
+			_rowCount--;
+			[_table reloadData];
+			return;
+		}
+	}
+}
+
 - (void)reloadData 
 {
 	//Readd all accounts, for now add in dummy account
@@ -127,7 +143,7 @@
 
 - (BOOL)respondsToSelector:(SEL)aSelector
 {
-  NSLog(@"ACCOUNTSVIEW>> Request for selector: %@", NSStringFromSelector(aSelector));
+//  NSLog(@"ACCOUNTSVIEW>> Request for selector: %@", NSStringFromSelector(aSelector));
   return [super respondsToSelector:aSelector];
 }
 - (void)tableRowSelected:(NSNotification *)notification {

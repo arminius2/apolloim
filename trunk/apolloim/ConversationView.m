@@ -85,7 +85,7 @@
 	}
 }
 
-- (BOOL)appendToConversation:(NSString *)text fromUser:(Buddy *)user
+- (BOOL)appendToConversation:(NSString *)text fromUser:(Buddy *)user isStatusMessage:(BOOL)statusMsg
 {
 	float seperator = 10.0f;
 	float text_height = 18.0f;
@@ -93,22 +93,30 @@
 	
 	float self_color[4] = {0.0, 0.0, 1.0, 1.0};
 	float their_color[4] = {1.0, 0.0, 0.0, 1.0};
+	float status_color[4] = {0.0, 1.0, 1.0, 1.0};	
+	
 	CGColorSpaceRef const colorSpace = CGColorSpaceCreateDeviceRGB();
 	
 	CGRect user_area = CGRectMake(0.0f, current_y, width, text_height);
 	UITextLabel * username = [[UITextLabel alloc] initWithFrame:user_area];
 	[username setWrapsText:YES];
 	
-	if(user != nil)
+	if(statusMsg)
 	{
-		[username setText:[user name]];
-		[username setColor:CGColorCreate(colorSpace, their_color)];
+		[username setText:@"Incoming status..."];
+		[username setColor:CGColorCreate(colorSpace, status_color)];
 	}
-	else
-	{
-		[username setText:[[[ApolloTOC sharedInstance]you]name]];
-		[username setColor:CGColorCreate(colorSpace, self_color)];
-	}
+	else	
+		if(user != nil)
+		{
+			[username setText:[user name]];
+			[username setColor:CGColorCreate(colorSpace, their_color)];
+		}
+		else
+		{
+			[username setText:[[[ApolloTOC sharedInstance]you]name]];
+			[username setColor:CGColorCreate(colorSpace, self_color)];
+		}
 		
 	[self addSubview: username];
 	current_y += text_height;

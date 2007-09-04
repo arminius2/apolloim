@@ -21,6 +21,11 @@
 void ft_callback_doinit				(void *c, void *cs, char *nickname);
 void ft_callback_im_user_nickchanged(void *c, void *cs, const char * const nickname);
 void ft_callback_listbuddy			(void *c, void *cs, const char * const nickname, const char * const group, char online, char away, const long idle);
+
+void ft_callback_buddytyping		(void *c, void *cs, const char * const who, const int typing);
+void ft_callback_buddyidle			(void *c, void *cs, const char * const who, const long idle);
+void ft_callback_buddystatus		(void *c, void *cs, const char * const who, const char *message);
+
 void ft_callback_buddyonline		(void *c, void *cs, const char * const who);
 void ft_callback_buddyoffline		(void *c, void *cs, const char * const who);
 void ft_callback_buddyunaway		(void *c, void *cs, const char * const who);

@@ -22,6 +22,7 @@
 #import "UIKit/UITransformAnimation.h"
 #import "Acct.h"
 #import <UIKit/UIView-Hierarchy.h>
+#import <UIKit/UIPushButton.h>
 #import <UIKit/UIView-Rendering.h>
 #import "UIKit/UISwitchControl.h"
 #import <UIKit/UIWindow.h>
@@ -41,6 +42,7 @@ if ((self == [super initWithFrame: frame]) != nil) {
 		CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
 		float whiteComponents[4] = {1, 1, 1, 1};
 		float transparentComponents[4] = {0, 0, 0, 0};
+		float blackComponents[4] = {0.0, 0.0, 0.0, 1.0};
 		
         _table = [[UIPreferencesTable alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 415.0f)];
         [_table setDataSource:self];
@@ -49,18 +51,49 @@ if ((self == [super initWithFrame: frame]) != nil) {
 
 		enabledSwitch = [[UISwitchControl alloc]initWithFrame:CGRectMake(200.0f, 10.0f, 320.0f, 480.0f)];
 		[enabledSwitch setEnabled:YES];
-
-		//NSLog(@"AccountEditorView>> Keyboard implementation...");
-
-		[self addSubview:	_table];		
 		
-//		[_table setKeyboardVisible:NO];
-//		[[_table keyboard]setFrame:CGRectMake(0.0f, 0.0f, 0.0f, 0.0f)];
+		delete = false;
+		
+		killButton = [[UIPushButton alloc] initWithTitle:@"Delete" autosizesToFit:YES];
+		[killButton setFrame:CGRectMake(200.0f, 15.0f, 200.0f,100.0f)];			
+		[killButton setDrawsShadow: YES];
+		[killButton setEnabled:YES];
+		[killButton setTitleColor: CGColorCreate(colorSpace, blackComponents)];
+		[killButton addTarget:self action:@selector(toggleDelete) forEvents:1];
 
+		[self addSubview:	_table];
 		[self setMode:		 false];
 		_delegate = nil;
 	}
 	return self;
+}
+
+- (void)alertSheet:(UIAlertSheet *)sheet buttonClicked:(int)button 
+{
+	[sheet dismiss];
+}
+
+- (void)toggleDelete
+{
+	delete = !delete;
+	NSLog(@"Set Delete To %d", delete);
+	UIAlertSheet *sheet = [[UIAlertSheet alloc] initWithFrame: CGRectMake(0, 240, 320, 240)];
+	[sheet setTitle:[account username]];
+	[sheet setDelegate: self];
+	if(delete)
+	{
+		[_deleteCell setTitle:@"Undelete?"];
+		[killButton	setTitle:@"Undelete."];
+		[sheet setBodyText:[NSString stringWithFormat:@"This account will be deleted."]];		
+	}
+	else
+	{
+		[_deleteCell setTitle:@"Delete?"];
+		[killButton	setTitle:@"Delete."];
+		[sheet setBodyText:[NSString stringWithFormat:@"This account will not be deleted."]];
+	}
+	[sheet addButtonWithTitle:@"OK"];
+	[sheet presentSheetFromAboveView: self];	
 }
 //*************************************
 
@@ -140,6 +173,15 @@ if ((self == [super initWithFrame: frame]) != nil) {
 				}
 				[cell addSubview:		enabledSwitch];						
 			}
+			if(editOrnew)
+				if(row == 1)
+				{
+					[cell setTitle:				@"Delete?"];
+					[cell setEnabled:				   YES];
+					[[cell textField]setEnabled:	 false];
+					[cell addSubview:			killButton];		
+					_deleteCell = cell;			
+				}
 		 }					
          return [cell autorelease];  
  }
@@ -171,10 +213,7 @@ if ((self == [super initWithFrame: frame]) != nil) {
 -(void)setAccount:(Acct*)theAccount
 {
 	account = theAccount;
-
-//	[theAccount setUsername:@"TESTALEX"];
-	editOrnew = YES;
-			
+	editOrnew = YES;			
 	//NSLog(@"AccountEditorView>> Account Set: %@", [theAccount username]);
 }
 
@@ -199,6 +238,10 @@ if ((self == [super initWithFrame: frame]) != nil) {
 	}		
 	//NSLog(@"AccountEditorView>>  Returning Account: %@",[getaccount username]);	
 	return getaccount;
+}
+- (BOOL)delete
+{
+	return delete;
 }
 
 - (void)dealloc
