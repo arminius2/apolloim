@@ -23,7 +23,7 @@ LDFLAGS = -Wl,-syslibroot,/Developer/SDKs/iPhone/heavenly \
 
 all:	ApolloIM package
 
-ApolloIM:	main.o ApolloIMApp.o StartView.o AccountsView.o AccountEditorView.o Acct.o  ApolloTOC.o ApolloIM-Callback.o  BuddyView.o Buddy.o Conversation.o ConversationView.o ShellKeyboard.o Shimmer.o AboutView.o ApolloNotificationController.o SendBox.o AcctCell.o AcctTable.o
+ApolloIM:	main.o ApolloIMApp.o StartView.o AccountsView.o AccountEditorView.o Acct.o  ApolloTOC.o ApolloIM-Callback.o  BuddyView.o Buddy.o Conversation.o ConversationView.o ShellKeyboard.o Shimmer.o AboutView.o ApolloNotificationController.o SendBox.o AcctCell.o AcctTable.o PreferenceController.o
 #		(cd libfiretalk && make)
 		$(LD) $(LDFLAGS) -o $@ $^
 		

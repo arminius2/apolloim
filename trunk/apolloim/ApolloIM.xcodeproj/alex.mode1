@@ -190,7 +190,7 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>FA60D93B0C8CF83700A90DEE</string>
+				<string>FA5EE9260C8D17CA00A0B03F</string>
 				<key>PBXProjectModuleLabel</key>
 				<string>ApolloNotificationController.m</string>
 				<key>PBXSplitModuleInNavigatorKey</key>
@@ -198,16 +198,16 @@
 					<key>Split0</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
-						<string>FA60D93C0C8CF83700A90DEE</string>
+						<string>FA5EE9270C8D17CA00A0B03F</string>
 						<key>PBXProjectModuleLabel</key>
 						<string>ApolloNotificationController.m</string>
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>FA60D9420C8CF89500A90DEE</string>
+						<string>FA5EE9630C8D1A0500A0B03F</string>
 						<key>history</key>
 						<array>
-							<string>FA60D9410C8CF89500A90DEE</string>
+							<string>FA5EE9210C8D17C500A0B03F</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -219,11 +219,11 @@
 			<key>Geometry</key>
 			<dict>
 				<key>Frame</key>
-				<string>{{0, 20}, {763, 681}}</string>
+				<string>{{0, 20}, {586, 676}}</string>
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>211 56 763 722 0 0 1280 778 </string>
+				<string>605 61 586 717 0 0 1280 778 </string>
 			</dict>
 		</dict>
 	</array>
@@ -311,14 +311,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>12</integer>
+									<integer>11</integer>
 									<integer>10</integer>
 									<integer>9</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 14}, {265, 664}}</string>
+							<string>{{0, 129}, {265, 664}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -418,9 +418,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>FA60D1490C8C7BC800A90DEE</string>
+				<string>FA5EE7FB0C8D051900A0B03F</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>FA60D14A0C8C7BC800A90DEE</string>
+				<string>FA5EE7FC0C8D051900A0B03F</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -554,11 +554,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1CD10A99069EF8BA00B06720</string>
-		<string>FA60D4D70C8CB1B400A90DEE</string>
-		<string>1C530D57069F1CE1000CFCEE</string>
+		<string>FA5EE9260C8D17CA00A0B03F</string>
 		<string>/Users/alex/Desktop/apolloim/apolloim/ApolloIM.xcodeproj</string>
-		<string>FA60D93B0C8CF83700A90DEE</string>
 	</array>
 	<key>WindowString</key>
 	<string>6 55 287 723 0 0 1280 778 </string>

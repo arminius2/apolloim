@@ -20,6 +20,7 @@
 #import "ApolloTOC.h"
 #import "ApolloIM-PrivateAccess.h"
 #import "ApolloNotificationController.h"
+#import "PreferenceController.h"
 
 enum { 
 	ACCOUNT_VIEW		=	1,
@@ -48,7 +49,8 @@ extern UIApplication *UIApp;
 								rect.origin.y, 
 								rect.size.width, 
 								rect.size.height-menu_height);
-	
+		NSLog(@"!!!!!!!!!!!!!!!!!!!!!!!!!!!!Loading Preferences...");
+		[[PreferenceController sharedInstance]read];	
 		NSLog(@"StartView.m>>  Init startview...");
 
 		_navBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, 50.0f)];
@@ -74,7 +76,9 @@ extern UIApplication *UIApp;
 		_transitionView = [[UITransitionView alloc] initWithFrame: 
 			CGRectMake(rect.origin.x, menu_height, rect.size.width, rect.size.height - menu_height)
 		];
-	
+
+
+
 //		NSLog(@"StartView.m>>  Starting navbar...");
         [self addSubview: _navBar];
 

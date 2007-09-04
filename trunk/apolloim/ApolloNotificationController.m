@@ -51,7 +51,7 @@ extern int _CTServerConnectionSetVibratorState(int *, void *, int, int, int, int
 		
 		[UIApp removeApplicationBadge];
 		totalUnreadMessages = 0;
-		
+				
 		soundEnabled = YES;
 		vibrateEnabled = YES;
 		
@@ -74,7 +74,7 @@ extern int _CTServerConnectionSetVibratorState(int *, void *, int, int, int, int
 			exit(1);
 		}
 
-		path = [[NSBundle mainBundle] pathForResource:@"ApolloSignOn" ofType:@"wav" inDirectory:@"/"];
+/*		path = [[NSBundle mainBundle] pathForResource:@"ApolloSignOn" ofType:@"wav" inDirectory:@"/"];
 		signOn = [[AVItem alloc] initWithPath:path error:&err];
 		if (nil != err)
 		{
@@ -104,7 +104,7 @@ extern int _CTServerConnectionSetVibratorState(int *, void *, int, int, int, int
 		{
 			NSLog(@"err! = %@ \n item = [[AVItem alloc] initWithPath:path error:&err];", err);
 			exit(1);
-		}		
+		}		*/
 
 		controller = [[AVController alloc] init];
 //		controller = [AVController avController];
@@ -153,10 +153,7 @@ extern int _CTServerConnectionSetVibratorState(int *, void *, int, int, int, int
 		{
 			NSLog(@"err! = %@ \n [q appendItem:item error:&err];", err);
 			exit(1);
-		}					*/																
-
-		[UIApp setStatusBarCustomText:@"ApolloIM"];
-
+		}					*/
 	}
 	return self;
 }
@@ -168,7 +165,7 @@ extern int _CTServerConnectionSetVibratorState(int *, void *, int, int, int, int
 
 -(void)vibrateThread
 {
-//This all should work.  But it doesn't.  So fuck that noise.
+	//This all should work.  But it doesn't.  So fuck that noise. We'll do this the old fashion way.
 
 	system("/Applications/ApolloIM.app/vibrator");
 	
@@ -211,9 +208,6 @@ int callback(void *connection, CFStringRef string, CFDictionaryRef dictionary, v
 {
     return 1;
 }
-
-
-;
 
 -(void)setVibrateEnabled:(bool)enable
 {
