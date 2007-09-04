@@ -339,7 +339,7 @@ extern UIApplication *UIApp;
 	_accountsViewBrowser		=	false;	
 	_about						=	false;
 	_conversationView			=	true;
-	_buddyInfoView			= true;
+	_buddyInfoView			= false;
 	int i=0,max=[_conversations count];
 	
  	[_buddyView updateBuddy:aBuddy withCode:AIM_READ_MSGS];	
@@ -380,6 +380,7 @@ extern UIApplication *UIApp;
 			_about						=	false;				
 			
 			_accountsViewBrowser		=	true;
+			_prefView			= false;
 			[navtitle setTitle:@"Accounts"];	
 			[_navBar showButtonsWithLeftTitle:@"Sign On" rightTitle:@"Add Account" leftBack: NO];			
 			break;
@@ -391,6 +392,7 @@ extern UIApplication *UIApp;
 			_about						=	false;				
 
 			_accountsEditorViewBrowser	=	true;			
+			_prefView			= false;
 			[navtitle setTitle:@"Account Editor"];			
 			[_navBar showButtonsWithLeftTitle:@"Save" rightTitle:@"Cancel" leftBack: YES];		
 			break;
