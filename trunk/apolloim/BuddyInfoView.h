@@ -1,6 +1,6 @@
 /*
  ApolloTOC.m: Objective-C firetalk interface.
- By Alex C. Schaefer
+ By Adam Bellmore
 
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -17,11 +17,29 @@
  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <UIKit/UITransitionView.h>
+#import <UIKit/UIScroller.h>
+#import <UIKit/UITextView.h>
+#import "Buddy.h"
 
+@interface BuddyInfoView : UIScroller 
+{
+	Buddy * buddy;
+	CGRect _rect;
 
-@interface BuddyInfo : NSObject {
+	UITextLabel * buddy_name_label;
+	UITextLabel * idle_time_label;
+	UITextLabel * status_label;
+	UITextLabel * info_label;
 
+	UITextView * info_text;
 }
+
+- (id)initWithFrame:(struct CGRect)frame withBuddy:(Buddy*)aBuddy andDelegate:(id)delegate;
+- (void)dealloc;
+- (void) reloadData;
+- (Buddy *) buddy;
 
 @end

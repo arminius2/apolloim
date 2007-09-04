@@ -67,6 +67,7 @@ extern UIApplication *UIApp;
 		_buddyView		= [[BuddyView alloc]initWithFrame:rect];
 		[_buddyView		setDelegate:self];
 		_conversations	= [[NSMutableArray alloc]init];		
+		buddyinfos	= [[NSMutableArray alloc]init];		
 //		_aboutView		= [[AboutView alloc]initWithFrame:rect];
 		
 //		NSLog(@"StartView.m>>  Transition view...");
@@ -203,7 +204,7 @@ extern UIApplication *UIApp;
 				break;			
 			case AIM_BUDDY_INFO:
 				NSLog(@"Getting info from %@ that says '%@'",[[payload objectAtIndex:1]name],[[payload objectAtIndex:1]info]);
-				[self receiveMessage:(NSString*)[[payload objectAtIndex:1]info] fromBuddy:(Buddy*)[payload objectAtIndex:1] isInfo:YES];				
+				[self receiveInfo:(NSString*)[[payload objectAtIndex:1]info] fromBuddy:(Buddy*)[payload objectAtIndex:1] isInfo:YES];				
 				break;
 			default:
 			NSLog(@"StartView>> Event -- %d", [[NSString stringWithString:[payload objectAtIndex:0]]intValue]);
@@ -222,6 +223,26 @@ extern UIApplication *UIApp;
 - (void)closeActiveKeyboard
 {
 	[currentConversation foldKeyboard];
+}
+
+- (void)receiveInfo:(NSString*)msg fromBuddy:(Buddy*)aBuddy isInfo:(BOOL)info
+{
+	int i=0,max=[buddyinfos count];
+	
+	BuddyInfoView * bi;
+	for(i=0; i<max; i++)
+	{
+		BuddyInfoView * biv = [buddyinfos objectAtIndex:i];
+		Buddy * b = [biv buddy];
+		if([[b properName] isEqualToString: [aBuddy properName]])
+		{
+			NSLog(@"Setting info: %@", msg);
+			[b setInfo:msg];
+			[biv reloadData];
+			return;
+		}
+ 	}
+
 }
 
 - (void)receiveMessage:(NSString*)msg fromBuddy:(Buddy*)aBuddy isInfo:(BOOL)info
@@ -265,6 +286,43 @@ extern UIApplication *UIApp;
 	[_conversations addObject:convo];	
 }
 
+- (void)switchToBuddyInfo:(Buddy*)aBuddy
+{
+//	[lock lock];
+	[_navBar showButtonsWithLeftTitle:@"Back" rightTitle:nil leftBack: YES];				
+	_accountsEditorViewBrowser	= false;
+	_buddyViewBrowser		= false;
+	_accountsViewBrowser		= false;	
+	_about				= false;
+	_conversationView		= false;
+	_buddyInfoView			= true;
+	int i=0,max=[buddyinfos count];
+	
+	[navtitle setTitle:@"Info"];			
+	NSLog(@"StartView> (Switch) Switching to Buddy Info");
+	for(i=0; i<max; i++)
+	{
+		if([[[[buddyinfos objectAtIndex:i]buddy]properName]isEqualToString:[aBuddy properName]])
+		{
+			NSLog(@"StartView> Going to existing info with... %@", [aBuddy name]);		
+			//[lock unlock];
+ 			[_buddyView updateBuddy:aBuddy withCode:AIM_READ_MSGS];	
+			currentBuddyInfo = [buddyinfos objectAtIndex:i];
+			[currentBuddyInfo reloadData];
+			[_transitionView transition:2 toView:currentBuddyInfo];
+			return;
+		}
+ 	}
+
+	NSLog(@"StartView> (Switch) Creating new buddy info... %@", [aBuddy name]);
+	BuddyInfoView * biv = [[BuddyInfoView alloc]initWithFrame:sub_views_rect withBuddy:aBuddy andDelegate:self];
+	[buddyinfos addObject:biv];
+	currentBuddyInfo = biv;
+ 	[_buddyView updateBuddy:aBuddy withCode:AIM_READ_MSGS];	
+	[currentBuddyInfo reloadData];
+	[_transitionView transition:2 toView:currentBuddyInfo];			
+}
+
 - (void)switchToConvo:(Buddy*)aBuddy
 {
 //	[lock lock];
@@ -275,6 +333,7 @@ extern UIApplication *UIApp;
 	_accountsViewBrowser		=	false;	
 	_about						=	false;
 	_conversationView			=	true;
+	_buddyInfoView			= true;
 	int i=0,max=[_conversations count];
 	
  	[_buddyView updateBuddy:aBuddy withCode:AIM_READ_MSGS];	
@@ -456,6 +515,13 @@ extern UIApplication *UIApp;
 				[self makeACoolMoveTo:BUDDY_VIEW];
 				return;
 			}
+			if(_buddyView)
+			{
+				NSLog(@"StartView>> Left -- BUDDY_INFO_VEW -- BuddyInfo");	
+				[[ApolloTOC sharedInstance] getInfo:currentConversationBuddy];
+				[self switchToConvo:currentConversationBuddy];
+				return;
+			}
 			break;
 		case 0:	
 			if (_buddyViewBrowser)
@@ -484,6 +550,7 @@ extern UIApplication *UIApp;
 			{
 				NSLog(@"StartView>> RIGHT -- CONVERSATION_VEW -- BuddyInfo");	
 				[[ApolloTOC sharedInstance] getInfo:currentConversationBuddy];
+				[self switchToBuddyInfo:currentConversationBuddy];
 				return;
 			}
 			break;

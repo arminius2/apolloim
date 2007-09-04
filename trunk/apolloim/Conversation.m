@@ -189,7 +189,7 @@
 	
 	- (void)recvInfo:(NSString*)info
 	{
-		[convoView appendToConversation:[sendField info] fromUser:nil];	
+		[convoView appendToConversation:sendField fromUser:nil];	
 	}
 	
 	- (Buddy*)buddy

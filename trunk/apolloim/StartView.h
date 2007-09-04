@@ -32,6 +32,7 @@
 #import "ApolloTOC.h"
 #import "Shimmer.h"
 #import "ApolloNotificationController.h"
+#import "BuddyInfoView.h"
 
 @interface StartView : UIView 
 {
@@ -52,8 +53,10 @@
 	Acct				*active;
 	
 	NSMutableArray		*_conversations;
+	NSMutableArray		* buddyinfos;
 	Buddy				*currentConversationBuddy;
 	Conversation		*currentConversation;
+	BuddyInfoView		*currentBuddyInfo;
 		
 	NSString			*prefFile;
 
@@ -62,13 +65,16 @@
 	bool				_buddyViewBrowser;
 	bool				_conversationView;
 	bool				_about;			
+	bool 				_buddyInfoView;
 }
 
 - (void)navigationBar:(UINavigationBar *)navbar buttonClicked:(int)button;
 - (id)initWithFrame:(CGRect)frame;
 - (void)imEvent:(NSMutableArray*)payload;
 - (void)populatePreferences;
+
 - (void)receiveMessage:(NSString*)msg fromBuddy:(Buddy*)aBuddy isInfo:(BOOL)info;
+- (void)receiveInfo:(NSString*)msg fromBuddy:(Buddy*)aBuddy isInfo:(BOOL)info;
 - (void)accountsView:(AccountsView *)acctView accountSelected:(Acct *)selectedAccount;
 - (void)makeACoolMoveTo:(int)target;
 - (void)checkForUpdates:(id)anObject;
