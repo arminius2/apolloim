@@ -61,6 +61,7 @@
                                                                         frame.origin.y+85,
                                                                         frame.size.width-15, 200)];
 		[info_text setTextSize: 12];
+		[info_text setEditable: NO];
 		[info_text setText: @"Sample Buddy Text"];
 
 		//[self addSubview: box];

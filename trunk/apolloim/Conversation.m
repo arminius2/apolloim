@@ -81,7 +81,8 @@
 			sendField = [[SendBox alloc] initWithFrame:CGRectMake(left_buf, 0.0f, 
 										send_text_width, send_view_height)];			
 			[sendField setBackgroundColor: CGColorCreate(colorSpace, lovelyShadeOfTransparent)];	
-			[sendField setDelegate: self];		
+			[sendField setDelegate: self];
+			[sendField becomeFirstResponder];
 
 			sendBtn = [[UIPushButton alloc] initWithTitle:@"" autosizesToFit:NO];
 			[sendBtn setFrame:CGRectMake(left_buf+send_text_width+left_buf, 0.0f, 
@@ -104,8 +105,8 @@
 			cell = [[UIImageAndTextTableCell alloc] init];
 			[cell setFrame:send_rect_orig];
 			[cell addSubview:send_bg];
-			[cell addSubview:sendField];
 			[cell addSubview:sendBtn];
+			[cell addSubview:sendField];
 										
 			//_msgBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(_rect.origin.x, 380.0f, _rect.size.width, 30.0f)];
 			//[_msgBar setDelegate: self];

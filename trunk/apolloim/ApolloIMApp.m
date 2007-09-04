@@ -25,6 +25,8 @@
 @implementation ApolloIMApp
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+
+
 	NSLog(@"ApolloIMApp.m>> Loading..");
 	struct CGRect rect	=	[UIHardware fullScreenApplicationContentRect];
 	rect.origin.x		=	rect.origin.y = 0.0f;
@@ -71,7 +73,8 @@
 - (void)applicationResume:(struct __GSEvent *)event 
 {
 	NSLog(@"Resuming...");
-//	[[ApolloTOC sharedInstance]resumeApollo];	
+//	[[ApolloTOC sharedInstance]resumeApollo];
+	[startView resume];
 }
 
 - (BOOL)applicationIsReadyToSuspend

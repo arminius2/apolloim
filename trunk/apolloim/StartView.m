@@ -600,6 +600,17 @@ extern UIApplication *UIApp;
         [peeIn release];
 }
 
+-(void) resume
+{
+	if(_conversationView)
+	{
+		NSLog(@"StartView>> LEFT -- CONVERSATION_VEW -- BACK_TO_BUDDYLIST");	
+		[self makeACoolMoveTo:BUDDY_VIEW];
+		currentConversation = nil;
+		return;
+	}
+}
+
 
 - (void)dealloc {
 	[_navBar release];

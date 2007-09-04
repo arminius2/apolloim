@@ -83,6 +83,7 @@
 - (void)checkForUpdates:(id)anObject;
 - (void)closeActiveKeyboard;
 - (void)dealloc;
+-(void) resume;
 
 @end
 
