@@ -204,7 +204,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>FA5EE9630C8D1A0500A0B03F</string>
+						<string>FA5EE9680C8D1B4B00A0B03F</string>
 						<key>history</key>
 						<array>
 							<string>FA5EE9210C8D17C500A0B03F</string>
@@ -554,8 +554,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>FA5EE9260C8D17CA00A0B03F</string>
 		<string>/Users/alex/Desktop/apolloim/apolloim/ApolloIM.xcodeproj</string>
+		<string>FA5EE9260C8D17CA00A0B03F</string>
 	</array>
 	<key>WindowString</key>
 	<string>6 55 287 723 0 0 1280 778 </string>
