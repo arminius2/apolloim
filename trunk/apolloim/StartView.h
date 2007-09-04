@@ -33,6 +33,7 @@
 #import "Shimmer.h"
 #import "ApolloNotificationController.h"
 #import "BuddyInfoView.h"
+#import "PreferencesView.h"
 
 @interface StartView : UIView 
 {
@@ -57,6 +58,7 @@
 	Buddy				*currentConversationBuddy;
 	Conversation		*currentConversation;
 	BuddyInfoView		*currentBuddyInfo;
+	PreferencesView		*preferences;
 		
 	NSString			*prefFile;
 
@@ -66,6 +68,7 @@
 	bool				_conversationView;
 	bool				_about;			
 	bool 				_buddyInfoView;
+	bool				_prefView;
 }
 
 - (void)navigationBar:(UINavigationBar *)navbar buttonClicked:(int)button;

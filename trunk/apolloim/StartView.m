@@ -25,9 +25,10 @@
 enum { 
 	ACCOUNT_VIEW		=	1,
 	ACCOUNT_EDITOR_VIEW	=	2,
-	BUDDY_VIEW			=	3,
+	BUDDY_VIEW		=	3,
 	CONVERSATION		=   4,
-	ABOUT_VIEW			=	5
+	ABOUT_VIEW		=	5,
+	PREF_VIEW		= 6
 };
 
 static NSRecursiveLock *lock;
@@ -69,7 +70,8 @@ extern UIApplication *UIApp;
 		_buddyView		= [[BuddyView alloc]initWithFrame:rect];
 		[_buddyView		setDelegate:self];
 		_conversations	= [[NSMutableArray alloc]init];		
-		buddyinfos	= [[NSMutableArray alloc]init];		
+		buddyinfos	= [[NSMutableArray alloc]init];
+		preferences	= [[PreferencesView alloc] initWithFrame:sub_views_rect];
 //		_aboutView		= [[AboutView alloc]initWithFrame:rect];
 		
 //		NSLog(@"StartView.m>>  Transition view...");
@@ -400,9 +402,21 @@ extern UIApplication *UIApp;
 			_about						=	false;			
 
 			_buddyViewBrowser			=	true;
+			_prefView			= false;
 			[navtitle setTitle:@"Buddy List"];						
-			[_navBar showButtonsWithLeftTitle:@"Disconnect" rightTitle:nil /*@"Options"*/ leftBack: NO];				
-			break;		
+			[_navBar showButtonsWithLeftTitle:@"Disconnect" rightTitle:@"Options" leftBack: NO];				
+			break;
+		case PREF_VIEW:
+			[_transitionView transition:3 toView:preferences];
+			_accountsViewBrowser		=	false;
+			_accountsEditorViewBrowser	=	false;
+			_conversationView			=	false;			
+			_about						=	false;			
+			_buddyViewBrowser			=	false;
+			_prefView			= true;
+			[navtitle setTitle:@"Settings"];						
+			[_navBar showButtonsWithLeftTitle:@"Back" rightTitle:nil leftBack: NO];				
+			break;
 /*		case ABOUT_VIEW:
 			NSLog(@"About view...");
 			[_transitionView transition:3 toView:_aboutView];
@@ -519,11 +533,18 @@ extern UIApplication *UIApp;
 				[self makeACoolMoveTo:BUDDY_VIEW];
 				return;
 			}
-			if(_buddyView)
+			if(_buddyInfoView)
 			{
 				NSLog(@"StartView>> Left -- BUDDY_INFO_VEW -- BuddyInfo");	
 				[[ApolloTOC sharedInstance] getInfo:currentConversationBuddy];
 				[self switchToConvo:currentConversationBuddy];
+				return;
+			}
+			if(_prefView)
+			{
+				NSLog(@"StartView>> Left -- PREF_VIEW -- BuddyInfo");	
+				[preferences savePreferences];
+				[self makeACoolMoveTo:BUDDY_VIEW];						
 				return;
 			}
 			break;
@@ -531,7 +552,8 @@ extern UIApplication *UIApp;
 			if (_buddyViewBrowser)
 			{
 				NSLog(@"StartView>> RIGHT -- BUDDY_VIEW -- OPTIONS");		
-				[self makeACoolMoveTo:ABOUT_VIEW];						
+				[self makeACoolMoveTo:PREF_VIEW];						
+				return;
 			}		
 			if(_accountsViewBrowser)
 			{
