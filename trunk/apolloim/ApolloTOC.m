@@ -340,7 +340,12 @@ static NSRecursiveLock *lock;
 
 - (void)disconnect
 {    
-   
+    if (connected == ApolloTOC_DISCONNECTED)
+	{
+		NSLog(@"Can't disconnect if disconnected.");
+        return;
+	}
+    
     [lock lock];
     if (connected == ApolloTOC_CONNECTING)
 	{
@@ -349,19 +354,14 @@ static NSRecursiveLock *lock;
 	}
     else
     {
-		NSLog(@"Setting to disconnect.");
-        firetalk_disconnect(ft_aim_connection);
+		NSLog(@"Setting to disconnect.");	
 //        connected = ApolloTOC_DISCONNECTED;
+        firetalk_disconnect(ft_aim_connection);
 		[keepAlive invalidate];
-    }
-	
-    if (connected == ApolloTOC_DISCONNECTED)
-	{
-		NSLog(@"Can't disconnect if disconnected.");
-        return;
-	}	
+	}
     [lock unlock];
 }
+
 
 - (void)disconnected:(void *)ftConnection reason:(int)reason
 {
