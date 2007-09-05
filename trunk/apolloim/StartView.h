@@ -45,6 +45,7 @@
 	ApolloTOC			*conn;
 	bool				EDGE;
 	bool				okayToConnect;
+	bool				connected;
 	
 //	AboutView			*_aboutView;
 	AccountsView		*_accountsView;

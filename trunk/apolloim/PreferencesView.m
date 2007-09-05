@@ -90,7 +90,7 @@
 
  - (int)preferencesTable:(UIPreferencesTable *)aTable numberOfRowsInGroup:(int)group 
  {
-	   return 3;
+	   return 2;
  }
  - (UIPreferencesTableCell *)preferencesTable:(UIPreferencesTable *)aTable cellForGroup:(int)group 
  {
