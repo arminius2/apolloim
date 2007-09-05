@@ -289,7 +289,16 @@ extern UIApplication *UIApp;
 //	NSLog(@"StartView> (recv) Starting New Convo with... %@", [aBuddy name]);
 	Conversation* convo = [[Conversation alloc]initWithFrame:sub_views_rect withBuddy:aBuddy andDelegate:self];
 	[convo recvMessage:msg isStatusMessage:info];
-	[_conversations addObject:convo];	
+	[_conversations addObject:convo];
+	
+	
+	if([[PreferenceController sharedInstance]notify] && ![UIApp isSuspended])
+	{
+		NSArray* buttons = [NSArray arrayWithObjects:@"Okay",nil];
+		UIAlertSheet *recvMesg = [[UIAlertSheet alloc]initWithTitle:[aBuddy name] buttons:buttons defaultButtonIndex:1 delegate:self context:nil];
+		[recvMesg setBodyText:[PreferenceController removeHTML:[msg copy]]];
+		[recvMesg popupAlertAnimated: YES];	
+	}	
 }
 
 - (void)switchToBuddyInfo:(Buddy*)aBuddy

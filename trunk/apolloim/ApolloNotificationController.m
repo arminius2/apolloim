@@ -250,6 +250,8 @@ int callback(void *connection, CFStringRef string, CFDictionaryRef dictionary, v
 -(void)playRecvIm
 {
 	[self play:recvIm];
+	if(vibrateEnabled)
+		[self vibrateForDuration];	
 }
 
 -(void)receiveUnreadMessages:(int)msgCount  //should just do playRecvIm
@@ -305,8 +307,6 @@ int callback(void *connection, CFStringRef string, CFDictionaryRef dictionary, v
 			exit(1);
 		}
 	}
-	if(vibrateEnabled)
-		[self vibrateForDuration];
 }
 
 - (BOOL)respondsToSelector:(SEL)aSelector

@@ -34,6 +34,7 @@
 
 	UISwitchControl		*soundSwitch;	
 	UISwitchControl		*vibrateSwitch;	
+	UISwitchControl		*notifySwitch;		
 		
     	CGRect _rect;	
 	

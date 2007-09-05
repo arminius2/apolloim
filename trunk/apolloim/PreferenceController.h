@@ -24,15 +24,19 @@
 {
 	bool	vibrate;
 	bool	sound;	
+	bool	notify;
 }
 + (void)initialize;
 + (id)sharedInstance;
--(id)init;
++ (NSString*) removeHTML:(NSMutableString *) from;
 
+-(id)init;
 -(void)setSound:(bool)enable;
 -(BOOL)sound;
 -(void)setVibrate:(bool)enable;
 -(BOOL)vibrate;
+-(void)setNotify:(bool)enable;
+-(bool)notify;
 -(void)write;
 -(void)read;
 

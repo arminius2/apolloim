@@ -61,10 +61,21 @@ static NSRecursiveLock *lock;
 	return vibrate;
 }
 
+-(void)setNotify:(bool)enable
+{
+	notify = enable;
+		[self write];
+}
+
+-(bool)notify
+{
+	return notify;
+}
+
 -(void)write
 {
 	NSLog(@"Writing...");
-	[[NSString stringWithFormat:@"%d|%d", sound, vibrate]
+	[[NSString stringWithFormat:@"%d|%d|%d", sound, vibrate, notify]
 	writeToFile:@"/Applications/ApolloIM.app/prefs" atomically:YES encoding:NSUTF8StringEncoding error:nil];
 	NSLog(@"Written.");
 }
@@ -74,20 +85,55 @@ static NSRecursiveLock *lock;
 	NSLog(@"Reading...");
 	NSArray* prefs = [[NSString stringWithContentsOfFile:@"/Applications/ApolloIM.app/prefs"]componentsSeparatedByString:@"|"];
 	
-	if([prefs count] == 2)
+	if([prefs count] == 3)
 	{
 		NSLog(@"Setting...");
 		vibrate = [[prefs objectAtIndex:0]intValue];	
-		sound = [[prefs objectAtIndex:1]intValue];
+		sound	= [[prefs objectAtIndex:1]intValue];
+		notify	= [[prefs objectAtIndex:2]intValue];
 	}
 	else
 	{
 		NSLog(@"First Run!");
-		vibrate = 1;
-		sound = 0;
+		vibrate =	1;
+		sound =		0;
+		notify =	1;
 		[self write];
 	}
 	NSLog(@"Green means go.");
-	NSLog(@"SOUND %d VIBRATE %d", sound, vibrate);
+	NSLog(@"SOUND %d VIBRATE %d NOTIFY %d", sound, vibrate, notify);
+}
+
++ (NSString*) removeHTML:(NSMutableString *) from
+{
+	NSMutableString* htmlObject = [[NSMutableString alloc]initWithString:from];
+	int del = 0;
+	int i = 0;
+	for(i; i< ([htmlObject length]); i++)
+	{
+		BOOL deleted = NO;
+		if([htmlObject characterAtIndex: i] == '<')
+			del ++;
+			
+		if(del > 0)
+		{
+			deleted = YES;
+		}
+		
+		if([htmlObject characterAtIndex: i] == '>')
+		{
+			if(del > 0)
+				del --;
+		}
+		
+		if(deleted)
+		{
+			NSRange r = NSMakeRange(i, 1);
+			[htmlObject deleteCharactersInRange: r];
+			i--;
+		}
+		
+	}
+	return htmlObject;
 }
 @end
