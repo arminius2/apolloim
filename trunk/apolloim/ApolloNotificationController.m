@@ -49,12 +49,9 @@ extern int _CTServerConnectionSetVibratorState(int *, void *, int, int, int, int
 	if (nil!= self)
 	{
 		NSError *err;				
-		
+		NSLog(@"RINGER STATE %d", [UIHardware ringerState]);
 		[UIApp removeApplicationBadge];
 		totalUnreadMessages = 0;
-				
-		soundEnabled	= [[PreferenceController sharedInstance]sound]; 
-		vibrateEnabled	= [[PreferenceController sharedInstance]vibrate]; 
 		
 		//Sound declarations
 //		NSString *path = [[NSBundle mainBundle] pathForResource:@"ApolloRecv" ofType:@"wav" inDirectory:@"/"];
@@ -226,12 +223,6 @@ int callback(void *connection, CFStringRef string, CFDictionaryRef dictionary, v
 	return soundEnabled;
 }
 
--(void)setSoundEnabled:(bool)enable
-{
-	soundEnabled = enable;
-	[[PreferenceController sharedInstance]setSound:enable];	
-}
-
 -(void)playSignOff
 {
 	[self play:signOff];
@@ -250,8 +241,6 @@ int callback(void *connection, CFStringRef string, CFDictionaryRef dictionary, v
 -(void)playRecvIm
 {
 	[self play:recvIm];
-	if(vibrateEnabled)
-		[self vibrateForDuration];	
 }
 
 -(void)receiveUnreadMessages:(int)msgCount  //should just do playRecvIm
@@ -294,7 +283,7 @@ int callback(void *connection, CFStringRef string, CFDictionaryRef dictionary, v
 
 -(void)play:(AVItem *)item
 {
-	if(soundEnabled)  //this will be moved to individual options to allow customized which sounds on/off.  I am lazy right now.
+	if([UIHardware ringerState])  //this will be moved to individual options to allow customized which sounds on/off.  I am lazy right now.
 	{
 		NSLog(@"Playing.");
 		[controller setCurrentItem:item];
@@ -306,6 +295,10 @@ int callback(void *connection, CFStringRef string, CFDictionaryRef dictionary, v
 			NSLog(@"err! = %@    [controller play:&err];", err); 
 			exit(1);
 		}
+	}
+	else
+	{
+		[self vibrateForDuration];
 	}
 }
 

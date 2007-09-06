@@ -36,6 +36,7 @@ extern UIApplication *UIApp;
 - (BOOL)isSuspendingUnderLock;
 - (BOOL)applicationIsReadyToSuspend;
 - (BOOL) suspendRemainInMemory;
+- (void)ringerChanged:(int)fp8;
 //- (void)applicationDidResumeFromUnderLock;
 //- (void)applicationWillSuspendUnderLock;
 @end

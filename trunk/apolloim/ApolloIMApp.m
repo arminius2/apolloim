@@ -104,4 +104,9 @@
 	return YES;
 }
 
+- (void)ringerChanged:(int)fp8
+{
+	NSLog(@"RINGER CHANGED %d", fp8);
+}
+
 @end

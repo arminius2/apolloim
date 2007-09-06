@@ -92,27 +92,6 @@ extern UIApplication *UIApp;
 		prefFile = [[NSString alloc]initWithString:@"/var/root/Library/Preferences/ApolloIM_Version(.1)"];	
 		[self populatePreferences];	
 		_rect = rect;
-		EDGE=NO;
-
-		
-		if([[NetworkController sharedInstance]isNetworkUp])
-		{
-			NSLog(@"NetworkController>> Network is up.");
-			NSLog(@"NetworkController>> This is a stub incase I need to do something else with network.  Like.  I don't know.  Something.");
-			EDGE = NO;
-		}
-		else
-		{
-			if(![[NetworkController sharedInstance]isEdgeUp])
-			{
-				sleep(5);
-				NSLog(@"StartView Init> But can you bring Edge up?");
-				[[NetworkController sharedInstance]bringUpEdge];
-				[[NetworkController sharedInstance]keepEdgeUp];				
-				NSLog(@"StartView Init> Edge has been broughtten!");		
-				EDGE = YES;
-			}
-		}		
 		
 		[NSThread detachNewThreadSelector:@selector(checkForUpdates:) toTarget:self withObject:self];
 		okayToConnect = YES;		
@@ -292,7 +271,7 @@ extern UIApplication *UIApp;
 	[_conversations addObject:convo];
 	
 	
-	if([[PreferenceController sharedInstance]notify] && ![UIApp isSuspended])
+	if(![UIApp isSuspended])
 	{
 		NSArray* buttons = [NSArray arrayWithObjects:@"Okay",nil];
 		UIAlertSheet *recvMesg = [[UIAlertSheet alloc]initWithTitle:[aBuddy name] buttons:buttons defaultButtonIndex:1 delegate:self context:nil];
@@ -415,9 +394,9 @@ extern UIApplication *UIApp;
 			_buddyViewBrowser			=	true;
 			_prefView			= false;
 			[navtitle setTitle:@"Buddy List"];						
-			[_navBar showButtonsWithLeftTitle:@"Disconnect" rightTitle:@"Options" leftBack: NO];				
+			[_navBar showButtonsWithLeftTitle:@"Disconnect" rightTitle:nil leftBack: NO];				
 			break;
-		case PREF_VIEW:
+	/*	case PREF_VIEW:
 			[_transitionView transition:3 toView:preferences];
 			_accountsViewBrowser		=	false;
 			_accountsEditorViewBrowser	=	false;
@@ -427,7 +406,7 @@ extern UIApplication *UIApp;
 			_prefView			= true;
 			[navtitle setTitle:@"Settings"];						
 			[_navBar showButtonsWithLeftTitle:@"Back" rightTitle:nil leftBack: NO];				
-			break;
+			break;*/
 /*		case ABOUT_VIEW:
 			NSLog(@"About view...");
 			[_transitionView transition:3 toView:_aboutView];
@@ -455,6 +434,28 @@ extern UIApplication *UIApp;
 			if (_accountsViewBrowser) 
 			{
 //				NSLog(@"StartView>> LEFT -- ACCOUNT_VIEW -- SIGNON");
+				EDGE=NO;
+				
+				if([[NetworkController sharedInstance]isNetworkUp])
+				{
+					NSLog(@"NetworkController>> Network is up.");
+					NSLog(@"NetworkController>> This is a stub incase I need to do something else with network.  Like.  I don't know.  Something.");
+					EDGE = NO;
+				}
+				else
+				{
+					if(![[NetworkController sharedInstance]isEdgeUp])
+					{
+						sleep(5);
+						NSLog(@"StartView Init> But can you bring Edge up?");
+						[[NetworkController sharedInstance]bringUpEdge];
+						[[NetworkController sharedInstance]keepEdgeUp];				
+						NSLog(@"StartView Init> Edge has been broughtten!");		
+						EDGE = YES;
+					}
+				}		
+
+
 				if(okayToConnect)
 				{
 					active = [_accountsView getActive];
@@ -551,13 +552,13 @@ extern UIApplication *UIApp;
 				[self switchToConvo:currentConversationBuddy];
 				return;
 			}
-			if(_prefView)
+/*			if(_prefView)
 			{
 				NSLog(@"StartView>> Left -- PREF_VIEW -- BuddyInfo");	
 				[preferences savePreferences];
 				[self makeACoolMoveTo:BUDDY_VIEW];						
 				return;
-			}
+			}*/
 			break;
 		case 0:	
 			if (_buddyViewBrowser)

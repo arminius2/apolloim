@@ -60,11 +60,6 @@
 -(void)vibrateThread;			//These two functions go out to all the lonely ladies out there
 -(void)vibrateForDuration;
 
--(void)setSoundEnabled:(bool)enable;
--(BOOL)soundEnabled;
--(void)setVibrateEnabled:(bool)enable;
--(BOOL) vibrateEnabled;
-
 -(BOOL)respondsToSelector:(SEL)aSelector;
 -(void)stop;
 -(void)queueItemWasAdded:(id)fp8;

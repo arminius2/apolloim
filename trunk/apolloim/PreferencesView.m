@@ -54,13 +54,13 @@
 		_delegate = nil;
 
 		soundSwitch = [[UISwitchControl alloc]initWithFrame:CGRectMake(200.0f, 10.0f, 320.0f, 480.0f)];
-		[soundSwitch setValue:[[ApolloNotificationController sharedInstance]soundEnabled]];
+//		[soundSwitch setValue:[[ApolloNotificationController sharedInstance]soundEnabled]];
 		
 		vibrateSwitch = [[UISwitchControl alloc]initWithFrame:CGRectMake(200.0f, 10.0f, 320.0f, 480.0f)];
-		[vibrateSwitch setValue:[[ApolloNotificationController sharedInstance]vibrateEnabled]];			
+//		[vibrateSwitch setValue:[[ApolloNotificationController sharedInstance]vibrateEnabled]];			
 
 		notifySwitch = [[UISwitchControl alloc]initWithFrame:CGRectMake(200.0f, 10.0f, 320.0f, 480.0f)];
-		[notifySwitch setValue:[[PreferenceController sharedInstance]notify]];			
+//		[notifySwitch setValue:[[PreferenceController sharedInstance]notify]];			
 
                 CGColorSpaceRef colorShadow = CGColorSpaceCreateDeviceRGB();
                 float grayComponents[4] = {0.85, 0.85, 0.85, 1};
@@ -85,12 +85,12 @@
 
  - (int)numberOfGroupsInPreferencesTable:(UIPreferencesTable *)aTable 
  {
-	return 3;
+	return 2;
  }
 
  - (int)preferencesTable:(UIPreferencesTable *)aTable numberOfRowsInGroup:(int)group 
  {
-	   return 2;
+	   return 3;
  }
  - (UIPreferencesTableCell *)preferencesTable:(UIPreferencesTable *)aTable cellForGroup:(int)group 
  {
@@ -157,9 +157,8 @@
 
 - (void)savePreferences
 {
-	[[ApolloNotificationController sharedInstance]setSoundEnabled:[soundSwitch value]];
-	[[ApolloNotificationController sharedInstance]setVibrateEnabled:[vibrateSwitch value]];
-	[[PreferenceController sharedInstance]setNotify:[notifySwitch value]];
+//	[[ApolloNotificationController sharedInstance]setSoundEnabled:[soundSwitch value]];
+//	[[ApolloNotificationController sharedInstance]setVibrateEnabled:[vibrateSwitch value]];
 	NSLog(@"!!!!!!!!!!!!!!!Preferences Saved");
 }
 
