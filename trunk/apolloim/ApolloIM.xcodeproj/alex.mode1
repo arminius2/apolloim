@@ -185,48 +185,7 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>FAEED3300C90F8E200CDCEBC</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>ApolloCore.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>FAEED3310C90F8E200CDCEBC</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>ApolloCore.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>FAEEDBF10C9103C800CDCEBC</string>
-						<key>history</key>
-						<array>
-							<string>FAEED4760C90F9AF00CDCEBC</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {617, 604}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>666 133 617 645 0 0 1280 778 </string>
-			</dict>
-		</dict>
-	</array>
+	<array/>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -555,7 +514,6 @@
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>FAEEBDEA0C90D47500CDCEBC</string>
-		<string>FAEED3300C90F8E200CDCEBC</string>
 		<string>/Users/alex/Desktop/apolloim/apolloim_purple/ApolloIM.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
