@@ -1,5 +1,5 @@
 /*
- ApolloTOC.m: Objective-C firetalk interface.
+ StartView.h: Objective-C firetalk interface.
  By Alex C. Schaefer
 
  This program is free software; you can redistribute it and/or modify
@@ -29,7 +29,7 @@
 #import "AccountEditorView.h"
 #import "Buddy.h"
 #import "BuddyView.h"
-#import "ApolloTOC.h"
+#import "ApolloCore.h"
 #import "Shimmer.h"
 #import "ApolloNotificationController.h"
 #import "BuddyInfoView.h"
@@ -87,18 +87,4 @@
 -(void) resume;
 
 @end
-
-enum {
-	AIM_RECV_MESG		=	1,
-	AIM_BUDDY_ONLINE	=	2, 
-	AIM_BUDDY_OFFLINE	=	3, 
-	AIM_BUDDY_AWAY		=	4, 
-	AIM_BUDDY_UNAWAY	=	5,
-	AIM_BUDDY_IDLE		=	6,	
-	AIM_BUDDY_MSG_RECV	=   7,
-	AIM_CONNECTED		=   8,
-	AIM_DISCONNECTED	=	9,
-	AIM_READ_MSGS		=   10,
-	AIM_BUDDY_INFO		=	11	
-};
 

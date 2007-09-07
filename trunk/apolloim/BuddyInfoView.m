@@ -1,5 +1,5 @@
 /*
- ApolloTOC.m: Objective-C firetalk interface.
+ ApolloCore.m: Objective-C firetalk interface.
  By Adam Bellmore
 
  This program is free software; you can redistribute it and/or modify

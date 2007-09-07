@@ -1,5 +1,5 @@
 /*
- ApolloTOC.m: Objective-C firetalk interface.
+ ApolloCore.m: Objective-C firetalk interface.
  By Alex C. Schaefer
 
 	credit to mobile terminal

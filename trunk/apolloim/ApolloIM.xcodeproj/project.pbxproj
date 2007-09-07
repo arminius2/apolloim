@@ -41,20 +41,77 @@
 		FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ApolloNotificationController.m; sourceTree = "<group>"; };
 		FA60D6360C8CC18100A90DEE /* AcctTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcctTable.h; sourceTree = "<group>"; };
 		FA60D6370C8CC18100A90DEE /* AcctTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcctTable.m; sourceTree = "<group>"; };
-		FA60D7490C8CCF0A00A90DEE /* firetalk.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = firetalk.h; path = libfiretalk/firetalk.h; sourceTree = "<group>"; };
 		FA650F960C86789F007EAD2E /* SendBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendBox.h; sourceTree = "<group>"; };
 		FA650F970C86789F007EAD2E /* SendBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendBox.m; sourceTree = "<group>"; };
 		FA6776E80C7A6E7B00DEC8EF /* Conversation.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Conversation.h; sourceTree = "<group>"; };
 		FA6776E90C7A6E7B00DEC8EF /* Conversation.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Conversation.m; sourceTree = "<group>"; };
-		FAB97BAF0C75E1F9004956B5 /* ApolloIM-Callback.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "ApolloIM-Callback.h"; sourceTree = "<group>"; };
-		FAB97BB00C75E1F9004956B5 /* ApolloIM-Callback.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = "ApolloIM-Callback.m"; sourceTree = "<group>"; };
+		FAB97BAF0C75E1F9004956B5 /* ApolloIM-Callbacks.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "ApolloIM-Callbacks.h"; sourceTree = "<group>"; };
+		FAB97BB00C75E1F9004956B5 /* ApolloIM-Callbacks.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = "ApolloIM-Callbacks.m"; sourceTree = "<group>"; };
 		FAB97BB10C75E1F9004956B5 /* ApolloIM-PrivateAccess.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "ApolloIM-PrivateAccess.h"; sourceTree = "<group>"; };
-		FAB97BB20C75E1F9004956B5 /* ApolloTOC.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ApolloTOC.h; sourceTree = "<group>"; };
-		FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ApolloTOC.m; sourceTree = "<group>"; };
+		FAB97BB20C75E1F9004956B5 /* ApolloCore.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ApolloCore.h; sourceTree = "<group>"; };
+		FAB97BB30C75E1F9004956B5 /* ApolloCore.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ApolloCore.m; sourceTree = "<group>"; };
 		FADDECA50C74185B002AFA9D /* ShellKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellKeyboard.h; sourceTree = "<group>"; };
 		FADDECA60C74185B002AFA9D /* ShellKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShellKeyboard.m; sourceTree = "<group>"; };
 		FAE7F55B0C80DC3D005A2930 /* ConvoBox.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ConvoBox.h; sourceTree = "<group>"; };
 		FAE7F55C0C80DC3D005A2930 /* ConvoBox.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ConvoBox.m; sourceTree = "<group>"; };
+		FAEEBDA80C90D18800CDCEBC /* account.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = account.h; path = libpurple/account.h; sourceTree = "<group>"; };
+		FAEEBDA90C90D18800CDCEBC /* conversation.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = conversation.h; path = libpurple/conversation.h; sourceTree = "<group>"; };
+		FAEEBDAA0C90D18800CDCEBC /* core.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = core.h; path = libpurple/core.h; sourceTree = "<group>"; };
+		FAEEBDAB0C90D18800CDCEBC /* debug.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = debug.h; path = libpurple/debug.h; sourceTree = "<group>"; };
+		FAEEBDAC0C90D18800CDCEBC /* defines.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = defines.h; path = libpurple/defines.h; sourceTree = "<group>"; };
+		FAEEBDAD0C90D18800CDCEBC /* eventloop.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = eventloop.h; path = libpurple/eventloop.h; sourceTree = "<group>"; };
+		FAEEBDAE0C90D18800CDCEBC /* ft.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ft.h; path = libpurple/ft.h; sourceTree = "<group>"; };
+		FAEEBDAF0C90D18800CDCEBC /* log.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = log.h; path = libpurple/log.h; sourceTree = "<group>"; };
+		FAEEBDB00C90D18800CDCEBC /* notify.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = notify.h; path = libpurple/notify.h; sourceTree = "<group>"; };
+		FAEEBDB10C90D18800CDCEBC /* pounce.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = pounce.h; path = libpurple/pounce.h; sourceTree = "<group>"; };
+		FAEEBDB20C90D18800CDCEBC /* prefs.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = prefs.h; path = libpurple/prefs.h; sourceTree = "<group>"; };
+		FAEEBDB30C90D18800CDCEBC /* prpl.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = prpl.h; path = libpurple/prpl.h; sourceTree = "<group>"; };
+		FAEEBDB40C90D18800CDCEBC /* savedstatuses.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = savedstatuses.h; path = libpurple/savedstatuses.h; sourceTree = "<group>"; };
+		FAEEBDB50C90D18800CDCEBC /* sound.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = sound.h; path = libpurple/sound.h; sourceTree = "<group>"; };
+		FAEEBDB60C90D18800CDCEBC /* status.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = status.h; path = libpurple/status.h; sourceTree = "<group>"; };
+		FAEEBDB70C90D18800CDCEBC /* util.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = util.h; path = libpurple/util.h; sourceTree = "<group>"; };
+		FAEEBDB80C90D18800CDCEBC /* whiteboard.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = whiteboard.h; path = libpurple/whiteboard.h; sourceTree = "<group>"; };
+		FAEEBDFC0C90D5A400CDCEBC /* accountopt.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = accountopt.h; path = libpurple/accountopt.h; sourceTree = "<group>"; };
+		FAEEBDFD0C90D5A400CDCEBC /* blist.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = blist.h; path = libpurple/blist.h; sourceTree = "<group>"; };
+		FAEEBDFE0C90D5A400CDCEBC /* buddyicon.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = buddyicon.h; path = libpurple/buddyicon.h; sourceTree = "<group>"; };
+		FAEEBDFF0C90D5A400CDCEBC /* cipher.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = cipher.h; path = libpurple/cipher.h; sourceTree = "<group>"; };
+		FAEEBE000C90D5A400CDCEBC /* circbuffer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = circbuffer.h; path = libpurple/circbuffer.h; sourceTree = "<group>"; };
+		FAEEBE010C90D5A400CDCEBC /* cmds.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = cmds.h; path = libpurple/cmds.h; sourceTree = "<group>"; };
+		FAEEBE020C90D5A400CDCEBC /* connection.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = connection.h; path = libpurple/connection.h; sourceTree = "<group>"; };
+		FAEEBE030C90D5A400CDCEBC /* dbus-bindings.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "dbus-bindings.h"; path = "libpurple/dbus-bindings.h"; sourceTree = "<group>"; };
+		FAEEBE040C90D5A400CDCEBC /* dbus-define-api.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "dbus-define-api.h"; path = "libpurple/dbus-define-api.h"; sourceTree = "<group>"; };
+		FAEEBE050C90D5A400CDCEBC /* dbus-maybe.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "dbus-maybe.h"; path = "libpurple/dbus-maybe.h"; sourceTree = "<group>"; };
+		FAEEBE060C90D5A400CDCEBC /* dbus-purple.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "dbus-purple.h"; path = "libpurple/dbus-purple.h"; sourceTree = "<group>"; };
+		FAEEBE070C90D5A400CDCEBC /* dbus-server.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "dbus-server.h"; path = "libpurple/dbus-server.h"; sourceTree = "<group>"; };
+		FAEEBE080C90D5A400CDCEBC /* dbus-types.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "dbus-types.h"; path = "libpurple/dbus-types.h"; sourceTree = "<group>"; };
+		FAEEBE090C90D5A400CDCEBC /* dbus-useful.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "dbus-useful.h"; path = "libpurple/dbus-useful.h"; sourceTree = "<group>"; };
+		FAEEBE0A0C90D5A400CDCEBC /* desktopitem.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = desktopitem.h; path = libpurple/desktopitem.h; sourceTree = "<group>"; };
+		FAEEBE0B0C90D5A400CDCEBC /* dnsquery.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = dnsquery.h; path = libpurple/dnsquery.h; sourceTree = "<group>"; };
+		FAEEBE0C0C90D5A400CDCEBC /* dnssrv.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = dnssrv.h; path = libpurple/dnssrv.h; sourceTree = "<group>"; };
+		FAEEBE0D0C90D5A400CDCEBC /* gaim-compat.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "gaim-compat.h"; path = "libpurple/gaim-compat.h"; sourceTree = "<group>"; };
+		FAEEBE0F0C90D5A400CDCEBC /* idle.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = idle.h; path = libpurple/idle.h; sourceTree = "<group>"; };
+		FAEEBE100C90D5A400CDCEBC /* imgstore.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = imgstore.h; path = libpurple/imgstore.h; sourceTree = "<group>"; };
+		FAEEBE110C90D5A400CDCEBC /* internal.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = internal.h; path = libpurple/internal.h; sourceTree = "<group>"; };
+		FAEEBE120C90D5A400CDCEBC /* mime.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = mime.h; path = libpurple/mime.h; sourceTree = "<group>"; };
+		FAEEBE130C90D5A400CDCEBC /* nat-pmp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "nat-pmp.h"; path = "libpurple/nat-pmp.h"; sourceTree = "<group>"; };
+		FAEEBE140C90D5A400CDCEBC /* network.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = network.h; path = libpurple/network.h; sourceTree = "<group>"; };
+		FAEEBE150C90D5A400CDCEBC /* ntlm.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ntlm.h; path = libpurple/ntlm.h; sourceTree = "<group>"; };
+		FAEEBE160C90D5A400CDCEBC /* plugin.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = plugin.h; path = libpurple/plugin.h; sourceTree = "<group>"; };
+		FAEEBE170C90D5A400CDCEBC /* pluginpref.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = pluginpref.h; path = libpurple/pluginpref.h; sourceTree = "<group>"; };
+		FAEEBE180C90D5A400CDCEBC /* privacy.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = privacy.h; path = libpurple/privacy.h; sourceTree = "<group>"; };
+		FAEEBE190C90D5A400CDCEBC /* proxy.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = proxy.h; path = libpurple/proxy.h; sourceTree = "<group>"; };
+		FAEEBE1A0C90D5A400CDCEBC /* purple-client.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "purple-client.h"; path = "libpurple/purple-client.h"; sourceTree = "<group>"; };
+		FAEEBE1B0C90D5A400CDCEBC /* request.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = request.h; path = libpurple/request.h; sourceTree = "<group>"; };
+		FAEEBE1C0C90D5A400CDCEBC /* roomlist.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = roomlist.h; path = libpurple/roomlist.h; sourceTree = "<group>"; };
+		FAEEBE1D0C90D5A400CDCEBC /* server.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = server.h; path = libpurple/server.h; sourceTree = "<group>"; };
+		FAEEBE1E0C90D5A400CDCEBC /* signals.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = signals.h; path = libpurple/signals.h; sourceTree = "<group>"; };
+		FAEEBE1F0C90D5A400CDCEBC /* sslconn.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = sslconn.h; path = libpurple/sslconn.h; sourceTree = "<group>"; };
+		FAEEBE200C90D5A400CDCEBC /* stringref.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = stringref.h; path = libpurple/stringref.h; sourceTree = "<group>"; };
+		FAEEBE210C90D5A400CDCEBC /* stun.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = stun.h; path = libpurple/stun.h; sourceTree = "<group>"; };
+		FAEEBE220C90D5A400CDCEBC /* upnp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = upnp.h; path = libpurple/upnp.h; sourceTree = "<group>"; };
+		FAEEBE230C90D5A400CDCEBC /* value.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = value.h; path = libpurple/value.h; sourceTree = "<group>"; };
+		FAEEBE240C90D5A400CDCEBC /* version.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = version.h; path = libpurple/version.h; sourceTree = "<group>"; };
+		FAEEBE250C90D5A400CDCEBC /* xmlnode.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = xmlnode.h; path = libpurple/xmlnode.h; sourceTree = "<group>"; };
 		FAF55A570C89E9D70037FA4F /* AcctCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcctCell.h; sourceTree = "<group>"; };
 		FAF55A580C89E9D70037FA4F /* AcctCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcctCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +141,7 @@
 		29B97314FDCFA39411CA2CEA /* ApolloIM */ = {
 			isa = PBXGroup;
 			children = (
+				FAEEBDA70C90D17A00CDCEBC /* libpurple */,
 				FA2121320C73CBF300D6ABA1 /* AIM */,
 				D92591D70C6B431100BBDBBC /* Makefile */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -150,12 +208,11 @@
 		FA2121320C73CBF300D6ABA1 /* AIM */ = {
 			isa = PBXGroup;
 			children = (
-				FA60D7490C8CCF0A00A90DEE /* firetalk.h */,
-				FAB97BAF0C75E1F9004956B5 /* ApolloIM-Callback.h */,
-				FAB97BB00C75E1F9004956B5 /* ApolloIM-Callback.m */,
+				FAB97BAF0C75E1F9004956B5 /* ApolloIM-Callbacks.h */,
+				FAB97BB00C75E1F9004956B5 /* ApolloIM-Callbacks.m */,
 				FAB97BB10C75E1F9004956B5 /* ApolloIM-PrivateAccess.h */,
-				FAB97BB20C75E1F9004956B5 /* ApolloTOC.h */,
-				FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */,
+				FAB97BB20C75E1F9004956B5 /* ApolloCore.h */,
+				FAB97BB30C75E1F9004956B5 /* ApolloCore.m */,
 			);
 			name = AIM;
 			sourceTree = "<group>";
@@ -203,6 +260,71 @@
 				FA6776E90C7A6E7B00DEC8EF /* Conversation.m */,
 			);
 			name = "IM Window";
+			sourceTree = "<group>";
+		};
+		FAEEBDA70C90D17A00CDCEBC /* libpurple */ = {
+			isa = PBXGroup;
+			children = (
+				FAEEBDFC0C90D5A400CDCEBC /* accountopt.h */,
+				FAEEBDFD0C90D5A400CDCEBC /* blist.h */,
+				FAEEBDFE0C90D5A400CDCEBC /* buddyicon.h */,
+				FAEEBDFF0C90D5A400CDCEBC /* cipher.h */,
+				FAEEBE000C90D5A400CDCEBC /* circbuffer.h */,
+				FAEEBE010C90D5A400CDCEBC /* cmds.h */,
+				FAEEBE020C90D5A400CDCEBC /* connection.h */,
+				FAEEBE030C90D5A400CDCEBC /* dbus-bindings.h */,
+				FAEEBE040C90D5A400CDCEBC /* dbus-define-api.h */,
+				FAEEBE050C90D5A400CDCEBC /* dbus-maybe.h */,
+				FAEEBE060C90D5A400CDCEBC /* dbus-purple.h */,
+				FAEEBE070C90D5A400CDCEBC /* dbus-server.h */,
+				FAEEBE080C90D5A400CDCEBC /* dbus-types.h */,
+				FAEEBE090C90D5A400CDCEBC /* dbus-useful.h */,
+				FAEEBE0A0C90D5A400CDCEBC /* desktopitem.h */,
+				FAEEBE0B0C90D5A400CDCEBC /* dnsquery.h */,
+				FAEEBE0C0C90D5A400CDCEBC /* dnssrv.h */,
+				FAEEBE0D0C90D5A400CDCEBC /* gaim-compat.h */,
+				FAEEBE0F0C90D5A400CDCEBC /* idle.h */,
+				FAEEBE100C90D5A400CDCEBC /* imgstore.h */,
+				FAEEBE110C90D5A400CDCEBC /* internal.h */,
+				FAEEBE120C90D5A400CDCEBC /* mime.h */,
+				FAEEBE130C90D5A400CDCEBC /* nat-pmp.h */,
+				FAEEBE140C90D5A400CDCEBC /* network.h */,
+				FAEEBE150C90D5A400CDCEBC /* ntlm.h */,
+				FAEEBE160C90D5A400CDCEBC /* plugin.h */,
+				FAEEBE170C90D5A400CDCEBC /* pluginpref.h */,
+				FAEEBE180C90D5A400CDCEBC /* privacy.h */,
+				FAEEBE190C90D5A400CDCEBC /* proxy.h */,
+				FAEEBE1A0C90D5A400CDCEBC /* purple-client.h */,
+				FAEEBE1B0C90D5A400CDCEBC /* request.h */,
+				FAEEBE1C0C90D5A400CDCEBC /* roomlist.h */,
+				FAEEBE1D0C90D5A400CDCEBC /* server.h */,
+				FAEEBE1E0C90D5A400CDCEBC /* signals.h */,
+				FAEEBE1F0C90D5A400CDCEBC /* sslconn.h */,
+				FAEEBE200C90D5A400CDCEBC /* stringref.h */,
+				FAEEBE210C90D5A400CDCEBC /* stun.h */,
+				FAEEBE220C90D5A400CDCEBC /* upnp.h */,
+				FAEEBE230C90D5A400CDCEBC /* value.h */,
+				FAEEBE240C90D5A400CDCEBC /* version.h */,
+				FAEEBE250C90D5A400CDCEBC /* xmlnode.h */,
+				FAEEBDA80C90D18800CDCEBC /* account.h */,
+				FAEEBDA90C90D18800CDCEBC /* conversation.h */,
+				FAEEBDAA0C90D18800CDCEBC /* core.h */,
+				FAEEBDAB0C90D18800CDCEBC /* debug.h */,
+				FAEEBDAC0C90D18800CDCEBC /* defines.h */,
+				FAEEBDAD0C90D18800CDCEBC /* eventloop.h */,
+				FAEEBDAE0C90D18800CDCEBC /* ft.h */,
+				FAEEBDAF0C90D18800CDCEBC /* log.h */,
+				FAEEBDB00C90D18800CDCEBC /* notify.h */,
+				FAEEBDB10C90D18800CDCEBC /* pounce.h */,
+				FAEEBDB20C90D18800CDCEBC /* prefs.h */,
+				FAEEBDB30C90D18800CDCEBC /* prpl.h */,
+				FAEEBDB40C90D18800CDCEBC /* savedstatuses.h */,
+				FAEEBDB50C90D18800CDCEBC /* sound.h */,
+				FAEEBDB60C90D18800CDCEBC /* status.h */,
+				FAEEBDB70C90D18800CDCEBC /* util.h */,
+				FAEEBDB80C90D18800CDCEBC /* whiteboard.h */,
+			);
+			name = libpurple;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

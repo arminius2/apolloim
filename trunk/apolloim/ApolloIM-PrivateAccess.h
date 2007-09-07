@@ -1,5 +1,5 @@
 /*
- ApolloTOC.m: Objective-C firetalk interface.
+ ApolloCore.m: Objective-C firetalk interface.
  By Alex C. Schaefer
  Modification of BoomBot's objc/firetalk wrapper
 
@@ -18,15 +18,14 @@
  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#import "ApolloTOC.h"
+#import "ApolloCore.h"
 
 @interface ApolloTOC (PrivateMethods)
 
-- (void)registerFiretalkCallbacks;
-- (void)error:(int)code ftConnection:(void *)ftConnection;
-- (void)connectionSucessful:(void *)ftConnection;
-- (void)recievedMessage:(NSString*)message fromUser:(NSString*)user isAutomessage:(BOOL)automessage ftConnection:(void *)ftConnection;
-- (void)runloopCheck:(NSTimer*)timer;
-- (void)disconnected:(void *)ftConnection reason:(int)reason;
+- (void)registerCallbacks;
+- (void)error:(int)code;
+- (void)connectionSucessful;
+- (void)receivedMessage:(NSString*)message fromUser:(NSString*)user isAutomessage:(BOOL)automessage;
+//- (void)disconnected:(void *)ftConnection reason:(int)reason;
 
 @end

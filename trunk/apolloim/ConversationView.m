@@ -21,7 +21,7 @@
 #import <UIKit/UITextLabel.h>
 #import <UIKit/UITextView.h>
 #import <UIKit/UIBox.h>
-#import "ApolloTOC.h"
+#import "ApolloCore.h"
 #import "ApolloIM-PrivateAccess.h"
 
 @implementation ConversationView

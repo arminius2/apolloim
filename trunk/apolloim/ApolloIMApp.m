@@ -1,5 +1,5 @@
 /*
- ApolloTOC.m: Objective-C firetalk interface.
+ ApolloCore.m: Objective-C firetalk interface.
  By Alex C. Schaefer
 
  This program is free software; you can redistribute it and/or modify
@@ -18,7 +18,7 @@
 */
 #import "ApolloIMApp.h"
 #import "StartView.h"
-#import "ApolloTOC.h"
+#import "ApolloCore.h"
 #import "ApolloIM-PrivateAccess.h"
 #import <UIKit/UIBox.h>
 

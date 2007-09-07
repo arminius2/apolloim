@@ -1,5 +1,5 @@
 /*
- ApolloTOC.m: Objective-C firetalk interface.
+ ApolloCore.m: Objective-C firetalk interface.
  By Alex C. Schaefer
 
  This program is free software; you can redistribute it and/or modify
@@ -17,7 +17,7 @@
  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 #import "StartView.h"
-#import "ApolloTOC.h"
+#import "ApolloCore.h"
 #import "ApolloIM-PrivateAccess.h"
 #import "ApolloNotificationController.h"
 #import "PreferenceController.h"
@@ -29,6 +29,20 @@ enum {
 	CONVERSATION		=   4,
 	ABOUT_VIEW		=	5,
 	PREF_VIEW		= 6
+};
+
+enum {
+	AIM_RECV_MESG		=	1,
+	AIM_BUDDY_ONLINE	=	2, 
+	AIM_BUDDY_OFFLINE	=	3, 
+	AIM_BUDDY_AWAY		=	4, 
+	AIM_BUDDY_UNAWAY	=	5,
+	AIM_BUDDY_IDLE		=	6,	
+	AIM_BUDDY_MSG_RECV	=   7,
+	AIM_CONNECTED		=   8,
+	AIM_DISCONNECTED	=	9,
+	AIM_READ_MSGS		=   10,
+	AIM_BUDDY_INFO		=	11	
 };
 
 static NSRecursiveLock *lock;
