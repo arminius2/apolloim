@@ -1,0 +1,89 @@
+Index: PreferencesView.m
+===================================================================
+--- PreferencesView.m	(revision 74)
++++ PreferencesView.m	(working copy)
+@@ -58,6 +58,24 @@
+ 		
+ 		vibrateSwitch = [[UISwitchControl alloc]initWithFrame:CGRectMake(200.0f, 10.0f, 320.0f, 480.0f)];
+ 		[vibrateSwitch setValue:[[ApolloNotificationController sharedInstance]vibrateEnabled]];			
++
++                CGColorSpaceRef colorShadow = CGColorSpaceCreateDeviceRGB();
++                float grayComponents[4] = {0.85, 0.85, 0.85, 1};
++                CGSize size;
++                size.height = 1;
++                size.width = 1;
++
++                UITextLabel *text;
++                text  = [[UITextLabel alloc] initWithFrame:
++                    CGRectMake(15.0f, 10.0f, 160.0f, 20.0f)];
++                [ text setShadowColor: CGColorCreate(colorShadow, grayComponents)];
++                [ text setShadowOffset: size ];
++                [ text setText:@"Notification Options"];
++                [ text setBackgroundColor:
++                    CGColorCreate(colorSpace, transparentComponents)];
++               [ _table addSubview: text ];
++               [ text release ];
++
+ 	}
+ 	return self;
+ }
+@@ -69,7 +87,7 @@
+ 
+  - (int)preferencesTable:(UIPreferencesTable *)aTable numberOfRowsInGroup:(int)group 
+  {
+-	   return 1;
++	   return 2;
+  }
+  - (UIPreferencesTableCell *)preferencesTable:(UIPreferencesTable *)aTable cellForGroup:(int)group 
+  {
+@@ -81,32 +99,37 @@
+ {
+   	UIPreferencesTextTableCell * cell = [[UIPreferencesTextTableCell alloc] init];
+ 	[cell setEnabled:NO];
+-        if(group == 0) 
+-	{
+-		if(row == 0)
+-		{
++        switch (group) {
++	    case(0):
++                [ cell setValue:@"" ]; 
++                [ cell setDrawsBackground: NO ];
++                break;
++
++            case(1):
++                switch (row) {
++                    case(0):
+ 			[cell setTitle:			@"Enable Sound"];
+ 			[cell setEnabled:		YES];	
+-			[[cell textField]setEnabled:	false];				
++			[[cell textField]setEnabled:	false];	
+ 			[cell addSubview:		soundSwitch];
+-		}
+-	} 
+-	else 
+-	{
+-		if(row == 0)
+-		{
++			break;
++                    case(1):
+ 			[cell setTitle:			@"Enable Vibrate"];
+ 			[cell setEnabled:		YES];	
+-			[[cell textField]setEnabled:	false];				
++			[[cell textField]setEnabled:	false];	
+ 			[cell addSubview:		vibrateSwitch];
++			break;
+ 		}
++                break;
+ 	}
+          return [cell autorelease];  
+  }
+  
+  - (float)preferencesTable:(UIPreferencesTable *)aTable heightForRow:(int)row inGroup:(int)group withProposedHeight:(float)proposed 
+  {
+-         return proposed;
++     if (group == 0)
++         return 10;
++     return proposed;
+  }
+  - (BOOL)preferencesTable:(UIPreferencesTable *)aTable isLabelGroup:(int)group
+   {
