@@ -189,8 +189,6 @@ static NSRecursiveLock *lock;
     [lock lock];
     firetalk_im_send_message(ft_aim_connection, [user cString], [body cString], 0);
     [lock unlock];
-	
-	[[ApolloNotificationController sharedInstance]playSendIm];
 }
 
 - (void)buddyUpdate:(Buddy*)buddy withCode:(int)code
