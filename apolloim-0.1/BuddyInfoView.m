@@ -24,7 +24,7 @@
 
 - (id)initWithFrame:(struct CGRect)frame withBuddy:(Buddy*)aBuddy andDelegate:(id)delegate
 {
-	NSLog(@"Creating BuddyInfoView with dimensions(%f, %f, %f, %f)", frame.origin.x, frame.origin.y,
+	NSLog(@"Creating BuddynfoView with dimensions(%f, %f, %f, %f)", frame.origin.x, frame.origin.y,
 				frame.size.width, frame.size.height);
 	if ((self == [super initWithFrame: frame]) != nil) 
 	{
