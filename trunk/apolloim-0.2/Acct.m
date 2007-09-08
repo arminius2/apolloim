@@ -19,6 +19,18 @@
 
 #import "Acct.h"
 
+/*
+
+enum info for purple
+
+2007-09-08 14:22:08.033 ApolloIM[5961:d03] libpurple initialized.
+2007-09-08 14:22:08.035 ApolloIM[5961:d03] 0 -- AIM
+2007-09-08 14:22:08.037 ApolloIM[5961:d03] 1 -- ICQ
+2007-09-08 14:22:08.039 ApolloIM[5961:d03] 2 -- IRC
+2007-09-08 14:22:08.041 ApolloIM[5961:d03] 3 -- XMPP
+
+
+*/
 
 @implementation Acct
 
@@ -28,7 +40,7 @@
 		username	= [[NSString alloc]init]	;
 		password	= [[NSString alloc]init]	;
 		status		= [[NSString alloc]initWithString:@"Disconnected."];
-//		connection  = [[NSString alloc]init]	;
+		connection  = 0;//We only support AIM for now, and it will be enum'd to 0... 
 		enabled		= false;
 	}
 	return self;
@@ -55,13 +67,6 @@
 		[coder encodeObject: @"NO" forKey:@"enabled"];		
 }
 
--(void)setDebug
-{
-	[self setUsername:		@"BLANKMAN"]		;
-	[self setPassword:		@"BLANKPASS"]		;
-//	[self setConnection:	@"AIM"]				;
-	[self setStatus:		@"Disconnected."]	;
-}
 -(void)setUsername:(NSString*)pass
 {
 	username	=	[pass copy];
@@ -70,15 +75,23 @@
 {
 	password	=	[pass copy];
 }
+
 -(void)setStatus:(NSString*)pass
 {
 	status		=	[pass copy];
 }
-/*-(void)setConnection:(NSString*)pass
+
+-(void)setConnection:(int)conn;
 {
-	connection	=	[pass copy];
+	connection	=	conn;
 }
--(void)setExtServer:(NSString*)pass
+
+-(void)setConnected:(bool)pass
+{
+    connected = pass;
+}
+
+/*-(void)setExtServer:(NSString*)pass
 {
 	extServer	=	[pass copy];
 }*/
@@ -102,11 +115,16 @@
 {
 	return status;
 }
-/*-(NSString*)connection
+-(int)connection
 {
 	return connection;
 }
--(NSString*)extServer
+-(bool)connected
+{
+    return connected;
+}
+
+/*-(NSString*)extServer
 {
 	return extServer;
 }*/
