@@ -54,25 +54,25 @@ typedef enum {ApolloCORE_DISCONNECTED, ApolloCORE_CONNECTING, ApolloCORE_CONNECT
 	PurpleSavedStatus *status;
 }
 
-- (id)init:(Acct*)newAccount withDelegate:(id)delegate;
+- (id)initWithAccount:(Acct*)newAccount withDelegate:(id)delegate;
 
 - (void)registerCallbacks;
 
 - (BOOL)connectUsingAccount:(Acct*)account;
 - (void)disconnected:(NSString*)reason;
 - (void)error:(int)code;
-- (void)connectionSucessful;
+- (void)connectionSuccessful;
 
 - (BOOL)connected;
 - (void)disconnect;
 
-- (void)sendIM:(NSString*)body toUser:(NSString*)user;
+- (void)sendIM:(NSString*)body     toBuddy:(Buddy*)buddy;
 - (void)receivedMessage:(NSString*)message fromUser:(Buddy*)user;
 
 - (void)buddyUpdate:(Buddy*)buddy withCode:(int)code;
 
-- (NSString*) userName;
-- (Buddy*)you;
+- (NSString*) username;
+- (Acct*)thisAccount;
 - (void)getInfo:(Buddy*)aBuddy;
 
 //Specifically Purple

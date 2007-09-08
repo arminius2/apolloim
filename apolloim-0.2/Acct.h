@@ -25,28 +25,29 @@
 	NSString*	username;
 	NSString*	password;
 	NSString*	status;
-//	NSString*	connection;	
+	int        	connection;	
 //	NSString*	extServer;		//For jabber	
 	bool		enabled;
+	bool        connected;
 }
 
 -(void)setUsername:(NSString*)pass;
 -(void)setPassword:(NSString*)pass;
 -(void)setStatus:(NSString*)pass;
-//-(void)setConnection:(NSString*)pass;
+-(void)setConnection:(int)conn;
 -(void)setEnabled:(bool)pass;
+-(void)setConnected:(bool)pass;
 -(void)setEnabledString:(NSString*)pass;
 //-(void)setExtServer:(NSString*)pass;
 -(NSString*)username;
 -(NSString*)password;
 -(NSString*)status;
-//-(NSString*)connection;
+-(int)connection;
 //-(NSString*)extServer;
 -(bool)enabled;
+-(bool)connected;
 
 - (void) encodeWithCoder: (NSCoder *)coder;
 - (id) initWithCoder: (NSCoder *)coder;
-
--(void)setDebug;
 
 @end
