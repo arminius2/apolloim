@@ -136,6 +136,70 @@
 			sepNavWindowFrame = "{{40, 20}, {1103, 681}}";
 		};
 	};
+	FA1597820C93122900081E3F /* ApolloOscarService.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {529, 623}}";
+			sepNavSelRange = "{83, 0}";
+			sepNavVisRect = "{{0, 0}, {529, 623}}";
+			sepNavWindowFrame = "{{19, 21}, {568, 752}}";
+		};
+	};
+	FA1597830C93122900081E3F /* ApolloOscarService.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {939, 1232}}";
+			sepNavSelRange = "{3069, 0}";
+			sepNavVisRect = "{{0, 617}, {939, 601}}";
+			sepNavWindowFrame = "{{19, 43}, {978, 730}}";
+		};
+	};
+	FA1597840C93122900081E3F /* ApolloPurpleAccount.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {939, 601}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {939, 601}}";
+			sepNavWindowFrame = "{{42, 22}, {978, 730}}";
+		};
+	};
+	FA1597A60C93122900081E3F /* PurpleCommon.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {956, 608}}";
+			sepNavSelRange = "{1053, 0}";
+			sepNavVisRect = "{{0, 0}, {956, 608}}";
+			sepNavWindowFrame = "{{19, 36}, {995, 737}}";
+		};
+	};
+	FA1597AF0C93122900081E3F /* PurpleServices.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {650, 623}}";
+			sepNavSelRange = "{1086, 0}";
+			sepNavVisRect = "{{0, 0}, {529, 623}}";
+			sepNavWindowFrame = "{{508, 26}, {568, 752}}";
+		};
+	};
+	FA1597D60C9314BE00081E3F /* ApolloCore.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {939, 602}}";
+			sepNavSelRange = "{1066, 0}";
+			sepNavVisRect = "{{0, 1}, {939, 601}}";
+			sepNavWindowFrame = "{{19, 43}, {978, 730}}";
+		};
+	};
+	FA1597DA0C9314D300081E3F /* ApolloIM-Connection.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {939, 952}}";
+			sepNavSelRange = "{774, 0}";
+			sepNavVisRect = "{{0, 0}, {939, 601}}";
+			sepNavWindowFrame = "{{247, 48}, {978, 730}}";
+		};
+	};
+	FA1597DB0C9314D300081E3F /* ApolloIM-Connection.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {939, 601}}";
+			sepNavSelRange = "{220, 0}";
+			sepNavVisRect = "{{0, 0}, {939, 601}}";
+			sepNavWindowFrame = "{{42, 22}, {978, 730}}";
+		};
+	};
 	FA15D9960C7755BA002A6BD2 /* Buddy.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1239, 938}}";
@@ -461,46 +525,6 @@
 		modificationTime = 210050886.846268;
 		state = 1;
 	};
-	FAB97BAF0C75E1F9004956B5 /* ApolloIM-Callbacks.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1065, 812}}";
-			sepNavSelRange = "{1189, 0}";
-			sepNavVisRect = "{{0, 82}, {1065, 422}}";
-			sepNavWindowFrame = "{{160, 188}, {1104, 551}}";
-		};
-	};
-	FAB97BB00C75E1F9004956B5 /* ApolloIM-Callbacks.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1138, 3318}}";
-			sepNavSelRange = "{2218, 38}";
-			sepNavVisRect = "{{0, 668}, {1138, 578}}";
-			sepNavWindowFrame = "{{72, 71}, {1177, 707}}";
-		};
-	};
-	FAB97BB10C75E1F9004956B5 /* ApolloIM-PrivateAccess.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 552}}";
-			sepNavSelRange = "{874, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{50, 97}, {1103, 681}}";
-		};
-	};
-	FAB97BB20C75E1F9004956B5 /* ApolloCore.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 2128}}";
-			sepNavSelRange = "{2379, 0}";
-			sepNavVisRect = "{{0, 1019}, {1064, 552}}";
-			sepNavWindowFrame = "{{19, 92}, {1103, 681}}";
-		};
-	};
-	FAB97BB30C75E1F9004956B5 /* ApolloCore.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {902, 5082}}";
-			sepNavSelRange = "{923, 0}";
-			sepNavVisRect = "{{0, 0}, {578, 572}}";
-			sepNavWindowFrame = "{{666, 77}, {617, 701}}";
-		};
-	};
 	FADC9AE60C88E77F00294A90 /* firetalk.h */ = {
 		isa = PBXFileReference;
 		lastKnownFileType = file;
@@ -551,470 +575,6 @@
 			sepNavSelRange = "{1581, 0}";
 			sepNavVisRect = "{{0, 391}, {1172, 771}}";
 			sepNavWindowFrame = "{{50, 102}, {1211, 900}}";
-		};
-	};
-	FAEEBDA80C90D18800CDCEBC /* account.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 14056}}";
-			sepNavSelRange = "{1240, 0}";
-			sepNavVisRect = "{{0, 814}, {1064, 552}}";
-			sepNavWindowFrame = "{{394, 94}, {1103, 681}}";
-		};
-	};
-	FAEEBDA90C90D18800CDCEBC /* conversation.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 18228}}";
-			sepNavSelRange = "{232, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{19, 92}, {1103, 681}}";
-		};
-	};
-	FAEEBDAA0C90D18800CDCEBC /* core.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 2576}}";
-			sepNavSelRange = "{127, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{42, 71}, {1103, 681}}";
-		};
-	};
-	FAEEBDAB0C90D18800CDCEBC /* debug.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 2786}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{111, 8}, {1103, 681}}";
-		};
-	};
-	FAEEBDAC0C90D18800CDCEBC /* defines.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 552}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{19, 92}, {1103, 681}}";
-		};
-	};
-	FAEEBDAD0C90D18800CDCEBC /* eventloop.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 3038}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{111, 8}, {1103, 681}}";
-		};
-	};
-	FAEEBDAE0C90D18800CDCEBC /* ft.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 9002}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{19, 92}, {1103, 681}}";
-		};
-	};
-	FAEEBDAF0C90D18800CDCEBC /* log.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 7994}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{19, 92}, {1103, 681}}";
-		};
-	};
-	FAEEBDB00C90D18800CDCEBC /* notify.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 9814}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{111, 8}, {1103, 681}}";
-		};
-	};
-	FAEEBDB10C90D18800CDCEBC /* pounce.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 5320}}";
-			sepNavSelRange = "{706, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{88, 29}, {1103, 681}}";
-		};
-	};
-	FAEEBDB20C90D18800CDCEBC /* prefs.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 4648}}";
-			sepNavSelRange = "{567, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{111, 8}, {1103, 681}}";
-		};
-	};
-	FAEEBDB30C90D18800CDCEBC /* prpl.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 6804}}";
-			sepNavSelRange = "{648, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{65, 50}, {1103, 681}}";
-		};
-	};
-	FAEEBDB40C90D18800CDCEBC /* savedstatuses.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 6006}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{42, 71}, {1103, 681}}";
-		};
-	};
-	FAEEBDB50C90D18800CDCEBC /* sound.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 1960}}";
-			sepNavSelRange = "{988, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{111, 8}, {1103, 681}}";
-		};
-	};
-	FAEEBDB60C90D18800CDCEBC /* status.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 14252}}";
-			sepNavSelRange = "{1065, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{42, 71}, {1103, 681}}";
-		};
-	};
-	FAEEBDB70C90D18800CDCEBC /* util.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 16506}}";
-			sepNavSelRange = "{574, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{19, 92}, {1103, 681}}";
-		};
-	};
-	FAEEBDB80C90D18800CDCEBC /* whiteboard.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 3668}}";
-			sepNavSelRange = "{1442, 0}";
-			sepNavVisRect = "{{0, 325}, {1064, 552}}";
-			sepNavWindowFrame = "{{395, 48}, {1103, 681}}";
-		};
-	};
-	FAEEBDFC0C90D5A400CDCEBC /* accountopt.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 5362}}";
-			sepNavSelRange = "{62, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{88, 29}, {1103, 681}}";
-		};
-	};
-	FAEEBDFD0C90D5A400CDCEBC /* blist.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 13132}}";
-			sepNavSelRange = "{1147, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{111, 8}, {1103, 681}}";
-		};
-	};
-	FAEEBDFE0C90D5A400CDCEBC /* buddyicon.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 5390}}";
-			sepNavSelRange = "{227, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{19, 92}, {1103, 681}}";
-		};
-	};
-	FAEEBDFF0C90D5A400CDCEBC /* cipher.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 6314}}";
-			sepNavSelRange = "{56, 1}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{42, 71}, {1103, 681}}";
-		};
-	};
-	FAEEBE000C90D5A400CDCEBC /* circbuffer.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 1652}}";
-			sepNavSelRange = "{149, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{65, 50}, {1103, 681}}";
-		};
-	};
-	FAEEBE010C90D5A400CDCEBC /* cmds.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 2716}}";
-			sepNavSelRange = "{49, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{88, 29}, {1103, 681}}";
-		};
-	};
-	FAEEBE020C90D5A400CDCEBC /* connection.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 5236}}";
-			sepNavSelRange = "{40, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{111, 8}, {1103, 681}}";
-		};
-	};
-	FAEEBE030C90D5A400CDCEBC /* dbus-bindings.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 1596}}";
-			sepNavSelRange = "{79, 1}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{65, 50}, {1103, 681}}";
-		};
-	};
-	FAEEBE040C90D5A400CDCEBC /* dbus-define-api.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 552}}";
-			sepNavSelRange = "{112, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{88, 29}, {1103, 681}}";
-		};
-	};
-	FAEEBE050C90D5A400CDCEBC /* dbus-maybe.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 552}}";
-			sepNavSelRange = "{140, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{111, 8}, {1103, 681}}";
-		};
-	};
-	FAEEBE060C90D5A400CDCEBC /* dbus-purple.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 552}}";
-			sepNavSelRange = "{269, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{19, 92}, {1103, 681}}";
-		};
-	};
-	FAEEBE070C90D5A400CDCEBC /* dbus-server.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 2982}}";
-			sepNavSelRange = "{78, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{42, 71}, {1103, 681}}";
-		};
-	};
-	FAEEBE080C90D5A400CDCEBC /* dbus-types.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 1288}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{65, 50}, {1103, 681}}";
-		};
-	};
-	FAEEBE090C90D5A400CDCEBC /* dbus-useful.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 552}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{88, 29}, {1103, 681}}";
-		};
-	};
-	FAEEBE0A0C90D5A400CDCEBC /* desktopitem.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 2408}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{42, 71}, {1103, 681}}";
-		};
-	};
-	FAEEBE0B0C90D5A400CDCEBC /* dnsquery.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 2072}}";
-			sepNavSelRange = "{753, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{65, 50}, {1103, 681}}";
-		};
-	};
-	FAEEBE0C0C90D5A400CDCEBC /* dnssrv.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 910}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{88, 29}, {1103, 681}}";
-		};
-	};
-	FAEEBE0D0C90D5A400CDCEBC /* gaim-compat.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 32466}}";
-			sepNavSelRange = "{833, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{42, 71}, {1103, 681}}";
-		};
-	};
-	FAEEBE0F0C90D5A400CDCEBC /* idle.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 1428}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{65, 50}, {1103, 681}}";
-		};
-	};
-	FAEEBE100C90D5A400CDCEBC /* imgstore.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 2660}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{88, 29}, {1103, 681}}";
-		};
-	};
-	FAEEBE110C90D5A400CDCEBC /* internal.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 3094}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{111, 8}, {1103, 681}}";
-		};
-	};
-	FAEEBE120C90D5A400CDCEBC /* mime.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 3080}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{42, 71}, {1103, 681}}";
-		};
-	};
-	FAEEBE130C90D5A400CDCEBC /* nat-pmp.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 1078}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{65, 50}, {1103, 681}}";
-		};
-	};
-	FAEEBE140C90D5A400CDCEBC /* network.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 3122}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{88, 29}, {1103, 681}}";
-		};
-	};
-	FAEEBE150C90D5A400CDCEBC /* ntlm.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 1022}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{19, 92}, {1103, 681}}";
-		};
-	};
-	FAEEBE160C90D5A400CDCEBC /* plugin.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 9520}}";
-			sepNavSelRange = "{820, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{42, 71}, {1103, 681}}";
-		};
-	};
-	FAEEBE170C90D5A400CDCEBC /* pluginpref.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 3766}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{65, 50}, {1103, 681}}";
-		};
-	};
-	FAEEBE180C90D5A400CDCEBC /* privacy.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1250, 2716}}";
-			sepNavSelRange = "{962, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{19, 92}, {1103, 681}}";
-		};
-	};
-	FAEEBE190C90D5A400CDCEBC /* proxy.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 4214}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{42, 71}, {1103, 681}}";
-		};
-	};
-	FAEEBE1A0C90D5A400CDCEBC /* purple-client.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 552}}";
-			sepNavSelRange = "{193, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{88, 29}, {1103, 681}}";
-		};
-	};
-	FAEEBE1B0C90D5A400CDCEBC /* request.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 20692}}";
-			sepNavSelRange = "{504, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{111, 8}, {1103, 681}}";
-		};
-	};
-	FAEEBE1C0C90D5A400CDCEBC /* roomlist.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 4550}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{19, 92}, {1103, 681}}";
-		};
-	};
-	FAEEBE1D0C90D5A400CDCEBC /* server.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 1918}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{65, 50}, {1103, 681}}";
-		};
-	};
-	FAEEBE1E0C90D5A400CDCEBC /* signals.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 4886}}";
-			sepNavSelRange = "{1020, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{88, 29}, {1103, 681}}";
-		};
-	};
-	FAEEBE1F0C90D5A400CDCEBC /* sslconn.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 3486}}";
-			sepNavSelRange = "{1074, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{19, 92}, {1103, 681}}";
-		};
-	};
-	FAEEBE200C90D5A400CDCEBC /* stringref.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 1932}}";
-			sepNavSelRange = "{1088, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{65, 50}, {1103, 681}}";
-		};
-	};
-	FAEEBE210C90D5A400CDCEBC /* stun.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 1232}}";
-			sepNavSelRange = "{1009, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{88, 29}, {1103, 681}}";
-		};
-	};
-	FAEEBE220C90D5A400CDCEBC /* upnp.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 1848}}";
-			sepNavSelRange = "{194, 0}";
-			sepNavVisRect = "{{0, 384}, {1064, 552}}";
-			sepNavWindowFrame = "{{111, 8}, {1103, 681}}";
-		};
-	};
-	FAEEBE230C90D5A400CDCEBC /* value.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 7028}}";
-			sepNavSelRange = "{1046, 0}";
-			sepNavVisRect = "{{0, 63}, {1064, 552}}";
-			sepNavWindowFrame = "{{42, 71}, {1103, 681}}";
-		};
-	};
-	FAEEBE240C90D5A400CDCEBC /* version.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 812}}";
-			sepNavSelRange = "{1298, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{495, -36}, {1103, 681}}";
-		};
-	};
-	FAEEBE250C90D5A400CDCEBC /* xmlnode.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 3864}}";
-			sepNavSelRange = "{1067, 0}";
-			sepNavVisRect = "{{0, 0}, {1064, 552}}";
-			sepNavWindowFrame = "{{404, 45}, {1103, 681}}";
 		};
 	};
 	FAF55A570C89E9D70037FA4F /* AcctCell.h */ = {

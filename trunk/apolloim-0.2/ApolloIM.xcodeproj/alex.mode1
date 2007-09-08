@@ -257,7 +257,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
-								<string>FA2121320C73CBF300D6ABA1</string>
+								<string>FA1597810C93122900081E3F</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>FAB983CD0C76932F004956B5</string>
 								<string>FA15D9910C775579002A6BD2</string>
@@ -269,8 +269,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>3</integer>
-									<integer>2</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -375,9 +374,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>FAEEBDC30C90D2C300CDCEBC</string>
+				<string>FA1597B00C93123C00081E3F</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>FAEEBDC40C90D2C300CDCEBC</string>
+				<string>FA1597B10C93123C00081E3F</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -511,10 +510,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C530D57069F1CE1000CFCEE</string>
-		<string>1CD10A99069EF8BA00B06720</string>
-		<string>FAEEBDEA0C90D47500CDCEBC</string>
-		<string>/Users/alex/Desktop/apolloim/apolloim_purple/ApolloIM.xcodeproj</string>
+		<string>/Users/alex/Desktop/apolloim/apolloim-0.2/ApolloIM.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>6 55 287 723 0 0 1280 778 </string>

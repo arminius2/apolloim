@@ -26,6 +26,6 @@
 - (void)error:(int)code;
 - (void)connectionSucessful;
 - (void)receivedMessage:(NSString*)message fromUser:(NSString*)user isAutomessage:(BOOL)automessage;
-//- (void)disconnected:(void *)ftConnection reason:(int)reason;
+- (void)disconnected:(void *)ftConnection reason:(int)reason;
 
 @end
