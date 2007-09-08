@@ -185,6 +185,7 @@
 			[convoView appendToConversation:[sendField text] fromUser:nil isStatusMessage:NO];
 			[[ApolloTOC sharedInstance]sendIM:[sendField text] toUser:[buddy name]];
 			[sendField setText:@""];
+			[[ApolloNotificationController sharedInstance]playSendIm];			
 		}
 	}
 	
