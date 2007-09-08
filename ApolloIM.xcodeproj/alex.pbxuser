@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeTarget = D92591D10C6B42C700BBDBBC /* ApolloIM */;
+		addToTargets = (
+			D92591D10C6B42C700BBDBBC /* ApolloIM */,
+		);
+		breakpoints = (
+			FA2121440C73CC7800D6ABA1 /* MainView.m:21 */,
+			FA01BDE90C83D1AE00DCD30D /* ApolloTOC.m:165 */,
+			FAAC85730C851F4600E0D36B /* ShellKeyboard.m:12 */,
+			FADC9AE80C88E77F00294A90 /* firetalk.h:157 */,
+			FA60D4C40C8CB17300A90DEE /* ApolloIMApp.m:85 */,
+			FA74DFA50C904A4800294C68 /* AccountsView.m:122 */,
+		);
+		breakpointsGroup = FA211F930C73C20C00D6ABA1 /* XCBreakpointsBucket */;
+		codeSenseManager = FA211EC60C73B73200D6ABA1 /* Code sense */;
+		perUserDictionary = {
+			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA1AED706398EBD00589147" = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBreakpointsDataSource_BreakpointID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					210,
+					20,
+					110,
+					109,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBreakpointsDataSource_ActionID,
+					PBXBreakpointsDataSource_TypeID,
+					PBXBreakpointsDataSource_BreakpointID,
+					PBXBreakpointsDataSource_UseID,
+					PBXBreakpointsDataSource_LocationID,
+					PBXBreakpointsDataSource_ConditionID,
+					PBXBreakpointsDataSource_ContinueID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = 1;
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					10,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFindDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFindDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					120,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFindDataSource_MessageID,
+					PBXFindDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					200,
+					11,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 210815764;
+			PBXWorkspaceStateSaveDate = 210815764;
+		};
+		sourceControlManager = FA211EC50C73B73200D6ABA1 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1099, 583}}";
+			sepNavSelRange = "{221, 0}";
+			sepNavVisRect = "{{0, 0}, {1099, 583}}";
+			sepNavWindowFrame = "{{38, 264}, {1138, 712}}";
+		};
+	};
+	D90F56B90C6719EF007AE76B /* ApolloIMApp.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1136, 1400}}";
+			sepNavSelRange = "{2230, 0}";
+			sepNavVisRect = "{{0, 751}, {1136, 649}}";
+			sepNavWindowFrame = "{{521, 0}, {1175, 778}}";
+		};
+	};
+	D90F56BA0C6719EF007AE76B /* ApolloIMApp.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {711, 588}}";
+			sepNavSelRange = "{900, 0}";
+			sepNavVisRect = "{{0, 145}, {711, 429}}";
+			sepNavWindowFrame = "{{50, 220}, {750, 558}}";
+		};
+	};
+	D92591D10C6B42C700BBDBBC /* ApolloIM */ = {
+		activeExec = 0;
+	};
+	FA01BDE90C83D1AE00DCD30D /* ApolloTOC.m:165 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */;
+		functionName = "-listBuddies";
+		hitCount = 0;
+		lineNumber = 165;
+		modificationTime = 209965486.363201;
+		state = 1;
+	};
+	FA15D9960C7755BA002A6BD2 /* Buddy.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1239, 938}}";
+			sepNavSelRange = "{760, 0}";
+			sepNavVisRect = "{{0, 0}, {1239, 393}}";
+			sepNavWindowFrame = "{{50, 444}, {750, 558}}";
+		};
+	};
+	FA15D9970C7755BA002A6BD2 /* Buddy.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {860, 2730}}";
+			sepNavSelRange = "{1441, 0}";
+			sepNavVisRect = "{{0, 453}, {711, 429}}";
+			sepNavWindowFrame = "{{50, 220}, {750, 558}}";
+		};
+	};
+	FA211EC50C73B73200D6ABA1 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	FA211EC60C73B73200D6ABA1 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	FA211EF10C73B87D00D6ABA1 /* BuddyView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1155, 700}}";
+			sepNavSelRange = "{1163, 0}";
+			sepNavVisRect = "{{0, 127}, {1155, 477}}";
+			sepNavWindowFrame = "{{50, 172}, {1194, 606}}";
+		};
+	};
+	FA211EF20C73B87D00D6ABA1 /* BuddyView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1076, 3444}}";
+			sepNavSelRange = "{6409, 0}";
+			sepNavVisRect = "{{0, 2567}, {872, 649}}";
+			sepNavWindowFrame = "{{125, 0}, {911, 778}}";
+		};
+	};
+	FA211EF50C73B8A100D6ABA1 /* BuddyInfoView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {711, 644}}";
+			sepNavSelRange = "{0, 758}";
+			sepNavVisRect = "{{0, 0}, {711, 429}}";
+			sepNavWindowFrame = "{{50, 220}, {750, 558}}";
+		};
+	};
+	FA211EF60C73B8A100D6ABA1 /* BuddyInfoView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {711, 429}}";
+			sepNavSelRange = "{760, 0}";
+			sepNavVisRect = "{{0, 0}, {711, 429}}";
+			sepNavWindowFrame = "{{50, 444}, {750, 558}}";
+		};
+	};
+	FA211EFD0C73B8C400D6ABA1 /* AboutView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {711, 504}}";
+			sepNavSelRange = "{760, 0}";
+			sepNavVisRect = "{{0, 0}, {711, 429}}";
+			sepNavWindowFrame = "{{365, 372}, {750, 558}}";
+		};
+	};
+	FA211EFE0C73B8C400D6ABA1 /* AboutView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1155, 546}}";
+			sepNavSelRange = "{1037, 0}";
+			sepNavVisRect = "{{0, 0}, {1155, 477}}";
+			sepNavWindowFrame = "{{365, 218}, {889, 712}}";
+		};
+	};
+	FA211F010C73B8DD00D6ABA1 /* AccountsView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1239, 756}}";
+			sepNavSelRange = "{966, 0}";
+			sepNavVisRect = "{{0, 0}, {1239, 393}}";
+			sepNavWindowFrame = "{{612, 199}, {596, 579}}";
+		};
+	};
+	FA211F020C73B8DD00D6ABA1 /* AccountsView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1211, 2800}}";
+			sepNavSelRange = "{3383, 0}";
+			sepNavVisRect = "{{0, 1369}, {1211, 637}}";
+			sepNavWindowFrame = "{{305, 12}, {1250, 766}}";
+		};
+	};
+	FA211F050C73B90100D6ABA1 /* StartView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {711, 1456}}";
+			sepNavSelRange = "{2534, 0}";
+			sepNavVisRect = "{{0, 983}, {711, 429}}";
+			sepNavWindowFrame = "{{371, 220}, {750, 558}}";
+		};
+	};
+	FA211F060C73B90100D6ABA1 /* StartView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {956, 8820}}";
+			sepNavSelRange = "{16984, 0}";
+			sepNavVisRect = "{{0, 6631}, {886, 625}}";
+			sepNavWindowFrame = "{{183, 24}, {925, 754}}";
+		};
+	};
+	FA211F930C73C20C00D6ABA1 /* XCBreakpointsBucket */ = {
+		isa = XCBreakpointsBucket;
+		name = "Project Breakpoints";
+		objects = (
+			FA2121440C73CC7800D6ABA1 /* MainView.m:21 */,
+			FA01BDE90C83D1AE00DCD30D /* ApolloTOC.m:165 */,
+			FAAC85730C851F4600E0D36B /* ShellKeyboard.m:12 */,
+			FADC9AE80C88E77F00294A90 /* firetalk.h:157 */,
+			FA60D4C40C8CB17300A90DEE /* ApolloIMApp.m:85 */,
+			FA74DFA50C904A4800294C68 /* AccountsView.m:122 */,
+		);
+	};
+	FA2121350C73CC2000D6ABA1 /* MainView.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 30;
+		lastKnownFileType = sourcecode.c.objc;
+		name = MainView.m;
+		path = /Users/alex/IPHONEDEV/ApolloIM/MainView.m;
+		sourceTree = "<absolute>";
+	};
+	FA2121440C73CC7800D6ABA1 /* MainView.m:21 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = FA2121350C73CC2000D6ABA1 /* MainView.m */;
+		hitCount = 0;
+		lineNumber = 21;
+		modificationTime = 208915576.596891;
+		state = 1;
+	};
+	FA2125750C73E59200D6ABA1 /* AccountEditorView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {812, 1036}}";
+			sepNavSelRange = "{2051, 0}";
+			sepNavVisRect = "{{0, 607}, {711, 429}}";
+			sepNavWindowFrame = "{{50, 220}, {750, 558}}";
+		};
+	};
+	FA2125760C73E59200D6ABA1 /* AccountEditorView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1121, 3598}}";
+			sepNavSelRange = "{6895, 0}";
+			sepNavVisRect = "{{0, 2951}, {1121, 646}}";
+			sepNavWindowFrame = "{{279, 3}, {1160, 775}}";
+		};
+	};
+	FA2793CF0C8D2A840032E1C0 /* PreferencesView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {812, 770}}";
+			sepNavSelRange = "{1268, 0}";
+			sepNavVisRect = "{{0, 47}, {617, 571}}";
+			sepNavWindowFrame = "{{19, 73}, {656, 700}}";
+		};
+	};
+	FA2793D00C8D2A840032E1C0 /* PreferencesView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {812, 2324}}";
+			sepNavSelRange = "{2348, 0}";
+			sepNavVisRect = "{{0, 341}, {789, 564}}";
+			sepNavWindowFrame = "{{343, 85}, {828, 693}}";
+		};
+	};
+	FA5EE80E0C8D089100A0B03F /* PreferenceController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {617, 616}}";
+			sepNavSelRange = "{990, 0}";
+			sepNavVisRect = "{{0, 31}, {617, 571}}";
+			sepNavWindowFrame = "{{438, 78}, {656, 700}}";
+		};
+	};
+	FA5EE80F0C8D089100A0B03F /* PreferenceController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {782, 1960}}";
+			sepNavSelRange = "{1731, 49}";
+			sepNavVisRect = "{{0, 1247}, {695, 468}}";
+			sepNavWindowFrame = "{{341, 181}, {734, 597}}";
+		};
+	};
+	FA60D1360C8C7B4100A90DEE /* Acct.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {932, 742}}";
+			sepNavSelRange = "{795, 0}";
+			sepNavVisRect = "{{0, 0}, {932, 548}}";
+			sepNavWindowFrame = "{{551, 20}, {971, 677}}";
+		};
+	};
+	FA60D1370C8C7B4100A90DEE /* Acct.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {932, 1666}}";
+			sepNavSelRange = "{733, 0}";
+			sepNavVisRect = "{{0, 0}, {932, 548}}";
+			sepNavWindowFrame = "{{325, 101}, {971, 677}}";
+		};
+	};
+	FA60D2130C8C87E100A90DEE /* ConversationView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {932, 548}}";
+			sepNavSelRange = "{1084, 0}";
+			sepNavVisRect = "{{0, 0}, {932, 548}}";
+			sepNavWindowFrame = "{{19, 96}, {971, 677}}";
+		};
+	};
+	FA60D2140C8C87E100A90DEE /* ConversationView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1116, 3402}}";
+			sepNavSelRange = "{1940, 0}";
+			sepNavVisRect = "{{0, 683}, {1116, 649}}";
+			sepNavWindowFrame = "{{125, 0}, {1155, 778}}";
+		};
+	};
+	FA60D3080C8C9E4500A90DEE /* ApolloNotificationController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {724, 966}}";
+			sepNavSelRange = "{1715, 0}";
+			sepNavVisRect = "{{0, 317}, {724, 649}}";
+			sepNavWindowFrame = "{{401, -31}, {763, 778}}";
+		};
+	};
+	FA60D3090C8C9E4500A90DEE /* ApolloNotificationController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {854, 4508}}";
+			sepNavSelRange = "{6215, 0}";
+			sepNavVisRect = "{{0, 3859}, {717, 649}}";
+			sepNavWindowFrame = "{{411, 0}, {756, 778}}";
+		};
+	};
+	FA60D4C40C8CB17300A90DEE /* ApolloIMApp.m:85 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = D90F56B90C6719EF007AE76B /* ApolloIMApp.m */;
+		functionName = "-isSuspendingUnderLock";
+		hitCount = 0;
+		lineNumber = 85;
+		modificationTime = 210547059.889404;
+		state = 1;
+	};
+	FA60D6360C8CC18100A90DEE /* AcctTable.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {886, 625}}";
+			sepNavSelRange = "{239, 0}";
+			sepNavVisRect = "{{0, 0}, {886, 625}}";
+			sepNavWindowFrame = "{{19, 19}, {925, 754}}";
+		};
+	};
+	FA60D6370C8CC18100A90DEE /* AcctTable.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {886, 625}}";
+			sepNavSelRange = "{303, 0}";
+			sepNavVisRect = "{{0, 0}, {886, 625}}";
+			sepNavWindowFrame = "{{321, -243}, {925, 754}}";
+		};
+	};
+	FA60D7490C8CCF0A00A90DEE /* firetalk.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1160, 3920}}";
+			sepNavSelRange = "{2576, 11}";
+			sepNavVisRect = "{{0, 2619}, {778, 644}}";
+			sepNavWindowFrame = "{{178, 5}, {817, 773}}";
+		};
+	};
+	FA650F960C86789F007EAD2E /* SendBox.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {990, 649}}";
+			sepNavSelRange = "{336, 42}";
+			sepNavVisRect = "{{0, 0}, {990, 649}}";
+			sepNavWindowFrame = "{{533, 0}, {1029, 778}}";
+		};
+	};
+	FA650F970C86789F007EAD2E /* SendBox.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {990, 649}}";
+			sepNavSelRange = "{506, 175}";
+			sepNavVisRect = "{{0, 0}, {990, 649}}";
+			sepNavWindowFrame = "{{357, 0}, {1029, 778}}";
+		};
+	};
+	FA6776E80C7A6E7B00DEC8EF /* Conversation.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {711, 868}}";
+			sepNavSelRange = "{1436, 0}";
+			sepNavVisRect = "{{0, 398}, {711, 429}}";
+			sepNavWindowFrame = "{{50, 220}, {750, 558}}";
+		};
+	};
+	FA6776E90C7A6E7B00DEC8EF /* Conversation.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1136, 3038}}";
+			sepNavSelRange = "{6385, 0}";
+			sepNavVisRect = "{{0, 2358}, {1136, 649}}";
+			sepNavWindowFrame = "{{112, -7}, {1175, 778}}";
+		};
+	};
+	FA74DFA50C904A4800294C68 /* AccountsView.m:122 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = FA211F020C73B8DD00D6ABA1 /* AccountsView.m */;
+		functionName = "-table:cellForRow:column:";
+		hitCount = 0;
+		lineNumber = 122;
+		modificationTime = 210782792.19907;
+		state = 1;
+	};
+	FAAC85730C851F4600E0D36B /* ShellKeyboard.m:12 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = FADDECA60C74185B002AFA9D /* ShellKeyboard.m */;
+		hitCount = 0;
+		lineNumber = 12;
+		modificationTime = 210050886.846268;
+		state = 1;
+	};
+	FAB97BAF0C75E1F9004956B5 /* ApolloIM-Callback.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1065, 588}}";
+			sepNavSelRange = "{1706, 7}";
+			sepNavVisRect = "{{0, 166}, {1065, 422}}";
+			sepNavWindowFrame = "{{251, 227}, {1104, 551}}";
+		};
+	};
+	FAB97BB00C75E1F9004956B5 /* ApolloIM-Callback.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1148, 2478}}";
+			sepNavSelRange = "{4912, 0}";
+			sepNavVisRect = "{{0, 1538}, {1138, 578}}";
+			sepNavWindowFrame = "{{72, 71}, {1177, 707}}";
+		};
+	};
+	FAB97BB10C75E1F9004956B5 /* ApolloIM-PrivateAccess.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {824, 462}}";
+			sepNavSelRange = "{907, 0}";
+			sepNavVisRect = "{{0, 33}, {711, 429}}";
+			sepNavWindowFrame = "{{50, 220}, {750, 558}}";
+		};
+	};
+	FAB97BB20C75E1F9004956B5 /* ApolloTOC.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {662, 1050}}";
+			sepNavSelRange = "{918, 0}";
+			sepNavVisRect = "{{0, 0}, {548, 649}}";
+			sepNavWindowFrame = "{{209, 0}, {587, 778}}";
+		};
+	};
+	FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {902, 5684}}";
+			sepNavSelRange = "{6315, 0}";
+			sepNavVisRect = "{{0, 2723}, {724, 649}}";
+			sepNavWindowFrame = "{{481, 0}, {763, 778}}";
+		};
+	};
+	FADC9AE60C88E77F00294A90 /* firetalk.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = file;
+		name = firetalk.h;
+		path = /Users/alex/Desktop/apolloim/firetalk/firetalk.h;
+		sourceTree = "<group>";
+	};
+	FADC9AE80C88E77F00294A90 /* firetalk.h:157 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = FADC9AE60C88E77F00294A90 /* firetalk.h */;
+		hitCount = 0;
+		lineNumber = 157;
+		modificationTime = 210298751.177228;
+		state = 1;
+	};
+	FADDECA50C74185B002AFA9D /* ShellKeyboard.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {822, 632}}";
+			sepNavSelRange = "{1066, 0}";
+			sepNavVisRect = "{{0, 0}, {822, 632}}";
+			sepNavWindowFrame = "{{326, 17}, {861, 761}}";
+		};
+	};
+	FADDECA60C74185B002AFA9D /* ShellKeyboard.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {990, 1512}}";
+			sepNavSelRange = "{2364, 0}";
+			sepNavVisRect = "{{0, 600}, {990, 649}}";
+			sepNavWindowFrame = "{{134, 0}, {1029, 778}}";
+		};
+	};
+	FAE7F55B0C80DC3D005A2930 /* ConvoBox.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {711, 560}}";
+			sepNavSelRange = "{879, 0}";
+			sepNavVisRect = "{{0, 131}, {711, 429}}";
+			sepNavWindowFrame = "{{419, 348}, {750, 558}}";
+		};
+	};
+	FAE7F55C0C80DC3D005A2930 /* ConvoBox.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1172, 1554}}";
+			sepNavSelRange = "{1581, 0}";
+			sepNavVisRect = "{{0, 391}, {1172, 771}}";
+			sepNavWindowFrame = "{{50, 102}, {1211, 900}}";
+		};
+	};
+	FAF55A570C89E9D70037FA4F /* AcctCell.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {452, 316}}";
+			sepNavSelRange = "{284, 0}";
+			sepNavVisRect = "{{0, 0}, {452, 316}}";
+			sepNavWindowFrame = "{{432, 333}, {491, 445}}";
+		};
+	};
+	FAF55A580C89E9D70037FA4F /* AcctCell.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {831, 328}}";
+			sepNavSelRange = "{157, 0}";
+			sepNavVisRect = "{{0, 0}, {831, 328}}";
+			sepNavWindowFrame = "{{310, 307}, {870, 457}}";
+		};
+	};
+}

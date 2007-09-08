@@ -1,0 +1,36 @@
+FireDNS Library
+---------------
+(c) 2002 Ian Gulliver under the GNU Public License, Version 2.
+See GPL for more details.
+
+From libfiredns(3):
+
+libfiredns is a library for handling asynchronous DNS
+requests.  It provides a very simple interface for sending
+requests and parsing reponses, as well as low-timeout
+blocking functions.  It can also be compiled to override
+the BIND/LIBC functions with its alternative implementations.
+libfiredns functions have much lower timeouts than the stock
+functions and tend to be faster because they send requests
+to all configured system nameservers at the same time.
+
+To build the library, simply type:
+
+	make
+	(su to root)
+	make install
+
+The makefile accepts the following environment variables to
+change its behaviour:
+
+	PREFIX
+	INSTALL_USER
+	CC
+	CFLAGS
+	LDFLAGS
+	LIBS
+
+You may need to alter these for your individual configuration.
+
+Thats it.  If it doesn't work, I'm sorry.  Let me know; you
+can reach me at ian@penguinhosting.net.
