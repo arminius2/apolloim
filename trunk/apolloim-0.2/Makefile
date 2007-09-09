@@ -48,7 +48,7 @@ all:	prep ApolloIM package
 prep:
 		#Something should be done here to counteract the NSObject problems we keep having.
 	
-ApolloIM:	main.o ApolloIMApp.o StartView.o AccountsView.o AccountEditorView.o Acct.o  ApolloCore.o ApolloIM-Callbacks.o  BuddyView.o Buddy.o Conversation.o ConversationView.o ShellKeyboard.o Shimmer.o AboutView.o ApolloNotificationController.o SendBox.o AcctCell.o AcctTable.o PreferenceController.o BuddyInfoView.o PreferencesView.o ApolloIM-Connection.o
+ApolloIM:	main.o ApolloIMApp.o StartView.o AccountsView.o AccountEditorView.o Acct.o  ApolloCore.o  BuddyView.o Buddy.o Conversation.o ConversationView.o ShellKeyboard.o Shimmer.o AboutView.o ApolloNotificationController.o SendBox.o AcctCell.o AcctTable.o PreferenceController.o BuddyInfoView.o PreferencesView.o
 			$(LD) $(LDFLAGS) -o $@ $^	./PurpleSupport/lib/libintl.a ./PurpleSupport/lib/libiconv.a
 
 clean:

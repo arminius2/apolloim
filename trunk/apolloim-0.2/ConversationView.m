@@ -116,7 +116,7 @@
 		}
 		else
 		{
-			[username setText:[[[ApolloTOC sharedInstance]you]name]];
+			[username setText:[[[ApolloCore sharedInstance]you]name]];
 			[username setColor:CGColorCreate(colorSpace, self_color)];
 		}
 		

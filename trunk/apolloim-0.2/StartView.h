@@ -42,7 +42,7 @@
 	UINavigationItem 	*navtitle;
 	CGRect				_rect;	
 	CGRect				sub_views_rect;
-	ApolloTOC			*conn;
+
 	bool				EDGE;
 	bool				okayToConnect;
 	bool				connected;

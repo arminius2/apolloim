@@ -69,13 +69,13 @@
 	[startView closeActiveKeyboard];
 	[startView resume];
 	[[ApolloNotificationController sharedInstance] clearBadges];
-//	[[ApolloTOC sharedInstance]suspendApollo];
+//	[[ApolloCore sharedInstance]suspendApollo];
 }
 
 - (void)applicationResume:(struct __GSEvent *)event 
 {
 	NSLog(@"Resuming...");
-//	[[ApolloTOC sharedInstance]resumeApollo];
+//	[[ApolloCore sharedInstance]resumeApollo];
 	[startView resume];
 	[[ApolloNotificationController sharedInstance] clearBadges];
 }

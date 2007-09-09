@@ -183,7 +183,7 @@
 		if(![[sendField text]isEqualToString:@""])
 		{
 			[convoView appendToConversation:[sendField text] fromUser:nil isStatusMessage:NO];
-			[[ApolloTOC sharedInstance]sendIM:[sendField text] toUser:[buddy name]];
+			[[ApolloCore sharedInstance]sendIM:[sendField text] toUser:[buddy name]];
 			[sendField setText:@""];
 		}
 	}
@@ -205,7 +205,7 @@
 	- (void)navigationBar:(UINavigationBar *)navbar buttonClicked:(int)button 
 	{
 //		NSLog(@"Buddy Info.");
-//		[[ApolloTOC sharedInstance]getInfo:buddy];
+//		[[ApolloCore sharedInstance]getInfo:buddy];
 	}	
 	
 	-(void)dealloc

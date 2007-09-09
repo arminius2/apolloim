@@ -18,14 +18,3 @@
  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#import "ApolloCore.h"
-
-@interface ApolloTOC (PrivateMethods)
-
-- (void)registerCallbacks;
-- (void)error:(int)code;
-- (void)connectionSucessful;
-- (void)receivedMessage:(NSString*)message fromUser:(NSString*)user isAutomessage:(BOOL)automessage;
-- (void)disconnected:(void *)ftConnection reason:(int)reason;
-
-@end
