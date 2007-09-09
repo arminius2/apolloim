@@ -28,6 +28,7 @@ typedef enum {ApolloTOC_DISCONNECTED, ApolloTOC_CONNECTING, ApolloTOC_CONNECTED}
 @interface ApolloTOC : NSObject
 {
 	NSTimer* keepAlive;
+	NSTimer* runloopCheck;
 	
     BOOL willSendMarkup;
 	BOOL status;
