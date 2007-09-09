@@ -88,18 +88,3 @@
 -(void) resume;
 
 @end
-
-enum {
-	AIM_RECV_MESG		=	1,
-	AIM_BUDDY_ONLINE	=	2, 
-	AIM_BUDDY_OFFLINE	=	3, 
-	AIM_BUDDY_AWAY		=	4, 
-	AIM_BUDDY_UNAWAY	=	5,
-	AIM_BUDDY_IDLE		=	6,	
-	AIM_BUDDY_MSG_RECV	=   7,
-	AIM_CONNECTED		=   8,
-	AIM_DISCONNECTED	=	9,
-	AIM_READ_MSGS		=   10,
-	AIM_BUDDY_INFO		=	11	
-};
-

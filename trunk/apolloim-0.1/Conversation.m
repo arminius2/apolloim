@@ -124,7 +124,7 @@
 	}
 	
 	-(void)rollKeyboard
-	{	
+	{
 		if(_hidden)
 		{
 			[keyboard show:sendField withCell:cell forConvoBox:convoView];
@@ -202,6 +202,13 @@
 	{
 		return sendField;
 	}	
+	
+	- (void)switchToMe
+	{
+//		[self foldKeyboard];
+//		[convoView scrollToEnd];
+		[sendField becomeFirstResponder];
+	}
 	
 	- (void)navigationBar:(UINavigationBar *)navbar buttonClicked:(int)button 
 	{

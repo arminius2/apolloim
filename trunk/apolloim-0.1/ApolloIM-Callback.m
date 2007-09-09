@@ -141,6 +141,8 @@ void ft_callback_getinfo(void *c, void *cs, const char * const who, const char *
 		[buddy setInfo:[NSString stringWithCString:info]];
 		[[ApolloTOC sharedInstance] buddyUpdate:buddy withCode:AIM_BUDDY_INFO];			
 	}
+	else
+		[[ApolloTOC sharedInstance] keepAliveDecrement];
 }
 
 void ft_callback_buddytyping		(void *c, void *cs, const char * const who, const int typing)

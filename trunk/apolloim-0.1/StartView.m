@@ -21,15 +21,7 @@
 #import "ApolloIM-PrivateAccess.h"
 #import "ApolloNotificationController.h"
 #import "PreferenceController.h"
-
-enum { 
-	ACCOUNT_VIEW		=	1,
-	ACCOUNT_EDITOR_VIEW	=	2,
-	BUDDY_VIEW		=	3,
-	CONVERSATION		=   4,
-	ABOUT_VIEW		=	5,
-	PREF_VIEW		= 6
-};
+#import "Common.m" 
 
 static NSRecursiveLock *lock;
 extern UIApplication *UIApp;
@@ -207,7 +199,7 @@ extern UIApplication *UIApp;
 
 - (void)closeActiveKeyboard
 {
-	[currentConversation foldKeyboard];
+//	[currentConversation foldKeyboard];
 }
 
 - (bool)connected
@@ -345,7 +337,8 @@ extern UIApplication *UIApp;
 			NSLog(@"StartView> Going to existing Convo with... %@", [aBuddy name]);		
 			[lock unlock];
 			currentConversation = [_conversations objectAtIndex:i];
-			currentConversationBuddy = 	[[_conversations objectAtIndex:i]buddy];			
+			currentConversationBuddy = 	[[_conversations objectAtIndex:i]buddy];	
+			[currentConversation switchToMe];
 			[_transitionView transition:1 toView:[_conversations objectAtIndex:i]];
 			return;
 		}
@@ -617,13 +610,17 @@ extern UIApplication *UIApp;
 
 -(void) resume
 {
-	if(_conversationView)
+	[currentConversation foldKeyboard];
+	[self makeACoolMoveTo:BUDDY_VIEW];	
+	currentConversation = nil;
+//	[currentConversation switchToMe];
+/*	if(_conversationView)
 	{
 		NSLog(@"StartView>> LEFT -- CONVERSATION_VEW -- BACK_TO_BUDDYLIST");	
 		[self makeACoolMoveTo:BUDDY_VIEW];
 		currentConversation = nil;
 		return;
-	}
+	}*/
 }
 
 

@@ -21,6 +21,7 @@
 #import "ApolloTOC.h"
 #import "ApolloIM-PrivateAccess.h"
 #import <UIKit/UIBox.h>
+#import "Common.m"
 
 @implementation ApolloIMApp
 
@@ -45,7 +46,7 @@
 	[_window	makeKey:		self];
 	[_window	_setHidden:		NO];
 	
-    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(resetIdles) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(resetIdles) userInfo:nil repeats:YES];
 	/*
 	float x = 0.0f;
 	float y = 50.0f;
@@ -83,7 +84,7 @@
 	{
 //		[startView closeActiveKeyboard];
 //		[startView resume];
-//		[[ApolloNotificationController sharedInstance] clearBadges];
+		[[ApolloNotificationController sharedInstance] clearBadges];
 	}
 	else
 	{
@@ -98,7 +99,7 @@
 	NSLog(@"Removing Lock file...");
 	system("rm /tmp/SummerBoard.DisablePowerManagement");
 //	[[ApolloTOC sharedInstance]resumeApollo];
-//	[startView resume];
+	[startView resume];
 	[[ApolloNotificationController sharedInstance] clearBadges];
 }
 
@@ -114,8 +115,10 @@
 	NSLog(@"SUSPENDING UNDER LOCK");
 	return YES;
 }
+
 - (void)applicationDidResumeFromUnderLock
 {
+	[startView resume];
 	NSLog(@"Resuming from under lock...");
 		system("rm /tmp/SummerBoard.DisablePowerManagement");	
 }
@@ -129,7 +132,7 @@
 	}
 }
 
-- (void)applicationWillTerminate 
+- (void)applicationWillTerminate
 {	
 	[[ApolloNotificationController sharedInstance] clearBadges];
 	[self removeApplicationBadge];
@@ -141,6 +144,12 @@
 {
 	NSLog(@"SUSPEND REMAIN IN MEMORY");
 	return YES;
+}
+
+- (void)menuButtonDown:(struct __GSEvent *)fp8
+{
+//	[startView makeACoolMoveTo:BUDDY_VIEW];
+	
 }
 
 - (void)ringerChanged:(int)fp8

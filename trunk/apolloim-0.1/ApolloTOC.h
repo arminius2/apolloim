@@ -22,6 +22,7 @@
 #import "ApolloNotificationController.h"
 #import "libfiretalk/firetalk.h"
 #import "Buddy.h"
+#import "Common.m" 
 
 typedef enum {ApolloTOC_DISCONNECTED, ApolloTOC_CONNECTING, ApolloTOC_CONNECTED} ApolloTOCConnectionStatus;
 
@@ -38,6 +39,8 @@ typedef enum {ApolloTOC_DISCONNECTED, ApolloTOC_CONNECTING, ApolloTOC_CONNECTED}
 	NSMutableArray *connectionHandles;
 
 	Buddy *you;
+	
+	int keepAliveCount;
 	
     NSString *infoMessage;
 	
@@ -67,6 +70,7 @@ typedef enum {ApolloTOC_DISCONNECTED, ApolloTOC_CONNECTING, ApolloTOC_CONNECTED}
 - (Buddy*)you;
 - (void)getInfo:(Buddy*)aBuddy;
 - (void)keepAlive;
+- (void)keepAliveDecrement;
 
 
 @end

@@ -36,6 +36,7 @@ extern UIApplication *UIApp;
 - (void)applicationWillSuspendUnderLock;
 - (BOOL)isSuspendingUnderLock;
 - (BOOL)applicationIsReadyToSuspend;
+- (void)menuButtonDown:(struct __GSEvent *)fp8;
 - (BOOL) suspendRemainInMemory;
 - (void)ringerChanged:(int)fp8;
 //- (void)applicationDidResumeFromUnderLock;
