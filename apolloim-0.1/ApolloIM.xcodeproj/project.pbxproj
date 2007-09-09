@@ -52,6 +52,7 @@
 		FAB97BB10C75E1F9004956B5 /* ApolloIM-PrivateAccess.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "ApolloIM-PrivateAccess.h"; sourceTree = "<group>"; };
 		FAB97BB20C75E1F9004956B5 /* ApolloTOC.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ApolloTOC.h; sourceTree = "<group>"; };
 		FAB97BB30C75E1F9004956B5 /* ApolloTOC.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ApolloTOC.m; sourceTree = "<group>"; };
+		FABC33450C94A3E60048809E /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
 		FADDECA50C74185B002AFA9D /* ShellKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellKeyboard.h; sourceTree = "<group>"; };
 		FADDECA60C74185B002AFA9D /* ShellKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShellKeyboard.m; sourceTree = "<group>"; };
 		FAE7F55B0C80DC3D005A2930 /* ConvoBox.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ConvoBox.h; sourceTree = "<group>"; };
@@ -71,6 +72,7 @@
 				FA15D9910C775579002A6BD2 /* BuddyListViews */,
 				FAE7F55D0C80DC9B005A2930 /* IM Window */,
 				FA15D9920C775591002A6BD2 /* Views Of The Damned */,
+				FABC33450C94A3E60048809E /* Common.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";

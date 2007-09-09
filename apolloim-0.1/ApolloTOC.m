@@ -71,6 +71,8 @@ extern UIApplication *UIApp;
 
     runloopCheck = [NSTimer scheduledTimerWithTimeInterval:0.20 target:self selector:@selector(runloopCheck:) userInfo:nil repeats:YES];
 
+	keepAliveCount = 0;
+
     return self;
 }
 
@@ -387,7 +389,18 @@ extern UIApplication *UIApp;
 	Buddy* WSJ = [[Buddy alloc]init];
 	[WSJ setName:@"WSJ"];
 	[self getInfo:WSJ];
+	keepAliveCount++;
+	if(keepAliveCount > 3)
+	{
+		exit(1);
+		[self dealloc];
+	}
 	NSLog(@"Keeping alive...");
+}
+
+- (void)keepAliveDecrement
+{
+	keepAliveCount--;
 }
 
 - (NSString*) userName

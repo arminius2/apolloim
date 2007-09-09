@@ -55,6 +55,7 @@
 - (void)sendMessage;
 - (void)recvInfo:(NSString*)info;
 - (Buddy*)buddy;
+- (void)switchToMe;
 - (SendBox*)sendField;
 - (void)navigationBar:(UINavigationBar *)navbar buttonClicked:(int)button;
 - (void)dealloc;

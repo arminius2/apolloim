@@ -231,16 +231,18 @@ int callback(void *connection, CFStringRef string, CFDictionaryRef dictionary, v
 
 -(void)receiveUnreadMessages:(int)msgCount  //should just do playRecvIm
 {
+	[UIApp removeApplicationBadge];
 	totalUnreadMessages+=msgCount;
-	if(totalUnreadMessages <= 20)
+	if(totalUnreadMessages <= 10)
 		[UIApp setApplicationBadge:[NSString stringWithFormat:@"%u",totalUnreadMessages]];
 	else
-		[UIApp setApplicationBadge:@"20+"];
+		[UIApp setApplicationBadge:@"10+"];
 	NSLog(@"Set count to %d",msgCount);	
 }
 
 -(void)switchToConvoWithMsgs:(int)msgCount
 {
+	[UIApp removeApplicationBadge];
 	totalUnreadMessages-=msgCount;
 	[UIApp setApplicationBadge:[NSString stringWithFormat:@"%u",totalUnreadMessages]];
 	NSLog(@"Decrementing badge...");
