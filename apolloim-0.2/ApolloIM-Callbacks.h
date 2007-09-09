@@ -24,7 +24,8 @@
 #define PURPLE_GLIB_WRITE_COND (G_IO_OUT | G_IO_HUP | G_IO_ERR | G_IO_NVAL)
 
 static void init_libpurple();
-static void signed_on(PurpleConnection *gc, gpointer null);
+static void signed_on(PurpleConnection *gc, gpointer event);
+static void signd_off(PurpleConnection *gc, gpointer event);
 static PurpleEventLoopUiOps glib_eventloops;
 static PurpleConversationUiOps null_conv_uiops;
 static PurpleCoreUiOps null_core_uiops;

@@ -216,7 +216,7 @@ extern UIApplication *UIApp;
 {
 	[sheet dismiss];
 	okayToConnect = YES;
-	[ApolloTOC dump];
+	[ApolloCore dump];
 }
 
 - (void)closeActiveKeyboard
@@ -443,7 +443,7 @@ extern UIApplication *UIApp;
 		case 1:
 			if (_buddyViewBrowser)
 			{
-				[[ApolloTOC sharedInstance]disconnect];
+				[[ApolloCore sharedInstance]disconnect];
 			}
 			if (_accountsViewBrowser) 
 			{
@@ -485,8 +485,8 @@ extern UIApplication *UIApp;
 					else
 					{
 						NSLog(@"StartView>> Initiating a connection...");
-						[[ApolloTOC sharedInstance] setDelegate:self];
-						[[ApolloTOC sharedInstance] connectUsingUsername:[active username] password:[active password]];
+						[[ApolloCore sharedInstance] setDelegate:self];
+						[[ApolloCore sharedInstance] createConnection:active];
 					}
 				}
 				return;
@@ -562,7 +562,7 @@ extern UIApplication *UIApp;
 			if(_buddyInfoView)
 			{
 				NSLog(@"StartView>> Left -- BUDDY_INFO_VEW -- BuddyInfo");	
-				[[ApolloTOC sharedInstance] getInfo:currentConversationBuddy];
+				[[ApolloCore sharedInstance] getInfo:currentConversationBuddy];
 				[self switchToConvo:currentConversationBuddy];
 				return;
 			}
@@ -601,7 +601,7 @@ extern UIApplication *UIApp;
 			if(_conversationView)
 			{
 				NSLog(@"StartView>> RIGHT -- CONVERSATION_VEW -- BuddyInfo");	
-				[[ApolloTOC sharedInstance] getInfo:currentConversationBuddy];
+				[[ApolloCore sharedInstance] getInfo:currentConversationBuddy];
 				[self switchToBuddyInfo:currentConversationBuddy];
 				return;
 			}
