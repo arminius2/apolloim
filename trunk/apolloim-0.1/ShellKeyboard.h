@@ -32,7 +32,7 @@
   CGRect cellFrame;
   CGRect kbFrame;
 }
-
+- (id)initWithFrame:(struct CGRect)fp8;
 - (void)show:(UITextView*)sendView    withCell:(UIImageAndTextTableCell*) cell	forConvoBox:(ConversationView*)box;
 - (void)hide:(UITextView*)sendView    withCell:(UIImageAndTextTableCell*) cell  forConvoBox:(ConversationView*)box;
 - (void)toggle:(UITextView*)sendView  withCell:(UIImageAndTextTableCell*) cell	forConvoBox:(ConversationView*)box;

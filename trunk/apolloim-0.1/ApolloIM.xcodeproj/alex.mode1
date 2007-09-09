@@ -190,24 +190,24 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>FABC33AF0C94B10E0048809E</string>
+				<string>FABC33FF0C94B7A50048809E</string>
 				<key>PBXProjectModuleLabel</key>
-				<string>ApolloTOC.m</string>
+				<string>Conversation.m</string>
 				<key>PBXSplitModuleInNavigatorKey</key>
 				<dict>
 					<key>Split0</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
-						<string>FABC33B00C94B10E0048809E</string>
+						<string>FABC34000C94B7A50048809E</string>
 						<key>PBXProjectModuleLabel</key>
-						<string>ApolloTOC.m</string>
+						<string>Conversation.m</string>
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>FABC33B10C94B10E0048809E</string>
+						<string>FABC34100C94BBA70048809E</string>
 						<key>history</key>
 						<array>
-							<string>FABC33AC0C94B0F60048809E</string>
+							<string>FABC33FA0C94B7470048809E</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -219,11 +219,11 @@
 			<key>Geometry</key>
 			<dict>
 				<key>Frame</key>
-				<string>{{0, 20}, {763, 681}}</string>
+				<string>{{0, 20}, {1175, 681}}</string>
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>481 56 763 722 0 0 1280 778 </string>
+				<string>112 49 1175 722 0 0 1280 778 </string>
 			</dict>
 		</dict>
 	</array>
@@ -311,13 +311,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>7</integer>
-									<integer>1</integer>
+									<integer>46</integer>
+									<integer>36</integer>
+									<integer>9</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 19}, {265, 664}}</string>
+							<string>{{0, 526}, {265, 664}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -555,7 +556,7 @@
 	<array>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>/Users/alex/Desktop/apolloim/apolloim-0.1/ApolloIM.xcodeproj</string>
-		<string>FABC33AF0C94B10E0048809E</string>
+		<string>FABC33FF0C94B7A50048809E</string>
 	</array>
 	<key>WindowString</key>
 	<string>6 55 287 723 0 0 1280 778 </string>

@@ -18,7 +18,7 @@
   [self setTextSize:14];
   [self setEditable:YES];
   [self setAllowsRubberBanding:NO];
-  [self setOpaque:YES];
+  [self setOpaque:YES];  
 
   return parent;
 }
@@ -32,6 +32,17 @@
 {
 //  NSLog(@"SENDBOX>> Request for selector: %@", NSStringFromSelector(aSelector));
   return [super respondsToSelector:aSelector];
+}
+
+- (BOOL)webView:(id)fp8 shouldInsertText:(id)character replacingDOMRange:(id)fp16 givenAction:(int)fp20
+{
+	if([character characterAtIndex:0] == '\n')
+	{
+		[_delegate sendMessage];
+		return NO;
+	}
+
+	return [super webView:fp8 shouldInsertText:character replacingDOMRange:fp16 givenAction:fp20];
 }
 
 - (BOOL)webView:(id)fp8 shouldBeginEditingInDOMRange:(id)fp12

@@ -36,6 +36,13 @@
 
 @implementation ShellKeyboard
 
+- (id)initWithFrame:(struct CGRect)fp8
+{
+	id parent = [super initWithFrame:fp8];
+	[self setStringValue:@"Send"];	
+	return parent;
+}
+
 - (void) show:(UITextView*)sendView withCell:(UIImageAndTextTableCell*) cell forConvoBox:(ConversationView*)box
 {
 	[sendView setBottomBufferHeight:(5.0f)];

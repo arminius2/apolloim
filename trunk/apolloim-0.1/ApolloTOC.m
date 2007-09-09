@@ -315,14 +315,15 @@ extern UIApplication *UIApp;
 
     if (connected != ApolloTOC_DISCONNECTED)
     {		
-        if (firetalk_select_custom(0,NULL,NULL,NULL,&timeout) < 0) {
+        if (firetalk_select_custom(0,NULL,NULL,NULL,&timeout) < 0) 
+		{
             NSLog(@"ApolloTOC: Error: firetalk_select failed.");
-		exit(-1);
+			exit(-1);
         }
     }
 	else
 	{
-		NSLog(@"DISCONNECTED");
+		[timer invalidate];
 	}
 }
 
@@ -390,17 +391,19 @@ extern UIApplication *UIApp;
 	[WSJ setName:@"WSJ"];
 	[self getInfo:WSJ];
 	keepAliveCount++;
-	if(keepAliveCount > 3)
+	if(keepAliveCount > 2)
 	{
-		exit(1);
-		[self dealloc];
+        firetalk_disconnect(ft_aim_connection);
+		[keepAlive invalidate];
 	}
-	NSLog(@"Keeping alive...");
+	NSLog(@"Keeping alive... %d", keepAliveCount);
 }
 
 - (void)keepAliveDecrement
 {
 	keepAliveCount--;
+	NSLog(@"Decerementing keep alive... %d", keepAliveCount);
+	
 }
 
 - (NSString*) userName

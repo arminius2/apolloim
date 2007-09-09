@@ -38,7 +38,8 @@
 	-(id)initWithFrame:(struct CGRect)frame withBuddy:(Buddy*)aBuddy andDelegate:(id)delegate
 	{
 		float send_view_height = 30.0f;
-		float send_text_width = 0.8f * frame.size.width;
+//		float send_text_width = 0.8f * frame.size.width;
+		float send_text_width = frame.size.width;
 		float left_buf = 0.03 * frame.size.width;
 		float send_button_width = frame.size.width - (left_buf+send_text_width+left_buf);
 		float kb_height = 215.0f;
@@ -80,11 +81,11 @@
 			
 			sendField = [[SendBox alloc] initWithFrame:CGRectMake(left_buf, 0.0f, 
 										send_text_width, send_view_height)];			
-			[sendField setBackgroundColor: CGColorCreate(colorSpace, lovelyShadeOfTransparent)];	
+			[sendField setBackgroundColor: CGColorCreate(colorSpace, lovelyShadeOfTransparent)];
 			[sendField setDelegate: self];
 			[sendField becomeFirstResponder];
 
-			sendBtn = [[UIPushButton alloc] initWithTitle:@"" autosizesToFit:NO];
+			/*sendBtn = [[UIPushButton alloc] initWithTitle:@"" autosizesToFit:NO];
 			[sendBtn setFrame:CGRectMake(left_buf+send_text_width+left_buf, 0.0f, 
 									send_button_width, send_view_height)];			
 			[sendBtn setDrawsShadow: YES];
@@ -92,7 +93,7 @@
 			[sendBtn setTitle:@"Send"];
 			[sendBtn setStretchBackground:YES];
 			[sendBtn setTitleColor: CGColorCreate(colorSpace, black)];
-			[sendBtn addTarget:self action:@selector(sendMessage) forEvents:1];
+			[sendBtn addTarget:self action:@selector(sendMessage) forEvents:1];*/
 
 			send_rect_orig = CGRectMake(0.0, 
 									_rect.size.height - send_view_height, 
@@ -207,6 +208,7 @@
 	{
 //		[self foldKeyboard];
 //		[convoView scrollToEnd];
+		//Ensures sendbox gets re-hit
 		[sendField becomeFirstResponder];
 	}
 	
