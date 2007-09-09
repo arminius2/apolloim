@@ -44,7 +44,7 @@
 	[_window	orderFront:		self];
 	[_window	makeKey:		self];
 	[_window	_setHidden:		NO];
-	
+    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(resetIdles) userInfo:nil repeats:YES];
 	/*
 	float x = 0.0f;
 	float y = 50.0f;
@@ -63,18 +63,31 @@
 	*/
 }
 
+-(void)resetIdles
+{
+	[self resetIdleTimer];
+	[self resetIdleDuration:0.0f];
+//	NSLog(@"Maybe LG is right...");
+}
+
 - (void)applicationSuspend:(struct __GSEvent *)event 
 {
 	NSLog(@"Suspending...");
-	[startView closeActiveKeyboard];
-	[startView resume];
-	[[ApolloNotificationController sharedInstance] clearBadges];
-//	[[ApolloTOC sharedInstance]suspendApollo];
+	if([startView connected])
+	{
+		[startView closeActiveKeyboard];
+		[startView resume];
+		[[ApolloNotificationController sharedInstance] clearBadges];
+		[[NSString stringWithString:@"NINJA"]writeToFile:@"/tmp/KEEPALIVE" atomically:YES encoding:NSUTF8StringEncoding error:nil];
+	}
+	else
+		exit(1);
 }
 
 - (void)applicationResume:(struct __GSEvent *)event 
 {
 	NSLog(@"Resuming...");
+	system("rm /tmp/KEEPALIVE");
 //	[[ApolloTOC sharedInstance]resumeApollo];
 	[startView resume];
 	[[ApolloNotificationController sharedInstance] clearBadges];
@@ -92,10 +105,9 @@
 }
 
 - (void)applicationWillTerminate 
-{
-	
+{	
 	[[ApolloNotificationController sharedInstance] clearBadges];
-	[UIApp removeApplicationBadge];
+	[self removeApplicationBadge];
 	[_window release];
 }
 

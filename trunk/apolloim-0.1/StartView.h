@@ -76,6 +76,7 @@
 - (id)initWithFrame:(CGRect)frame;
 - (void)imEvent:(NSMutableArray*)payload;
 - (void)populatePreferences;
+- (bool)connected;
 
 - (void)receiveMessage:(NSString*)msg fromBuddy:(Buddy*)aBuddy isInfo:(BOOL)info;
 - (void)receiveInfo:(NSString*)msg fromBuddy:(Buddy*)aBuddy isInfo:(BOOL)info;

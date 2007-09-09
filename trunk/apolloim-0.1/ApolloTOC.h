@@ -59,9 +59,6 @@ typedef enum {ApolloTOC_DISCONNECTED, ApolloTOC_CONNECTING, ApolloTOC_CONNECTED}
 - (void)disconnect;
 - (void)killHandle;
 
-- (BOOL)willSendMarkup;
-- (void)setWillSendMarkup:(BOOL)newSetting;
-
 - (void)sendIM:(NSString*)body toUser:(NSString*)user;
 - (void)buddyUpdate:(Buddy*)buddy withCode:(int)code;
 

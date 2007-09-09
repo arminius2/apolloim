@@ -74,15 +74,15 @@ static NSRecursiveLock *lock;
 
 -(void)write
 {
-	NSLog(@"Writing...");
+/*	NSLog(@"Writing...");
 	[[NSString stringWithFormat:@"%d|%d|%d", sound, vibrate, notify]
 	writeToFile:@"/Applications/ApolloIM.app/prefs" atomically:YES encoding:NSUTF8StringEncoding error:nil];
-	NSLog(@"Written.");
+	NSLog(@"Written.");*/
 }
 
 -(void)read
 {
-	NSLog(@"Reading...");
+/*	NSLog(@"Reading...");
 	NSArray* prefs = [[NSString stringWithContentsOfFile:@"/Applications/ApolloIM.app/prefs"]componentsSeparatedByString:@"|"];
 	
 	if([prefs count] == 3)
@@ -101,7 +101,7 @@ static NSRecursiveLock *lock;
 		[self write];
 	}
 	NSLog(@"Green means go.");
-	NSLog(@"SOUND %d VIBRATE %d NOTIFY %d", sound, vibrate, notify);
+	NSLog(@"SOUND %d VIBRATE %d NOTIFY %d", sound, vibrate, notify);*/
 }
 
 + (NSString*) removeHTML:(NSMutableString *) from
