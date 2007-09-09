@@ -29,6 +29,7 @@ extern UIApplication *UIApp;
     StartView		*startView;
 	
 }
+-(void)resetIdles;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification;
 - (void)applicationWillTerminate;
 - (void)applicationSuspend:(struct __GSEvent *)event;

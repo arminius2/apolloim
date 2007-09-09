@@ -79,8 +79,6 @@ extern UIApplication *UIApp;
 			CGRectMake(rect.origin.x, menu_height, rect.size.width, rect.size.height - menu_height)
 		];
 
-
-
 //		NSLog(@"StartView.m>>  Starting navbar...");
         [self addSubview: _navBar];
 
@@ -95,6 +93,7 @@ extern UIApplication *UIApp;
 		
 		[NSThread detachNewThreadSelector:@selector(checkForUpdates:) toTarget:self withObject:self];
 		okayToConnect = YES;		
+		connected = NO;
 	}
 	return self;
 }
@@ -105,7 +104,6 @@ extern UIApplication *UIApp;
 	if ([[NSFileManager defaultManager] fileExistsAtPath:prefFile]) 
 		[_accountsView setAccounts:[NSKeyedUnarchiver unarchiveObjectWithFile:prefFile]];
 }
-
 
 /*	UIAlertSheet *sheet = [[UIAlertSheet alloc] initWithFrame: CGRectMake(0, 240, 320, 240)];
 	[sheet setTitle:[selectedAccount username]];
@@ -134,7 +132,7 @@ extern UIApplication *UIApp;
 - (void)imEvent:(NSMutableArray*)payload
 {
 //	NSLog(@"EVENT RECEIVED");
-	[lock lock];
+//	[lock lock];
 	if([payload count] > 0)
 	{
 //		NSLog(@"PAYLOAD IS SET");
@@ -159,16 +157,7 @@ extern UIApplication *UIApp;
 			case AIM_DISCONNECTED:
 				NSLog(@"You have been disconnected.");
 				okayToConnect = NO;
-
-				UIAlertSheet *sheet = [[UIAlertSheet alloc] initWithFrame: CGRectMake(0, 220, 320, 220)];
-				[sheet setTitle:[active username]];
-				if([payload count]>1)
-					[sheet setBodyText:[payload objectAtIndex:1]];
-					else
-					[sheet setBodyText:@"You have been disconnected."];
-				[sheet addButtonWithTitle:@"OK"];
-				[sheet setDelegate: self];
-				[sheet presentSheetFromAboveView: self];	
+				connected = NO;				
 				[self makeACoolMoveTo:ACCOUNT_VIEW];		
 				//Reinit conversations and buddyviews
 				[_buddyView		release];
@@ -177,6 +166,15 @@ extern UIApplication *UIApp;
 				[_conversations release];
 				_conversations	= [[NSMutableArray alloc]init];
 				[[ApolloNotificationController sharedInstance]clearBadges];
+				UIAlertSheet *sheet = [[UIAlertSheet alloc] initWithFrame: CGRectMake(0, 0, 320, 20)];
+				[sheet setTitle:[active username]];
+				if([payload count]>1)
+					[sheet setBodyText:[payload objectAtIndex:1]];
+					else
+					[sheet setBodyText:@"You have been disconnected."];					
+				[sheet addButtonWithTitle:@"OK"];
+				[sheet setDelegate: self];
+				[sheet popupAlertAnimated: YES];	
 				break;
 			case AIM_RECV_MESG:
 				NSLog(@"Received Message from %@ that says '%@'",[[payload objectAtIndex:1]name],[payload objectAtIndex:2]);
@@ -186,6 +184,7 @@ extern UIApplication *UIApp;
 				NSLog(@"Connected.");
 //				[[ApolloTOC sharedInstance]listBuddies];
 				[self makeACoolMoveTo:BUDDY_VIEW];
+				connected = YES;
 				break;			
 			case AIM_BUDDY_INFO:
 				NSLog(@"Getting info from %@ that says '%@'",[[payload objectAtIndex:1]name],[[payload objectAtIndex:1]info]);
@@ -195,19 +194,25 @@ extern UIApplication *UIApp;
 			NSLog(@"StartView>> Event -- %d", [[NSString stringWithString:[payload objectAtIndex:0]]intValue]);
 		}
 	}
-	[lock unlock];
+//	[lock unlock];
 }
 
 - (void)alertSheet:(UIAlertSheet *)sheet buttonClicked:(int)button 
 {
 	[sheet dismiss];
 	okayToConnect = YES;
-	[ApolloTOC dump];
+	if(!connected)
+		[ApolloTOC dump];
 }
 
 - (void)closeActiveKeyboard
 {
 	[currentConversation foldKeyboard];
+}
+
+- (bool)connected
+{
+	return connected;
 }
 
 - (void)receiveInfo:(NSString*)msg fromBuddy:(Buddy*)aBuddy isInfo:(BOOL)info
@@ -466,7 +471,7 @@ extern UIApplication *UIApp;
 						[sheet setBodyText:@"The 'active account' is the account you wish to sign on with.  Please set an active account and try again."];
 						[sheet addButtonWithTitle:@"OK"];
 						[sheet setDelegate: self];
-						[sheet presentSheetFromAboveView: self];					
+						[sheet popupAlertAnimated: YES];
 					}
 					else
 					{

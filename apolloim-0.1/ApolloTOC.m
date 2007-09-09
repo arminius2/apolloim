@@ -31,6 +31,7 @@ const int TOC_PORT = 9898;
 
 static id sharedInst;
 static NSRecursiveLock *lock;
+extern UIApplication *UIApp;
 
 @implementation ApolloTOC
 
@@ -41,12 +42,12 @@ static NSRecursiveLock *lock;
 
 + (id)sharedInstance
 {
-    [lock lock];
+    //[lock lock];
     if (!sharedInst)
     {
         sharedInst = [[[self class] alloc] init];
     }
-    [lock unlock];
+    //[lock unlock];
     
     return sharedInst;
 }
@@ -90,13 +91,13 @@ static NSRecursiveLock *lock;
 
 - (void)setInfoMessage:(NSString*)newMessage
 {
-    [lock lock];
+    //[lock lock];
     [infoMessage autorelease];
     infoMessage = [newMessage retain];
 
     if ([self connected])
         firetalk_set_info(ft_aim_connection, [infoMessage cString]);
-    [lock unlock];
+    //[lock unlock];
 }
 
 - (BOOL)connectUsingUsername:(NSString*)username password:(NSString*)password
@@ -109,13 +110,13 @@ static NSRecursiveLock *lock;
         return YES;
 
 	NSLog(@"ApolloTOC> Preconnect...");
-   [lock lock];
+   //[lock lock];
     ft_callback_storepass("");
     ft_callback_storepass([password UTF8String]);
 	NSLog(@"ApolloTOC> Password Stored... Connecting.. %@",username);
     success = firetalk_signon(ft_aim_connection, TOC_SERVER, TOC_PORT, [username cString]);
 	NSLog(@"ApolloTOC> Sign on request sent...");	
-	[lock unlock];		
+	//[lock unlock];		
     
     if (success != FE_SUCCESS)
     {
@@ -162,9 +163,9 @@ static NSRecursiveLock *lock;
 
 //- (void)listBuddies
 //{
-//	[lock lock];
+//	//[lock lock];
 //	firetalk_im_list_buddies(ft_aim_connection);
-//	[lock unlock];
+//	//[lock unlock];
 //}
 
 - (BOOL)connected
@@ -177,9 +178,9 @@ static NSRecursiveLock *lock;
 
 - (void)killHandle
 {
-	[lock lock];
+	//[lock lock];
 	firetalk_destroy_handle(ft_aim_connection);
-	[lock unlock];	
+	//[lock unlock];	
 }
 
 - (void)sendIM:(NSString*)body toUser:(NSString*)user
@@ -202,8 +203,7 @@ static NSRecursiveLock *lock;
 
 - (void)registerFiretalkCallbacks
 {
-
-    [lock lock];
+    //[lock lock];
 	int proto = firetalk_find_protocol("TOC2");
 	NSLog(@"ApolloTOC> Registering callbacks... %d", proto);
 	NSLog(@"ApolloTOC> Creating Handle...");	
@@ -213,10 +213,8 @@ static NSRecursiveLock *lock;
 	if(ft_aim_connection == nil)
 	{
 		NSLog(@"Shit is fucked. Let's go get some tacobell.");
-		//[UIApp exit];
 		exit(40);	
-	}
-		
+	}		
 
     firetalk_register_callback(ft_aim_connection, FC_DOINIT, (ptrtofnct)ft_callback_doinit);
     firetalk_register_callback(ft_aim_connection, FC_ERROR, (ptrtofnct)ft_callback_error);
@@ -233,9 +231,9 @@ static NSRecursiveLock *lock;
 	firetalk_register_callback(ft_aim_connection, FC_IM_GOTINFO, (ptrtofnct)ft_callback_getinfo);
 //	firetalk_register_callback(ft_aim_connection, FC_IM_TYPINGINFO, (ptrtofnct)ft_callback_buddytyping); //Does work, not implemented
 	firetalk_register_callback(ft_aim_connection, FC_IM_IDLEINFO, (ptrtofnct)ft_callback_buddyidle);
-//	firetalk_register_callback(ft_aim_connection, FC_IM_STATUSINFO, (ptrtofnct)ft_callback_buddystatus);	 //doesn't work
+	firetalk_register_callback(ft_aim_connection, FC_IM_STATUSINFO, (ptrtofnct)ft_callback_buddystatus);	 //doesn't work
 	
-    [lock unlock];
+    //[lock unlock];
     NSLog(@"ApolloTOC: firetalk callbacks registered.");
 }
 
@@ -256,7 +254,7 @@ static NSRecursiveLock *lock;
 - (void)getInfo:(Buddy*)aBuddy
 {
 	[lock lock];
-	firetalk_im_get_info(ft_aim_connection, [[[aBuddy name]lowercaseString]cString]);
+	firetalk_im_get_info(ft_aim_connection, [[[aBuddy properName]lowercaseString]cString]);
 	[lock unlock];
 }
 
@@ -273,21 +271,21 @@ static NSRecursiveLock *lock;
     connected = ApolloTOC_CONNECTED;
 	
     NSLog(@"ApolloTOC: Connection sucessful.");
-    [lock unlock];
+    //[lock unlock];
 	NSMutableArray* payload = 
 	[[NSMutableArray alloc]init];
 	
 	[payload addObject:		@"8"];
 	[_delegate imEvent:		payload];
 	NSLog(@"ApolloTOC>  here's to the good ol' days...");
-	keepAlive = [NSTimer scheduledTimerWithTimeInterval:15 target:self selector:@selector(keepAlive) userInfo:nil repeats:YES] ;	
-
+	keepAlive = [NSTimer scheduledTimerWithTimeInterval:15 target:self selector:@selector(keepAlive) userInfo:nil repeats:YES] ;
 
 	[lock unlock];	
 }
 
 - (void)recievedMessage:(NSString*)message fromUser:(NSString*)user isAutomessage:(BOOL)automessage ftConnection:(void *)ftConnection
 {
+	[lock lock];
 	NSLog(@"ApolloTOC: Recieved message from %@, is auto: %i.\n%@", user, automessage, message);
 	[[ApolloNotificationController sharedInstance]playRecvIm];	
 	Buddy* yourBuddy = [[Buddy alloc]init];
@@ -300,6 +298,7 @@ static NSRecursiveLock *lock;
 	[payload addObject:		yourBuddy];
 	[payload addObject:		message];
 	[_delegate imEvent:		payload];
+	[lock unlock];	
 //	[payload release];	
 }
 
@@ -319,6 +318,10 @@ static NSRecursiveLock *lock;
 		exit(-1);
         }
     }
+	else
+	{
+		NSLog(@"DISCONNECTED");
+	}
 }
 
 - (void)setDelegate:(id)delegate 
@@ -326,23 +329,13 @@ static NSRecursiveLock *lock;
 	_delegate = delegate;
 }
 
-- (BOOL)willSendMarkup
-{
-    return willSendMarkup;
-}
-
-- (void)setWillSendMarkup:(BOOL)newSetting
-{
-    willSendMarkup = newSetting;
-}
-
 - (void)disconnect
 {    
-    if (connected == ApolloTOC_DISCONNECTED)
+/*    if (connected == ApolloTOC_DISCONNECTED)
 	{
 		NSLog(@"Can't disconnect if disconnected.");
         return;
-	}
+	}*/
     
     [lock lock];
     if (connected == ApolloTOC_CONNECTING)

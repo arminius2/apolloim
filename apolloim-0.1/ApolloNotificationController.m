@@ -104,24 +104,24 @@ extern int _CTServerConnectionSetVibratorState(int *, void *, int, int, int, int
 			exit(1);
 		}		*/
 
-		controller = [[AVController alloc] init];
-//		controller = [AVController avController];
+//		controller = [[AVController alloc] init];
+		controller = [AVController avController];
 		[controller setDelegate:self];
-		[controller setVibrationEnabled:YES];		
+		[controller setVibrationEnabled:YES];
 		
 		q = [[AVQueue alloc] init];
 		
 		[q appendItem:recvIm error:&err];
 		if (nil != err)
 		{
-			NSLog(@"err! = %@ \n [q appendItem:item error:&err];", err);
+			NSLog(@"recvim err! = %@ \n [q appendItem:item error:&err];", err);
 			exit(1);
 		}
 
 		[q appendItem:sendIm error:&err];
 		if (nil != err)
 		{
-			NSLog(@"err! = %@ \n [q appendItem:item error:&err];", err);
+			NSLog(@"sendim err! = %@ \n [q appendItem:item error:&err];", err);
 			exit(1);
 		}
 		
@@ -167,6 +167,8 @@ extern int _CTServerConnectionSetVibratorState(int *, void *, int, int, int, int
 
 	system("/Applications/ApolloIM.app/vibrator");
 	
+	//Thanks to pumpkin
+	
 /*	int x = 0;    
 	NSLog(@"Connecting to telephony...");
 	int connection = _CTServerConnectionCreate(kCFAllocatorDefault, callback, &x);    
@@ -178,9 +180,7 @@ extern int _CTServerConnectionSetVibratorState(int *, void *, int, int, int, int
 	{
 	}	
 	NSLog(@"Killing vibrator...");	
-	_CTServerConnectionSetVibratorState(&x, connection, 0, 10, 10, 10, 10);*/
-	
-	
+	_CTServerConnectionSetVibratorState(&x, connection, 0, 10, 10, 10, 10);*/	
 }
 
 - (void)dealloc
@@ -207,22 +207,6 @@ int callback(void *connection, CFStringRef string, CFDictionaryRef dictionary, v
     return 1;
 }
 
--(void)setVibrateEnabled:(bool)enable
-{
-	vibrateEnabled = enable;	
-	[[PreferenceController sharedInstance]setVibrate:enable];	
-}
-
--(BOOL) vibrateEnabled
-{
-	return vibrateEnabled;
-}
-
--(BOOL)soundEnabled
-{
-	return soundEnabled;
-}
-
 -(void)playSignOff
 {
 	[self play:signOff];
@@ -241,6 +225,8 @@ int callback(void *connection, CFStringRef string, CFDictionaryRef dictionary, v
 -(void)playRecvIm
 {
 	[self play:recvIm];
+	if(![UIHardware ringerState]) 
+		[self vibrateForDuration];	
 }
 
 -(void)receiveUnreadMessages:(int)msgCount  //should just do playRecvIm
@@ -285,20 +271,14 @@ int callback(void *connection, CFStringRef string, CFDictionaryRef dictionary, v
 {
 	if([UIHardware ringerState])  //this will be moved to individual options to allow customized which sounds on/off.  I am lazy right now.
 	{
-		NSLog(@"Playing.");
 		[controller setCurrentItem:item];
-		[controller setCurrentTime:(double)0.0];
 		NSError *err;
 		[controller play:&err];
 		if(nil != err)
 		{
 			NSLog(@"err! = %@    [controller play:&err];", err); 
 			exit(1);
-		}
-	}
-	else
-	{
-		[self vibrateForDuration];
+		}		
 	}
 }
 
