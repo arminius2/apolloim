@@ -44,6 +44,7 @@
 	[_window	orderFront:		self];
 	[_window	makeKey:		self];
 	[_window	_setHidden:		NO];
+	
     [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(resetIdles) userInfo:nil repeats:YES];
 	/*
 	float x = 0.0f;
@@ -67,52 +68,78 @@
 {
 	[self resetIdleTimer];
 	[self resetIdleDuration:0.0f];
-//	NSLog(@"Maybe LG is right...");
+	if([UIApp isLocked])
+	{
+		NSLog(@"LOCKING");
+		[[NSString stringWithString:@"NINJA"]writeToFile:@"/tmp/SummerBoard.DisablePowerManagement" atomically:YES encoding:NSUTF8StringEncoding error:nil];
+	}
 }
 
-- (void)applicationSuspend:(struct __GSEvent *)event 
+- (void)applicationSuspend:(struct __GSEvent *)fp8
 {
 	NSLog(@"Suspending...");
+	[[NSString stringWithString:@"NINJA"]writeToFile:@"/tmp/SummerBoard.DisablePowerManagement" atomically:YES encoding:NSUTF8StringEncoding error:nil];	
 	if([startView connected])
 	{
-		[startView closeActiveKeyboard];
-		[startView resume];
-		[[ApolloNotificationController sharedInstance] clearBadges];
-		[[NSString stringWithString:@"NINJA"]writeToFile:@"/tmp/KEEPALIVE" atomically:YES encoding:NSUTF8StringEncoding error:nil];
+//		[startView closeActiveKeyboard];
+//		[startView resume];
+//		[[ApolloNotificationController sharedInstance] clearBadges];
 	}
 	else
+	{
+		system("rm /tmp/SummerBoard.DisablePowerManagement");		
 		exit(1);
+	}
 }
 
-- (void)applicationResume:(struct __GSEvent *)event 
+- (void)applicationResume:(struct __GSEvent *)fp8
 {
 	NSLog(@"Resuming...");
-	system("rm /tmp/KEEPALIVE");
+	NSLog(@"Removing Lock file...");
+	system("rm /tmp/SummerBoard.DisablePowerManagement");
 //	[[ApolloTOC sharedInstance]resumeApollo];
-	[startView resume];
+//	[startView resume];
 	[[ApolloNotificationController sharedInstance] clearBadges];
 }
 
 - (BOOL)applicationIsReadyToSuspend
 {
+	NSLog(@"APPLICATION IS READY");
 	//Please?  Please work?
 	return NO;
 }
 
 - (BOOL)isSuspendingUnderLock
 {
-	return NO;
+	NSLog(@"SUSPENDING UNDER LOCK");
+	return YES;
+}
+- (void)applicationDidResumeFromUnderLock
+{
+	NSLog(@"Resuming from under lock...");
+		system("rm /tmp/SummerBoard.DisablePowerManagement");	
+}
+
+- (void)applicationWillSuspendUnderLock
+{
+	if(![UIApp isLocked])
+	{
+		NSLog(@"Locking...");
+		[[NSString stringWithString:@"NINJA"]writeToFile:@"/tmp/SummerBoard.DisablePowerManagement" atomically:YES encoding:NSUTF8StringEncoding error:nil];	
+	}
 }
 
 - (void)applicationWillTerminate 
 {	
 	[[ApolloNotificationController sharedInstance] clearBadges];
 	[self removeApplicationBadge];
+	system("rm /tmp/SummerBoard.DisablePowerManagement");	
 	[_window release];
 }
 
 - (BOOL) suspendRemainInMemory
 {
+	NSLog(@"SUSPEND REMAIN IN MEMORY");
 	return YES;
 }
 

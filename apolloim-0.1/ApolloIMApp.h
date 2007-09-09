@@ -26,14 +26,14 @@ extern UIApplication *UIApp;
 @interface ApolloIMApp : UIApplication 
 {
     UIWindow		*_window;
-    StartView		*startView;
-	
+    StartView		*startView;	
 }
 -(void)resetIdles;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification;
 - (void)applicationWillTerminate;
-- (void)applicationSuspend:(struct __GSEvent *)event;
-- (void)applicationResume:(struct __GSEvent *)event;
+- (void)applicationSuspend:(struct __GSEvent *)fp8;
+- (void)applicationResume:(struct __GSEvent *)fp8;
+- (void)applicationWillSuspendUnderLock;
 - (BOOL)isSuspendingUnderLock;
 - (BOOL)applicationIsReadyToSuspend;
 - (BOOL) suspendRemainInMemory;

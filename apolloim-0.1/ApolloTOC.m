@@ -69,7 +69,7 @@ extern UIApplication *UIApp;
 
 	connectionHandles = [[NSMutableArray alloc]init];
 
-    [NSTimer scheduledTimerWithTimeInterval:0.20 target:self selector:@selector(runloopCheck:) userInfo:nil repeats:YES];
+    runloopCheck = [NSTimer scheduledTimerWithTimeInterval:0.20 target:self selector:@selector(runloopCheck:) userInfo:nil repeats:YES];
 
     return self;
 }
@@ -369,6 +369,8 @@ extern UIApplication *UIApp;
 		[_delegate imEvent:		payload];
 		firetalk_destroy_handle(ft_aim_connection);
 		ft_aim_connection = NULL;
+		[keepAlive invalidate];
+//		[runloopCheck invalidate];
 		[lock unlock];
     }
 	else
