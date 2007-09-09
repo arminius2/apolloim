@@ -104,8 +104,8 @@ extern int _CTServerConnectionSetVibratorState(int *, void *, int, int, int, int
 			exit(1);
 		}		*/
 
-//		controller = [[AVController alloc] init];
-		controller = [AVController avController];
+		controller = [[AVController alloc] init];
+//		controller = [AVController avController];
 		[controller setDelegate:self];
 		[controller setVibrationEnabled:YES];
 		
