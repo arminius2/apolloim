@@ -23,7 +23,6 @@
 #import "PreferenceController.h"
 #import "Common.m" 
 
-static NSRecursiveLock *lock;
 extern UIApplication *UIApp;
 
 @implementation StartView
@@ -61,8 +60,8 @@ extern UIApplication *UIApp;
 		[_accountsView setDelegate:self];
 		_buddyView		= [[BuddyView alloc]initWithFrame:rect];
 		[_buddyView		setDelegate:self];
-		_conversations	= [[NSMutableArray alloc]init];		
-		buddyinfos	= [[NSMutableArray alloc]init];
+		_conversations	= [[NSMutableDictionary alloc]init];		
+		_buddyinfos	= [[NSMutableDictionary alloc]init];
 		preferences	= [[PreferencesView alloc] initWithFrame:sub_views_rect];
 //		_aboutView		= [[AboutView alloc]initWithFrame:rect];
 		
@@ -209,22 +208,12 @@ extern UIApplication *UIApp;
 
 - (void)receiveInfo:(NSString*)msg fromBuddy:(Buddy*)aBuddy isInfo:(BOOL)info
 {
-	int i=0,max=[buddyinfos count];
-	
 	BuddyInfoView * bi;
-	for(i=0; i<max; i++)
-	{
-		BuddyInfoView * biv = [buddyinfos objectAtIndex:i];
-		Buddy * b = [biv buddy];
-		if([[b properName] isEqualToString: [aBuddy properName]])
-		{
-			NSLog(@"Setting info: %@", msg);
-			[b setInfo:msg];
-			[biv reloadData];
-			return;
-		}
- 	}
-
+	BuddyInfoView * biv = [_buddyinfos objectForKey:[aBuddy properName]];	
+	Buddy * b = [biv buddy];
+	NSLog(@"Setting info: %@", msg);
+	[b setInfo:msg];
+	[biv reloadData];
 }
 
 - (void)receiveMessage:(NSString*)msg fromBuddy:(Buddy*)aBuddy isInfo:(BOOL)info
@@ -233,15 +222,15 @@ extern UIApplication *UIApp;
 	//Go through conversations, looking for one
 	//If one matches this buddy, add to that
 	//Else - create new conversation, add it to the conversations array.
-	int i=0,max=[_conversations count];
+	
 	bool exist=NO;
 	NSLog(@"StartView> Mother fucking %@ wants to talk to me.h", [aBuddy properName]);	
-	for(i=0; i<max; i++)
+	
+	
+	Conversation* testConvo = [_conversations objectForKey:[aBuddy properName]];
+	if(testConvo != nil)	
 	{
-		if([[[[_conversations objectAtIndex:i]buddy]properName]isEqualToString:[aBuddy properName]])
-		{
-//			NSLog(@"StartView> (recv) Adding to Existing Convo with... %@", [aBuddy name]);		
-			if(!info)
+		if(!info)
 			{
 				if(msg != nil)
 				{
@@ -251,22 +240,22 @@ extern UIApplication *UIApp;
 						else
 						[_buddyView updateBuddy:aBuddy withCode:AIM_RECV_MESG]; 						
 
-					[[_conversations objectAtIndex:i] recvMessage:msg isStatusMessage:info];
+					[testConvo recvMessage:msg isStatusMessage:info];
 				}				
 			}
 			else
 			{
-				[[_conversations objectAtIndex:i] recvInfo:msg];			
-			}
-			return;			
-		}	
- 	}
- 	[_buddyView updateBuddy:aBuddy withCode:AIM_RECV_MESG]; 	
-//	NSLog(@"StartView> (recv) Starting New Convo with... %@", [aBuddy name]);
-	Conversation* convo = [[Conversation alloc]initWithFrame:sub_views_rect withBuddy:aBuddy andDelegate:self];
-	[convo recvMessage:msg isStatusMessage:info];
-	[_conversations addObject:convo];
-	
+				[testConvo recvInfo:msg];			
+			}		
+	}
+	else
+	{
+		[_buddyView updateBuddy:aBuddy withCode:AIM_RECV_MESG]; 	
+		NSLog(@"StartView> (recv) Starting New Convo with... %@", [aBuddy name]);
+		Conversation* convo = [[Conversation alloc]initWithFrame:sub_views_rect withBuddy:aBuddy andDelegate:self];
+		[convo recvMessage:msg isStatusMessage:info];
+		[_conversations setObject:convo forKey:[aBuddy properName]];		
+	}
 	
 	if(![UIApp isSuspended])
 	{
@@ -279,39 +268,33 @@ extern UIApplication *UIApp;
 
 - (void)switchToBuddyInfo:(Buddy*)aBuddy
 {
-//	[lock lock];
 	[_navBar showButtonsWithLeftTitle:@"Back" rightTitle:nil leftBack: YES];				
 	_accountsEditorViewBrowser	= false;
-	_buddyViewBrowser		= false;
+	_buddyViewBrowser			= false;
 	_accountsViewBrowser		= false;	
-	_about				= false;
-	_conversationView		= false;
-	_buddyInfoView			= true;
-	int i=0,max=[buddyinfos count];
+	_about						= false;
+	_conversationView			= false;
+	_buddyInfoView				= true;
 	
 	[navtitle setTitle:@"Info"];			
 	NSLog(@"StartView> (Switch) Switching to Buddy Info");
-	for(i=0; i<max; i++)
+	BuddyInfoView* info = [_buddyinfos objectForKey:[aBuddy properName]];
+	if(info != nil)
 	{
-		if([[[[buddyinfos objectAtIndex:i]buddy]properName]isEqualToString:[aBuddy properName]])
-		{
-			NSLog(@"StartView> Going to existing info with... %@", [aBuddy name]);		
-			//[lock unlock];
- 			[_buddyView updateBuddy:aBuddy withCode:AIM_READ_MSGS];	
-			currentBuddyInfo = [buddyinfos objectAtIndex:i];
-			[currentBuddyInfo reloadData];
-			[_transitionView transition:2 toView:currentBuddyInfo];
-			return;
-		}
- 	}
-
-	NSLog(@"StartView> (Switch) Creating new buddy info... %@", [aBuddy name]);
-	BuddyInfoView * biv = [[BuddyInfoView alloc]initWithFrame:sub_views_rect withBuddy:aBuddy andDelegate:self];
-	[buddyinfos addObject:biv];
-	currentBuddyInfo = biv;
- 	[_buddyView updateBuddy:aBuddy withCode:AIM_READ_MSGS];	
-	[currentBuddyInfo reloadData];
-	[_transitionView transition:2 toView:currentBuddyInfo];			
+		NSLog(@"StartView> Going to existing info with... %@", [aBuddy name]);
+		currentBuddyInfo =info;
+		[currentBuddyInfo reloadData];
+		[_transitionView transition:2 toView:currentBuddyInfo];		
+	}
+	else
+	{
+		NSLog(@"StartView> (Switch) Creating new buddy info... %@", [aBuddy name]);
+		BuddyInfoView * biv = [[BuddyInfoView alloc]initWithFrame:sub_views_rect withBuddy:aBuddy andDelegate:self];
+		[_buddyinfos setObject:biv forKey:[aBuddy properName]];
+		currentBuddyInfo = biv;
+		[currentBuddyInfo reloadData];
+		[_transitionView transition:2 toView:currentBuddyInfo];			
+	}
 }
 
 - (void)switchToConvo:(Buddy*)aBuddy
@@ -325,32 +308,28 @@ extern UIApplication *UIApp;
 	_about						=	false;
 	_conversationView			=	true;
 	_buddyInfoView			= false;
-	int i=0,max=[_conversations count];
 	
- 	[_buddyView updateBuddy:aBuddy withCode:AIM_READ_MSGS];	
-	[navtitle setTitle:[aBuddy name]];			
+ 	[_buddyView updateBuddy:aBuddy withCode:AIM_READ_MSGS];				
+	[navtitle setTitle:[aBuddy name]];				
+	
 	NSLog(@"StartView> (Switch) Switching to ", [aBuddy name]);
-	for(i=0; i<max; i++)
+	Conversation* testConvo = [_conversations objectForKey:[aBuddy properName]];
+	if(testConvo!=nil)
 	{
-		if([[[[_conversations objectAtIndex:i]buddy]properName]isEqualToString:[aBuddy properName]])
-		{
-			NSLog(@"StartView> Going to existing Convo with... %@", [aBuddy name]);		
-			[lock unlock];
-			currentConversation = [_conversations objectAtIndex:i];
-			currentConversationBuddy = 	[[_conversations objectAtIndex:i]buddy];	
-			[currentConversation switchToMe];
-			[_transitionView transition:1 toView:[_conversations objectAtIndex:i]];
-			return;
-		}
- 	}
-
-	NSLog(@"StartView> (Switch) Starting New Convo with... %@", [aBuddy name]);
-	Conversation* convo = [[Conversation alloc]initWithFrame:sub_views_rect withBuddy:aBuddy andDelegate:self];
-	[_conversations addObject:convo];	
-//	[lock unlock];
-	currentConversation = [_conversations objectAtIndex:i];	
-	currentConversationBuddy = 	[[_conversations objectAtIndex:i]buddy];	
-	[_transitionView transition:2 toView:[_conversations objectAtIndex:i]];			
+		NSLog(@"StartView> Going to existing Convo with... %@", [aBuddy name]);	
+		currentConversation = testConvo;
+		currentConversationBuddy = 	aBuddy;
+		[currentConversation switchToMe];
+		[_transitionView transition:1 toView:currentConversation];
+	}
+	else
+	{
+		Conversation* convo = [[Conversation alloc]initWithFrame:sub_views_rect withBuddy:aBuddy andDelegate:self];
+		[_conversations setObject:convo forKey:[aBuddy properName]];	
+		currentConversation = convo;
+		currentConversationBuddy = 	aBuddy;
+		[_transitionView transition:2 toView:currentConversation];			
+	}	
 }
 
 - (void)makeACoolMoveTo:(int)target

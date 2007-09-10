@@ -54,8 +54,8 @@
 	BuddyView			*_buddyView;
 	Acct				*active;
 	
-	NSMutableArray		*_conversations;
-	NSMutableArray		* buddyinfos;
+	NSMutableDictionary	*_conversations;
+	NSMutableDictionary	*_buddyinfos;
 	Buddy				*currentConversationBuddy;
 	Conversation		*currentConversation;
 	BuddyInfoView		*currentBuddyInfo;
