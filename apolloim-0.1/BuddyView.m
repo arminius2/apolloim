@@ -20,8 +20,9 @@
 #import "BuddyView.h"
 #import "ApolloTOC.h"
 #import "ApolloIM-PrivateAccess.h"
+#import "Common.m"
 
-enum {
+/*enum {
 	AIM_RECV_MESG		=	1,
 	AIM_BUDDY_ONLINE	=	2, 
 	AIM_BUDDY_OFFLINE	=	3, 
@@ -32,7 +33,7 @@ enum {
 	AIM_CONNECTED		=   8,
 	AIM_DISCONNECTED	=	9,
 	AIM_READ_MSGS		=   10
-};
+};*/
 
 @implementation BuddyView
 
