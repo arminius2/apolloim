@@ -24,9 +24,10 @@
 #import "ApolloTOC.h"
 #import "ApolloIM-PrivateAccess.h"
 #import "Buddy.h"
+#import "Common.m"
 
 #import "libfiretalk/firetalk.h"
-enum {
+/*enum {
 	AIM_RECV_MESG		=	1,
 	AIM_BUDDY_ONLINE	=	2, 
 	AIM_BUDDY_OFFLINE	=	3, 
@@ -38,7 +39,7 @@ enum {
 	AIM_DISCONNECTED	=	9,
 	AIM_READ_MSGS		=   10,
 	AIM_BUDDY_INFO		=	11	
-};
+};*/
 char pass[1024];
 
 void ft_callback_error(void *c, void *cs, const int error, const char * const roomoruser, const char * const description)
