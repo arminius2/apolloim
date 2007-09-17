@@ -1,0 +1,24 @@
+#summary 0.2.0 Release Checklist
+
+= Introduction =
+
+Things needed before 0.2.0 releases
+
+
+= Checklist =
+  * Notification Code - preferably the new Queue code for seamless Ipod playback
+  * Keepalive Code
+  * Person who isn't on buddy list added to buddy list when an IM is received
+  * Account manager cleanup - with protocol chooser.
+  * Shrink size of balloons in convo window
+  * Test every protocol.  Protocol's with even minor quirks will be saved for 0.2.1, a protocol update release
+  * DotMac / Aim differentiation in some way
+  * Auto-reply if away (ApolloCore code)
+  * DestroyConnection should do something.
+  * Clear Buddylist on signoff / disconnect.
+
+
+ 
+ 
+ 
+ 
