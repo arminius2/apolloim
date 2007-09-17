@@ -16,8 +16,9 @@ Things needed before 0.2.0 releases
   * Auto-reply if away (ApolloCore code)
   * DestroyConnection should do something.
   * Clear Buddylist on signoff / disconnect.
+  * Alphabetized buddylist
 
-
+ 
  
  
  
