@@ -17,7 +17,8 @@ Things needed before 0.2.0 releases
   * DestroyConnection should do something.
   * Clear Buddylist on signoff / disconnect.
   * Alphabetized buddylist
-  * Should support DotMac, AIM, Jabber, Gtalk, MSN - Yahoo if core can get us the code
+  * Should support DotMac, AIM, Jabber, Gtalk, ICQ, MSN - Yahoo if core can get us the code
+ 
  
  
  
