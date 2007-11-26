@@ -1,0 +1,13 @@
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1	localhost
+255.255.255.255	broadcasthost
+::1             localhost 
+64.12.161.185   login.oscar.aol.com
+65.54.239.210   messenger.hotmail.com
+65.54.179.216   nexus.passport.com
+65.54.183.203   login.live.com
