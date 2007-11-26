@@ -1,0 +1,55 @@
+CC = /usr/local/arm-apple-darwin/bin/gcc -I/Developer/SDKs/iPhone/include
+LD = $(CC)
+LDFLAGS = -Wl,-syslibroot,/Developer/SDKs/iPhone/heavenly \
+          -L/Developer/SDKs/iPhone/lib \
+          -L/Developer/SDKs/iPhone/heavenly/System/Library/Frameworks \
+          -framework Message \
+          -framework CoreFoundation \
+          -framework Foundation \
+          -framework UIKit \
+          -framework LayerKit \
+          -framework CoreGraphics \
+          -framework CoreTelephony \
+          -framework GraphicsServices \
+          -framework CoreSurface \
+          -framework Celestial \
+          -framework CoreAudio \
+	  -lobjc \
+          -larmfp
+
+CFLAGS = -DDEBUG
+
+all:	Apollo package
+
+Apollo:	main.o ApolloApp.o Preferences.o Buddy.o Event.o User.o LoginCell.o LoginView.o ProtocolManager.o TestInterface.o \
+	UserManager.o BuddyCell.o BuddyListView.o ViewController.o AccountEditView.o AccountTypeSelector.o Conversation.o \
+	ConversationView.o SendBox.o ShellKeyboard.o
+#TestInterface.m ProtocolManager.o LoginCell.o
+		$(LD) $(LDFLAGS) -o $@ $^
+		
+
+%.o:	%.m
+	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
+
+%.o:	%.c
+	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
+
+%.o:	%.cpp
+	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
+
+clean:
+	rm -f *.o Apollo
+
+package:
+	rm -rf Apollo.app
+	mkdir Apollo.app
+	cp Apollo ./Apollo.app/
+	#cp resources/*.png ./Apollo.app/
+	#cp resources/*.gif ./Apollo.app/
+	#cp resource/*.aiff ./Apollo.app/
+	cp resources/*.plist ./Apollo.app/
+	cp resources/vibrator ./Apollo.app/
+	cp resources/images/* ./Apollo.app/
+	chmod 644 ./Apollo.app/*
+	chmod 755 ./Apollo.app/Apollo
+	chmod 755 ./Apollo.app/vibrator
