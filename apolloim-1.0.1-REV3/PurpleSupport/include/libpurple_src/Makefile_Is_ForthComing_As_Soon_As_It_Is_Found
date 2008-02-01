@@ -1,0 +1,1 @@
+Makefile was lost in the "great exodus" of Apollo.  We are currently looking for it, and worst case, will have an updated libpurple compiled.  The trick to it, as far as my memory can remember, was to use the latest compiler as well as the included glib and libxml which we got to work first before we even tried libpurple.  
